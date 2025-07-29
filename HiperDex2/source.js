@@ -1584,10 +1584,10 @@ var _Sources = (() => {
   });
 
   // src/HiperDex/HiperDex.ts
-  var HiperDex_exports = {};
-  __export(HiperDex_exports, {
-    HiperDex: () => HiperDex,
-    HiperDexInfo: () => HiperDexInfo
+  var HiperDex2_exports = {};
+  __export(HiperDex2_exports, {
+    HiperDex: () => HiperDex2,
+    HiperDexInfo: () => HiperDex2Info
   });
   var import_types3 = __toESM(require_lib());
 
@@ -17154,7 +17154,7 @@ Please go to the homepage of <${this.baseUrl}> and press the cloud icon.`);
 
   // src/HiperDex/HiperDex.ts
   var DOMAIN = "https://hiperdex.tv";
-  var HiperDexInfo = {
+  var HiperDex2Info = {
     version: getExportVersion("0.0.11"),
     name: "HiperDex2",
     description: `Extension that pulls manga from ${DOMAIN}`,
@@ -17171,13 +17171,13 @@ Please go to the homepage of <${this.baseUrl}> and press the cloud icon.`);
     ],
     intents: import_types3.SourceIntents.MANGA_CHAPTERS | import_types3.SourceIntents.HOMEPAGE_SECTIONS | import_types3.SourceIntents.CLOUDFLARE_BYPASS_REQUIRED | import_types3.SourceIntents.SETTINGS_UI
   };
-  var HiperDex = class extends Madara {
+  var HiperDex2 = class extends Madara {
     constructor() {
       super(...arguments);
       this.baseUrl = DOMAIN;
       this.chapterEndpoint = 1;
     }
   };
-  return __toCommonJS(HiperDex_exports);
+  return __toCommonJS(HiperDex2_exports);
 })();
 this.Sources = _Sources; if (typeof exports === 'object' && typeof module !== 'undefined') { module.exports.Sources = this.Sources; }
