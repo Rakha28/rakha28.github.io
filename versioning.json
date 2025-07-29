@@ -1,0 +1,27 @@
+{
+    "buildTime": "2025-07-22T21:21:38.750Z",
+    "sources": [
+        {
+            "id": "HiperDex2",
+            "name": "HiperDex2",
+            "author": "Netsky",
+            "desc": "Extension that pulls manga from https://hiperdex.tv",
+            "website": "http://github.com/TheNetsky",
+            "contentRating": "ADULT",
+            "version": "3.2.12",
+            "icon": "icon.png",
+            "tags": [
+                {
+                    "text": "18+",
+                    "type": "warning"
+                }
+            ],
+            "websiteBaseURL": "https://hiperdex.tv",
+            "intents": 53
+        }
+    ],
+    "builtWith": {
+        "toolchain": "0.8.7",
+        "types": "0.8.7"
+    }
+}
