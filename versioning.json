@@ -2,8 +2,8 @@
     "buildTime": "2025-07-22T21:21:38.750Z",
     "sources": [
         {
-            "id": "HiperDex2",
-            "name": "HiperDex2",
+            "id": "HiperDex",
+            "name": "HiperDex",
             "author": "Netsky",
             "desc": "Extension that pulls manga from https://hiperdex.tv",
             "website": "http://github.com/TheNetsky",
