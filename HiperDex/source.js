@@ -16948,50 +16948,48 @@ var _Sources = (() => {
       let response;
 
       try {
-        // Attempt to fetch the page
         response = await this.requestManager.schedule(request, 1);
-        // This function should throw an error if the status is 404
         this.checkResponseError(response);
       } catch (error) {
-        // Check if the error message indicates a 404 Not Found error
         if (String(error).includes('404')) {
-          // This is the end of the results. Return an empty array and no
-          // metadata to signal the app to stop loading more.
           return App.createPagedResults({
             results: [],
             metadata: undefined
           });
         }
-        // If it's a different error (e.g., Cloudflare), let it fail
         throw error;
       }
 
-      // This part only runs if the request was successful (not a 404)
       const $2 = load(response.data);
       const results = await this.parser.parseSearchResults($2, this);
-      const manga = [];
+      let manga;
 
-      for (const result of results) {
-        if (this.usePostIds) {
+      // ✅ EFFICIENCY FIX STARTS HERE
+      if (!this.usePostIds) {
+        // FAST PATH: If we don't need post IDs, just map the results directly.
+        manga = results.map(result => App.createPartialSourceManga({
+          mangaId: result.slug,
+          image: result.image,
+          title: result.title,
+          subtitle: result.subtitle
+        }));
+      } else {
+        // OPTIMIZED PATH: Fetch all post IDs in parallel.
+        // 1. Create an array of promises. Each promise will fetch one postId.
+        const promises = results.map(async (result) => {
           const postId = await this.slugToPostId(result.slug, result.path);
-          manga.push(App.createPartialSourceManga({
+          return App.createPartialSourceManga({
             mangaId: String(postId),
             image: result.image,
             title: result.title,
             subtitle: result.subtitle
-          }));
-        } else {
-          manga.push(App.createPartialSourceManga({
-            mangaId: result.slug,
-            image: result.image,
-            title: result.title,
-            subtitle: result.subtitle
-          }));
-        }
+          });
+        });
+
+        // 2. Wait for all the promises to resolve at the same time.
+        manga = await Promise.all(promises);
       }
 
-      // If the page loaded successfully, provide metadata for the next page.
-      // The loop will be stopped by the `catch` block on the next run.
       return App.createPagedResults({
         results: manga,
         metadata: { page: page + 1 }
