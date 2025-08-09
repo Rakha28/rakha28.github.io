@@ -16911,121 +16911,121 @@ var _Sources = (() => {
       const $2 = load(response.data);
       return this.parser.parseTags($2, this.hasAdvancedSearchPage);
     }
-    // async getSearchResults(query, metadata) {
-    //   const page = metadata?.page ?? 1;
-    //   const request = this.constructSearchRequest(page, query);
-    //   const response = await this.requestManager.schedule(request, 1);
-    //   this.checkResponseError(response);
-    //   const $2 = load(response.data);
-    //   const results = await this.parser.parseSearchResults($2, this);
-    //   const manga = [];
-    //   for (const result of results) {
-    //     if (this.usePostIds) {
-    //       const postId = await this.slugToPostId(result.slug, result.path);
-    //       manga.push(App.createPartialSourceManga({
-    //         mangaId: String(postId),
-    //         image: result.image,
-    //         title: result.title,
-    //         subtitle: result.subtitle
-    //       }));
-    //     } else {
-    //       manga.push(App.createPartialSourceManga({
-    //         mangaId: result.slug,
-    //         image: result.image,
-    //         title: result.title,
-    //         subtitle: result.subtitle
-    //       }));
-    //     }
-    //   }
-    //   return App.createPagedResults({
-    //     results: manga,
-    //     metadata: { page: page + 1 }
-    //   });
-    // }
     async getSearchResults(query, metadata) {
-      // This object will automatically collect debug info at each step.
-      const debugInfo = {
-        step1_finalResult: 'Search did not complete or failed.',
-        step2_requestURL: 'Not constructed',
-        step3_responseStatus: 'Not received',
-        step4_rawHTML_snippet: 'Not received',
-        step5_parserResult_count: 0,
-        step6_firstResult_object: 'Parser found no results.'
-      };
-
-      try {
-        const page = metadata?.page ?? 1;
-        const request = this.constructSearchRequest(page, query);
-        debugInfo.step2_requestURL = request.url; // Capture the generated URL
-
-        const response = await this.requestManager.schedule(request, 1);
-        debugInfo.step3_responseStatus = response.status;
-        debugInfo.step4_rawHTML_snippet = response.data?.substring(0, 750) ?? 'Response data was null.';
-
-        // This check runs first. If it fails, it will throw its own specific error.
-        this.checkResponseError(response);
-
-        const $2 = load(response.data);
-        const results = await this.parser.parseSearchResults($2, this);
-        debugInfo.step5_parserResult_count = results.length;
-
-        if (results.length > 0) {
-          // Using JSON.stringify to make the object readable in the error message.
-          debugInfo.step6_firstResult_object = JSON.stringify(results[0]);
+      const page = metadata?.page ?? 1;
+      const request = this.constructSearchRequest(page, query);
+      const response = await this.requestManager.schedule(request, 1);
+      this.checkResponseError(response);
+      const $2 = load(response.data);
+      const results = await this.parser.parseSearchResults($2, this);
+      const manga = [];
+      for (const result of results) {
+        if (this.usePostIds) {
+          const postId = await this.slugToPostId(result.slug, result.path);
+          manga.push(App.createPartialSourceManga({
+            mangaId: String(postId),
+            image: result.image,
+            title: result.title,
+            subtitle: result.subtitle
+          }));
+        } else {
+          manga.push(App.createPartialSourceManga({
+            mangaId: result.slug,
+            image: result.image,
+            title: result.title,
+            subtitle: result.subtitle
+          }));
         }
-
-        const manga = [];
-        for (const result of results) {
-          if (this.usePostIds) {
-            // Your slugToPostId function already throws a detailed error if it fails,
-            // which is good. It will be caught by our catch block below.
-            const postId = await this.slugToPostId(result.slug, result.path);
-            manga.push(App.createPartialSourceManga({
-              mangaId: String(postId),
-              image: result.image,
-              title: result.title,
-              subtitle: result.subtitle
-            }));
-          } else {
-            manga.push(App.createPartialSourceManga({
-              mangaId: result.slug,
-              image: result.image,
-              title: result.title,
-              subtitle: result.subtitle
-            }));
-          }
-        }
-
-        // FINAL CHECK: If everything ran but we still have no manga, throw the report.
-        if (manga.length === 0 && results.length > 0) {
-          debugInfo.step1_finalResult = 'Processing failed inside the loop. The parser found items, but they were not added to the final list. Check the slugToPostId logic.';
-          throw new Error("Automatic Debug Report"); // Trigger the catch block
-        }
-
-        if (manga.length === 0) {
-          debugInfo.step1_finalResult = 'Search returned no results.';
-          throw new Error("Automatic Debug Report"); // Trigger the catch block
-        }
-
-        // If we get here, the search was successful!
-        return App.createPagedResults({
-          results: manga,
-          metadata: { page: page + 1 }
-        });
-
-      } catch (error) {
-        // This will catch any error (from slugToPostId, checkResponseError, or our own)
-        // and attach the full debug report to it.
-        const errorMessage = error.message === "Automatic Debug Report" ?
-          "Search failed. See diagnostic data below." :
-          `An error occurred: ${error.message}`;
-
-        // Using JSON.stringify with formatting for readability
-        const report = JSON.stringify(debugInfo, null, 2);
-
-        throw new Error(`${errorMessage}\n\n--- DEBUG REPORT ---\n${report}`);
       }
+      return App.createPagedResults({
+        results: manga,
+        metadata: { page: page + 1 }
+      });
     }
+    // async getSearchResults(query, metadata) {
+    //   // This object will automatically collect debug info at each step.
+    //   const debugInfo = {
+    //     step1_finalResult: 'Search did not complete or failed.',
+    //     step2_requestURL: 'Not constructed',
+    //     step3_responseStatus: 'Not received',
+    //     step4_rawHTML_snippet: 'Not received',
+    //     step5_parserResult_count: 0,
+    //     step6_firstResult_object: 'Parser found no results.'
+    //   };
+
+    //   try {
+    //     const page = metadata?.page ?? 1;
+    //     const request = this.constructSearchRequest(page, query);
+    //     debugInfo.step2_requestURL = request.url; // Capture the generated URL
+
+    //     const response = await this.requestManager.schedule(request, 1);
+    //     debugInfo.step3_responseStatus = response.status;
+    //     debugInfo.step4_rawHTML_snippet = response.data?.substring(0, 750) ?? 'Response data was null.';
+
+    //     // This check runs first. If it fails, it will throw its own specific error.
+    //     this.checkResponseError(response);
+
+    //     const $2 = load(response.data);
+    //     const results = await this.parser.parseSearchResults($2, this);
+    //     debugInfo.step5_parserResult_count = results.length;
+
+    //     if (results.length > 0) {
+    //       // Using JSON.stringify to make the object readable in the error message.
+    //       debugInfo.step6_firstResult_object = JSON.stringify(results[0]);
+    //     }
+
+    //     const manga = [];
+    //     for (const result of results) {
+    //       if (this.usePostIds) {
+    //         // Your slugToPostId function already throws a detailed error if it fails,
+    //         // which is good. It will be caught by our catch block below.
+    //         const postId = await this.slugToPostId(result.slug, result.path);
+    //         manga.push(App.createPartialSourceManga({
+    //           mangaId: String(postId),
+    //           image: result.image,
+    //           title: result.title,
+    //           subtitle: result.subtitle
+    //         }));
+    //       } else {
+    //         manga.push(App.createPartialSourceManga({
+    //           mangaId: result.slug,
+    //           image: result.image,
+    //           title: result.title,
+    //           subtitle: result.subtitle
+    //         }));
+    //       }
+    //     }
+
+    //     // FINAL CHECK: If everything ran but we still have no manga, throw the report.
+    //     if (manga.length === 0 && results.length > 0) {
+    //       debugInfo.step1_finalResult = 'Processing failed inside the loop. The parser found items, but they were not added to the final list. Check the slugToPostId logic.';
+    //       throw new Error("Automatic Debug Report"); // Trigger the catch block
+    //     }
+
+    //     if (manga.length === 0) {
+    //       debugInfo.step1_finalResult = 'Search returned no results.';
+    //       throw new Error("Automatic Debug Report"); // Trigger the catch block
+    //     }
+
+    //     // If we get here, the search was successful!
+    //     return App.createPagedResults({
+    //       results: manga,
+    //       metadata: { page: page + 1 }
+    //     });
+
+    //   } catch (error) {
+    //     // This will catch any error (from slugToPostId, checkResponseError, or our own)
+    //     // and attach the full debug report to it.
+    //     const errorMessage = error.message === "Automatic Debug Report" ?
+    //       "Search failed. See diagnostic data below." :
+    //       `An error occurred: ${error.message}`;
+
+    //     // Using JSON.stringify with formatting for readability
+    //     const report = JSON.stringify(debugInfo, null, 2);
+
+    //     throw new Error(`${errorMessage}\n\n--- DEBUG REPORT ---\n${report}`);
+    //   }
+    // }
     async getHomePageSections(sectionCallback) {
       const sections = [
         {
