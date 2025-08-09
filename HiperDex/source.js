@@ -17033,7 +17033,7 @@ var _Sources = (() => {
     // Utility
     constructSearchRequest(page, query) {
       return App.createRequest({
-        url: new URLBuilder(this.baseUrl).addPathComponent(this.searchPagePathName).addPathComponent(page.toString()).addQueryParameter("s", encodeURIComponent(query?.title ?? "")).addQueryParameter("post_type", "wp-manga").addQueryParameter("genre", query?.includedTags?.map((x) => x.id)).buildUrl({ addTrailingSlash: true, includeUndefinedParameters: false }),
+        url: new URLBuilder(this.baseUrl).addQueryParameter("s", encodeURIComponent(query?.title ?? "")).addQueryParameter("post_type", "wp-manga").buildUrl({ addTrailingSlash: false, includeUndefinedParameters: false }),
         method: "GET"
       });
     }
