@@ -16737,7 +16737,7 @@ var _Sources = (() => {
        * each manga object while on a search result page. This is the selector
        * which is looped over. This may be overridden if required.
        */
-      this.searchMangaSelector = "div.c-tabs-item__content";
+      this.searchMangaSelector = ".page-listing-item";
       /**
        * Set to true if your source has advanced search functionality built in.
        * If this is not true, no genre tags will be shown on the homepage!
