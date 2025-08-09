@@ -16911,14 +16911,66 @@ var _Sources = (() => {
       const $2 = load(response.data);
       return this.parser.parseTags($2, this.hasAdvancedSearchPage);
     }
+    // async getSearchResults(query, metadata) {
+    //   const page = metadata?.page ?? 1;
+    //   const request = this.constructSearchRequest(page, query);
+    //   const response = await this.requestManager.schedule(request, 1);
+    //   this.checkResponseError(response);
+    //   const $2 = load(response.data);
+    //   const results = await this.parser.parseSearchResults($2, this);
+    //   const manga = [];
+    //   for (const result of results) {
+    //     if (this.usePostIds) {
+    //       const postId = await this.slugToPostId(result.slug, result.path);
+    //       manga.push(App.createPartialSourceManga({
+    //         mangaId: String(postId),
+    //         image: result.image,
+    //         title: result.title,
+    //         subtitle: result.subtitle
+    //       }));
+    //     } else {
+    //       manga.push(App.createPartialSourceManga({
+    //         mangaId: result.slug,
+    //         image: result.image,
+    //         title: result.title,
+    //         subtitle: result.subtitle
+    //       }));
+    //     }
+    //   }
+    //   return App.createPagedResults({
+    //     results: manga,
+    //     metadata: { page: page + 1 }
+    //   });
+    // }
     async getSearchResults(query, metadata) {
       const page = metadata?.page ?? 1;
       const request = this.constructSearchRequest(page, query);
-      const response = await this.requestManager.schedule(request, 1);
-      this.checkResponseError(response);
+      let response;
+
+      try {
+        // Attempt to fetch the page
+        response = await this.requestManager.schedule(request, 1);
+        // This function should throw an error if the status is 404
+        this.checkResponseError(response);
+      } catch (error) {
+        // Check if the error message indicates a 404 Not Found error
+        if (String(error).includes('404')) {
+          // This is the end of the results. Return an empty array and no
+          // metadata to signal the app to stop loading more.
+          return App.createPagedResults({
+            results: [],
+            metadata: undefined
+          });
+        }
+        // If it's a different error (e.g., Cloudflare), let it fail
+        throw error;
+      }
+
+      // This part only runs if the request was successful (not a 404)
       const $2 = load(response.data);
       const results = await this.parser.parseSearchResults($2, this);
       const manga = [];
+
       for (const result of results) {
         if (this.usePostIds) {
           const postId = await this.slugToPostId(result.slug, result.path);
@@ -16937,6 +16989,9 @@ var _Sources = (() => {
           }));
         }
       }
+
+      // If the page loaded successfully, provide metadata for the next page.
+      // The loop will be stopped by the `catch` block on the next run.
       return App.createPagedResults({
         results: manga,
         metadata: { page: page + 1 }
@@ -17115,9 +17170,20 @@ var _Sources = (() => {
       });
     }
     // Utility
+    // constructSearchRequest(page, query) {
+    //   return App.createRequest({
+    //     url: new URLBuilder(this.baseUrl).addQueryParameter("s", encodeURIComponent(query?.title ?? "")).addQueryParameter("post_type", "wp-manga").buildUrl({ addTrailingSlash: false, includeUndefinedParameters: false }),
+    //     method: "GET"
+    //   });
+    // }
     constructSearchRequest(page, query) {
+      const search = encodeURIComponent(query?.title ?? "");
+
+      // This now correctly builds the URL with the page number in the path.
+      const url = `${this.baseUrl}/page/${page}/?s=${search}&post_type=wp-manga`;
+
       return App.createRequest({
-        url: new URLBuilder(this.baseUrl).addQueryParameter("s", encodeURIComponent(query?.title ?? "")).addQueryParameter("post_type", "wp-manga").buildUrl({ addTrailingSlash: false, includeUndefinedParameters: false }),
+        url: url,
         method: "GET"
       });
     }
