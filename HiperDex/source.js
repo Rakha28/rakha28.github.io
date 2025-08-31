@@ -17240,15 +17240,8 @@ var _Sources = (() => {
             sectionCallback(config.section);
           });
 
-          // THIS IS THE CORRECTED PART
-          // Race the request against a 20-second timeout using the environment's built-in function
-          promises.push(Promise.race([
-            promise,
-            (async () => {
-              await timeout(5000); // Use the built-in timeout function
-              throw new Error(`Timeout: '${config.section.title}'`);
-            })()
-          ]));
+          // The original promise is pushed directly, without the timeout wrapper.
+          promises.push(promise);
         }
 
         step = 'awaitPromises';
