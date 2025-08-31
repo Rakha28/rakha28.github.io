@@ -17085,9 +17085,19 @@ var _Sources = (() => {
      * @returns {Promise<string>} The security nonce.
      * @throws {Error} If the nonce cannot be found.
      */
+    /**
+ * Fetches the security nonce required for AJAX requests from the homepage.
+ * This should be called once before making a series of AJAX calls.
+ * @returns {Promise<string>} The security nonce.
+ * @throws {Error} If the nonce cannot be found.
+ */
     async getNonce() {
       // Create a request to the base URL to get the homepage HTML
-      const request = App.createRequest({ url: this.baseUrl });
+      const request = App.createRequest({
+        url: this.baseUrl,
+        method: 'GET' // <-- FIX: Explicitly set the method to 'GET'
+      });
+
       const response = await this.requestManager.schedule(request, 1);
       const html = response.data;
 
