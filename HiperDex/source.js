@@ -17106,70 +17106,85 @@ var _Sources = (() => {
  * It now orchestrates getting the nonce first, then building all requests.
  */
     async getHomePageSections(sectionCallback) {
-      // 1. Get the nonce one time at the beginning. This is the most important step.
+      // 1. Get the nonce one time at the beginning.
       const nonce = await this.getNonce();
 
-      // 2. Define the sections with the CORRECT orderby parameter for each.
+      // 2. Define the sections with the CORRECT orderby and FULL UI configurations.
       const sectionConfigs = [
         {
           meta_key: "_latest_update",
           meta_value: "",
-          orderby: "latest", // Correct orderby for updates
-          section: App.createHomeSection({ id: "0", title: "Recently Updated", /* ... */ })
+          orderby: "latest",
+          section: App.createHomeSection({
+            id: "0",
+            title: "Recently Updated",
+            type: import_types2.HomeSectionType.singleRowNormal,
+            containsMoreItems: true
+          })
         },
         {
           meta_key: "_wp_manga_week_views_value",
           meta_value: "",
-          orderby: "meta_value_num", // Correct orderby for view counts
-          section: App.createHomeSection({ id: "1", title: "Currently Trending", /* ... */ })
+          orderby: "meta_value_num",
+          section: App.createHomeSection({
+            id: "1",
+            title: "Currently Trending",
+            type: import_types2.HomeSectionType.singleRowNormal,
+            containsMoreItems: true
+          })
         },
         {
           meta_key: "_wp_manga_views",
           meta_value: "",
-          orderby: "meta_value_num", // Correct orderby for view counts
-          section: App.createHomeSection({ id: "2", title: "Most Popular", /* ... */ })
+          orderby: "meta_value_num",
+          section: App.createHomeSection({
+            id: "2",
+            title: "Most Popular",
+            type: import_types2.HomeSectionType.singleRowNormal,
+            containsMoreItems: true
+          })
         },
         {
           meta_key: "_wp_manga_status",
           meta_value: "end",
-          orderby: "latest", // Correct orderby for completed status
-          section: App.createHomeSection({ id: "3", title: "Completed", /* ... */ })
+          orderby: "latest",
+          section: App.createHomeSection({
+            id: "3",
+            title: "Completed",
+            type: import_types2.HomeSectionType.singleRowNormal,
+            containsMoreItems: true
+          })
         }
       ];
 
       // 3. Build the requests and schedule them.
       const promises = [];
       for (const config of sectionConfigs) {
-        // Immediately show the empty section in the UI
         sectionCallback(config.section);
 
-        // Construct the request with all the correct, dynamic data
         const request = this.constructAjaxHomepageRequest(
-          0,                          // page
-          10,                         // postsPerPage
+          0,
+          10,
           config.meta_key,
           config.meta_value,
-          nonce,                      // The fresh nonce
-          config.orderby              // The correct orderby parameter
+          nonce,
+          config.orderby
         );
 
-        // Schedule the request and handle the response
         const promise = this.requestManager.schedule(request, 1).then(async (response) => {
           this.checkResponseError(response);
           const $2 = load(response.data);
           config.section.items = await this.parser.parseHomeSection($2, this);
-          sectionCallback(config.section); // Update the section with parsed items
+          sectionCallback(config.section);
         }).catch(error => {
           console.error(`Failed to load section: ${config.section.title}`, error);
-          // Optionally update the UI to show an error for this section
-          config.section.items = []; // Clear items on failure
+          config.section.items = [];
           sectionCallback(config.section);
         });
 
         promises.push(promise);
       }
 
-      // Wait for all requests to complete
       await Promise.all(promises);
       console.log("All homepage sections loaded.");
     }
