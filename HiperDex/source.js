@@ -16568,18 +16568,31 @@ var _Sources = (() => {
       }
       return results;
     }
+    // This is the only function you need to replace.
     async parseHomeSection($2, source) {
       const items = [];
-      for (const obj of $2("div.page-item-detail").toArray()) {
+
+      // CORRECTED: The main container for each item is '.page-listing-item'
+      for (const obj of $2("div.page-listing-item").toArray()) {
+
+        // CORRECTED: Selectors for link and image are now simpler and more direct.
+        const link = $2("a", obj);
         const image = encodeURI(await this.getImageSrc($2("img", obj), source) ?? "");
-        const title = $2("a", $2("h3.h5", obj)).last().text();
-        const slug = this.idCleaner($2("a", $2("h3.h5", obj)).attr("href") ?? "");
-        const postId = $2("div", obj).attr("data-post-id");
-        const subtitle = $2("span.font-meta.chapter", obj).first().text().trim();
-        if (isNaN(Number(postId)) || !title) {
-          console.log(`Failed to parse homepage sections for ${source.baseUrl}`);
+        const title = link.attr("title")?.trim() ?? "";
+        const slug = this.idCleaner(link.attr("href") ?? "");
+
+        // CORRECTED: The post-id is on a nested div with the class 'item-thumb'
+        const postId = $2(".item-thumb", obj).attr("data-post-id");
+
+        // CORRECTED: Subtitle is inside the link tag
+        const subtitle = $2("span.font-meta.chapter", link).first().text().trim();
+
+        // Your validation logic remains the same
+        if (isNaN(Number(postId)) || !title || !slug) {
+          console.log(`Failed to parse a homepage item for ${source.baseUrl}`);
           continue;
         }
+
         items.push(App.createPartialSourceManga({
           mangaId: String(source.usePostIds ? postId : slug),
           image,
@@ -16587,6 +16600,8 @@ var _Sources = (() => {
           subtitle: decode(subtitle)
         }));
       }
+
+      // This will now return an array full of manga items.
       return items;
     }
     async getImageSrc(imageObj, source) {
