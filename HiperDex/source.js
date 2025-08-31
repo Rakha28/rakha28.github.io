@@ -17107,18 +17107,10 @@ var _Sources = (() => {
         method: "POST",
         headers: { "content-type": "application/x-www-form-urlencoded" },
         data: {
-          "action": "madara_load_more",
-          "nonce": nonce,
-          "template": "madara-core/content/content-archive",
-          "page": page,
-          "vars[paged]": "1",
-          "vars[posts_per_page]": postsPerPage,
-          "vars[orderby]": orderby,
-          "vars[sidebar]": "right",
-          "vars[post_type]": "wp-manga",
-          "vars[order]": "desc",
-          "vars[meta_key]": meta_key,
-          "vars[meta_value]": meta_value
+          "action": "madara_load_more", "nonce": nonce, "template": "madara-core/content/content-archive",
+          "page": page, "vars[paged]": "1", "vars[posts_per_page]": postsPerPage,
+          "vars[orderby]": orderby, "vars[sidebar]": "right", "vars[post_type]": "wp-manga",
+          "vars[order]": "desc", "vars[meta_key]": meta_key, "vars[meta_value]": meta_value
         }
       });
     }
@@ -17152,48 +17144,49 @@ var _Sources = (() => {
       for (const config of sectionConfigs) {
         sectionCallback(config.section);
         const request = this.constructAjaxHomepageRequest(0, 10, config.meta_key, config.meta_value, nonce, config.orderby);
-
         const promise = this.requestManager.schedule(request, 1).then(async (response) => {
           this.checkResponseError(response);
           const $2 = load(response.data);
           const items = await this.parser.parseHomeSection($2, this);
-          if (!items) {
-            throw new Error(`Parser returned null/undefined`);
-          }
+          if (!items) { throw new Error(`Parser returned null/undefined`); }
+          // IMPORTANT: Assign items to the original section object before the UI update
           config.section.items = items;
-          sectionCallback(config.section);
         });
         promises.push(promise);
       }
 
       const results = await Promise.allSettled(promises);
-
       let successCount = 0;
       const reportLines = ["HomePage Debug Report:"];
 
       results.forEach((result, index) => {
         const config = sectionConfigs[index];
         const originalTitle = config.section.title;
+        let statusMessage;
 
         if (result.status === 'fulfilled') {
           successCount++;
-          // Update the title in the UI to show success
-          config.section.title = `${originalTitle} (✅ Success)`;
+          statusMessage = `✅ Success`;
           reportLines.push(`- ${originalTitle}: Success`);
         } else {
-          // Update the title in the UI to show failure
-          config.section.title = `${originalTitle} (❌ Failed)`;
-          // Add the specific error reason to our report
+          statusMessage = `❌ Failed`;
           reportLines.push(`- ${originalTitle}: FAILED (Reason: ${result.reason})`);
         }
-        // Refresh the section with its new title
-        sectionCallback(config.section);
+
+        // --- FIX for 'readonly' error ---
+        // 1. Create a clone of the original section object.
+        // The spread syntax `{...}` is a common way to do this.
+        const updatedSection = { ...config.section };
+
+        // 2. Modify the title on the NEW object.
+        updatedSection.title = `${originalTitle} (${statusMessage})`;
+
+        // 3. Pass the new, modified object to the UI callback.
+        sectionCallback(updatedSection);
       });
 
       if (successCount !== sectionConfigs.length) {
-        // Combine the report lines into a single string
         const fullReport = reportLines.join("\n");
-        // Throw the detailed report, which will show up in your app's error pop-up
         throw new Error(fullReport);
       }
     }
