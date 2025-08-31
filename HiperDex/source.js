@@ -17111,93 +17111,195 @@ var _Sources = (() => {
         throw new Error("Security nonce could not be found on the homepage.");
       }
     }
-    /**
- * Main function to fetch all homepage sections.
- * It now orchestrates getting the nonce first, then building all requests.
- */
     async getHomePageSections(sectionCallback) {
-      // 1. Get the nonce one time at the beginning.
-      const nonce = await this.getNonce();
+      let step = 'Init'; // This variable will track our progress
+      try {
+        // --- Step 1: Get Nonce ---
+        step = 'getNonce';
+        const nonce = await this.getNonce();
 
-      // 2. Define the sections with the CORRECT orderby and FULL UI configurations.
-      const sectionConfigs = [
-        {
-          meta_key: "_latest_update",
-          meta_value: "",
-          orderby: "latest",
-          section: App.createHomeSection({
-            id: "0",
-            title: "Recently Updated",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
-        },
-        {
-          meta_key: "_wp_manga_week_views_value",
-          meta_value: "",
-          orderby: "meta_value_num",
-          section: App.createHomeSection({
-            id: "1",
-            title: "Currently Trending",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
-        },
-        {
-          meta_key: "_wp_manga_views",
-          meta_value: "",
-          orderby: "meta_value_num",
-          section: App.createHomeSection({
-            id: "2",
-            title: "Most Popular",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
-        },
-        {
-          meta_key: "_wp_manga_status",
-          meta_value: "end",
-          orderby: "latest",
-          section: App.createHomeSection({
-            id: "3",
-            title: "Completed",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
+        // --- Step 2: Define Full Section Configs ---
+        step = 'defineConfigs';
+        const sectionConfigs = [
+          {
+            meta_key: "_latest_update",
+            meta_value: "",
+            orderby: "latest",
+            section: App.createHomeSection({
+              id: "0",
+              title: "Recently Updated",
+              type: import_types2.HomeSectionType.singleRowNormal,
+              containsMoreItems: true
+            })
+          },
+          {
+            meta_key: "_wp_manga_week_views_value",
+            meta_value: "",
+            orderby: "meta_value_num",
+            section: App.createHomeSection({
+              id: "1",
+              title: "Currently Trending",
+              type: import_types2.HomeSectionType.singleRowNormal,
+              containsMoreItems: true
+            })
+          },
+          {
+            meta_key: "_wp_manga_views",
+            meta_value: "",
+            orderby: "meta_value_num",
+            section: App.createHomeSection({
+              id: "2",
+              title: "Most Popular",
+              type: import_types2.HomeSectionType.singleRowNormal,
+              containsMoreItems: true
+            })
+          },
+          {
+            meta_key: "_wp_manga_status",
+            meta_value: "end",
+            orderby: "latest",
+            section: App.createHomeSection({
+              id: "3",
+              title: "Completed",
+              type: import_types2.HomeSectionType.singleRowNormal,
+              containsMoreItems: true
+            })
+          }
+        ];
+
+        // --- Step 3: Schedule and Parse Requests ---
+        step = 'scheduleRequests';
+        const promises = [];
+        for (const config of sectionConfigs) {
+          sectionCallback(config.section);
+
+          const request = this.constructAjaxHomepageRequest(
+            0,
+            10,
+            config.meta_key,
+            config.meta_value,
+            nonce,
+            config.orderby
+          );
+
+          const promise = this.requestManager.schedule(request, 1).then(async (response) => {
+            this.checkResponseError(response);
+            const $2 = load(response.data);
+            config.section.items = await this.parser.parseHomeSection($2, this);
+            sectionCallback(config.section);
+          }).catch(error => {
+            // This inner catch handles individual promise failures
+            console.error(`Failed to load section: ${config.section.title}`, error);
+            config.section.items = [];
+            sectionCallback(config.section);
+          });
+
+          promises.push(promise);
         }
-      ];
 
-      // 3. Build the requests and schedule them.
-      const promises = [];
-      for (const config of sectionConfigs) {
-        sectionCallback(config.section);
+        step = 'awaitPromises';
+        await Promise.all(promises);
+        console.log("All homepage sections loaded.");
 
-        const request = this.constructAjaxHomepageRequest(
-          0,
-          10,
-          config.meta_key,
-          config.meta_value,
-          nonce,
-          config.orderby
-        );
-
-        const promise = this.requestManager.schedule(request, 1).then(async (response) => {
-          this.checkResponseError(response);
-          const $2 = load(response.data);
-          config.section.items = await this.parser.parseHomeSection($2, this);
-          sectionCallback(config.section);
-        }).catch(error => {
-          console.error(`Failed to load section: ${config.section.title}`, error);
-          config.section.items = [];
-          sectionCallback(config.section);
+      } catch (error) {
+        // --- CATCH BLOCK: This runs if a critical error occurs (e.g., getNonce fails) ---
+        const debugReport = JSON.stringify({
+          failedStep: step,
+          error: error.message
         });
-
-        promises.push(promise);
+        // Throws a short, clean error that your app can display
+        throw new Error(`HomePage Error\n${debugReport}`);
       }
-
-      await Promise.all(promises);
-      console.log("All homepage sections loaded.");
     }
+    /**
+//  * Main function to fetch all homepage sections.
+//  * It now orchestrates getting the nonce first, then building all requests.
+//  */
+    //     async getHomePageSections(sectionCallback) {
+    //       // 1. Get the nonce one time at the beginning.
+    //       const nonce = await this.getNonce();
+
+    //       // 2. Define the sections with the CORRECT orderby and FULL UI configurations.
+    //       const sectionConfigs = [
+    //         {
+    //           meta_key: "_latest_update",
+    //           meta_value: "",
+    //           orderby: "latest",
+    //           section: App.createHomeSection({
+    //             id: "0",
+    //             title: "Recently Updated",
+    //             type: import_types2.HomeSectionType.singleRowNormal,
+    //             containsMoreItems: true
+    //           })
+    //         },
+    //         {
+    //           meta_key: "_wp_manga_week_views_value",
+    //           meta_value: "",
+    //           orderby: "meta_value_num",
+    //           section: App.createHomeSection({
+    //             id: "1",
+    //             title: "Currently Trending",
+    //             type: import_types2.HomeSectionType.singleRowNormal,
+    //             containsMoreItems: true
+    //           })
+    //         },
+    //         {
+    //           meta_key: "_wp_manga_views",
+    //           meta_value: "",
+    //           orderby: "meta_value_num",
+    //           section: App.createHomeSection({
+    //             id: "2",
+    //             title: "Most Popular",
+    //             type: import_types2.HomeSectionType.singleRowNormal,
+    //             containsMoreItems: true
+    //           })
+    //         },
+    //         {
+    //           meta_key: "_wp_manga_status",
+    //           meta_value: "end",
+    //           orderby: "latest",
+    //           section: App.createHomeSection({
+    //             id: "3",
+    //             title: "Completed",
+    //             type: import_types2.HomeSectionType.singleRowNormal,
+    //             containsMoreItems: true
+    //           })
+    //         }
+    //       ];
+
+    //       // 3. Build the requests and schedule them.
+    //       const promises = [];
+    //       for (const config of sectionConfigs) {
+    //         sectionCallback(config.section);
+
+    //         const request = this.constructAjaxHomepageRequest(
+    //           0,
+    //           10,
+    //           config.meta_key,
+    //           config.meta_value,
+    //           nonce,
+    //           config.orderby
+    //         );
+
+    //         const promise = this.requestManager.schedule(request, 1).then(async (response) => {
+    //           this.checkResponseError(response);
+    //           const $2 = load(response.data);
+    //           config.section.items = await this.parser.parseHomeSection($2, this);
+    //           sectionCallback(config.section);
+    //         }).catch(error => {
+    //           console.error(`Failed to load section: ${config.section.title}`, error);
+    //           config.section.items = [];
+    //           sectionCallback(config.section);
+    //         });
+
+    //         promises.push(promise);
+    //       }
+
+    //       await Promise.all(promises);
+    //       console.log("All homepage sections loaded.");
+    //     }
+
+
 
 
     async getViewMoreItems(homepageSectionId, metadata) {
