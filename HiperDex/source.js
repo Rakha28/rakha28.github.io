@@ -17240,10 +17240,14 @@ var _Sources = (() => {
             sectionCallback(config.section);
           });
 
-          // Race the request against a 20-second timeout
+          // THIS IS THE CORRECTED PART
+          // Race the request against a 20-second timeout using the environment's built-in function
           promises.push(Promise.race([
             promise,
-            new Promise((_, reject) => setTimeout(() => reject(new Error(`Timeout: '${config.section.title}'`)), 10))
+            (async () => {
+              await timeout(5000); // Use the built-in timeout function
+              throw new Error(`Timeout: '${config.section.title}'`);
+            })()
           ]));
         }
 
@@ -17251,7 +17255,6 @@ var _Sources = (() => {
         await Promise.all(promises);
 
         // --- SUCCESS REPORT ---
-        // This will now throw a success message when everything completes.
         throw new Error(`HomePage Report\n${JSON.stringify({
           status: 'Success',
           message: `Loaded ${promises.length} sections.`
