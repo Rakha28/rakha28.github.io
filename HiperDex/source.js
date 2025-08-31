@@ -17105,7 +17105,7 @@ var _Sources = (() => {
       return App.createRequest({
         url: `${this.baseUrl}/wp-admin/admin-ajax.php`,
         method: "POST",
-        headers: { "content-type": "application/x-www-form-urlencoded" },
+        headers: { "content-type": "application/x-w ww-form-urlencoded" },
         data: {
           "action": "madara_load_more", "nonce": nonce, "template": "madara-core/content/content-archive",
           "page": page, "vars[paged]": "1", "vars[posts_per_page]": postsPerPage,
@@ -17149,7 +17149,6 @@ var _Sources = (() => {
           const $2 = load(response.data);
           const items = await this.parser.parseHomeSection($2, this);
           if (!items) { throw new Error(`Parser returned null/undefined`); }
-          // IMPORTANT: Assign items to the original section object before the UI update
           config.section.items = items;
         });
         promises.push(promise);
@@ -17173,15 +17172,21 @@ var _Sources = (() => {
           reportLines.push(`- ${originalTitle}: FAILED (Reason: ${result.reason})`);
         }
 
-        // --- FIX for 'readonly' error ---
-        // 1. Create a clone of the original section object.
-        // The spread syntax `{...}` is a common way to do this.
-        const updatedSection = { ...config.section };
+        // --- FIX for 'Objective-C Class' error ---
+        // We must re-create the section object using the official App function
+        // to ensure it has the correct native type.
+        const updatedSection = App.createHomeSection({
+          // First, copy all original properties from the section
+          id: config.section.id,
+          items: config.section.items, // Make sure items from the successful promise are included
+          type: config.section.type,
+          containsMoreItems: config.section.containsMoreItems,
 
-        // 2. Modify the title on the NEW object.
-        updatedSection.title = `${originalTitle} (${statusMessage})`;
+          // Second, override the title with our new debug message
+          title: `${originalTitle} (${statusMessage})`
+        });
 
-        // 3. Pass the new, modified object to the UI callback.
+        // Finally, pass the new, correctly-typed object to the UI callback.
         sectionCallback(updatedSection);
       });
 
