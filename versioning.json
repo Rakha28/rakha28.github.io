@@ -4,11 +4,11 @@
         {
             "id": "HiperDex",
             "name": "HiperDex",
-            "author": "Netsky",
+            "author": "Rakha",
             "desc": "Extension that pulls manga from https://hiperdex.tv",
-            "website": "http://github.com/TheNetsky",
+            "website": "http://github.com/rakha",
             "contentRating": "ADULT",
-            "version": "3.2.12",
+            "version": "3.2.13",
             "icon": "icon.png",
             "tags": [
                 {
