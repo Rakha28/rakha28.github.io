@@ -17208,47 +17208,23 @@ var _Sources = (() => {
         const sectionConfigs = [
           {
             meta_key: "_latest_update",
-            meta_value: "",
             orderby: "latest",
-            section: App.createHomeSection({
-              id: "0",
-              title: "Recently Updated",
-              type: import_types2.HomeSectionType.singleRowNormal,
-              containsMoreItems: true
-            })
+            section: App.createHomeSection({ id: "0", title: "Recently Updated", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
           },
           {
             meta_key: "_wp_manga_week_views_value",
-            meta_value: "",
             orderby: "meta_value_num",
-            section: App.createHomeSection({
-              id: "1",
-              title: "Currently Trending",
-              type: import_types2.HomeSectionType.singleRowNormal,
-              containsMoreItems: true
-            })
+            section: App.createHomeSection({ id: "1", title: "Currently Trending", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
           },
           {
             meta_key: "_wp_manga_views",
-            meta_value: "",
             orderby: "meta_value_num",
-            section: App.createHomeSection({
-              id: "2",
-              title: "Most Popular",
-              type: import_types2.HomeSectionType.singleRowNormal,
-              containsMoreItems: true
-            })
+            section: App.createHomeSection({ id: "2", title: "Most Popular", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
           },
           {
             meta_key: "_wp_manga_status",
-            meta_value: "end",
             orderby: "latest",
-            section: App.createHomeSection({
-              id: "3",
-              title: "Completed",
-              type: import_types2.HomeSectionType.singleRowNormal,
-              containsMoreItems: true
-            })
+            section: App.createHomeSection({ id: "3", title: "Completed", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
           }
         ];
 
@@ -17256,49 +17232,41 @@ var _Sources = (() => {
         const promises = [];
         for (const config of sectionConfigs) {
           sectionCallback(config.section);
+          const request = this.constructAjaxHomepageRequest(0, 10, config.meta_key, "", nonce, config.orderby);
 
-          const request = this.constructAjaxHomepageRequest(
-            0, 10, config.meta_key, config.meta_value, nonce, config.orderby
-          );
-
-          let scheduledPromise = this.requestManager.schedule(request, 1).then(async (response) => {
-            this.checkResponseError(response);
+          const promise = this.requestManager.schedule(request, 1).then(async (response) => {
             const $2 = load(response.data);
             config.section.items = await this.parser.parseHomeSection($2, this);
             sectionCallback(config.section);
           });
 
-          // --- Timeout logic is now directly inside the loop ---
-          const promiseWithTimeout = Promise.race([
-            scheduledPromise,
-            new Promise((_, reject) => {
-              setTimeout(() => {
-                reject(new Error(`Timeout: Section '${config.section.title}' took too long to respond.`));
-              }, 20000); // 20-second timeout
-            })
-          ]);
-
-          promises.push(promiseWithTimeout);
+          // Race the request against a 20-second timeout
+          promises.push(Promise.race([
+            promise,
+            new Promise((_, reject) => setTimeout(() => reject(new Error(`Timeout: '${config.section.title}'`)), 10))
+          ]));
         }
 
         step = 'awaitPromises';
         await Promise.all(promises);
-        console.log("All homepage sections loaded.");
+
+        // --- SUCCESS REPORT ---
+        // This will now throw a success message when everything completes.
+        throw new Error(`HomePage Report\n${JSON.stringify({
+          status: 'Success',
+          message: `Loaded ${promises.length} sections.`
+        })}`);
 
       } catch (error) {
-        // Now, if a promise hangs, this block will be triggered after the timeout.
-        const debugReport = JSON.stringify({
+        // --- ERROR REPORT ---
+        const report = JSON.stringify({
+          status: 'Error',
           failedStep: step,
           error: error.message
         });
-        throw new Error(`HomePage Error\n${debugReport}`);
+        throw new Error(`HomePage Report\n${report}`);
       }
     }
-
-
-
-
-
 
     async getViewMoreItems(homepageSectionId, metadata) {
       const page = metadata?.page ?? 0;
