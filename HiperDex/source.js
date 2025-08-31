@@ -17082,49 +17082,30 @@ var _Sources = (() => {
 
     /**
  * Fetches the security nonce required for AJAX requests from the homepage.
- * This should be called once before making a series of AJAX calls.
- * @returns {Promise<string>} The security nonce.
- * @throws {Error} If the nonce cannot be found.
  */
     async getNonce() {
-      // Create a request to the base URL to get the homepage HTML
       const request = App.createRequest({
         url: this.baseUrl,
-        method: 'GET' // FIX: Explicitly set the method to 'GET'
+        method: 'GET'
       });
-
       const response = await this.requestManager.schedule(request, 1);
       const html = response.data;
-
-      // Use a regular expression to find the nonce in the script tags
       const nonceMatch = html.match(/"nonce"\s*:\s*"([a-zA-Z0-9]+)"/);
-
       if (nonceMatch && nonceMatch[1]) {
-        console.log(`Nonce found: ${nonceMatch[1]}`);
-        return nonceMatch[1]; // Return the captured nonce string
+        return nonceMatch[1];
       } else {
-        throw new Error("Security nonce could not be found on the homepage.");
+        throw new Error("Security nonce could not be found.");
       }
     }
 
     /**
      * Constructs a single AJAX request for a homepage section.
-     * Includes nonce and a flexible orderby parameter.
-     * @param {number} page - The page number to request.
-     * @param {number} postsPerPage - The number of items to request.
-     * @param {string} meta_key - The meta_key for sorting.
-     * @param {string} meta_value - The meta_value for filtering.
-     * @param {string} nonce - The security nonce.
-     * @param {string} orderby - The specific orderby value (e.g., 'latest').
-     * @returns {Request} The constructed request object.
      */
     constructAjaxHomepageRequest(page, postsPerPage, meta_key, meta_value, nonce, orderby) {
       return App.createRequest({
         url: `${this.baseUrl}/wp-admin/admin-ajax.php`,
         method: "POST",
-        headers: {
-          "content-type": "application/x-www-form-urlencoded"
-        },
+        headers: { "content-type": "application/x-www-form-urlencoded" },
         data: {
           "action": "madara_load_more",
           "nonce": nonce,
@@ -17143,57 +17124,27 @@ var _Sources = (() => {
     }
 
     /**
-     * Main function to fetch all homepage sections with detailed error reporting.
-     * It uses Promise.allSettled to prevent one failed section from stopping the others.
+     * Main function to fetch all homepage sections with detailed error reporting in the UI.
      */
     async getHomePageSections(sectionCallback) {
       const nonce = await this.getNonce();
 
-      // The full, complete configuration for all sections
       const sectionConfigs = [
         {
-          meta_key: "_latest_update",
-          meta_value: "",
-          orderby: "latest",
-          section: App.createHomeSection({
-            id: "0",
-            title: "Recently Updated",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
+          meta_key: "_latest_update", meta_value: "", orderby: "latest",
+          section: App.createHomeSection({ id: "0", title: "Recently Updated", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
         },
         {
-          meta_key: "_wp_manga_week_views_value",
-          meta_value: "",
-          orderby: "meta_value_num",
-          section: App.createHomeSection({
-            id: "1",
-            title: "Currently Trending",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
+          meta_key: "_wp_manga_week_views_value", meta_value: "", orderby: "meta_value_num",
+          section: App.createHomeSection({ id: "1", title: "Currently Trending", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
         },
         {
-          meta_key: "_wp_manga_views",
-          meta_value: "",
-          orderby: "meta_value_num",
-          section: App.createHomeSection({
-            id: "2",
-            title: "Most Popular",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
+          meta_key: "_wp_manga_views", meta_value: "", orderby: "meta_value_num",
+          section: App.createHomeSection({ id: "2", title: "Most Popular", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
         },
         {
-          meta_key: "_wp_manga_status",
-          meta_value: "end",
-          orderby: "latest",
-          section: App.createHomeSection({
-            id: "3",
-            title: "Completed",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
+          meta_key: "_wp_manga_status", meta_value: "end", orderby: "latest",
+          section: App.createHomeSection({ id: "3", title: "Completed", type: import_types2.HomeSectionType.singleRowNormal, containsMoreItems: true })
         }
       ];
 
@@ -17207,36 +17158,43 @@ var _Sources = (() => {
           const $2 = load(response.data);
           const items = await this.parser.parseHomeSection($2, this);
           if (!items) {
-            throw new Error(`Parser returned null/undefined for section "${config.section.title}"`);
+            throw new Error(`Parser returned null/undefined`);
           }
           config.section.items = items;
           sectionCallback(config.section);
-          return config.section.title;
         });
         promises.push(promise);
       }
 
-      // DEBUGGING: Use Promise.allSettled to get a result for every promise
-      console.log("Waiting for all sections to settle...");
       const results = await Promise.allSettled(promises);
 
       let successCount = 0;
+      const reportLines = ["HomePage Debug Report:"];
+
       results.forEach((result, index) => {
-        const sectionTitle = sectionConfigs[index].section.title;
+        const config = sectionConfigs[index];
+        const originalTitle = config.section.title;
+
         if (result.status === 'fulfilled') {
-          console.log(`✅ SUCCESS: Section "${sectionTitle}" loaded successfully.`);
           successCount++;
+          // Update the title in the UI to show success
+          config.section.title = `${originalTitle} (✅ Success)`;
+          reportLines.push(`- ${originalTitle}: Success`);
         } else {
-          // This will log the specific error for the failing section
-          console.error(`❌ FAILED: Section "${sectionTitle}" failed to load.`);
-          console.error(`   -> Reason: ${result.reason}`);
+          // Update the title in the UI to show failure
+          config.section.title = `${originalTitle} (❌ Failed)`;
+          // Add the specific error reason to our report
+          reportLines.push(`- ${originalTitle}: FAILED (Reason: ${result.reason})`);
         }
+        // Refresh the section with its new title
+        sectionCallback(config.section);
       });
 
-      console.log(`Finished loading. ${successCount}/${sectionConfigs.length} sections were successful.`);
-
       if (successCount !== sectionConfigs.length) {
-        throw new Error("One or more homepage sections failed to load. Check the logs for details.");
+        // Combine the report lines into a single string
+        const fullReport = reportLines.join("\n");
+        // Throw the detailed report, which will show up in your app's error pop-up
+        throw new Error(fullReport);
       }
     }
 
