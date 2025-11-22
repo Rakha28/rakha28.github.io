@@ -15665,20 +15665,21 @@ var _Sources = (() => {
     updateSection.items = updateSection_Array;
     sectionCallback(updateSection);
   };
-  const parseViewMore = ($) => {
-    const manga = [];
-    const collectedIds = [];
+  const parseViewMore = ($: CheerioStatic): PartialSourceManga[] => {
+    const manga: PartialSourceManga[] = [];
+    const collectedIds: string[] = [];
 
-    // Updated selector to match the new "comic-card" class in the HTML
-    for (const obj of $("div.comic-card").toArray()) {
+    // Updated selector for the new "comic-card" layout
+    for (const obj of $("article.comic-card").toArray()) {
       const image = $("div.comic-card__cover img", obj).attr("src") ?? "";
       const title = $("h3.comic-card__title a", obj).text().trim() ?? "";
       const id = $("h3.comic-card__title a", obj).attr("href")?.replace(/\/$/, "")?.split("/").pop() ?? "";
 
-      // Attempt to find a subtitle (like "Chapter 10" or status)
-      const subtitle = $("span.comic-card__badge", obj).text().trim()
-        || $("div.comic-card__meta", obj).text().trim()
-        || "";
+      // Try to find a subtitle (Rating, Trending badge, or just generic text)
+      // The new layout doesn't explicitly show "Chapter X" on the card front usually
+      const rating = $("span.comic-card__stat--rating", obj).text().trim();
+      const badge = $("span.comic-card__badge", obj).text().trim();
+      const subtitle = badge || rating || "";
 
       if (!id || !title || collectedIds.includes(id)) continue;
 
@@ -15812,32 +15813,59 @@ var _Sources = (() => {
       const $2 = load(response.data);
       parseHomeSections($2, sectionCallback);
     }
-    async getViewMoreItems(homepageSectionId, metadata) {
+    async getViewMoreItems(homepageSectionId: string, metadata: any): Promise<PagedResults> {
       if (metadata?.completed) return metadata;
       const page = metadata?.page ?? 1;
+
+      // Switch to the data API endpoint
       let param = "";
       switch (homepageSectionId) {
         case "most_viewed":
-          param = `browse-comics/?results=${page}&filter=Views`;
+          param = `browse-comics/data/?page=${page}&sort=popular_all_time`;
           break;
         case "updated":
-          param = `browse-comics/?results=${page}&filter=Updated`;
+          param = `browse-comics/data/?page=${page}&sort=latest`;
           break;
         case "new":
-          param = `browse-comics/?results=${page}&filter=New`;
+          param = `browse-comics/data/?page=${page}&sort=recently_added`;
           break;
         default:
           throw new Error("Requested to getViewMoreItems for a section ID which doesn't exist");
       }
+
       const request = App.createRequest({
         url: `${MCR_DOMAIN}/${param}`,
         method: "GET"
       });
+
       const response = await this.requestManager.schedule(request, 1);
       this.CloudFlareError(response.status);
-      const $2 = load(response.data);
-      const manga = parseViewMore($2);
-      metadata = !isLastPage($2) ? { page: page + 1 } : void 0;
+
+      let resultHtml = "";
+      let totalPages = 1;
+
+      try {
+        // Parse the JSON response
+        const jsonResult = JSON.parse(response.data);
+        resultHtml = jsonResult.results_html;
+        totalPages = jsonResult.num_pages || 1;
+      } catch (e) {
+        console.log("Failed to parse JSON, falling back to HTML or error");
+        // If parsing fails, it might be a Cloudflare challenge or raw HTML page
+        // You might want to throw or handle graceful degradation here
+      }
+
+      // Pass the HTML fragment from the JSON into Cheerio
+      const $ = this.cheerio.load(resultHtml);
+      const manga = parseViewMore($);
+
+      // Check pagination against the API's "num_pages"
+      if (page >= totalPages) {
+        metadata = { completed: true };
+      } else {
+        metadata = { page: page + 1 };
+      }
+
       return App.createPagedResults({
         results: manga,
         metadata
