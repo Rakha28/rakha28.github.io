@@ -15809,16 +15809,17 @@ var _Sources = (() => {
       const page = metadata?.page ?? 1;
       let param = "";
 
-      // Added "/data/" to the URLs to access the JSON API endpoint
+      // FIXED URL PARAMETERS:
+      // 'results' is fixed to 1, and we add '&page=${page}' for pagination.
       switch (homepageSectionId) {
         case "most_viewed":
-          param = `browse-comics/data/?results=${page}&filter=Views`;
+          param = `browse-comics/data/?results=1&filter=Views&page=${page}`;
           break;
         case "updated":
-          param = `browse-comics/data/?results=${page}&filter=Updated`;
+          param = `browse-comics/data/?results=1&filter=Updated&page=${page}`;
           break;
         case "new":
-          param = `browse-comics/data/?results=${page}&filter=New`;
+          param = `browse-comics/data/?results=1&filter=New&page=${page}`;
           break;
         default:
           throw new Error("Requested to getViewMoreItems for a section ID which doesn't exist");
@@ -15832,7 +15833,7 @@ var _Sources = (() => {
       const response = await this.requestManager.schedule(request, 1);
       this.CloudFlareError(response.status);
 
-      // Parse the JSON response
+      // Parse JSON response
       let resultJSON;
       try {
         resultJSON = JSON.parse(response.data);
@@ -15840,12 +15841,11 @@ var _Sources = (() => {
         throw new Error(`Failed to parse JSON: ${e}`);
       }
 
-      // Load the HTML string located in 'results_html' into Cheerio ($2)
+      // Load HTML from JSON
       const $2 = load(resultJSON.results_html);
-
       const manga = parseViewMore($2);
 
-      // Use the 'num_pages' from the JSON to handle pagination
+      // Handle Metadata using JSON fields
       const currentPage = resultJSON.page;
       const totalPages = resultJSON.num_pages;
 
