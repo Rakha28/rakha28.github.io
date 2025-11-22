@@ -379,22 +379,20 @@ var _Sources = (() => {
   var require_exports = __commonJS({
     "node_modules/@paperback/types/lib/generated/_exports.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -512,7 +510,7 @@ var _Sources = (() => {
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.BadgeColor = void 0;
       var BadgeColor;
-      (function (BadgeColor2) {
+      (function(BadgeColor2) {
         BadgeColor2["BLUE"] = "default";
         BadgeColor2["GREEN"] = "success";
         BadgeColor2["GREY"] = "info";
@@ -582,22 +580,20 @@ var _Sources = (() => {
   var require_interfaces = __commonJS({
     "node_modules/@paperback/types/lib/base/interfaces/index.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -618,7 +614,7 @@ var _Sources = (() => {
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.ContentRating = exports.SourceIntents = void 0;
       var SourceIntents2;
-      (function (SourceIntents3) {
+      (function(SourceIntents3) {
         SourceIntents3[SourceIntents3["MANGA_CHAPTERS"] = 1] = "MANGA_CHAPTERS";
         SourceIntents3[SourceIntents3["MANGA_TRACKING"] = 2] = "MANGA_TRACKING";
         SourceIntents3[SourceIntents3["HOMEPAGE_SECTIONS"] = 4] = "HOMEPAGE_SECTIONS";
@@ -627,7 +623,7 @@ var _Sources = (() => {
         SourceIntents3[SourceIntents3["SETTINGS_UI"] = 32] = "SETTINGS_UI";
       })(SourceIntents2 = exports.SourceIntents || (exports.SourceIntents = {}));
       var ContentRating2;
-      (function (ContentRating3) {
+      (function(ContentRating3) {
         ContentRating3["EVERYONE"] = "EVERYONE";
         ContentRating3["MATURE"] = "MATURE";
         ContentRating3["ADULT"] = "ADULT";
@@ -642,7 +638,7 @@ var _Sources = (() => {
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.HomeSectionType = void 0;
       var HomeSectionType2;
-      (function (HomeSectionType3) {
+      (function(HomeSectionType3) {
         HomeSectionType3["singleRowNormal"] = "singleRowNormal";
         HomeSectionType3["singleRowLarge"] = "singleRowLarge";
         HomeSectionType3["doubleRow"] = "doubleRow";
@@ -663,22 +659,20 @@ var _Sources = (() => {
   var require_base = __commonJS({
     "node_modules/@paperback/types/lib/base/index.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -704,22 +698,20 @@ var _Sources = (() => {
   var require_lib = __commonJS({
     "node_modules/@paperback/types/lib/index.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -827,7 +819,7 @@ var _Sources = (() => {
     isTag: () => isTag
   });
   var ElementType;
-  (function (ElementType2) {
+  (function(ElementType2) {
     ElementType2["Root"] = "root";
     ElementType2["Text"] = "text";
     ElementType2["Directive"] = "directive";
@@ -1295,7 +1287,7 @@ var _Sources = (() => {
   ]);
   var fromCodePoint = (
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, node/no-unsupported-features/es-builtins
-    (_a = String.fromCodePoint) !== null && _a !== void 0 ? _a : function (codePoint) {
+    (_a = String.fromCodePoint) !== null && _a !== void 0 ? _a : function(codePoint) {
       let output = "";
       if (codePoint > 65535) {
         codePoint -= 65536;
@@ -1316,7 +1308,7 @@ var _Sources = (() => {
 
   // node_modules/entities/lib/esm/decode.js
   var CharCodes;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["NUM"] = 35] = "NUM";
     CharCodes5[CharCodes5["SEMI"] = 59] = "SEMI";
     CharCodes5[CharCodes5["EQUALS"] = 61] = "EQUALS";
@@ -1332,7 +1324,7 @@ var _Sources = (() => {
   })(CharCodes || (CharCodes = {}));
   var TO_LOWER_BIT = 32;
   var BinTrieFlags;
-  (function (BinTrieFlags4) {
+  (function(BinTrieFlags4) {
     BinTrieFlags4[BinTrieFlags4["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
     BinTrieFlags4[BinTrieFlags4["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
     BinTrieFlags4[BinTrieFlags4["JUMP_TABLE"] = 127] = "JUMP_TABLE";
@@ -1350,7 +1342,7 @@ var _Sources = (() => {
     return code === CharCodes.EQUALS || isAsciiAlphaNumeric(code);
   }
   var EntityDecoderState;
-  (function (EntityDecoderState4) {
+  (function(EntityDecoderState4) {
     EntityDecoderState4[EntityDecoderState4["EntityStart"] = 0] = "EntityStart";
     EntityDecoderState4[EntityDecoderState4["NumericStart"] = 1] = "NumericStart";
     EntityDecoderState4[EntityDecoderState4["NumericDecimal"] = 2] = "NumericDecimal";
@@ -1358,7 +1350,7 @@ var _Sources = (() => {
     EntityDecoderState4[EntityDecoderState4["NamedEntity"] = 4] = "NamedEntity";
   })(EntityDecoderState || (EntityDecoderState = {}));
   var DecodingMode;
-  (function (DecodingMode4) {
+  (function(DecodingMode4) {
     DecodingMode4[DecodingMode4["Legacy"] = 0] = "Legacy";
     DecodingMode4[DecodingMode4["Strict"] = 1] = "Strict";
     DecodingMode4[DecodingMode4["Attribute"] = 2] = "Attribute";
@@ -1545,9 +1537,9 @@ var _Sources = (() => {
         this.treeIndex = determineBranch(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
         if (this.treeIndex < 0) {
           return this.result === 0 || // If we are parsing an attribute
-            this.decodeMode === DecodingMode.Attribute && // We shouldn't have consumed any characters after the entity,
-            (valueLength === 0 || // And there should be no invalid characters.
-              isEntityInAttributeInvalidEnd(char)) ? 0 : this.emitNotTerminatedNamedEntity();
+          this.decodeMode === DecodingMode.Attribute && // We shouldn't have consumed any characters after the entity,
+          (valueLength === 0 || // And there should be no invalid characters.
+          isEntityInAttributeInvalidEnd(char)) ? 0 : this.emitNotTerminatedNamedEntity();
         }
         current = decodeTree[this.treeIndex];
         valueLength = (current & BinTrieFlags.VALUE_LENGTH) >> 14;
@@ -1750,12 +1742,12 @@ var _Sources = (() => {
 
   // node_modules/entities/lib/esm/index.js
   var EntityLevel;
-  (function (EntityLevel2) {
+  (function(EntityLevel2) {
     EntityLevel2[EntityLevel2["XML"] = 0] = "XML";
     EntityLevel2[EntityLevel2["HTML"] = 1] = "HTML";
   })(EntityLevel || (EntityLevel = {}));
   var EncodingMode;
-  (function (EncodingMode2) {
+  (function(EncodingMode2) {
     EncodingMode2[EncodingMode2["UTF8"] = 0] = "UTF8";
     EncodingMode2[EncodingMode2["ASCII"] = 1] = "ASCII";
     EncodingMode2[EncodingMode2["Extensive"] = 2] = "Extensive";
@@ -2196,7 +2188,7 @@ var _Sources = (() => {
     const result = [];
     const nodeStack = [Array.isArray(nodes) ? nodes : [nodes]];
     const indexStack = [0];
-    for (; ;) {
+    for (; ; ) {
       if (indexStack[0] >= nodeStack[0].length) {
         if (indexStack.length === 1) {
           return result;
@@ -2242,7 +2234,7 @@ var _Sources = (() => {
     const result = [];
     const nodeStack = [Array.isArray(nodes) ? nodes : [nodes]];
     const indexStack = [0];
-    for (; ;) {
+    for (; ; ) {
       if (indexStack[0] >= nodeStack[0].length) {
         if (nodeStack.length === 1) {
           return result;
@@ -2342,7 +2334,7 @@ var _Sources = (() => {
     return nodes;
   }
   var DocumentPosition;
-  (function (DocumentPosition2) {
+  (function(DocumentPosition2) {
     DocumentPosition2[DocumentPosition2["DISCONNECTED"] = 1] = "DISCONNECTED";
     DocumentPosition2[DocumentPosition2["PRECEDING"] = 2] = "PRECEDING";
     DocumentPosition2[DocumentPosition2["FOLLOWING"] = 4] = "FOLLOWING";
@@ -2669,7 +2661,7 @@ var _Sources = (() => {
     return array;
   }
   var CharacterCode;
-  (function (CharacterCode2) {
+  (function(CharacterCode2) {
     CharacterCode2[CharacterCode2["LowerA"] = 97] = "LowerA";
     CharacterCode2[CharacterCode2["LowerZ"] = 122] = "LowerZ";
     CharacterCode2[CharacterCode2["UpperA"] = 65] = "UpperA";
@@ -2731,7 +2723,7 @@ var _Sources = (() => {
   ]);
   var fromCodePoint2 = (
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, n/no-unsupported-features/es-builtins
-    (_a2 = String.fromCodePoint) !== null && _a2 !== void 0 ? _a2 : function (codePoint) {
+    (_a2 = String.fromCodePoint) !== null && _a2 !== void 0 ? _a2 : function(codePoint) {
       let output = "";
       if (codePoint > 65535) {
         codePoint -= 65536;
@@ -2752,7 +2744,7 @@ var _Sources = (() => {
 
   // node_modules/htmlparser2/node_modules/entities/dist/esm/decode.js
   var CharCodes2;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["NUM"] = 35] = "NUM";
     CharCodes5[CharCodes5["SEMI"] = 59] = "SEMI";
     CharCodes5[CharCodes5["EQUALS"] = 61] = "EQUALS";
@@ -2768,7 +2760,7 @@ var _Sources = (() => {
   })(CharCodes2 || (CharCodes2 = {}));
   var TO_LOWER_BIT2 = 32;
   var BinTrieFlags2;
-  (function (BinTrieFlags4) {
+  (function(BinTrieFlags4) {
     BinTrieFlags4[BinTrieFlags4["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
     BinTrieFlags4[BinTrieFlags4["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
     BinTrieFlags4[BinTrieFlags4["JUMP_TABLE"] = 127] = "JUMP_TABLE";
@@ -2786,7 +2778,7 @@ var _Sources = (() => {
     return code === CharCodes2.EQUALS || isAsciiAlphaNumeric2(code);
   }
   var EntityDecoderState2;
-  (function (EntityDecoderState4) {
+  (function(EntityDecoderState4) {
     EntityDecoderState4[EntityDecoderState4["EntityStart"] = 0] = "EntityStart";
     EntityDecoderState4[EntityDecoderState4["NumericStart"] = 1] = "NumericStart";
     EntityDecoderState4[EntityDecoderState4["NumericDecimal"] = 2] = "NumericDecimal";
@@ -2794,7 +2786,7 @@ var _Sources = (() => {
     EntityDecoderState4[EntityDecoderState4["NamedEntity"] = 4] = "NamedEntity";
   })(EntityDecoderState2 || (EntityDecoderState2 = {}));
   var DecodingMode2;
-  (function (DecodingMode4) {
+  (function(DecodingMode4) {
     DecodingMode4[DecodingMode4["Legacy"] = 0] = "Legacy";
     DecodingMode4[DecodingMode4["Strict"] = 1] = "Strict";
     DecodingMode4[DecodingMode4["Attribute"] = 2] = "Attribute";
@@ -2981,9 +2973,9 @@ var _Sources = (() => {
         this.treeIndex = determineBranch2(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
         if (this.treeIndex < 0) {
           return this.result === 0 || // If we are parsing an attribute
-            this.decodeMode === DecodingMode2.Attribute && // We shouldn't have consumed any characters after the entity,
-            (valueLength === 0 || // And there should be no invalid characters.
-              isEntityInAttributeInvalidEnd2(char)) ? 0 : this.emitNotTerminatedNamedEntity();
+          this.decodeMode === DecodingMode2.Attribute && // We shouldn't have consumed any characters after the entity,
+          (valueLength === 0 || // And there should be no invalid characters.
+          isEntityInAttributeInvalidEnd2(char)) ? 0 : this.emitNotTerminatedNamedEntity();
         }
         current = decodeTree[this.treeIndex];
         valueLength = (current & BinTrieFlags2.VALUE_LENGTH) >> 14;
@@ -3087,7 +3079,7 @@ var _Sources = (() => {
 
   // node_modules/htmlparser2/dist/esm/Tokenizer.js
   var CharCodes3;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["Tab"] = 9] = "Tab";
     CharCodes5[CharCodes5["NewLine"] = 10] = "NewLine";
     CharCodes5[CharCodes5["FormFeed"] = 12] = "FormFeed";
@@ -3117,7 +3109,7 @@ var _Sources = (() => {
     CharCodes5[CharCodes5["OpeningSquareBracket"] = 91] = "OpeningSquareBracket";
   })(CharCodes3 || (CharCodes3 = {}));
   var State;
-  (function (State3) {
+  (function(State3) {
     State3[State3["Text"] = 1] = "Text";
     State3[State3["BeforeTagName"] = 2] = "BeforeTagName";
     State3[State3["InTagName"] = 3] = "InTagName";
@@ -3155,7 +3147,7 @@ var _Sources = (() => {
     return c >= CharCodes3.LowerA && c <= CharCodes3.LowerZ || c >= CharCodes3.UpperA && c <= CharCodes3.UpperZ;
   }
   var QuoteType;
-  (function (QuoteType2) {
+  (function(QuoteType2) {
     QuoteType2[QuoteType2["NoValue"] = 0] = "NoValue";
     QuoteType2[QuoteType2["Unquoted"] = 1] = "Unquoted";
     QuoteType2[QuoteType2["Single"] = 2] = "Single";
@@ -4668,7 +4660,7 @@ var _Sources = (() => {
 
   // node_modules/css-what/lib/es/types.js
   var SelectorType;
-  (function (SelectorType2) {
+  (function(SelectorType2) {
     SelectorType2["Attribute"] = "attribute";
     SelectorType2["Pseudo"] = "pseudo";
     SelectorType2["PseudoElement"] = "pseudo-element";
@@ -4682,7 +4674,7 @@ var _Sources = (() => {
     SelectorType2["ColumnCombinator"] = "column-combinator";
   })(SelectorType || (SelectorType = {}));
   var AttributeAction;
-  (function (AttributeAction2) {
+  (function(AttributeAction2) {
     AttributeAction2["Any"] = "any";
     AttributeAction2["Element"] = "element";
     AttributeAction2["End"] = "end";
@@ -6224,8 +6216,8 @@ var _Sources = (() => {
     return this._make(select(selector, elems, options, limit));
   }
   function _getMatcher(matchMap) {
-    return function (fn, ...postFns) {
-      return function (selector) {
+    return function(fn, ...postFns) {
+      return function(selector) {
         var _a5;
         let matched = matchMap(fn, this);
         if (selector) {
@@ -6270,7 +6262,7 @@ var _Sources = (() => {
       });
       return matched;
     })(nextElem, ...postFns);
-    return function (selector, filterSelector) {
+    return function(selector, filterSelector) {
       matches = typeof selector === "string" ? (elem) => is2(elem, selector, this.options) : selector ? getFilterFn(selector) : null;
       const ret = innerMatcher.call(this, filterSelector);
       matches = null;
@@ -6370,7 +6362,7 @@ var _Sources = (() => {
     if (isCheerio(match)) {
       return (el) => Array.prototype.includes.call(match, el);
     }
-    return function (el) {
+    return function(el) {
       return match === el;
     };
   }
@@ -6554,7 +6546,7 @@ var _Sources = (() => {
     return [clone2 ? cloneNode(elem, true) : elem];
   }
   function _insert(concatenator) {
-    return function (...elems) {
+    return function(...elems) {
       const lastIdx = this.length - 1;
       return domEach(this, (el, i) => {
         if (!hasChildren(el))
@@ -6622,7 +6614,7 @@ var _Sources = (() => {
     uniqueSplice(children2, 0, 0, dom, parent2);
   });
   function _wrap(insert) {
-    return function (wrapper) {
+    return function(wrapper) {
       const lastIdx = this.length - 1;
       const lastParent = this.parents().last();
       for (let i = 0; i < this.length; i++) {
@@ -6851,7 +6843,7 @@ var _Sources = (() => {
   });
   function css(prop2, val2) {
     if (prop2 != null && val2 != null || // When `prop` is a "plain" object
-      typeof prop2 === "object" && !Array.isArray(prop2)) {
+    typeof prop2 === "object" && !Array.isArray(prop2)) {
       return domEach(this, (el, i) => {
         if (isTag2(el)) {
           setCss(el, prop2, val2, i);
@@ -7156,7 +7148,7 @@ var _Sources = (() => {
   ]);
   var REPLACEMENT_CHARACTER = "\uFFFD";
   var CODE_POINTS;
-  (function (CODE_POINTS2) {
+  (function(CODE_POINTS2) {
     CODE_POINTS2[CODE_POINTS2["EOF"] = -1] = "EOF";
     CODE_POINTS2[CODE_POINTS2["NULL"] = 0] = "NULL";
     CODE_POINTS2[CODE_POINTS2["TABULATION"] = 9] = "TABULATION";
@@ -7210,7 +7202,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/dist/common/error-codes.js
   var ERR;
-  (function (ERR2) {
+  (function(ERR2) {
     ERR2["controlCharacterInInputStream"] = "control-character-in-input-stream";
     ERR2["noncharacterInInputStream"] = "noncharacter-in-input-stream";
     ERR2["surrogateInInputStream"] = "surrogate-in-input-stream";
@@ -7444,7 +7436,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/dist/common/token.js
   var TokenType;
-  (function (TokenType2) {
+  (function(TokenType2) {
     TokenType2[TokenType2["CHARACTER"] = 0] = "CHARACTER";
     TokenType2[TokenType2["NULL_CHARACTER"] = 1] = "NULL_CHARACTER";
     TokenType2[TokenType2["WHITESPACE_CHARACTER"] = 2] = "WHITESPACE_CHARACTER";
@@ -7505,7 +7497,7 @@ var _Sources = (() => {
   ]);
   var fromCodePoint3 = (
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, n/no-unsupported-features/es-builtins
-    (_a4 = String.fromCodePoint) !== null && _a4 !== void 0 ? _a4 : function (codePoint) {
+    (_a4 = String.fromCodePoint) !== null && _a4 !== void 0 ? _a4 : function(codePoint) {
       let output = "";
       if (codePoint > 65535) {
         codePoint -= 65536;
@@ -7526,7 +7518,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/node_modules/entities/dist/esm/decode.js
   var CharCodes4;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["NUM"] = 35] = "NUM";
     CharCodes5[CharCodes5["SEMI"] = 59] = "SEMI";
     CharCodes5[CharCodes5["EQUALS"] = 61] = "EQUALS";
@@ -7542,7 +7534,7 @@ var _Sources = (() => {
   })(CharCodes4 || (CharCodes4 = {}));
   var TO_LOWER_BIT3 = 32;
   var BinTrieFlags3;
-  (function (BinTrieFlags4) {
+  (function(BinTrieFlags4) {
     BinTrieFlags4[BinTrieFlags4["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
     BinTrieFlags4[BinTrieFlags4["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
     BinTrieFlags4[BinTrieFlags4["JUMP_TABLE"] = 127] = "JUMP_TABLE";
@@ -7560,7 +7552,7 @@ var _Sources = (() => {
     return code === CharCodes4.EQUALS || isAsciiAlphaNumeric3(code);
   }
   var EntityDecoderState3;
-  (function (EntityDecoderState4) {
+  (function(EntityDecoderState4) {
     EntityDecoderState4[EntityDecoderState4["EntityStart"] = 0] = "EntityStart";
     EntityDecoderState4[EntityDecoderState4["NumericStart"] = 1] = "NumericStart";
     EntityDecoderState4[EntityDecoderState4["NumericDecimal"] = 2] = "NumericDecimal";
@@ -7568,7 +7560,7 @@ var _Sources = (() => {
     EntityDecoderState4[EntityDecoderState4["NamedEntity"] = 4] = "NamedEntity";
   })(EntityDecoderState3 || (EntityDecoderState3 = {}));
   var DecodingMode3;
-  (function (DecodingMode4) {
+  (function(DecodingMode4) {
     DecodingMode4[DecodingMode4["Legacy"] = 0] = "Legacy";
     DecodingMode4[DecodingMode4["Strict"] = 1] = "Strict";
     DecodingMode4[DecodingMode4["Attribute"] = 2] = "Attribute";
@@ -7755,9 +7747,9 @@ var _Sources = (() => {
         this.treeIndex = determineBranch3(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
         if (this.treeIndex < 0) {
           return this.result === 0 || // If we are parsing an attribute
-            this.decodeMode === DecodingMode3.Attribute && // We shouldn't have consumed any characters after the entity,
-            (valueLength === 0 || // And there should be no invalid characters.
-              isEntityInAttributeInvalidEnd3(char)) ? 0 : this.emitNotTerminatedNamedEntity();
+          this.decodeMode === DecodingMode3.Attribute && // We shouldn't have consumed any characters after the entity,
+          (valueLength === 0 || // And there should be no invalid characters.
+          isEntityInAttributeInvalidEnd3(char)) ? 0 : this.emitNotTerminatedNamedEntity();
         }
         current = decodeTree[this.treeIndex];
         valueLength = (current & BinTrieFlags3.VALUE_LENGTH) >> 14;
@@ -7873,7 +7865,7 @@ var _Sources = (() => {
     hasUnescapedText: () => hasUnescapedText
   });
   var NS;
-  (function (NS2) {
+  (function(NS2) {
     NS2["HTML"] = "http://www.w3.org/1999/xhtml";
     NS2["MATHML"] = "http://www.w3.org/1998/Math/MathML";
     NS2["SVG"] = "http://www.w3.org/2000/svg";
@@ -7882,7 +7874,7 @@ var _Sources = (() => {
     NS2["XMLNS"] = "http://www.w3.org/2000/xmlns/";
   })(NS || (NS = {}));
   var ATTRS;
-  (function (ATTRS2) {
+  (function(ATTRS2) {
     ATTRS2["TYPE"] = "type";
     ATTRS2["ACTION"] = "action";
     ATTRS2["ENCODING"] = "encoding";
@@ -7893,13 +7885,13 @@ var _Sources = (() => {
     ATTRS2["SIZE"] = "size";
   })(ATTRS || (ATTRS = {}));
   var DOCUMENT_MODE;
-  (function (DOCUMENT_MODE2) {
+  (function(DOCUMENT_MODE2) {
     DOCUMENT_MODE2["NO_QUIRKS"] = "no-quirks";
     DOCUMENT_MODE2["QUIRKS"] = "quirks";
     DOCUMENT_MODE2["LIMITED_QUIRKS"] = "limited-quirks";
   })(DOCUMENT_MODE || (DOCUMENT_MODE = {}));
   var TAG_NAMES;
-  (function (TAG_NAMES2) {
+  (function(TAG_NAMES2) {
     TAG_NAMES2["A"] = "a";
     TAG_NAMES2["ADDRESS"] = "address";
     TAG_NAMES2["ANNOTATION_XML"] = "annotation-xml";
@@ -8025,7 +8017,7 @@ var _Sources = (() => {
     TAG_NAMES2["XMP"] = "xmp";
   })(TAG_NAMES || (TAG_NAMES = {}));
   var TAG_ID;
-  (function (TAG_ID2) {
+  (function(TAG_ID2) {
     TAG_ID2[TAG_ID2["UNKNOWN"] = 0] = "UNKNOWN";
     TAG_ID2[TAG_ID2["A"] = 1] = "A";
     TAG_ID2[TAG_ID2["ADDRESS"] = 2] = "ADDRESS";
@@ -8387,7 +8379,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/dist/tokenizer/index.js
   var State2;
-  (function (State3) {
+  (function(State3) {
     State3[State3["DATA"] = 0] = "DATA";
     State3[State3["RCDATA"] = 1] = "RCDATA";
     State3[State3["RAWTEXT"] = 2] = "RAWTEXT";
@@ -11321,7 +11313,7 @@ var _Sources = (() => {
   // node_modules/parse5/dist/parser/formatting-element-list.js
   var NOAH_ARK_CAPACITY = 3;
   var EntryType;
-  (function (EntryType2) {
+  (function(EntryType2) {
     EntryType2[EntryType2["Marker"] = 0] = "Marker";
     EntryType2[EntryType2["Element"] = 1] = "Element";
   })(EntryType || (EntryType = {}));
@@ -11929,7 +11921,7 @@ var _Sources = (() => {
   var AA_OUTER_LOOP_ITER = 8;
   var AA_INNER_LOOP_ITER = 3;
   var InsertionMode;
-  (function (InsertionMode2) {
+  (function(InsertionMode2) {
     InsertionMode2[InsertionMode2["INITIAL"] = 0] = "INITIAL";
     InsertionMode2[InsertionMode2["BEFORE_HTML"] = 1] = "BEFORE_HTML";
     InsertionMode2[InsertionMode2["BEFORE_HEAD"] = 2] = "BEFORE_HEAD";
@@ -15344,8 +15336,8 @@ var _Sources = (() => {
   var import_types2 = __toESM(require_lib());
 
   // node_modules/html-entities/dist/esm/named-references.js
-  var __assign = function () {
-    __assign = Object.assign || function (t) {
+  var __assign = function() {
+    __assign = Object.assign || function(t) {
       for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
         for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
@@ -15421,18 +15413,18 @@ var _Sources = (() => {
   };
 
   // node_modules/html-entities/dist/esm/surrogate-pairs.js
-  var fromCodePoint4 = String.fromCodePoint || function (astralCodePoint) {
+  var fromCodePoint4 = String.fromCodePoint || function(astralCodePoint) {
     return String.fromCharCode(Math.floor((astralCodePoint - 65536) / 1024) + 55296, (astralCodePoint - 65536) % 1024 + 56320);
   };
-  var getCodePoint3 = String.prototype.codePointAt ? function (input, position) {
+  var getCodePoint3 = String.prototype.codePointAt ? function(input, position) {
     return input.codePointAt(position);
-  } : function (input, position) {
+  } : function(input, position) {
     return (input.charCodeAt(position) - 55296) * 1024 + input.charCodeAt(position + 1) - 56320 + 65536;
   };
 
   // node_modules/html-entities/dist/esm/index.js
-  var __assign2 = function () {
-    __assign2 = Object.assign || function (t) {
+  var __assign2 = function() {
+    __assign2 = Object.assign || function(t) {
       for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
         for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
@@ -15497,7 +15489,7 @@ var _Sources = (() => {
     var references = allNamedReferences[level].entities;
     var isAttribute = scope === "attribute";
     var isStrict = scope === "strict";
-    return text3.replace(decodeRegExp, function (entity) {
+    return text3.replace(decodeRegExp, function(entity) {
       return getDecodedEntity(entity, references, isAttribute, isStrict);
     });
   }
@@ -15666,32 +15658,32 @@ var _Sources = (() => {
     sectionCallback(updateSection);
   };
   var parseViewMore = ($: CheerioStatic): any[] => {
-    const manga: any[] = [];
-    const collectedIds: string[] = [];
+      const manga: any[] = [];
+      const collectedIds: string[] = [];
 
-    // The selector has changed from 'li.novel-item' to 'article.comic-card'
-    for (const obj of $("article.comic-card").toArray()) {
-      const image = $("img", obj).first().attr("src") ?? "";
-      const title = $("h3.comic-card__title", obj).text().trim();
-      const id = $("a", obj).attr("href")?.replace(/\/$/, "")?.split("/").pop() ?? "";
+      // The selector has changed from 'li.novel-item' to 'article.comic-card'
+      for (const obj of $("article.comic-card").toArray()) {
+          const image = $("img", obj).first().attr("src") ?? "";
+          const title = $("h3.comic-card__title", obj).text().trim();
+          const id = $("a", obj).attr("href")?.replace(/\/$/, "")?.split("/").pop() ?? "";
 
-      // The new card layout doesn't explicitly show the latest chapter number 
-      // in the text provided, so we default to the rating or empty.
-      const rating = $("span.comic-card__stat--rating", obj).text().trim();
-      const subtitle = rating ? rating : "";
+          // The new card layout doesn't explicitly show the latest chapter number 
+          // in the text provided, so we default to the rating or empty.
+          const rating = $("span.comic-card__stat--rating", obj).text().trim();
+          const subtitle = rating ? rating : "";
 
-      if (!id || !title || collectedIds.includes(id)) continue;
+          if (!id || !title || collectedIds.includes(id)) continue;
 
-      manga.push(App.createPartialSourceManga({
-        image,
-        title: decode(title),
-        mangaId: id,
-        subtitle: decode(subtitle)
-      }));
-      collectedIds.push(id);
-    }
+          manga.push(App.createPartialSourceManga({
+              image,
+              title: decode(title),
+              mangaId: id,
+              subtitle: decode(subtitle)
+          }));
+          collectedIds.push(id);
+      }
 
-    return manga;
+      return manga;
   };
   var parseTags = ($2) => {
     const arrayTags = [];
@@ -15813,55 +15805,35 @@ var _Sources = (() => {
       const $2 = load(response.data);
       parseHomeSections($2, sectionCallback);
     }
-    async getViewMoreItems(homepageSectionId: string, metadata: any): Promise<any> {
+    async getViewMoreItems(homepageSectionId, metadata) {
+      if (metadata?.completed) return metadata;
       const page = metadata?.page ?? 1;
       let param = "";
-
-      // Note: The URL structure has changed to include "/data/" 
-      // and returns JSON instead of full HTML.
       switch (homepageSectionId) {
         case "most_viewed":
-          param = `browse-comics/data/?results=${page}&filter=Views`;
+          param = `browse-comics/?results=${page}&filter=Views`;
           break;
         case "updated":
-          param = `browse-comics/data/?results=${page}&filter=Updated`;
+          param = `browse-comics/?results=${page}&filter=Updated`;
           break;
         case "new":
-          param = `browse-comics/data/?results=${page}&filter=New`;
+          param = `browse-comics/?results=${page}&filter=New`;
           break;
         default:
           throw new Error("Requested to getViewMoreItems for a section ID which doesn't exist");
       }
-
       const request = App.createRequest({
         url: `${MCR_DOMAIN}/${param}`,
         method: "GET"
       });
-
       const response = await this.requestManager.schedule(request, 1);
       this.CloudFlareError(response.status);
-
-      // 1. Parse the JSON response
-      let resultJSON;
-      try {
-        resultJSON = JSON.parse(response.data);
-      } catch (e) {
-        throw new Error(`Failed to parse JSON response from server: ${e}`);
-      }
-
-      // 2. Load the HTML fragment found inside "results_html" into Cheerio
-      const $ = load(resultJSON.results_html);
-
-      // 3. Parse using the updated parser
-      const manga = parseViewMore($);
-
-      // 4. Handle Metadata using the JSON fields (page, num_pages)
-      // If current page < total pages, we have more.
-      const nextPage = (resultJSON.page < resultJSON.num_pages) ? { page: page + 1 } : undefined;
-
+      const $2 = load(response.data);
+      const manga = parseViewMore($2);
+      metadata = !isLastPage($2) ? { page: page + 1 } : void 0;
       return App.createPagedResults({
         results: manga,
-        metadata: nextPage
+        metadata
       });
     }
     async getSearchTags() {
@@ -15915,4 +15887,4 @@ Please go to the homepage of <${_McReader.name}> and press the cloud icon.`);
   };
   return __toCommonJS(McReader_exports);
 })();
-this.Sources = _Sources; if (typeof exports === 'object' && typeof module !== 'undefined') { module.exports.Sources = this.Sources; }
+this.Sources = _Sources; if (typeof exports === 'object' && typeof module !== 'undefined') {module.exports.Sources = this.Sources;}
