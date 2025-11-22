@@ -15657,33 +15657,32 @@ var _Sources = (() => {
     updateSection.items = updateSection_Array;
     sectionCallback(updateSection);
   };
-  var parseViewMore = ($: CheerioStatic): any[] => {
-      const manga: any[] = [];
-      const collectedIds: string[] = [];
+  var parseViewMore = ($2) => {
+    const manga = [];
+    const collectedIds = [];
+    for (const obj of $2("article.comic-card").toArray()) {
+      let image = $2("img", obj).first().attr("src") ?? "";
+      // Sometimes images are in data-src depending on the lazy load state, checking both is safer
+      if (!image) image = $2("img", obj).first().attr("data-src") ?? "";
 
-      // The selector has changed from 'li.novel-item' to 'article.comic-card'
-      for (const obj of $("article.comic-card").toArray()) {
-          const image = $("img", obj).first().attr("src") ?? "";
-          const title = $("h3.comic-card__title", obj).text().trim();
-          const id = $("a", obj).attr("href")?.replace(/\/$/, "")?.split("/").pop() ?? "";
+      const title = $2("h3.comic-card__title", obj).text().trim();
+      const id = $2("a", obj).attr("href")?.replace(/\/$/, "")?.split("/").pop() ?? "";
 
-          // The new card layout doesn't explicitly show the latest chapter number 
-          // in the text provided, so we default to the rating or empty.
-          const rating = $("span.comic-card__stat--rating", obj).text().trim();
-          const subtitle = rating ? rating : "";
+      // The new layout uses ratings (e.g. "⭐ 4.4") in the stats section
+      const rating = $2("span.comic-card__stat--rating", obj).text().trim();
+      const subtitle = rating ? rating : "";
 
-          if (!id || !title || collectedIds.includes(id)) continue;
+      if (!id || !title || collectedIds.includes(id)) continue;
 
-          manga.push(App.createPartialSourceManga({
-              image,
-              title: decode(title),
-              mangaId: id,
-              subtitle: decode(subtitle)
-          }));
-          collectedIds.push(id);
-      }
-
-      return manga;
+      manga.push(App.createPartialSourceManga({
+        image,
+        title: decode(title),
+        mangaId: id,
+        subtitle: decode(subtitle)
+      }));
+      collectedIds.push(id);
+    }
+    return manga;
   };
   var parseTags = ($2) => {
     const arrayTags = [];
@@ -15809,28 +15808,49 @@ var _Sources = (() => {
       if (metadata?.completed) return metadata;
       const page = metadata?.page ?? 1;
       let param = "";
+
+      // Added "/data/" to the URLs to access the JSON API endpoint
       switch (homepageSectionId) {
         case "most_viewed":
-          param = `browse-comics/?results=${page}&filter=Views`;
+          param = `browse-comics/data/?results=${page}&filter=Views`;
           break;
         case "updated":
-          param = `browse-comics/?results=${page}&filter=Updated`;
+          param = `browse-comics/data/?results=${page}&filter=Updated`;
           break;
         case "new":
-          param = `browse-comics/?results=${page}&filter=New`;
+          param = `browse-comics/data/?results=${page}&filter=New`;
           break;
         default:
           throw new Error("Requested to getViewMoreItems for a section ID which doesn't exist");
       }
+
       const request = App.createRequest({
         url: `${MCR_DOMAIN}/${param}`,
         method: "GET"
       });
+
       const response = await this.requestManager.schedule(request, 1);
       this.CloudFlareError(response.status);
-      const $2 = load(response.data);
+
+      // Parse the JSON response
+      let resultJSON;
+      try {
+        resultJSON = JSON.parse(response.data);
+      } catch (e) {
+        throw new Error(`Failed to parse JSON: ${e}`);
+      }
+
+      // Load the HTML string located in 'results_html' into Cheerio ($2)
+      const $2 = load(resultJSON.results_html);
+
       const manga = parseViewMore($2);
-      metadata = !isLastPage($2) ? { page: page + 1 } : void 0;
+
+      // Use the 'num_pages' from the JSON to handle pagination
+      const currentPage = resultJSON.page;
+      const totalPages = resultJSON.num_pages;
+
+      metadata = (currentPage < totalPages) ? { page: currentPage + 1 } : void 0;
+
       return App.createPagedResults({
         results: manga,
         metadata
