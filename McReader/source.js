@@ -15813,63 +15813,61 @@ var _Sources = (() => {
       const $2 = load(response.data);
       parseHomeSections($2, sectionCallback);
     }
-    async getViewMoreItems(homepageSectionId: string, metadata: any): Promise<PagedResults> {
-      if (metadata?.completed) return metadata;
-      const page = metadata?.page ?? 1;
+async getViewMoreItems(homepageSectionId, metadata) {
+        if (metadata?.completed) return metadata;
+        const page = metadata?.page ?? 1;
+        
+        // The site now uses an API endpoint returning JSON
+        let param = "";
+        switch (homepageSectionId) {
+            case "most_viewed":
+                param = `browse-comics/data/?page=${page}&sort=popular_all_time`;
+                break;
+            case "updated":
+                param = `browse-comics/data/?page=${page}&sort=latest`;
+                break;
+            case "new":
+                param = `browse-comics/data/?page=${page}&sort=recently_added`;
+                break;
+            default:
+                throw new Error("Requested to getViewMoreItems for a section ID which doesn't exist");
+        }
 
-      // Switch to the data API endpoint
-      let param = "";
-      switch (homepageSectionId) {
-        case "most_viewed":
-          param = `browse-comics/data/?page=${page}&sort=popular_all_time`;
-          break;
-        case "updated":
-          param = `browse-comics/data/?page=${page}&sort=latest`;
-          break;
-        case "new":
-          param = `browse-comics/data/?page=${page}&sort=recently_added`;
-          break;
-        default:
-          throw new Error("Requested to getViewMoreItems for a section ID which doesn't exist");
-      }
+        const request = App.createRequest({
+            url: `${MCR_DOMAIN}/${param}`,
+            method: "GET"
+        });
 
-      const request = App.createRequest({
-        url: `${MCR_DOMAIN}/${param}`,
-        method: "GET"
-      });
+        const response = await this.requestManager.schedule(request, 1);
+        this.CloudFlareError(response.status);
 
-      const response = await this.requestManager.schedule(request, 1);
-      this.CloudFlareError(response.status);
+        // The new response is JSON containing an HTML string in "results_html"
+        let resultHtml = "";
+        try {
+            const jsonResult = JSON.parse(response.data);
+            resultHtml = jsonResult.results_html;
+            
+            // Check pagination logic from the JSON response
+            // The API returns "num_pages". If current page >= num_pages, we are done.
+            const totalPages = jsonResult.num_pages || 1;
+            if (page >= totalPages) {
+                metadata = { completed: true };
+            } else {
+                metadata = { page: page + 1 };
+            }
+        } catch (e) {
+            // Fallback if response isn't JSON (e.g. Cloudflare error page)
+            throw new Error("Failed to parse API response");
+        }
 
-      let resultHtml = "";
-      let totalPages = 1;
+        // Load the HTML fragment into Cheerio
+        const $ = load(resultHtml);
+        const manga = parseViewMore($);
 
-      try {
-        // Parse the JSON response
-        const jsonResult = JSON.parse(response.data);
-        resultHtml = jsonResult.results_html;
-        totalPages = jsonResult.num_pages || 1;
-      } catch (e) {
-        console.log("Failed to parse JSON, falling back to HTML or error");
-        // If parsing fails, it might be a Cloudflare challenge or raw HTML page
-        // You might want to throw or handle graceful degradation here
-      }
-
-      // Pass the HTML fragment from the JSON into Cheerio
-      const $ = this.cheerio.load(resultHtml);
-      const manga = parseViewMore($);
-
-      // Check pagination against the API's "num_pages"
-      if (page >= totalPages) {
-        metadata = { completed: true };
-      } else {
-        metadata = { page: page + 1 };
-      }
-
-      return App.createPagedResults({
-        results: manga,
-        metadata
-      });
+        return App.createPagedResults({
+            results: manga,
+            metadata
+        });
     }
     async getSearchTags() {
       const request = App.createRequest({
