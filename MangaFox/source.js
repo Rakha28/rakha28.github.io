@@ -6,13 +6,7 @@ var _Sources = (() => {
   var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getProtoOf = Object.getPrototypeOf;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
-  var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
-    get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
-  }) : x)(function (x) {
-    if (typeof require !== "undefined") return require.apply(this, arguments);
-    throw Error('Dynamic require of "' + x + '" is not supported');
-  });
-  var __commonJS = (cb, mod) => function __require2() {
+  var __commonJS = (cb, mod) => function __require() {
     return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
   };
   var __export = (target, all) => {
@@ -385,22 +379,20 @@ var _Sources = (() => {
   var require_exports = __commonJS({
     "node_modules/@paperback/types/lib/generated/_exports.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -517,14 +509,14 @@ var _Sources = (() => {
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.BadgeColor = void 0;
-      var BadgeColor2;
-      (function (BadgeColor3) {
-        BadgeColor3["BLUE"] = "default";
-        BadgeColor3["GREEN"] = "success";
-        BadgeColor3["GREY"] = "info";
-        BadgeColor3["YELLOW"] = "warning";
-        BadgeColor3["RED"] = "danger";
-      })(BadgeColor2 = exports.BadgeColor || (exports.BadgeColor = {}));
+      var BadgeColor;
+      (function(BadgeColor2) {
+        BadgeColor2["BLUE"] = "default";
+        BadgeColor2["GREEN"] = "success";
+        BadgeColor2["GREY"] = "info";
+        BadgeColor2["YELLOW"] = "warning";
+        BadgeColor2["RED"] = "danger";
+      })(BadgeColor = exports.BadgeColor || (exports.BadgeColor = {}));
     }
   });
 
@@ -588,22 +580,20 @@ var _Sources = (() => {
   var require_interfaces = __commonJS({
     "node_modules/@paperback/types/lib/base/interfaces/index.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -624,7 +614,7 @@ var _Sources = (() => {
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.ContentRating = exports.SourceIntents = void 0;
       var SourceIntents2;
-      (function (SourceIntents3) {
+      (function(SourceIntents3) {
         SourceIntents3[SourceIntents3["MANGA_CHAPTERS"] = 1] = "MANGA_CHAPTERS";
         SourceIntents3[SourceIntents3["MANGA_TRACKING"] = 2] = "MANGA_TRACKING";
         SourceIntents3[SourceIntents3["HOMEPAGE_SECTIONS"] = 4] = "HOMEPAGE_SECTIONS";
@@ -633,7 +623,7 @@ var _Sources = (() => {
         SourceIntents3[SourceIntents3["SETTINGS_UI"] = 32] = "SETTINGS_UI";
       })(SourceIntents2 = exports.SourceIntents || (exports.SourceIntents = {}));
       var ContentRating2;
-      (function (ContentRating3) {
+      (function(ContentRating3) {
         ContentRating3["EVERYONE"] = "EVERYONE";
         ContentRating3["MATURE"] = "MATURE";
         ContentRating3["ADULT"] = "ADULT";
@@ -648,7 +638,7 @@ var _Sources = (() => {
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.HomeSectionType = void 0;
       var HomeSectionType2;
-      (function (HomeSectionType3) {
+      (function(HomeSectionType3) {
         HomeSectionType3["singleRowNormal"] = "singleRowNormal";
         HomeSectionType3["singleRowLarge"] = "singleRowLarge";
         HomeSectionType3["doubleRow"] = "doubleRow";
@@ -669,22 +659,20 @@ var _Sources = (() => {
   var require_base = __commonJS({
     "node_modules/@paperback/types/lib/base/index.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -710,22 +698,20 @@ var _Sources = (() => {
   var require_lib = __commonJS({
     "node_modules/@paperback/types/lib/index.js"(exports) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function (o, m, k, k2) {
+      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = {
-            enumerable: true, get: function () {
-              return m[k];
-            }
-          };
+          desc = { enumerable: true, get: function() {
+            return m[k];
+          } };
         }
         Object.defineProperty(o, k2, desc);
-      } : function (o, m, k, k2) {
+      } : function(o, m, k, k2) {
         if (k2 === void 0) k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function (m, exports2) {
+      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
       };
       Object.defineProperty(exports, "__esModule", { value: true });
@@ -749,850 +735,13 @@ var _Sources = (() => {
     }
   });
 
-  // src/crypto-js.min.js
-  var require_crypto_js_min = __commonJS({
-    "src/crypto-js.min.js"(exports, module) {
-      "use strict";
-      !function (t, e) {
-        "object" == typeof exports ? module.exports = exports = e() : "function" == typeof define && define.amd ? define([], e) : t.CryptoJS = e();
-      }(exports, function () {
-        var W, O, I, U, K, X, L, l, j, T, t, N, q, e, Z, V, G, J, Q, Y, $2, t1, e1, r1, i1, o1, n1, s, s1, c1, a1, h1, l1, o, f1, r, d1, u1, n, c, a, h, f, d, i = function (h3) {
-          var i3;
-          if ("undefined" != typeof window && window.crypto && (i3 = window.crypto), "undefined" != typeof self && self.crypto && (i3 = self.crypto), !(i3 = !(i3 = !(i3 = "undefined" != typeof globalThis && globalThis.crypto ? globalThis.crypto : i3) && "undefined" != typeof window && window.msCrypto ? window.msCrypto : i3) && "undefined" != typeof global && global.crypto ? global.crypto : i3) && "function" == typeof __require) try {
-            i3 = __require("crypto");
-          } catch (t4) {
-          }
-          var r3 = Object.create || function (t4) {
-            return e3.prototype = t4, t4 = new e3(), e3.prototype = null, t4;
-          };
-          function e3() {
-          }
-          var t3 = {}, o3 = t3.lib = {}, n3 = o3.Base = {
-            extend: function (t4) {
-              var e4 = r3(this);
-              return t4 && e4.mixIn(t4), e4.hasOwnProperty("init") && this.init !== e4.init || (e4.init = function () {
-                e4.$super.init.apply(this, arguments);
-              }), (e4.init.prototype = e4).$super = this, e4;
-            }, create: function () {
-              var t4 = this.extend();
-              return t4.init.apply(t4, arguments), t4;
-            }, init: function () {
-            }, mixIn: function (t4) {
-              for (var e4 in t4) t4.hasOwnProperty(e4) && (this[e4] = t4[e4]);
-              t4.hasOwnProperty("toString") && (this.toString = t4.toString);
-            }, clone: function () {
-              return this.init.prototype.extend(this);
-            }
-          }, l3 = o3.WordArray = n3.extend({
-            init: function (t4, e4) {
-              t4 = this.words = t4 || [], this.sigBytes = null != e4 ? e4 : 4 * t4.length;
-            }, toString: function (t4) {
-              return (t4 || c3).stringify(this);
-            }, concat: function (t4) {
-              var e4 = this.words, r4 = t4.words, i4 = this.sigBytes, o4 = t4.sigBytes;
-              if (this.clamp(), i4 % 4) for (var n4 = 0; n4 < o4; n4++) {
-                var s4 = r4[n4 >>> 2] >>> 24 - n4 % 4 * 8 & 255;
-                e4[i4 + n4 >>> 2] |= s4 << 24 - (i4 + n4) % 4 * 8;
-              }
-              else for (var c4 = 0; c4 < o4; c4 += 4) e4[i4 + c4 >>> 2] = r4[c4 >>> 2];
-              return this.sigBytes += o4, this;
-            }, clamp: function () {
-              var t4 = this.words, e4 = this.sigBytes;
-              t4[e4 >>> 2] &= 4294967295 << 32 - e4 % 4 * 8, t4.length = h3.ceil(e4 / 4);
-            }, clone: function () {
-              var t4 = n3.clone.call(this);
-              return t4.words = this.words.slice(0), t4;
-            }, random: function (t4) {
-              for (var e4 = [], r4 = 0; r4 < t4; r4 += 4) e4.push(function () {
-                if (i3) {
-                  if ("function" == typeof i3.getRandomValues) try {
-                    return i3.getRandomValues(new Uint32Array(1))[0];
-                  } catch (t5) {
-                  }
-                  if ("function" == typeof i3.randomBytes) try {
-                    return i3.randomBytes(4).readInt32LE();
-                  } catch (t5) {
-                  }
-                }
-                throw new Error("Native crypto module could not be used to get secure random number.");
-              }());
-              return new l3.init(e4, t4);
-            }
-          }), s3 = t3.enc = {}, c3 = s3.Hex = {
-            stringify: function (t4) {
-              for (var e4 = t4.words, r4 = t4.sigBytes, i4 = [], o4 = 0; o4 < r4; o4++) {
-                var n4 = e4[o4 >>> 2] >>> 24 - o4 % 4 * 8 & 255;
-                i4.push((n4 >>> 4).toString(16)), i4.push((15 & n4).toString(16));
-              }
-              return i4.join("");
-            }, parse: function (t4) {
-              for (var e4 = t4.length, r4 = [], i4 = 0; i4 < e4; i4 += 2) r4[i4 >>> 3] |= parseInt(t4.substr(i4, 2), 16) << 24 - i4 % 8 * 4;
-              return new l3.init(r4, e4 / 2);
-            }
-          }, a3 = s3.Latin1 = {
-            stringify: function (t4) {
-              for (var e4 = t4.words, r4 = t4.sigBytes, i4 = [], o4 = 0; o4 < r4; o4++) {
-                var n4 = e4[o4 >>> 2] >>> 24 - o4 % 4 * 8 & 255;
-                i4.push(String.fromCharCode(n4));
-              }
-              return i4.join("");
-            }, parse: function (t4) {
-              for (var e4 = t4.length, r4 = [], i4 = 0; i4 < e4; i4++) r4[i4 >>> 2] |= (255 & t4.charCodeAt(i4)) << 24 - i4 % 4 * 8;
-              return new l3.init(r4, e4);
-            }
-          }, f3 = s3.Utf8 = {
-            stringify: function (t4) {
-              try {
-                return decodeURIComponent(escape(a3.stringify(t4)));
-              } catch (t5) {
-                throw new Error("Malformed UTF-8 data");
-              }
-            }, parse: function (t4) {
-              return a3.parse(unescape(encodeURIComponent(t4)));
-            }
-          }, d3 = o3.BufferedBlockAlgorithm = n3.extend({
-            reset: function () {
-              this._data = new l3.init(), this._nDataBytes = 0;
-            }, _append: function (t4) {
-              "string" == typeof t4 && (t4 = f3.parse(t4)), this._data.concat(t4), this._nDataBytes += t4.sigBytes;
-            }, _process: function (t4) {
-              var e4, r4 = this._data, i4 = r4.words, o4 = r4.sigBytes, n4 = this.blockSize, s4 = o4 / (4 * n4), c4 = (s4 = t4 ? h3.ceil(s4) : h3.max((0 | s4) - this._minBufferSize, 0)) * n4, t4 = h3.min(4 * c4, o4);
-              if (c4) {
-                for (var a4 = 0; a4 < c4; a4 += n4) this._doProcessBlock(i4, a4);
-                e4 = i4.splice(0, c4), r4.sigBytes -= t4;
-              }
-              return new l3.init(e4, t4);
-            }, clone: function () {
-              var t4 = n3.clone.call(this);
-              return t4._data = this._data.clone(), t4;
-            }, _minBufferSize: 0
-          }), u3 = (o3.Hasher = d3.extend({
-            cfg: n3.extend(), init: function (t4) {
-              this.cfg = this.cfg.extend(t4), this.reset();
-            }, reset: function () {
-              d3.reset.call(this), this._doReset();
-            }, update: function (t4) {
-              return this._append(t4), this._process(), this;
-            }, finalize: function (t4) {
-              return t4 && this._append(t4), this._doFinalize();
-            }, blockSize: 16, _createHelper: function (r4) {
-              return function (t4, e4) {
-                return new r4.init(e4).finalize(t4);
-              };
-            }, _createHmacHelper: function (r4) {
-              return function (t4, e4) {
-                return new u3.HMAC.init(r4, e4).finalize(t4);
-              };
-            }
-          }), t3.algo = {});
-          return t3;
-        }(Math), u = (u = (p = i).lib, W = u.Base, O = u.WordArray, (u = p.x64 = {}).Word = W.extend({
-          init: function (t3, e3) {
-            this.high = t3, this.low = e3;
-          }
-        }), u.WordArray = W.extend({
-          init: function (t3, e3) {
-            t3 = this.words = t3 || [], this.sigBytes = null != e3 ? e3 : 8 * t3.length;
-          }, toX32: function () {
-            for (var t3 = this.words, e3 = t3.length, r3 = [], i3 = 0; i3 < e3; i3++) {
-              var o3 = t3[i3];
-              r3.push(o3.high), r3.push(o3.low);
-            }
-            return O.create(r3, this.sigBytes);
-          }, clone: function () {
-            for (var t3 = W.clone.call(this), e3 = t3.words = this.words.slice(0), r3 = e3.length, i3 = 0; i3 < r3; i3++) e3[i3] = e3[i3].clone();
-            return t3;
-          }
-        }), "function" == typeof ArrayBuffer && (p = i.lib.WordArray, I = p.init, (p.init = function (t3) {
-          if ((t3 = (t3 = t3 instanceof ArrayBuffer ? new Uint8Array(t3) : t3) instanceof Int8Array || "undefined" != typeof Uint8ClampedArray && t3 instanceof Uint8ClampedArray || t3 instanceof Int16Array || t3 instanceof Uint16Array || t3 instanceof Int32Array || t3 instanceof Uint32Array || t3 instanceof Float32Array || t3 instanceof Float64Array ? new Uint8Array(t3.buffer, t3.byteOffset, t3.byteLength) : t3) instanceof Uint8Array) {
-            for (var e3 = t3.byteLength, r3 = [], i3 = 0; i3 < e3; i3++) r3[i3 >>> 2] |= t3[i3] << 24 - i3 % 4 * 8;
-            I.call(this, r3, e3);
-          } else I.apply(this, arguments);
-        }).prototype = p), i), p1 = u.lib.WordArray;
-        function _1(t3) {
-          return t3 << 8 & 4278255360 | t3 >>> 8 & 16711935;
-        }
-        (u = u.enc).Utf16 = u.Utf16BE = {
-          stringify: function (t3) {
-            for (var e3 = t3.words, r3 = t3.sigBytes, i3 = [], o3 = 0; o3 < r3; o3 += 2) {
-              var n3 = e3[o3 >>> 2] >>> 16 - o3 % 4 * 8 & 65535;
-              i3.push(String.fromCharCode(n3));
-            }
-            return i3.join("");
-          }, parse: function (t3) {
-            for (var e3 = t3.length, r3 = [], i3 = 0; i3 < e3; i3++) r3[i3 >>> 1] |= t3.charCodeAt(i3) << 16 - i3 % 2 * 16;
-            return p1.create(r3, 2 * e3);
-          }
-        }, u.Utf16LE = {
-          stringify: function (t3) {
-            for (var e3 = t3.words, r3 = t3.sigBytes, i3 = [], o3 = 0; o3 < r3; o3 += 2) {
-              var n3 = _1(e3[o3 >>> 2] >>> 16 - o3 % 4 * 8 & 65535);
-              i3.push(String.fromCharCode(n3));
-            }
-            return i3.join("");
-          }, parse: function (t3) {
-            for (var e3 = t3.length, r3 = [], i3 = 0; i3 < e3; i3++) r3[i3 >>> 1] |= _1(t3.charCodeAt(i3) << 16 - i3 % 2 * 16);
-            return p1.create(r3, 2 * e3);
-          }
-        }, U = (p = i).lib.WordArray, p.enc.Base64 = {
-          stringify: function (t3) {
-            for (var e3 = t3.words, r3 = t3.sigBytes, i3 = this._map, o3 = (t3.clamp(), []), n3 = 0; n3 < r3; n3 += 3) for (var s3 = (e3[n3 >>> 2] >>> 24 - n3 % 4 * 8 & 255) << 16 | (e3[n3 + 1 >>> 2] >>> 24 - (n3 + 1) % 4 * 8 & 255) << 8 | e3[n3 + 2 >>> 2] >>> 24 - (n3 + 2) % 4 * 8 & 255, c3 = 0; c3 < 4 && n3 + 0.75 * c3 < r3; c3++) o3.push(i3.charAt(s3 >>> 6 * (3 - c3) & 63));
-            var a3 = i3.charAt(64);
-            if (a3) for (; o3.length % 4;) o3.push(a3);
-            return o3.join("");
-          }, parse: function (t3) {
-            var e3 = t3.length, r3 = this._map;
-            if (!(i3 = this._reverseMap)) for (var i3 = this._reverseMap = [], o3 = 0; o3 < r3.length; o3++) i3[r3.charCodeAt(o3)] = o3;
-            for (var n3, s3, c3 = r3.charAt(64), a3 = (!c3 || -1 !== (c3 = t3.indexOf(c3)) && (e3 = c3), t3), h3 = e3, l3 = i3, f3 = [], d3 = 0, u3 = 0; u3 < h3; u3++) u3 % 4 && (s3 = l3[a3.charCodeAt(u3 - 1)] << u3 % 4 * 2, n3 = l3[a3.charCodeAt(u3)] >>> 6 - u3 % 4 * 2, s3 = s3 | n3, f3[d3 >>> 2] |= s3 << 24 - d3 % 4 * 8, d3++);
-            return U.create(f3, d3);
-          }, _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
-        }, K = (u = i).lib.WordArray, u.enc.Base64url = {
-          stringify: function (t3, e3) {
-            for (var r3 = t3.words, i3 = t3.sigBytes, o3 = (e3 = void 0 === e3 ? true : e3) ? this._safe_map : this._map, n3 = (t3.clamp(), []), s3 = 0; s3 < i3; s3 += 3) for (var c3 = (r3[s3 >>> 2] >>> 24 - s3 % 4 * 8 & 255) << 16 | (r3[s3 + 1 >>> 2] >>> 24 - (s3 + 1) % 4 * 8 & 255) << 8 | r3[s3 + 2 >>> 2] >>> 24 - (s3 + 2) % 4 * 8 & 255, a3 = 0; a3 < 4 && s3 + 0.75 * a3 < i3; a3++) n3.push(o3.charAt(c3 >>> 6 * (3 - a3) & 63));
-            var h3 = o3.charAt(64);
-            if (h3) for (; n3.length % 4;) n3.push(h3);
-            return n3.join("");
-          }, parse: function (t3, e3) {
-            var r3 = t3.length, i3 = (e3 = void 0 === e3 ? true : e3) ? this._safe_map : this._map;
-            if (!(o3 = this._reverseMap)) for (var o3 = this._reverseMap = [], n3 = 0; n3 < i3.length; n3++) o3[i3.charCodeAt(n3)] = n3;
-            for (var s3, c3, e3 = i3.charAt(64), a3 = (!e3 || -1 !== (e3 = t3.indexOf(e3)) && (r3 = e3), t3), h3 = r3, l3 = o3, f3 = [], d3 = 0, u3 = 0; u3 < h3; u3++) u3 % 4 && (c3 = l3[a3.charCodeAt(u3 - 1)] << u3 % 4 * 2, s3 = l3[a3.charCodeAt(u3)] >>> 6 - u3 % 4 * 2, c3 = c3 | s3, f3[d3 >>> 2] |= c3 << 24 - d3 % 4 * 8, d3++);
-            return K.create(f3, d3);
-          }, _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", _safe_map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
-        };
-        for (var y1 = Math, p = i, g1 = (u = p.lib).WordArray, v1 = u.Hasher, u = p.algo, A = [], B1 = 0; B1 < 64; B1++) A[B1] = 4294967296 * y1.abs(y1.sin(B1 + 1)) | 0;
-        function z(t3, e3, r3, i3, o3, n3, s3) {
-          t3 = t3 + (e3 & r3 | ~e3 & i3) + o3 + s3;
-          return (t3 << n3 | t3 >>> 32 - n3) + e3;
-        }
-        function H(t3, e3, r3, i3, o3, n3, s3) {
-          t3 = t3 + (e3 & i3 | r3 & ~i3) + o3 + s3;
-          return (t3 << n3 | t3 >>> 32 - n3) + e3;
-        }
-        function C(t3, e3, r3, i3, o3, n3, s3) {
-          t3 = t3 + (e3 ^ r3 ^ i3) + o3 + s3;
-          return (t3 << n3 | t3 >>> 32 - n3) + e3;
-        }
-        function R(t3, e3, r3, i3, o3, n3, s3) {
-          t3 = t3 + (r3 ^ (e3 | ~i3)) + o3 + s3;
-          return (t3 << n3 | t3 >>> 32 - n3) + e3;
-        }
-        u = u.MD5 = v1.extend({
-          _doReset: function () {
-            this._hash = new g1.init([1732584193, 4023233417, 2562383102, 271733878]);
-          }, _doProcessBlock: function (t3, e3) {
-            for (var r3 = 0; r3 < 16; r3++) {
-              var i3 = e3 + r3, o3 = t3[i3];
-              t3[i3] = 16711935 & (o3 << 8 | o3 >>> 24) | 4278255360 & (o3 << 24 | o3 >>> 8);
-            }
-            var n3 = this._hash.words, s3 = t3[e3 + 0], c3 = t3[e3 + 1], a3 = t3[e3 + 2], h3 = t3[e3 + 3], l3 = t3[e3 + 4], f3 = t3[e3 + 5], d3 = t3[e3 + 6], u3 = t3[e3 + 7], p3 = t3[e3 + 8], _3 = t3[e3 + 9], y3 = t3[e3 + 10], g3 = t3[e3 + 11], v3 = t3[e3 + 12], B3 = t3[e3 + 13], w3 = t3[e3 + 14], k3 = t3[e3 + 15], x3 = z(n3[0], S3 = n3[1], m3 = n3[2], b3 = n3[3], s3, 7, A[0]), b3 = z(b3, x3, S3, m3, c3, 12, A[1]), m3 = z(m3, b3, x3, S3, a3, 17, A[2]), S3 = z(S3, m3, b3, x3, h3, 22, A[3]);
-            x3 = z(x3, S3, m3, b3, l3, 7, A[4]), b3 = z(b3, x3, S3, m3, f3, 12, A[5]), m3 = z(m3, b3, x3, S3, d3, 17, A[6]), S3 = z(S3, m3, b3, x3, u3, 22, A[7]), x3 = z(x3, S3, m3, b3, p3, 7, A[8]), b3 = z(b3, x3, S3, m3, _3, 12, A[9]), m3 = z(m3, b3, x3, S3, y3, 17, A[10]), S3 = z(S3, m3, b3, x3, g3, 22, A[11]), x3 = z(x3, S3, m3, b3, v3, 7, A[12]), b3 = z(b3, x3, S3, m3, B3, 12, A[13]), m3 = z(m3, b3, x3, S3, w3, 17, A[14]), x3 = H(x3, S3 = z(S3, m3, b3, x3, k3, 22, A[15]), m3, b3, c3, 5, A[16]), b3 = H(b3, x3, S3, m3, d3, 9, A[17]), m3 = H(m3, b3, x3, S3, g3, 14, A[18]), S3 = H(S3, m3, b3, x3, s3, 20, A[19]), x3 = H(x3, S3, m3, b3, f3, 5, A[20]), b3 = H(b3, x3, S3, m3, y3, 9, A[21]), m3 = H(m3, b3, x3, S3, k3, 14, A[22]), S3 = H(S3, m3, b3, x3, l3, 20, A[23]), x3 = H(x3, S3, m3, b3, _3, 5, A[24]), b3 = H(b3, x3, S3, m3, w3, 9, A[25]), m3 = H(m3, b3, x3, S3, h3, 14, A[26]), S3 = H(S3, m3, b3, x3, p3, 20, A[27]), x3 = H(x3, S3, m3, b3, B3, 5, A[28]), b3 = H(b3, x3, S3, m3, a3, 9, A[29]), m3 = H(m3, b3, x3, S3, u3, 14, A[30]), x3 = C(x3, S3 = H(S3, m3, b3, x3, v3, 20, A[31]), m3, b3, f3, 4, A[32]), b3 = C(b3, x3, S3, m3, p3, 11, A[33]), m3 = C(m3, b3, x3, S3, g3, 16, A[34]), S3 = C(S3, m3, b3, x3, w3, 23, A[35]), x3 = C(x3, S3, m3, b3, c3, 4, A[36]), b3 = C(b3, x3, S3, m3, l3, 11, A[37]), m3 = C(m3, b3, x3, S3, u3, 16, A[38]), S3 = C(S3, m3, b3, x3, y3, 23, A[39]), x3 = C(x3, S3, m3, b3, B3, 4, A[40]), b3 = C(b3, x3, S3, m3, s3, 11, A[41]), m3 = C(m3, b3, x3, S3, h3, 16, A[42]), S3 = C(S3, m3, b3, x3, d3, 23, A[43]), x3 = C(x3, S3, m3, b3, _3, 4, A[44]), b3 = C(b3, x3, S3, m3, v3, 11, A[45]), m3 = C(m3, b3, x3, S3, k3, 16, A[46]), x3 = R(x3, S3 = C(S3, m3, b3, x3, a3, 23, A[47]), m3, b3, s3, 6, A[48]), b3 = R(b3, x3, S3, m3, u3, 10, A[49]), m3 = R(m3, b3, x3, S3, w3, 15, A[50]), S3 = R(S3, m3, b3, x3, f3, 21, A[51]), x3 = R(x3, S3, m3, b3, v3, 6, A[52]), b3 = R(b3, x3, S3, m3, h3, 10, A[53]), m3 = R(m3, b3, x3, S3, y3, 15, A[54]), S3 = R(S3, m3, b3, x3, c3, 21, A[55]), x3 = R(x3, S3, m3, b3, p3, 6, A[56]), b3 = R(b3, x3, S3, m3, k3, 10, A[57]), m3 = R(m3, b3, x3, S3, d3, 15, A[58]), S3 = R(S3, m3, b3, x3, B3, 21, A[59]), x3 = R(x3, S3, m3, b3, l3, 6, A[60]), b3 = R(b3, x3, S3, m3, g3, 10, A[61]), m3 = R(m3, b3, x3, S3, a3, 15, A[62]), S3 = R(S3, m3, b3, x3, _3, 21, A[63]), n3[0] = n3[0] + x3 | 0, n3[1] = n3[1] + S3 | 0, n3[2] = n3[2] + m3 | 0, n3[3] = n3[3] + b3 | 0;
-          }, _doFinalize: function () {
-            for (var t3 = this._data, e3 = t3.words, r3 = 8 * this._nDataBytes, i3 = 8 * t3.sigBytes, o3 = (e3[i3 >>> 5] |= 128 << 24 - i3 % 32, y1.floor(r3 / 4294967296)), o3 = (e3[15 + (64 + i3 >>> 9 << 4)] = 16711935 & (o3 << 8 | o3 >>> 24) | 4278255360 & (o3 << 24 | o3 >>> 8), e3[14 + (64 + i3 >>> 9 << 4)] = 16711935 & (r3 << 8 | r3 >>> 24) | 4278255360 & (r3 << 24 | r3 >>> 8), t3.sigBytes = 4 * (e3.length + 1), this._process(), this._hash), n3 = o3.words, s3 = 0; s3 < 4; s3++) {
-              var c3 = n3[s3];
-              n3[s3] = 16711935 & (c3 << 8 | c3 >>> 24) | 4278255360 & (c3 << 24 | c3 >>> 8);
-            }
-            return o3;
-          }, clone: function () {
-            var t3 = v1.clone.call(this);
-            return t3._hash = this._hash.clone(), t3;
-          }
-        }), p.MD5 = v1._createHelper(u), p.HmacMD5 = v1._createHmacHelper(u), u = (p = i).lib, X = u.WordArray, L = u.Hasher, u = p.algo, l = [], u = u.SHA1 = L.extend({
-          _doReset: function () {
-            this._hash = new X.init([1732584193, 4023233417, 2562383102, 271733878, 3285377520]);
-          }, _doProcessBlock: function (t3, e3) {
-            for (var r3 = this._hash.words, i3 = r3[0], o3 = r3[1], n3 = r3[2], s3 = r3[3], c3 = r3[4], a3 = 0; a3 < 80; a3++) {
-              a3 < 16 ? l[a3] = 0 | t3[e3 + a3] : (h3 = l[a3 - 3] ^ l[a3 - 8] ^ l[a3 - 14] ^ l[a3 - 16], l[a3] = h3 << 1 | h3 >>> 31);
-              var h3 = (i3 << 5 | i3 >>> 27) + c3 + l[a3];
-              h3 += a3 < 20 ? 1518500249 + (o3 & n3 | ~o3 & s3) : a3 < 40 ? 1859775393 + (o3 ^ n3 ^ s3) : a3 < 60 ? (o3 & n3 | o3 & s3 | n3 & s3) - 1894007588 : (o3 ^ n3 ^ s3) - 899497514, c3 = s3, s3 = n3, n3 = o3 << 30 | o3 >>> 2, o3 = i3, i3 = h3;
-            }
-            r3[0] = r3[0] + i3 | 0, r3[1] = r3[1] + o3 | 0, r3[2] = r3[2] + n3 | 0, r3[3] = r3[3] + s3 | 0, r3[4] = r3[4] + c3 | 0;
-          }, _doFinalize: function () {
-            var t3 = this._data, e3 = t3.words, r3 = 8 * this._nDataBytes, i3 = 8 * t3.sigBytes;
-            return e3[i3 >>> 5] |= 128 << 24 - i3 % 32, e3[14 + (64 + i3 >>> 9 << 4)] = Math.floor(r3 / 4294967296), e3[15 + (64 + i3 >>> 9 << 4)] = r3, t3.sigBytes = 4 * e3.length, this._process(), this._hash;
-          }, clone: function () {
-            var t3 = L.clone.call(this);
-            return t3._hash = this._hash.clone(), t3;
-          }
-        }), p.SHA1 = L._createHelper(u), p.HmacSHA1 = L._createHmacHelper(u);
-        var w1 = Math, p = i, k1 = (u = p.lib).WordArray, x1 = u.Hasher, u = p.algo, b1 = [], m1 = [];
-        function S1(t3) {
-          return 4294967296 * (t3 - (0 | t3)) | 0;
-        }
-        for (var A1 = 2, z1 = 0; z1 < 64;) !function (t3) {
-          for (var e3 = w1.sqrt(t3), r3 = 2; r3 <= e3; r3++) if (!(t3 % r3)) return;
-          return 1;
-        }(A1) || (z1 < 8 && (b1[z1] = S1(w1.pow(A1, 0.5))), m1[z1] = S1(w1.pow(A1, 1 / 3)), z1++), A1++;
-        var _ = [], u = u.SHA256 = x1.extend({
-          _doReset: function () {
-            this._hash = new k1.init(b1.slice(0));
-          }, _doProcessBlock: function (t3, e3) {
-            for (var r3 = this._hash.words, i3 = r3[0], o3 = r3[1], n3 = r3[2], s3 = r3[3], c3 = r3[4], a3 = r3[5], h3 = r3[6], l3 = r3[7], f3 = 0; f3 < 64; f3++) {
-              f3 < 16 ? _[f3] = 0 | t3[e3 + f3] : (d3 = _[f3 - 15], u3 = _[f3 - 2], _[f3] = ((d3 << 25 | d3 >>> 7) ^ (d3 << 14 | d3 >>> 18) ^ d3 >>> 3) + _[f3 - 7] + ((u3 << 15 | u3 >>> 17) ^ (u3 << 13 | u3 >>> 19) ^ u3 >>> 10) + _[f3 - 16]);
-              var d3 = i3 & o3 ^ i3 & n3 ^ o3 & n3, u3 = l3 + ((c3 << 26 | c3 >>> 6) ^ (c3 << 21 | c3 >>> 11) ^ (c3 << 7 | c3 >>> 25)) + (c3 & a3 ^ ~c3 & h3) + m1[f3] + _[f3], l3 = h3, h3 = a3, a3 = c3, c3 = s3 + u3 | 0, s3 = n3, n3 = o3, o3 = i3, i3 = u3 + (((i3 << 30 | i3 >>> 2) ^ (i3 << 19 | i3 >>> 13) ^ (i3 << 10 | i3 >>> 22)) + d3) | 0;
-            }
-            r3[0] = r3[0] + i3 | 0, r3[1] = r3[1] + o3 | 0, r3[2] = r3[2] + n3 | 0, r3[3] = r3[3] + s3 | 0, r3[4] = r3[4] + c3 | 0, r3[5] = r3[5] + a3 | 0, r3[6] = r3[6] + h3 | 0, r3[7] = r3[7] + l3 | 0;
-          }, _doFinalize: function () {
-            var t3 = this._data, e3 = t3.words, r3 = 8 * this._nDataBytes, i3 = 8 * t3.sigBytes;
-            return e3[i3 >>> 5] |= 128 << 24 - i3 % 32, e3[14 + (64 + i3 >>> 9 << 4)] = w1.floor(r3 / 4294967296), e3[15 + (64 + i3 >>> 9 << 4)] = r3, t3.sigBytes = 4 * e3.length, this._process(), this._hash;
-          }, clone: function () {
-            var t3 = x1.clone.call(this);
-            return t3._hash = this._hash.clone(), t3;
-          }
-        }), p = (p.SHA256 = x1._createHelper(u), p.HmacSHA256 = x1._createHmacHelper(u), j = (p = i).lib.WordArray, u = p.algo, T = u.SHA256, u = u.SHA224 = T.extend({
-          _doReset: function () {
-            this._hash = new j.init([3238371032, 914150663, 812702999, 4144912697, 4290775857, 1750603025, 1694076839, 3204075428]);
-          }, _doFinalize: function () {
-            var t3 = T._doFinalize.call(this);
-            return t3.sigBytes -= 4, t3;
-          }
-        }), p.SHA224 = T._createHelper(u), p.HmacSHA224 = T._createHmacHelper(u), i), H1 = p.lib.Hasher, y = (u = p.x64).Word, C1 = u.WordArray, u = p.algo;
-        function g() {
-          return y.create.apply(y, arguments);
-        }
-        for (var R1 = [g(1116352408, 3609767458), g(1899447441, 602891725), g(3049323471, 3964484399), g(3921009573, 2173295548), g(961987163, 4081628472), g(1508970993, 3053834265), g(2453635748, 2937671579), g(2870763221, 3664609560), g(3624381080, 2734883394), g(310598401, 1164996542), g(607225278, 1323610764), g(1426881987, 3590304994), g(1925078388, 4068182383), g(2162078206, 991336113), g(2614888103, 633803317), g(3248222580, 3479774868), g(3835390401, 2666613458), g(4022224774, 944711139), g(264347078, 2341262773), g(604807628, 2007800933), g(770255983, 1495990901), g(1249150122, 1856431235), g(1555081692, 3175218132), g(1996064986, 2198950837), g(2554220882, 3999719339), g(2821834349, 766784016), g(2952996808, 2566594879), g(3210313671, 3203337956), g(3336571891, 1034457026), g(3584528711, 2466948901), g(113926993, 3758326383), g(338241895, 168717936), g(666307205, 1188179964), g(773529912, 1546045734), g(1294757372, 1522805485), g(1396182291, 2643833823), g(1695183700, 2343527390), g(1986661051, 1014477480), g(2177026350, 1206759142), g(2456956037, 344077627), g(2730485921, 1290863460), g(2820302411, 3158454273), g(3259730800, 3505952657), g(3345764771, 106217008), g(3516065817, 3606008344), g(3600352804, 1432725776), g(4094571909, 1467031594), g(275423344, 851169720), g(430227734, 3100823752), g(506948616, 1363258195), g(659060556, 3750685593), g(883997877, 3785050280), g(958139571, 3318307427), g(1322822218, 3812723403), g(1537002063, 2003034995), g(1747873779, 3602036899), g(1955562222, 1575990012), g(2024104815, 1125592928), g(2227730452, 2716904306), g(2361852424, 442776044), g(2428436474, 593698344), g(2756734187, 3733110249), g(3204031479, 2999351573), g(3329325298, 3815920427), g(3391569614, 3928383900), g(3515267271, 566280711), g(3940187606, 3454069534), g(4118630271, 4000239992), g(116418474, 1914138554), g(174292421, 2731055270), g(289380356, 3203993006), g(460393269, 320620315), g(685471733, 587496836), g(852142971, 1086792851), g(1017036298, 365543100), g(1126000580, 2618297676), g(1288033470, 3409855158), g(1501505948, 4234509866), g(1607167915, 987167468), g(1816402316, 1246189591)], D1 = [], E1 = 0; E1 < 80; E1++) D1[E1] = g();
-        u = u.SHA512 = H1.extend({
-          _doReset: function () {
-            this._hash = new C1.init([new y.init(1779033703, 4089235720), new y.init(3144134277, 2227873595), new y.init(1013904242, 4271175723), new y.init(2773480762, 1595750129), new y.init(1359893119, 2917565137), new y.init(2600822924, 725511199), new y.init(528734635, 4215389547), new y.init(1541459225, 327033209)]);
-          }, _doProcessBlock: function (W2, O2) {
-            for (var t3 = this._hash.words, e3 = t3[0], r3 = t3[1], i3 = t3[2], o3 = t3[3], n3 = t3[4], s3 = t3[5], c3 = t3[6], t3 = t3[7], I2 = e3.high, a3 = e3.low, U2 = r3.high, h3 = r3.low, K2 = i3.high, l3 = i3.low, X2 = o3.high, f3 = o3.low, L2 = n3.high, d3 = n3.low, j2 = s3.high, u3 = s3.low, T2 = c3.high, p3 = c3.low, N2 = t3.high, _3 = t3.low, y3 = I2, g3 = a3, v3 = U2, B3 = h3, w3 = K2, k3 = l3, q2 = X2, x3 = f3, b3 = L2, m3 = d3, Z2 = j2, S3 = u3, V2 = T2, G2 = p3, J2 = N2, Q2 = _3, A3 = 0; A3 < 80; A3++) var z3, H3, C3 = D1[A3], R3 = (A3 < 16 ? (H3 = C3.high = 0 | W2[O2 + 2 * A3], z3 = C3.low = 0 | W2[O2 + 2 * A3 + 1]) : (F = (P2 = D1[A3 - 15]).high, P2 = P2.low, M2 = (E2 = D1[A3 - 2]).high, E2 = E2.low, D2 = (R3 = D1[A3 - 7]).high, R3 = R3.low, $3 = (Y2 = D1[A3 - 16]).high, H3 = (H3 = ((F >>> 1 | P2 << 31) ^ (F >>> 8 | P2 << 24) ^ F >>> 7) + D2 + ((z3 = (D2 = (P2 >>> 1 | F << 31) ^ (P2 >>> 8 | F << 24) ^ (P2 >>> 7 | F << 25)) + R3) >>> 0 < D2 >>> 0 ? 1 : 0)) + ((M2 >>> 19 | E2 << 13) ^ (M2 << 3 | E2 >>> 29) ^ M2 >>> 6) + ((z3 += P2 = (E2 >>> 19 | M2 << 13) ^ (E2 << 3 | M2 >>> 29) ^ (E2 >>> 6 | M2 << 26)) >>> 0 < P2 >>> 0 ? 1 : 0), z3 += F = Y2.low, C3.high = H3 = H3 + $3 + (z3 >>> 0 < F >>> 0 ? 1 : 0), C3.low = z3), b3 & Z2 ^ ~b3 & V2), D2 = m3 & S3 ^ ~m3 & G2, E2 = y3 & v3 ^ y3 & w3 ^ v3 & w3, M2 = (g3 >>> 28 | y3 << 4) ^ (g3 << 30 | y3 >>> 2) ^ (g3 << 25 | y3 >>> 7), P2 = R1[A3], Y2 = P2.high, $3 = P2.low, F = Q2 + ((m3 >>> 14 | b3 << 18) ^ (m3 >>> 18 | b3 << 14) ^ (m3 << 23 | b3 >>> 9)), C3 = J2 + ((b3 >>> 14 | m3 << 18) ^ (b3 >>> 18 | m3 << 14) ^ (b3 << 23 | m3 >>> 9)) + (F >>> 0 < Q2 >>> 0 ? 1 : 0), t12 = M2 + (g3 & B3 ^ g3 & k3 ^ B3 & k3), J2 = V2, Q2 = G2, V2 = Z2, G2 = S3, Z2 = b3, S3 = m3, b3 = q2 + (C3 = C3 + R3 + ((F = F + D2) >>> 0 < D2 >>> 0 ? 1 : 0) + Y2 + ((F = F + $3) >>> 0 < $3 >>> 0 ? 1 : 0) + H3 + ((F = F + z3) >>> 0 < z3 >>> 0 ? 1 : 0)) + ((m3 = x3 + F | 0) >>> 0 < x3 >>> 0 ? 1 : 0) | 0, q2 = w3, x3 = k3, w3 = v3, k3 = B3, v3 = y3, B3 = g3, y3 = C3 + (((y3 >>> 28 | g3 << 4) ^ (y3 << 30 | g3 >>> 2) ^ (y3 << 25 | g3 >>> 7)) + E2 + (t12 >>> 0 < M2 >>> 0 ? 1 : 0)) + ((g3 = F + t12 | 0) >>> 0 < F >>> 0 ? 1 : 0) | 0;
-            a3 = e3.low = a3 + g3, e3.high = I2 + y3 + (a3 >>> 0 < g3 >>> 0 ? 1 : 0), h3 = r3.low = h3 + B3, r3.high = U2 + v3 + (h3 >>> 0 < B3 >>> 0 ? 1 : 0), l3 = i3.low = l3 + k3, i3.high = K2 + w3 + (l3 >>> 0 < k3 >>> 0 ? 1 : 0), f3 = o3.low = f3 + x3, o3.high = X2 + q2 + (f3 >>> 0 < x3 >>> 0 ? 1 : 0), d3 = n3.low = d3 + m3, n3.high = L2 + b3 + (d3 >>> 0 < m3 >>> 0 ? 1 : 0), u3 = s3.low = u3 + S3, s3.high = j2 + Z2 + (u3 >>> 0 < S3 >>> 0 ? 1 : 0), p3 = c3.low = p3 + G2, c3.high = T2 + V2 + (p3 >>> 0 < G2 >>> 0 ? 1 : 0), _3 = t3.low = _3 + Q2, t3.high = N2 + J2 + (_3 >>> 0 < Q2 >>> 0 ? 1 : 0);
-          }, _doFinalize: function () {
-            var t3 = this._data, e3 = t3.words, r3 = 8 * this._nDataBytes, i3 = 8 * t3.sigBytes;
-            return e3[i3 >>> 5] |= 128 << 24 - i3 % 32, e3[30 + (128 + i3 >>> 10 << 5)] = Math.floor(r3 / 4294967296), e3[31 + (128 + i3 >>> 10 << 5)] = r3, t3.sigBytes = 4 * e3.length, this._process(), this._hash.toX32();
-          }, clone: function () {
-            var t3 = H1.clone.call(this);
-            return t3._hash = this._hash.clone(), t3;
-          }, blockSize: 32
-        }), p.SHA512 = H1._createHelper(u), p.HmacSHA512 = H1._createHmacHelper(u), u = (p = i).x64, t = u.Word, N = u.WordArray, u = p.algo, q = u.SHA512, u = u.SHA384 = q.extend({
-          _doReset: function () {
-            this._hash = new N.init([new t.init(3418070365, 3238371032), new t.init(1654270250, 914150663), new t.init(2438529370, 812702999), new t.init(355462360, 4144912697), new t.init(1731405415, 4290775857), new t.init(2394180231, 1750603025), new t.init(3675008525, 1694076839), new t.init(1203062813, 3204075428)]);
-          }, _doFinalize: function () {
-            var t3 = q._doFinalize.call(this);
-            return t3.sigBytes -= 16, t3;
-          }
-        }), p.SHA384 = q._createHelper(u), p.HmacSHA384 = q._createHmacHelper(u);
-        for (var M1 = Math, p = i, P1 = (u = p.lib).WordArray, F1 = u.Hasher, W1 = p.x64.Word, u = p.algo, O1 = [], I1 = [], U1 = [], v = 1, B = 0, K1 = 0; K1 < 24; K1++) {
-          O1[v + 5 * B] = (K1 + 1) * (K1 + 2) / 2 % 64;
-          var X1 = (2 * v + 3 * B) % 5;
-          v = B % 5, B = X1;
-        }
-        for (v = 0; v < 5; v++) for (B = 0; B < 5; B++) I1[v + 5 * B] = B + (2 * v + 3 * B) % 5 * 5;
-        for (var L1 = 1, j1 = 0; j1 < 24; j1++) {
-          for (var T1, N1 = 0, q1 = 0, Z1 = 0; Z1 < 7; Z1++) 1 & L1 && ((T1 = (1 << Z1) - 1) < 32 ? q1 ^= 1 << T1 : N1 ^= 1 << T1 - 32), 128 & L1 ? L1 = L1 << 1 ^ 113 : L1 <<= 1;
-          U1[j1] = W1.create(N1, q1);
-        }
-        for (var D = [], V1 = 0; V1 < 25; V1++) D[V1] = W1.create();
-        function G1(t3, e3, r3) {
-          return t3 & e3 | ~t3 & r3;
-        }
-        function J1(t3, e3, r3) {
-          return t3 & r3 | e3 & ~r3;
-        }
-        function Q1(t3, e3) {
-          return t3 << e3 | t3 >>> 32 - e3;
-        }
-        function Y1(t3) {
-          return "string" == typeof t3 ? f1 : o;
-        }
-        function $1(t3, e3, r3) {
-          var i3, o3 = this._iv;
-          o3 ? (i3 = o3, this._iv = void 0) : i3 = this._prevBlock;
-          for (var n3 = 0; n3 < r3; n3++) t3[e3 + n3] ^= i3[n3];
-        }
-        function t2(t3, e3, r3, i3) {
-          var o3, n3 = this._iv;
-          n3 ? (o3 = n3.slice(0), this._iv = void 0) : o3 = this._prevBlock, i3.encryptBlock(o3, 0);
-          for (var s3 = 0; s3 < r3; s3++) t3[e3 + s3] ^= o3[s3];
-        }
-        function e2(t3) {
-          var e3, r3, i3;
-          return 255 == (t3 >> 24 & 255) ? (r3 = t3 >> 8 & 255, i3 = 255 & t3, 255 === (e3 = t3 >> 16 & 255) ? (e3 = 0, 255 === r3 ? (r3 = 0, 255 === i3 ? i3 = 0 : ++i3) : ++r3) : ++e3, t3 = 0, t3 = (t3 += e3 << 16) + (r3 << 8) + i3) : t3 += 1 << 24, t3;
-        }
-        u = u.SHA3 = F1.extend({
-          cfg: F1.cfg.extend({ outputLength: 512 }), _doReset: function () {
-            for (var t3 = this._state = [], e3 = 0; e3 < 25; e3++) t3[e3] = new W1.init();
-            this.blockSize = (1600 - 2 * this.cfg.outputLength) / 32;
-          }, _doProcessBlock: function (t3, e3) {
-            for (var r3 = this._state, i3 = this.blockSize / 2, o3 = 0; o3 < i3; o3++) {
-              var n3 = t3[e3 + 2 * o3], s3 = t3[e3 + 2 * o3 + 1], n3 = 16711935 & (n3 << 8 | n3 >>> 24) | 4278255360 & (n3 << 24 | n3 >>> 8);
-              (x3 = r3[o3]).high ^= 16711935 & (s3 << 8 | s3 >>> 24) | 4278255360 & (s3 << 24 | s3 >>> 8), x3.low ^= n3;
-            }
-            for (var c3 = 0; c3 < 24; c3++) {
-              for (var a3 = 0; a3 < 5; a3++) {
-                for (var h3 = 0, l3 = 0, f3 = 0; f3 < 5; f3++) h3 ^= (x3 = r3[a3 + 5 * f3]).high, l3 ^= x3.low;
-                var d3 = D[a3];
-                d3.high = h3, d3.low = l3;
-              }
-              for (a3 = 0; a3 < 5; a3++) for (var u3 = D[(a3 + 4) % 5], p3 = D[(a3 + 1) % 5], _3 = p3.high, p3 = p3.low, h3 = u3.high ^ (_3 << 1 | p3 >>> 31), l3 = u3.low ^ (p3 << 1 | _3 >>> 31), f3 = 0; f3 < 5; f3++) (x3 = r3[a3 + 5 * f3]).high ^= h3, x3.low ^= l3;
-              for (var y3 = 1; y3 < 25; y3++) {
-                var g3 = (x3 = r3[y3]).high, v3 = x3.low, B3 = O1[y3], g3 = (l3 = B3 < 32 ? (h3 = g3 << B3 | v3 >>> 32 - B3, v3 << B3 | g3 >>> 32 - B3) : (h3 = v3 << B3 - 32 | g3 >>> 64 - B3, g3 << B3 - 32 | v3 >>> 64 - B3), D[I1[y3]]);
-                g3.high = h3, g3.low = l3;
-              }
-              var w3 = D[0], k3 = r3[0];
-              w3.high = k3.high, w3.low = k3.low;
-              for (a3 = 0; a3 < 5; a3++) for (f3 = 0; f3 < 5; f3++) {
-                var x3 = r3[y3 = a3 + 5 * f3], b3 = D[y3], m3 = D[(a3 + 1) % 5 + 5 * f3], S3 = D[(a3 + 2) % 5 + 5 * f3];
-                x3.high = b3.high ^ ~m3.high & S3.high, x3.low = b3.low ^ ~m3.low & S3.low;
-              }
-              x3 = r3[0], w3 = U1[c3];
-              x3.high ^= w3.high, x3.low ^= w3.low;
-            }
-          }, _doFinalize: function () {
-            for (var t3 = this._data, e3 = t3.words, r3 = (this._nDataBytes, 8 * t3.sigBytes), i3 = 32 * this.blockSize, o3 = (e3[r3 >>> 5] |= 1 << 24 - r3 % 32, e3[(M1.ceil((1 + r3) / i3) * i3 >>> 5) - 1] |= 128, t3.sigBytes = 4 * e3.length, this._process(), this._state), r3 = this.cfg.outputLength / 8, n3 = r3 / 8, s3 = [], c3 = 0; c3 < n3; c3++) {
-              var a3 = o3[c3], h3 = a3.high, a3 = a3.low, h3 = 16711935 & (h3 << 8 | h3 >>> 24) | 4278255360 & (h3 << 24 | h3 >>> 8);
-              s3.push(16711935 & (a3 << 8 | a3 >>> 24) | 4278255360 & (a3 << 24 | a3 >>> 8)), s3.push(h3);
-            }
-            return new P1.init(s3, r3);
-          }, clone: function () {
-            for (var t3 = F1.clone.call(this), e3 = t3._state = this._state.slice(0), r3 = 0; r3 < 25; r3++) e3[r3] = e3[r3].clone();
-            return t3;
-          }
-        }), p.SHA3 = F1._createHelper(u), p.HmacSHA3 = F1._createHmacHelper(u), Math, u = (p = i).lib, e = u.WordArray, Z = u.Hasher, u = p.algo, V = e.create([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7, 4, 13, 1, 10, 6, 15, 3, 12, 0, 9, 5, 2, 14, 11, 8, 3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13, 11, 5, 12, 1, 9, 11, 10, 0, 8, 12, 4, 13, 3, 7, 15, 14, 5, 6, 2, 4, 0, 5, 9, 7, 12, 2, 10, 14, 1, 3, 8, 11, 6, 15, 13]), G = e.create([5, 14, 7, 0, 9, 2, 11, 4, 13, 6, 15, 8, 1, 10, 3, 12, 6, 11, 3, 7, 0, 13, 5, 10, 14, 15, 8, 12, 4, 9, 1, 2, 15, 5, 1, 3, 7, 14, 6, 9, 11, 8, 12, 2, 10, 0, 4, 13, 8, 6, 4, 1, 3, 11, 15, 0, 5, 12, 2, 13, 9, 7, 10, 14, 12, 15, 10, 4, 1, 5, 8, 7, 6, 2, 13, 14, 0, 3, 9, 11]), J = e.create([11, 14, 15, 12, 5, 8, 7, 9, 11, 13, 14, 15, 6, 7, 9, 8, 7, 6, 8, 13, 11, 9, 7, 15, 7, 12, 15, 9, 11, 7, 13, 12, 11, 13, 6, 7, 14, 9, 13, 15, 14, 8, 13, 6, 5, 12, 7, 5, 11, 12, 14, 15, 14, 15, 9, 8, 9, 14, 5, 6, 8, 6, 5, 12, 9, 15, 5, 11, 6, 8, 13, 12, 5, 12, 13, 14, 11, 8, 5, 6]), Q = e.create([8, 9, 9, 11, 13, 15, 15, 5, 7, 7, 8, 11, 14, 14, 12, 6, 9, 13, 15, 7, 12, 8, 9, 11, 7, 7, 12, 7, 6, 15, 13, 11, 9, 7, 15, 11, 8, 6, 6, 14, 12, 13, 5, 14, 13, 13, 7, 5, 15, 5, 8, 11, 14, 14, 6, 14, 6, 9, 12, 9, 12, 5, 15, 8, 8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11]), Y = e.create([0, 1518500249, 1859775393, 2400959708, 2840853838]), $2 = e.create([1352829926, 1548603684, 1836072691, 2053994217, 0]), u = u.RIPEMD160 = Z.extend({
-          _doReset: function () {
-            this._hash = e.create([1732584193, 4023233417, 2562383102, 271733878, 3285377520]);
-          }, _doProcessBlock: function (t3, e3) {
-            for (var r3 = 0; r3 < 16; r3++) {
-              var i3 = e3 + r3, o3 = t3[i3];
-              t3[i3] = 16711935 & (o3 << 8 | o3 >>> 24) | 4278255360 & (o3 << 24 | o3 >>> 8);
-            }
-            for (var n3, s3, c3, a3, h3, l3, f3 = this._hash.words, d3 = Y.words, u3 = $2.words, p3 = V.words, _3 = G.words, y3 = J.words, g3 = Q.words, v3 = n3 = f3[0], B3 = s3 = f3[1], w3 = c3 = f3[2], k3 = a3 = f3[3], x3 = h3 = f3[4], r3 = 0; r3 < 80; r3 += 1) l3 = (l3 = Q1(l3 = (l3 = n3 + t3[e3 + p3[r3]] | 0) + (r3 < 16 ? (s3 ^ c3 ^ a3) + d3[0] : r3 < 32 ? G1(s3, c3, a3) + d3[1] : r3 < 48 ? ((s3 | ~c3) ^ a3) + d3[2] : r3 < 64 ? J1(s3, c3, a3) + d3[3] : (s3 ^ (c3 | ~a3)) + d3[4]) | 0, y3[r3])) + h3 | 0, n3 = h3, h3 = a3, a3 = Q1(c3, 10), c3 = s3, s3 = l3, l3 = (l3 = Q1(l3 = (l3 = v3 + t3[e3 + _3[r3]] | 0) + (r3 < 16 ? (B3 ^ (w3 | ~k3)) + u3[0] : r3 < 32 ? J1(B3, w3, k3) + u3[1] : r3 < 48 ? ((B3 | ~w3) ^ k3) + u3[2] : r3 < 64 ? G1(B3, w3, k3) + u3[3] : (B3 ^ w3 ^ k3) + u3[4]) | 0, g3[r3])) + x3 | 0, v3 = x3, x3 = k3, k3 = Q1(w3, 10), w3 = B3, B3 = l3;
-            l3 = f3[1] + c3 + k3 | 0, f3[1] = f3[2] + a3 + x3 | 0, f3[2] = f3[3] + h3 + v3 | 0, f3[3] = f3[4] + n3 + B3 | 0, f3[4] = f3[0] + s3 + w3 | 0, f3[0] = l3;
-          }, _doFinalize: function () {
-            for (var t3 = this._data, e3 = t3.words, r3 = 8 * this._nDataBytes, i3 = 8 * t3.sigBytes, i3 = (e3[i3 >>> 5] |= 128 << 24 - i3 % 32, e3[14 + (64 + i3 >>> 9 << 4)] = 16711935 & (r3 << 8 | r3 >>> 24) | 4278255360 & (r3 << 24 | r3 >>> 8), t3.sigBytes = 4 * (e3.length + 1), this._process(), this._hash), o3 = i3.words, n3 = 0; n3 < 5; n3++) {
-              var s3 = o3[n3];
-              o3[n3] = 16711935 & (s3 << 8 | s3 >>> 24) | 4278255360 & (s3 << 24 | s3 >>> 8);
-            }
-            return i3;
-          }, clone: function () {
-            var t3 = Z.clone.call(this);
-            return t3._hash = this._hash.clone(), t3;
-          }
-        }), p.RIPEMD160 = Z._createHelper(u), p.HmacRIPEMD160 = Z._createHmacHelper(u), u = (p = i).lib.Base, t1 = p.enc.Utf8, p.algo.HMAC = u.extend({
-          init: function (t3, e3) {
-            t3 = this._hasher = new t3.init(), "string" == typeof e3 && (e3 = t1.parse(e3));
-            for (var r3 = t3.blockSize, i3 = 4 * r3, t3 = ((e3 = e3.sigBytes > i3 ? t3.finalize(e3) : e3).clamp(), this._oKey = e3.clone()), e3 = this._iKey = e3.clone(), o3 = t3.words, n3 = e3.words, s3 = 0; s3 < r3; s3++) o3[s3] ^= 1549556828, n3[s3] ^= 909522486;
-            t3.sigBytes = e3.sigBytes = i3, this.reset();
-          }, reset: function () {
-            var t3 = this._hasher;
-            t3.reset(), t3.update(this._iKey);
-          }, update: function (t3) {
-            return this._hasher.update(t3), this;
-          }, finalize: function (t3) {
-            var e3 = this._hasher, t3 = e3.finalize(t3);
-            return e3.reset(), e3.finalize(this._oKey.clone().concat(t3));
-          }
-        }), u = (p = i).lib, w = u.Base, e1 = u.WordArray, u = p.algo, P = u.SHA256, r1 = u.HMAC, i1 = u.PBKDF2 = w.extend({
-          cfg: w.extend({ keySize: 4, hasher: P, iterations: 25e4 }), init: function (t3) {
-            this.cfg = this.cfg.extend(t3);
-          }, compute: function (t3, e3) {
-            for (var r3 = this.cfg, i3 = r1.create(r3.hasher, t3), o3 = e1.create(), n3 = e1.create([1]), s3 = o3.words, c3 = n3.words, a3 = r3.keySize, h3 = r3.iterations; s3.length < a3;) {
-              for (var l3 = i3.update(e3).finalize(n3), f3 = (i3.reset(), l3.words), d3 = f3.length, u3 = l3, p3 = 1; p3 < h3; p3++) {
-                u3 = i3.finalize(u3), i3.reset();
-                for (var _3 = u3.words, y3 = 0; y3 < d3; y3++) f3[y3] ^= _3[y3];
-              }
-              o3.concat(l3), c3[0]++;
-            }
-            return o3.sigBytes = 4 * a3, o3;
-          }
-        }), p.PBKDF2 = function (t3, e3, r3) {
-          return i1.create(r3).compute(t3, e3);
-        }, w = (u = i).lib, P = w.Base, o1 = w.WordArray, w = u.algo, p = w.MD5, n1 = w.EvpKDF = P.extend({
-          cfg: P.extend({ keySize: 4, hasher: p, iterations: 1 }), init: function (t3) {
-            this.cfg = this.cfg.extend(t3);
-          }, compute: function (t3, e3) {
-            for (var r3, i3 = this.cfg, o3 = i3.hasher.create(), n3 = o1.create(), s3 = n3.words, c3 = i3.keySize, a3 = i3.iterations; s3.length < c3;) {
-              r3 && o3.update(r3), r3 = o3.update(t3).finalize(e3), o3.reset();
-              for (var h3 = 1; h3 < a3; h3++) r3 = o3.finalize(r3), o3.reset();
-              n3.concat(r3);
-            }
-            return n3.sigBytes = 4 * c3, n3;
-          }
-        }), u.EvpKDF = function (t3, e3, r3) {
-          return n1.create(r3).compute(t3, e3);
-        }, i.lib.Cipher || (P = (w = i).lib, p = P.Base, s = P.WordArray, s1 = P.BufferedBlockAlgorithm, (u = w.enc).Utf8, c1 = u.Base64, a1 = w.algo.EvpKDF, h1 = P.Cipher = s1.extend({
-          cfg: p.extend(), createEncryptor: function (t3, e3) {
-            return this.create(this._ENC_XFORM_MODE, t3, e3);
-          }, createDecryptor: function (t3, e3) {
-            return this.create(this._DEC_XFORM_MODE, t3, e3);
-          }, init: function (t3, e3, r3) {
-            this.cfg = this.cfg.extend(r3), this._xformMode = t3, this._key = e3, this.reset();
-          }, reset: function () {
-            s1.reset.call(this), this._doReset();
-          }, process: function (t3) {
-            return this._append(t3), this._process();
-          }, finalize: function (t3) {
-            return t3 && this._append(t3), this._doFinalize();
-          }, keySize: 4, ivSize: 4, _ENC_XFORM_MODE: 1, _DEC_XFORM_MODE: 2, _createHelper: function (i3) {
-            return {
-              encrypt: function (t3, e3, r3) {
-                return Y1(e3).encrypt(i3, t3, e3, r3);
-              }, decrypt: function (t3, e3, r3) {
-                return Y1(e3).decrypt(i3, t3, e3, r3);
-              }
-            };
-          }
-        }), P.StreamCipher = h1.extend({
-          _doFinalize: function () {
-            return this._process(true);
-          }, blockSize: 1
-        }), u = w.mode = {}, r = P.BlockCipherMode = p.extend({
-          createEncryptor: function (t3, e3) {
-            return this.Encryptor.create(t3, e3);
-          }, createDecryptor: function (t3, e3) {
-            return this.Decryptor.create(t3, e3);
-          }, init: function (t3, e3) {
-            this._cipher = t3, this._iv = e3;
-          }
-        }), r = u.CBC = ((u = r.extend()).Encryptor = u.extend({
-          processBlock: function (t3, e3) {
-            var r3 = this._cipher, i3 = r3.blockSize;
-            $1.call(this, t3, e3, i3), r3.encryptBlock(t3, e3), this._prevBlock = t3.slice(e3, e3 + i3);
-          }
-        }), u.Decryptor = u.extend({
-          processBlock: function (t3, e3) {
-            var r3 = this._cipher, i3 = r3.blockSize, o3 = t3.slice(e3, e3 + i3);
-            r3.decryptBlock(t3, e3), $1.call(this, t3, e3, i3), this._prevBlock = o3;
-          }
-        }), u), u = (w.pad = {}).Pkcs7 = {
-          pad: function (t3, e3) {
-            for (var e3 = 4 * e3, r3 = e3 - t3.sigBytes % e3, i3 = r3 << 24 | r3 << 16 | r3 << 8 | r3, o3 = [], n3 = 0; n3 < r3; n3 += 4) o3.push(i3);
-            e3 = s.create(o3, r3);
-            t3.concat(e3);
-          }, unpad: function (t3) {
-            var e3 = 255 & t3.words[t3.sigBytes - 1 >>> 2];
-            t3.sigBytes -= e3;
-          }
-        }, P.BlockCipher = h1.extend({
-          cfg: h1.cfg.extend({ mode: r, padding: u }), reset: function () {
-            h1.reset.call(this);
-            var t3, e3 = this.cfg, r3 = e3.iv, e3 = e3.mode;
-            this._xformMode == this._ENC_XFORM_MODE ? t3 = e3.createEncryptor : (t3 = e3.createDecryptor, this._minBufferSize = 1), this._mode && this._mode.__creator == t3 ? this._mode.init(this, r3 && r3.words) : (this._mode = t3.call(e3, this, r3 && r3.words), this._mode.__creator = t3);
-          }, _doProcessBlock: function (t3, e3) {
-            this._mode.processBlock(t3, e3);
-          }, _doFinalize: function () {
-            var t3, e3 = this.cfg.padding;
-            return this._xformMode == this._ENC_XFORM_MODE ? (e3.pad(this._data, this.blockSize), t3 = this._process(true)) : (t3 = this._process(true), e3.unpad(t3)), t3;
-          }, blockSize: 4
-        }), l1 = P.CipherParams = p.extend({
-          init: function (t3) {
-            this.mixIn(t3);
-          }, toString: function (t3) {
-            return (t3 || this.formatter).stringify(this);
-          }
-        }), r = (w.format = {}).OpenSSL = {
-          stringify: function (t3) {
-            var e3 = t3.ciphertext, t3 = t3.salt, t3 = t3 ? s.create([1398893684, 1701076831]).concat(t3).concat(e3) : e3;
-            return t3.toString(c1);
-          }, parse: function (t3) {
-            var e3, t3 = c1.parse(t3), r3 = t3.words;
-            return 1398893684 == r3[0] && 1701076831 == r3[1] && (e3 = s.create(r3.slice(2, 4)), r3.splice(0, 4), t3.sigBytes -= 16), l1.create({ ciphertext: t3, salt: e3 });
-          }
-        }, o = P.SerializableCipher = p.extend({
-          cfg: p.extend({ format: r }), encrypt: function (t3, e3, r3, i3) {
-            i3 = this.cfg.extend(i3);
-            var o3 = t3.createEncryptor(r3, i3), e3 = o3.finalize(e3), o3 = o3.cfg;
-            return l1.create({ ciphertext: e3, key: r3, iv: o3.iv, algorithm: t3, mode: o3.mode, padding: o3.padding, blockSize: t3.blockSize, formatter: i3.format });
-          }, decrypt: function (t3, e3, r3, i3) {
-            return i3 = this.cfg.extend(i3), e3 = this._parse(e3, i3.format), t3.createDecryptor(r3, i3).finalize(e3.ciphertext);
-          }, _parse: function (t3, e3) {
-            return "string" == typeof t3 ? e3.parse(t3, this) : t3;
-          }
-        }), u = (w.kdf = {}).OpenSSL = {
-          execute: function (t3, e3, r3, i3, o3) {
-            i3 = i3 || s.random(8), o3 = (o3 ? a1.create({ keySize: e3 + r3, hasher: o3 }) : a1.create({ keySize: e3 + r3 })).compute(t3, i3);
-            t3 = s.create(o3.words.slice(e3), 4 * r3);
-            return o3.sigBytes = 4 * e3, l1.create({ key: o3, iv: t3, salt: i3 });
-          }
-        }, f1 = P.PasswordBasedCipher = o.extend({
-          cfg: o.cfg.extend({ kdf: u }), encrypt: function (t3, e3, r3, i3) {
-            r3 = (i3 = this.cfg.extend(i3)).kdf.execute(r3, t3.keySize, t3.ivSize, i3.salt, i3.hasher), i3.iv = r3.iv, t3 = o.encrypt.call(this, t3, e3, r3.key, i3);
-            return t3.mixIn(r3), t3;
-          }, decrypt: function (t3, e3, r3, i3) {
-            i3 = this.cfg.extend(i3), e3 = this._parse(e3, i3.format);
-            r3 = i3.kdf.execute(r3, t3.keySize, t3.ivSize, e3.salt, i3.hasher);
-            return i3.iv = r3.iv, o.decrypt.call(this, t3, e3, r3.key, i3);
-          }
-        })), i.mode.CFB = ((p = i.lib.BlockCipherMode.extend()).Encryptor = p.extend({
-          processBlock: function (t3, e3) {
-            var r3 = this._cipher, i3 = r3.blockSize;
-            t2.call(this, t3, e3, i3, r3), this._prevBlock = t3.slice(e3, e3 + i3);
-          }
-        }), p.Decryptor = p.extend({
-          processBlock: function (t3, e3) {
-            var r3 = this._cipher, i3 = r3.blockSize, o3 = t3.slice(e3, e3 + i3);
-            t2.call(this, t3, e3, i3, r3), this._prevBlock = o3;
-          }
-        }), p), i.mode.CTR = (r = i.lib.BlockCipherMode.extend(), w = r.Encryptor = r.extend({
-          processBlock: function (t3, e3) {
-            var r3 = this._cipher, i3 = r3.blockSize, o3 = this._iv, n3 = this._counter, s3 = (o3 && (n3 = this._counter = o3.slice(0), this._iv = void 0), n3.slice(0));
-            r3.encryptBlock(s3, 0), n3[i3 - 1] = n3[i3 - 1] + 1 | 0;
-            for (var c3 = 0; c3 < i3; c3++) t3[e3 + c3] ^= s3[c3];
-          }
-        }), r.Decryptor = w, r), i.mode.CTRGladman = (P = i.lib.BlockCipherMode.extend(), u = P.Encryptor = P.extend({
-          processBlock: function (t3, e3) {
-            var r3 = this._cipher, i3 = r3.blockSize, o3 = this._iv, n3 = this._counter, s3 = (o3 && (n3 = this._counter = o3.slice(0), this._iv = void 0), 0 === ((o3 = n3)[0] = e2(o3[0])) && (o3[1] = e2(o3[1])), n3.slice(0));
-            r3.encryptBlock(s3, 0);
-            for (var c3 = 0; c3 < i3; c3++) t3[e3 + c3] ^= s3[c3];
-          }
-        }), P.Decryptor = u, P), i.mode.OFB = (p = i.lib.BlockCipherMode.extend(), w = p.Encryptor = p.extend({
-          processBlock: function (t3, e3) {
-            var r3 = this._cipher, i3 = r3.blockSize, o3 = this._iv, n3 = this._keystream;
-            o3 && (n3 = this._keystream = o3.slice(0), this._iv = void 0), r3.encryptBlock(n3, 0);
-            for (var s3 = 0; s3 < i3; s3++) t3[e3 + s3] ^= n3[s3];
-          }
-        }), p.Decryptor = w, p), i.mode.ECB = ((u = i.lib.BlockCipherMode.extend()).Encryptor = u.extend({
-          processBlock: function (t3, e3) {
-            this._cipher.encryptBlock(t3, e3);
-          }
-        }), u.Decryptor = u.extend({
-          processBlock: function (t3, e3) {
-            this._cipher.decryptBlock(t3, e3);
-          }
-        }), u), i.pad.AnsiX923 = {
-          pad: function (t3, e3) {
-            var r3 = t3.sigBytes, e3 = 4 * e3, e3 = e3 - r3 % e3, r3 = r3 + e3 - 1;
-            t3.clamp(), t3.words[r3 >>> 2] |= e3 << 24 - r3 % 4 * 8, t3.sigBytes += e3;
-          }, unpad: function (t3) {
-            var e3 = 255 & t3.words[t3.sigBytes - 1 >>> 2];
-            t3.sigBytes -= e3;
-          }
-        }, i.pad.Iso10126 = {
-          pad: function (t3, e3) {
-            e3 *= 4, e3 -= t3.sigBytes % e3;
-            t3.concat(i.lib.WordArray.random(e3 - 1)).concat(i.lib.WordArray.create([e3 << 24], 1));
-          }, unpad: function (t3) {
-            var e3 = 255 & t3.words[t3.sigBytes - 1 >>> 2];
-            t3.sigBytes -= e3;
-          }
-        }, i.pad.Iso97971 = {
-          pad: function (t3, e3) {
-            t3.concat(i.lib.WordArray.create([2147483648], 1)), i.pad.ZeroPadding.pad(t3, e3);
-          }, unpad: function (t3) {
-            i.pad.ZeroPadding.unpad(t3), t3.sigBytes--;
-          }
-        }, i.pad.ZeroPadding = {
-          pad: function (t3, e3) {
-            e3 *= 4;
-            t3.clamp(), t3.sigBytes += e3 - (t3.sigBytes % e3 || e3);
-          }, unpad: function (t3) {
-            for (var e3 = t3.words, r3 = t3.sigBytes - 1, r3 = t3.sigBytes - 1; 0 <= r3; r3--) if (e3[r3 >>> 2] >>> 24 - r3 % 4 * 8 & 255) {
-              t3.sigBytes = r3 + 1;
-              break;
-            }
-          }
-        }, i.pad.NoPadding = {
-          pad: function () {
-          }, unpad: function () {
-          }
-        }, d1 = (P = i).lib.CipherParams, u1 = P.enc.Hex, P.format.Hex = {
-          stringify: function (t3) {
-            return t3.ciphertext.toString(u1);
-          }, parse: function (t3) {
-            t3 = u1.parse(t3);
-            return d1.create({ ciphertext: t3 });
-          }
-        };
-        for (var w = i, p = w.lib.BlockCipher, u = w.algo, k = [], r2 = [], i2 = [], o2 = [], n2 = [], s2 = [], c2 = [], a2 = [], h2 = [], l2 = [], x = [], b = 0; b < 256; b++) x[b] = b < 128 ? b << 1 : b << 1 ^ 283;
-        for (var m = 0, S = 0, b = 0; b < 256; b++) {
-          var E = S ^ S << 1 ^ S << 2 ^ S << 3 ^ S << 4, f2 = (k[m] = E = E >>> 8 ^ 255 & E ^ 99, x[r2[E] = m]), d2 = x[f2], u2 = x[d2], M = 257 * x[E] ^ 16843008 * E;
-          i2[m] = M << 24 | M >>> 8, o2[m] = M << 16 | M >>> 16, n2[m] = M << 8 | M >>> 24, s2[m] = M, c2[E] = (M = 16843009 * u2 ^ 65537 * d2 ^ 257 * f2 ^ 16843008 * m) << 24 | M >>> 8, a2[E] = M << 16 | M >>> 16, h2[E] = M << 8 | M >>> 24, l2[E] = M, m ? (m = f2 ^ x[x[x[u2 ^ f2]]], S ^= x[x[S]]) : m = S = 1;
-        }
-        var p2 = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54], u = u.AES = p.extend({
-          _doReset: function () {
-            if (!this._nRounds || this._keyPriorReset !== this._key) {
-              for (var t3 = this._keyPriorReset = this._key, e3 = t3.words, r3 = t3.sigBytes / 4, i3 = 4 * (1 + (this._nRounds = 6 + r3)), o3 = this._keySchedule = [], n3 = 0; n3 < i3; n3++) n3 < r3 ? o3[n3] = e3[n3] : (a3 = o3[n3 - 1], n3 % r3 ? 6 < r3 && n3 % r3 == 4 && (a3 = k[a3 >>> 24] << 24 | k[a3 >>> 16 & 255] << 16 | k[a3 >>> 8 & 255] << 8 | k[255 & a3]) : (a3 = k[(a3 = a3 << 8 | a3 >>> 24) >>> 24] << 24 | k[a3 >>> 16 & 255] << 16 | k[a3 >>> 8 & 255] << 8 | k[255 & a3], a3 ^= p2[n3 / r3 | 0] << 24), o3[n3] = o3[n3 - r3] ^ a3);
-              for (var s3 = this._invKeySchedule = [], c3 = 0; c3 < i3; c3++) {
-                var a3, n3 = i3 - c3;
-                a3 = c3 % 4 ? o3[n3] : o3[n3 - 4], s3[c3] = c3 < 4 || n3 <= 4 ? a3 : c2[k[a3 >>> 24]] ^ a2[k[a3 >>> 16 & 255]] ^ h2[k[a3 >>> 8 & 255]] ^ l2[k[255 & a3]];
-              }
-            }
-          }, encryptBlock: function (t3, e3) {
-            this._doCryptBlock(t3, e3, this._keySchedule, i2, o2, n2, s2, k);
-          }, decryptBlock: function (t3, e3) {
-            var r3 = t3[e3 + 1], r3 = (t3[e3 + 1] = t3[e3 + 3], t3[e3 + 3] = r3, this._doCryptBlock(t3, e3, this._invKeySchedule, c2, a2, h2, l2, r2), t3[e3 + 1]);
-            t3[e3 + 1] = t3[e3 + 3], t3[e3 + 3] = r3;
-          }, _doCryptBlock: function (t3, e3, r3, i3, o3, n3, s3, c3) {
-            for (var a3 = this._nRounds, h3 = t3[e3] ^ r3[0], l3 = t3[e3 + 1] ^ r3[1], f3 = t3[e3 + 2] ^ r3[2], d3 = t3[e3 + 3] ^ r3[3], u3 = 4, p3 = 1; p3 < a3; p3++) var _3 = i3[h3 >>> 24] ^ o3[l3 >>> 16 & 255] ^ n3[f3 >>> 8 & 255] ^ s3[255 & d3] ^ r3[u3++], y3 = i3[l3 >>> 24] ^ o3[f3 >>> 16 & 255] ^ n3[d3 >>> 8 & 255] ^ s3[255 & h3] ^ r3[u3++], g3 = i3[f3 >>> 24] ^ o3[d3 >>> 16 & 255] ^ n3[h3 >>> 8 & 255] ^ s3[255 & l3] ^ r3[u3++], v3 = i3[d3 >>> 24] ^ o3[h3 >>> 16 & 255] ^ n3[l3 >>> 8 & 255] ^ s3[255 & f3] ^ r3[u3++], h3 = _3, l3 = y3, f3 = g3, d3 = v3;
-            _3 = (c3[h3 >>> 24] << 24 | c3[l3 >>> 16 & 255] << 16 | c3[f3 >>> 8 & 255] << 8 | c3[255 & d3]) ^ r3[u3++], y3 = (c3[l3 >>> 24] << 24 | c3[f3 >>> 16 & 255] << 16 | c3[d3 >>> 8 & 255] << 8 | c3[255 & h3]) ^ r3[u3++], g3 = (c3[f3 >>> 24] << 24 | c3[d3 >>> 16 & 255] << 16 | c3[h3 >>> 8 & 255] << 8 | c3[255 & l3]) ^ r3[u3++], v3 = (c3[d3 >>> 24] << 24 | c3[h3 >>> 16 & 255] << 16 | c3[l3 >>> 8 & 255] << 8 | c3[255 & f3]) ^ r3[u3++];
-            t3[e3] = _3, t3[e3 + 1] = y3, t3[e3 + 2] = g3, t3[e3 + 3] = v3;
-          }, keySize: 8
-        }), P = (w.AES = p._createHelper(u), i), _2 = (w = P.lib).WordArray, w = w.BlockCipher, p = P.algo, y2 = [57, 49, 41, 33, 25, 17, 9, 1, 58, 50, 42, 34, 26, 18, 10, 2, 59, 51, 43, 35, 27, 19, 11, 3, 60, 52, 44, 36, 63, 55, 47, 39, 31, 23, 15, 7, 62, 54, 46, 38, 30, 22, 14, 6, 61, 53, 45, 37, 29, 21, 13, 5, 28, 20, 12, 4], g2 = [14, 17, 11, 24, 1, 5, 3, 28, 15, 6, 21, 10, 23, 19, 12, 4, 26, 8, 16, 7, 27, 20, 13, 2, 41, 52, 31, 37, 47, 55, 30, 40, 51, 45, 33, 48, 44, 49, 39, 56, 34, 53, 46, 42, 50, 36, 29, 32], v2 = [1, 2, 4, 6, 8, 10, 12, 14, 15, 17, 19, 21, 23, 25, 27, 28], B2 = [{ 0: 8421888, 268435456: 32768, 536870912: 8421378, 805306368: 2, 1073741824: 512, 1342177280: 8421890, 1610612736: 8389122, 1879048192: 8388608, 2147483648: 514, 2415919104: 8389120, 2684354560: 33280, 2952790016: 8421376, 3221225472: 32770, 3489660928: 8388610, 3758096384: 0, 4026531840: 33282, 134217728: 0, 402653184: 8421890, 671088640: 33282, 939524096: 32768, 1207959552: 8421888, 1476395008: 512, 1744830464: 8421378, 2013265920: 2, 2281701376: 8389120, 2550136832: 33280, 2818572288: 8421376, 3087007744: 8389122, 3355443200: 8388610, 3623878656: 32770, 3892314112: 514, 4160749568: 8388608, 1: 32768, 268435457: 2, 536870913: 8421888, 805306369: 8388608, 1073741825: 8421378, 1342177281: 33280, 1610612737: 512, 1879048193: 8389122, 2147483649: 8421890, 2415919105: 8421376, 2684354561: 8388610, 2952790017: 33282, 3221225473: 514, 3489660929: 8389120, 3758096385: 32770, 4026531841: 0, 134217729: 8421890, 402653185: 8421376, 671088641: 8388608, 939524097: 512, 1207959553: 32768, 1476395009: 8388610, 1744830465: 2, 2013265921: 33282, 2281701377: 32770, 2550136833: 8389122, 2818572289: 514, 3087007745: 8421888, 3355443201: 8389120, 3623878657: 0, 3892314113: 33280, 4160749569: 8421378 }, { 0: 1074282512, 16777216: 16384, 33554432: 524288, 50331648: 1074266128, 67108864: 1073741840, 83886080: 1074282496, 100663296: 1073758208, 117440512: 16, 134217728: 540672, 150994944: 1073758224, 167772160: 1073741824, 184549376: 540688, 201326592: 524304, 218103808: 0, 234881024: 16400, 251658240: 1074266112, 8388608: 1073758208, 25165824: 540688, 41943040: 16, 58720256: 1073758224, 75497472: 1074282512, 92274688: 1073741824, 109051904: 524288, 125829120: 1074266128, 142606336: 524304, 159383552: 0, 176160768: 16384, 192937984: 1074266112, 209715200: 1073741840, 226492416: 540672, 243269632: 1074282496, 260046848: 16400, 268435456: 0, 285212672: 1074266128, 301989888: 1073758224, 318767104: 1074282496, 335544320: 1074266112, 352321536: 16, 369098752: 540688, 385875968: 16384, 402653184: 16400, 419430400: 524288, 436207616: 524304, 452984832: 1073741840, 469762048: 540672, 486539264: 1073758208, 503316480: 1073741824, 520093696: 1074282512, 276824064: 540688, 293601280: 524288, 310378496: 1074266112, 327155712: 16384, 343932928: 1073758208, 360710144: 1074282512, 377487360: 16, 394264576: 1073741824, 411041792: 1074282496, 427819008: 1073741840, 444596224: 1073758224, 461373440: 524304, 478150656: 0, 494927872: 16400, 511705088: 1074266128, 528482304: 540672 }, { 0: 260, 1048576: 0, 2097152: 67109120, 3145728: 65796, 4194304: 65540, 5242880: 67108868, 6291456: 67174660, 7340032: 67174400, 8388608: 67108864, 9437184: 67174656, 10485760: 65792, 11534336: 67174404, 12582912: 67109124, 13631488: 65536, 14680064: 4, 15728640: 256, 524288: 67174656, 1572864: 67174404, 2621440: 0, 3670016: 67109120, 4718592: 67108868, 5767168: 65536, 6815744: 65540, 7864320: 260, 8912896: 4, 9961472: 256, 11010048: 67174400, 12058624: 65796, 13107200: 65792, 14155776: 67109124, 15204352: 67174660, 16252928: 67108864, 16777216: 67174656, 17825792: 65540, 18874368: 65536, 19922944: 67109120, 20971520: 256, 22020096: 67174660, 23068672: 67108868, 24117248: 0, 25165824: 67109124, 26214400: 67108864, 27262976: 4, 28311552: 65792, 29360128: 67174400, 30408704: 260, 31457280: 65796, 32505856: 67174404, 17301504: 67108864, 18350080: 260, 19398656: 67174656, 20447232: 0, 21495808: 65540, 22544384: 67109120, 23592960: 256, 24641536: 67174404, 25690112: 65536, 26738688: 67174660, 27787264: 65796, 28835840: 67108868, 29884416: 67109124, 30932992: 67174400, 31981568: 4, 33030144: 65792 }, { 0: 2151682048, 65536: 2147487808, 131072: 4198464, 196608: 2151677952, 262144: 0, 327680: 4198400, 393216: 2147483712, 458752: 4194368, 524288: 2147483648, 589824: 4194304, 655360: 64, 720896: 2147487744, 786432: 2151678016, 851968: 4160, 917504: 4096, 983040: 2151682112, 32768: 2147487808, 98304: 64, 163840: 2151678016, 229376: 2147487744, 294912: 4198400, 360448: 2151682112, 425984: 0, 491520: 2151677952, 557056: 4096, 622592: 2151682048, 688128: 4194304, 753664: 4160, 819200: 2147483648, 884736: 4194368, 950272: 4198464, 1015808: 2147483712, 1048576: 4194368, 1114112: 4198400, 1179648: 2147483712, 1245184: 0, 1310720: 4160, 1376256: 2151678016, 1441792: 2151682048, 1507328: 2147487808, 1572864: 2151682112, 1638400: 2147483648, 1703936: 2151677952, 1769472: 4198464, 1835008: 2147487744, 1900544: 4194304, 1966080: 64, 2031616: 4096, 1081344: 2151677952, 1146880: 2151682112, 1212416: 0, 1277952: 4198400, 1343488: 4194368, 1409024: 2147483648, 1474560: 2147487808, 1540096: 64, 1605632: 2147483712, 1671168: 4096, 1736704: 2147487744, 1802240: 2151678016, 1867776: 4160, 1933312: 2151682048, 1998848: 4194304, 2064384: 4198464 }, { 0: 128, 4096: 17039360, 8192: 262144, 12288: 536870912, 16384: 537133184, 20480: 16777344, 24576: 553648256, 28672: 262272, 32768: 16777216, 36864: 537133056, 40960: 536871040, 45056: 553910400, 49152: 553910272, 53248: 0, 57344: 17039488, 61440: 553648128, 2048: 17039488, 6144: 553648256, 10240: 128, 14336: 17039360, 18432: 262144, 22528: 537133184, 26624: 553910272, 30720: 536870912, 34816: 537133056, 38912: 0, 43008: 553910400, 47104: 16777344, 51200: 536871040, 55296: 553648128, 59392: 16777216, 63488: 262272, 65536: 262144, 69632: 128, 73728: 536870912, 77824: 553648256, 81920: 16777344, 86016: 553910272, 90112: 537133184, 94208: 16777216, 98304: 553910400, 102400: 553648128, 106496: 17039360, 110592: 537133056, 114688: 262272, 118784: 536871040, 122880: 0, 126976: 17039488, 67584: 553648256, 71680: 16777216, 75776: 17039360, 79872: 537133184, 83968: 536870912, 88064: 17039488, 92160: 128, 96256: 553910272, 100352: 262272, 104448: 553910400, 108544: 0, 112640: 553648128, 116736: 16777344, 120832: 262144, 124928: 537133056, 129024: 536871040 }, { 0: 268435464, 256: 8192, 512: 270532608, 768: 270540808, 1024: 268443648, 1280: 2097152, 1536: 2097160, 1792: 268435456, 2048: 0, 2304: 268443656, 2560: 2105344, 2816: 8, 3072: 270532616, 3328: 2105352, 3584: 8200, 3840: 270540800, 128: 270532608, 384: 270540808, 640: 8, 896: 2097152, 1152: 2105352, 1408: 268435464, 1664: 268443648, 1920: 8200, 2176: 2097160, 2432: 8192, 2688: 268443656, 2944: 270532616, 3200: 0, 3456: 270540800, 3712: 2105344, 3968: 268435456, 4096: 268443648, 4352: 270532616, 4608: 270540808, 4864: 8200, 5120: 2097152, 5376: 268435456, 5632: 268435464, 5888: 2105344, 6144: 2105352, 6400: 0, 6656: 8, 6912: 270532608, 7168: 8192, 7424: 268443656, 7680: 270540800, 7936: 2097160, 4224: 8, 4480: 2105344, 4736: 2097152, 4992: 268435464, 5248: 268443648, 5504: 8200, 5760: 270540808, 6016: 270532608, 6272: 270540800, 6528: 270532616, 6784: 8192, 7040: 2105352, 7296: 2097160, 7552: 0, 7808: 268435456, 8064: 268443656 }, { 0: 1048576, 16: 33555457, 32: 1024, 48: 1049601, 64: 34604033, 80: 0, 96: 1, 112: 34603009, 128: 33555456, 144: 1048577, 160: 33554433, 176: 34604032, 192: 34603008, 208: 1025, 224: 1049600, 240: 33554432, 8: 34603009, 24: 0, 40: 33555457, 56: 34604032, 72: 1048576, 88: 33554433, 104: 33554432, 120: 1025, 136: 1049601, 152: 33555456, 168: 34603008, 184: 1048577, 200: 1024, 216: 34604033, 232: 1, 248: 1049600, 256: 33554432, 272: 1048576, 288: 33555457, 304: 34603009, 320: 1048577, 336: 33555456, 352: 34604032, 368: 1049601, 384: 1025, 400: 34604033, 416: 1049600, 432: 1, 448: 0, 464: 34603008, 480: 33554433, 496: 1024, 264: 1049600, 280: 33555457, 296: 34603009, 312: 1, 328: 33554432, 344: 1048576, 360: 1025, 376: 34604032, 392: 33554433, 408: 34603008, 424: 0, 440: 34604033, 456: 1049601, 472: 1024, 488: 33555456, 504: 1048577 }, { 0: 134219808, 1: 131072, 2: 134217728, 3: 32, 4: 131104, 5: 134350880, 6: 134350848, 7: 2048, 8: 134348800, 9: 134219776, 10: 133120, 11: 134348832, 12: 2080, 13: 0, 14: 134217760, 15: 133152, 2147483648: 2048, 2147483649: 134350880, 2147483650: 134219808, 2147483651: 134217728, 2147483652: 134348800, 2147483653: 133120, 2147483654: 133152, 2147483655: 32, 2147483656: 134217760, 2147483657: 2080, 2147483658: 131104, 2147483659: 134350848, 2147483660: 0, 2147483661: 134348832, 2147483662: 134219776, 2147483663: 131072, 16: 133152, 17: 134350848, 18: 32, 19: 2048, 20: 134219776, 21: 134217760, 22: 134348832, 23: 131072, 24: 0, 25: 131104, 26: 134348800, 27: 134219808, 28: 134350880, 29: 133120, 30: 2080, 31: 134217728, 2147483664: 131072, 2147483665: 2048, 2147483666: 134348832, 2147483667: 133152, 2147483668: 32, 2147483669: 134348800, 2147483670: 134217728, 2147483671: 134219808, 2147483672: 134350880, 2147483673: 134217760, 2147483674: 134219776, 2147483675: 0, 2147483676: 133120, 2147483677: 2080, 2147483678: 131104, 2147483679: 134350848 }], w2 = [4160749569, 528482304, 33030144, 2064384, 129024, 8064, 504, 2147483679], k2 = p.DES = w.extend({
-          _doReset: function () {
-            for (var t3 = this._key.words, e3 = [], r3 = 0; r3 < 56; r3++) {
-              var i3 = y2[r3] - 1;
-              e3[r3] = t3[i3 >>> 5] >>> 31 - i3 % 32 & 1;
-            }
-            for (var o3 = this._subKeys = [], n3 = 0; n3 < 16; n3++) {
-              for (var s3 = o3[n3] = [], c3 = v2[n3], r3 = 0; r3 < 24; r3++) s3[r3 / 6 | 0] |= e3[(g2[r3] - 1 + c3) % 28] << 31 - r3 % 6, s3[4 + (r3 / 6 | 0)] |= e3[28 + (g2[r3 + 24] - 1 + c3) % 28] << 31 - r3 % 6;
-              s3[0] = s3[0] << 1 | s3[0] >>> 31;
-              for (r3 = 1; r3 < 7; r3++) s3[r3] = s3[r3] >>> 4 * (r3 - 1) + 3;
-              s3[7] = s3[7] << 5 | s3[7] >>> 27;
-            }
-            for (var a3 = this._invSubKeys = [], r3 = 0; r3 < 16; r3++) a3[r3] = o3[15 - r3];
-          }, encryptBlock: function (t3, e3) {
-            this._doCryptBlock(t3, e3, this._subKeys);
-          }, decryptBlock: function (t3, e3) {
-            this._doCryptBlock(t3, e3, this._invSubKeys);
-          }, _doCryptBlock: function (t3, e3, r3) {
-            this._lBlock = t3[e3], this._rBlock = t3[e3 + 1], x2.call(this, 4, 252645135), x2.call(this, 16, 65535), b2.call(this, 2, 858993459), b2.call(this, 8, 16711935), x2.call(this, 1, 1431655765);
-            for (var i3 = 0; i3 < 16; i3++) {
-              for (var o3 = r3[i3], n3 = this._lBlock, s3 = this._rBlock, c3 = 0, a3 = 0; a3 < 8; a3++) c3 |= B2[a3][((s3 ^ o3[a3]) & w2[a3]) >>> 0];
-              this._lBlock = s3, this._rBlock = n3 ^ c3;
-            }
-            var h3 = this._lBlock;
-            this._lBlock = this._rBlock, this._rBlock = h3, x2.call(this, 1, 1431655765), b2.call(this, 8, 16711935), b2.call(this, 2, 858993459), x2.call(this, 16, 65535), x2.call(this, 4, 252645135), t3[e3] = this._lBlock, t3[e3 + 1] = this._rBlock;
-          }, keySize: 2, ivSize: 2, blockSize: 2
-        });
-        function x2(t3, e3) {
-          e3 = (this._lBlock >>> t3 ^ this._rBlock) & e3;
-          this._rBlock ^= e3, this._lBlock ^= e3 << t3;
-        }
-        function b2(t3, e3) {
-          e3 = (this._rBlock >>> t3 ^ this._lBlock) & e3;
-          this._lBlock ^= e3, this._rBlock ^= e3 << t3;
-        }
-        P.DES = w._createHelper(k2), p = p.TripleDES = w.extend({
-          _doReset: function () {
-            var t3 = this._key.words;
-            if (2 !== t3.length && 4 !== t3.length && t3.length < 6) throw new Error("Invalid key length - 3DES requires the key length to be 64, 128, 192 or >192.");
-            var e3 = t3.slice(0, 2), r3 = t3.length < 4 ? t3.slice(0, 2) : t3.slice(2, 4), t3 = t3.length < 6 ? t3.slice(0, 2) : t3.slice(4, 6);
-            this._des1 = k2.createEncryptor(_2.create(e3)), this._des2 = k2.createEncryptor(_2.create(r3)), this._des3 = k2.createEncryptor(_2.create(t3));
-          }, encryptBlock: function (t3, e3) {
-            this._des1.encryptBlock(t3, e3), this._des2.decryptBlock(t3, e3), this._des3.encryptBlock(t3, e3);
-          }, decryptBlock: function (t3, e3) {
-            this._des3.decryptBlock(t3, e3), this._des2.encryptBlock(t3, e3), this._des1.decryptBlock(t3, e3);
-          }, keySize: 6, ivSize: 2, blockSize: 2
-        }), P.TripleDES = w._createHelper(p);
-        var u = i, P = u.lib.StreamCipher, w = u.algo, m2 = w.RC4 = P.extend({
-          _doReset: function () {
-            for (var t3 = this._key, e3 = t3.words, r3 = t3.sigBytes, i3 = this._S = [], o3 = 0; o3 < 256; o3++) i3[o3] = o3;
-            for (var o3 = 0, n3 = 0; o3 < 256; o3++) {
-              var s3 = o3 % r3, s3 = e3[s3 >>> 2] >>> 24 - s3 % 4 * 8 & 255, n3 = (n3 + i3[o3] + s3) % 256, s3 = i3[o3];
-              i3[o3] = i3[n3], i3[n3] = s3;
-            }
-            this._i = this._j = 0;
-          }, _doProcessBlock: function (t3, e3) {
-            t3[e3] ^= S2.call(this);
-          }, keySize: 8, ivSize: 0
-        });
-        function S2() {
-          for (var t3 = this._S, e3 = this._i, r3 = this._j, i3 = 0, o3 = 0; o3 < 4; o3++) {
-            var r3 = (r3 + t3[e3 = (e3 + 1) % 256]) % 256, n3 = t3[e3];
-            t3[e3] = t3[r3], t3[r3] = n3, i3 |= t3[(t3[e3] + t3[r3]) % 256] << 24 - 8 * o3;
-          }
-          return this._i = e3, this._j = r3, i3;
-        }
-        function A2() {
-          for (var t3 = this._X, e3 = this._C, r3 = 0; r3 < 8; r3++) c[r3] = e3[r3];
-          e3[0] = e3[0] + 1295307597 + this._b | 0, e3[1] = e3[1] + 3545052371 + (e3[0] >>> 0 < c[0] >>> 0 ? 1 : 0) | 0, e3[2] = e3[2] + 886263092 + (e3[1] >>> 0 < c[1] >>> 0 ? 1 : 0) | 0, e3[3] = e3[3] + 1295307597 + (e3[2] >>> 0 < c[2] >>> 0 ? 1 : 0) | 0, e3[4] = e3[4] + 3545052371 + (e3[3] >>> 0 < c[3] >>> 0 ? 1 : 0) | 0, e3[5] = e3[5] + 886263092 + (e3[4] >>> 0 < c[4] >>> 0 ? 1 : 0) | 0, e3[6] = e3[6] + 1295307597 + (e3[5] >>> 0 < c[5] >>> 0 ? 1 : 0) | 0, e3[7] = e3[7] + 3545052371 + (e3[6] >>> 0 < c[6] >>> 0 ? 1 : 0) | 0, this._b = e3[7] >>> 0 < c[7] >>> 0 ? 1 : 0;
-          for (r3 = 0; r3 < 8; r3++) {
-            var i3 = t3[r3] + e3[r3], o3 = 65535 & i3, n3 = i3 >>> 16;
-            a[r3] = ((o3 * o3 >>> 17) + o3 * n3 >>> 15) + n3 * n3 ^ ((4294901760 & i3) * i3 | 0) + ((65535 & i3) * i3 | 0);
-          }
-          t3[0] = a[0] + (a[7] << 16 | a[7] >>> 16) + (a[6] << 16 | a[6] >>> 16) | 0, t3[1] = a[1] + (a[0] << 8 | a[0] >>> 24) + a[7] | 0, t3[2] = a[2] + (a[1] << 16 | a[1] >>> 16) + (a[0] << 16 | a[0] >>> 16) | 0, t3[3] = a[3] + (a[2] << 8 | a[2] >>> 24) + a[1] | 0, t3[4] = a[4] + (a[3] << 16 | a[3] >>> 16) + (a[2] << 16 | a[2] >>> 16) | 0, t3[5] = a[5] + (a[4] << 8 | a[4] >>> 24) + a[3] | 0, t3[6] = a[6] + (a[5] << 16 | a[5] >>> 16) + (a[4] << 16 | a[4] >>> 16) | 0, t3[7] = a[7] + (a[6] << 8 | a[6] >>> 24) + a[5] | 0;
-        }
-        function z2() {
-          for (var t3 = this._X, e3 = this._C, r3 = 0; r3 < 8; r3++) f[r3] = e3[r3];
-          e3[0] = e3[0] + 1295307597 + this._b | 0, e3[1] = e3[1] + 3545052371 + (e3[0] >>> 0 < f[0] >>> 0 ? 1 : 0) | 0, e3[2] = e3[2] + 886263092 + (e3[1] >>> 0 < f[1] >>> 0 ? 1 : 0) | 0, e3[3] = e3[3] + 1295307597 + (e3[2] >>> 0 < f[2] >>> 0 ? 1 : 0) | 0, e3[4] = e3[4] + 3545052371 + (e3[3] >>> 0 < f[3] >>> 0 ? 1 : 0) | 0, e3[5] = e3[5] + 886263092 + (e3[4] >>> 0 < f[4] >>> 0 ? 1 : 0) | 0, e3[6] = e3[6] + 1295307597 + (e3[5] >>> 0 < f[5] >>> 0 ? 1 : 0) | 0, e3[7] = e3[7] + 3545052371 + (e3[6] >>> 0 < f[6] >>> 0 ? 1 : 0) | 0, this._b = e3[7] >>> 0 < f[7] >>> 0 ? 1 : 0;
-          for (r3 = 0; r3 < 8; r3++) {
-            var i3 = t3[r3] + e3[r3], o3 = 65535 & i3, n3 = i3 >>> 16;
-            d[r3] = ((o3 * o3 >>> 17) + o3 * n3 >>> 15) + n3 * n3 ^ ((4294901760 & i3) * i3 | 0) + ((65535 & i3) * i3 | 0);
-          }
-          t3[0] = d[0] + (d[7] << 16 | d[7] >>> 16) + (d[6] << 16 | d[6] >>> 16) | 0, t3[1] = d[1] + (d[0] << 8 | d[0] >>> 24) + d[7] | 0, t3[2] = d[2] + (d[1] << 16 | d[1] >>> 16) + (d[0] << 16 | d[0] >>> 16) | 0, t3[3] = d[3] + (d[2] << 8 | d[2] >>> 24) + d[1] | 0, t3[4] = d[4] + (d[3] << 16 | d[3] >>> 16) + (d[2] << 16 | d[2] >>> 16) | 0, t3[5] = d[5] + (d[4] << 8 | d[4] >>> 24) + d[3] | 0, t3[6] = d[6] + (d[5] << 16 | d[5] >>> 16) + (d[4] << 16 | d[4] >>> 16) | 0, t3[7] = d[7] + (d[6] << 8 | d[6] >>> 24) + d[5] | 0;
-        }
-        u.RC4 = P._createHelper(m2), w = w.RC4Drop = m2.extend({
-          cfg: m2.cfg.extend({ drop: 192 }), _doReset: function () {
-            m2._doReset.call(this);
-            for (var t3 = this.cfg.drop; 0 < t3; t3--) S2.call(this);
-          }
-        }), u.RC4Drop = P._createHelper(w), u = (p = i).lib.StreamCipher, P = p.algo, n = [], c = [], a = [], P = P.Rabbit = u.extend({
-          _doReset: function () {
-            for (var t3 = this._key.words, e3 = this.cfg.iv, r3 = 0; r3 < 4; r3++) t3[r3] = 16711935 & (t3[r3] << 8 | t3[r3] >>> 24) | 4278255360 & (t3[r3] << 24 | t3[r3] >>> 8);
-            for (var i3 = this._X = [t3[0], t3[3] << 16 | t3[2] >>> 16, t3[1], t3[0] << 16 | t3[3] >>> 16, t3[2], t3[1] << 16 | t3[0] >>> 16, t3[3], t3[2] << 16 | t3[1] >>> 16], o3 = this._C = [t3[2] << 16 | t3[2] >>> 16, 4294901760 & t3[0] | 65535 & t3[1], t3[3] << 16 | t3[3] >>> 16, 4294901760 & t3[1] | 65535 & t3[2], t3[0] << 16 | t3[0] >>> 16, 4294901760 & t3[2] | 65535 & t3[3], t3[1] << 16 | t3[1] >>> 16, 4294901760 & t3[3] | 65535 & t3[0]], r3 = this._b = 0; r3 < 4; r3++) A2.call(this);
-            for (r3 = 0; r3 < 8; r3++) o3[r3] ^= i3[r3 + 4 & 7];
-            if (e3) {
-              var e3 = e3.words, n3 = e3[0], e3 = e3[1], n3 = 16711935 & (n3 << 8 | n3 >>> 24) | 4278255360 & (n3 << 24 | n3 >>> 8), e3 = 16711935 & (e3 << 8 | e3 >>> 24) | 4278255360 & (e3 << 24 | e3 >>> 8), s3 = n3 >>> 16 | 4294901760 & e3, c3 = e3 << 16 | 65535 & n3;
-              o3[0] ^= n3, o3[1] ^= s3, o3[2] ^= e3, o3[3] ^= c3, o3[4] ^= n3, o3[5] ^= s3, o3[6] ^= e3, o3[7] ^= c3;
-              for (r3 = 0; r3 < 4; r3++) A2.call(this);
-            }
-          }, _doProcessBlock: function (t3, e3) {
-            var r3 = this._X;
-            A2.call(this), n[0] = r3[0] ^ r3[5] >>> 16 ^ r3[3] << 16, n[1] = r3[2] ^ r3[7] >>> 16 ^ r3[5] << 16, n[2] = r3[4] ^ r3[1] >>> 16 ^ r3[7] << 16, n[3] = r3[6] ^ r3[3] >>> 16 ^ r3[1] << 16;
-            for (var i3 = 0; i3 < 4; i3++) n[i3] = 16711935 & (n[i3] << 8 | n[i3] >>> 24) | 4278255360 & (n[i3] << 24 | n[i3] >>> 8), t3[e3 + i3] ^= n[i3];
-          }, blockSize: 4, ivSize: 2
-        }), p.Rabbit = u._createHelper(P), p = (w = i).lib.StreamCipher, u = w.algo, h = [], f = [], d = [], u = u.RabbitLegacy = p.extend({
-          _doReset: function () {
-            for (var t3 = this._key.words, e3 = this.cfg.iv, r3 = this._X = [t3[0], t3[3] << 16 | t3[2] >>> 16, t3[1], t3[0] << 16 | t3[3] >>> 16, t3[2], t3[1] << 16 | t3[0] >>> 16, t3[3], t3[2] << 16 | t3[1] >>> 16], i3 = this._C = [t3[2] << 16 | t3[2] >>> 16, 4294901760 & t3[0] | 65535 & t3[1], t3[3] << 16 | t3[3] >>> 16, 4294901760 & t3[1] | 65535 & t3[2], t3[0] << 16 | t3[0] >>> 16, 4294901760 & t3[2] | 65535 & t3[3], t3[1] << 16 | t3[1] >>> 16, 4294901760 & t3[3] | 65535 & t3[0]], o3 = this._b = 0; o3 < 4; o3++) z2.call(this);
-            for (o3 = 0; o3 < 8; o3++) i3[o3] ^= r3[o3 + 4 & 7];
-            if (e3) {
-              var t3 = e3.words, e3 = t3[0], t3 = t3[1], e3 = 16711935 & (e3 << 8 | e3 >>> 24) | 4278255360 & (e3 << 24 | e3 >>> 8), t3 = 16711935 & (t3 << 8 | t3 >>> 24) | 4278255360 & (t3 << 24 | t3 >>> 8), n3 = e3 >>> 16 | 4294901760 & t3, s3 = t3 << 16 | 65535 & e3;
-              i3[0] ^= e3, i3[1] ^= n3, i3[2] ^= t3, i3[3] ^= s3, i3[4] ^= e3, i3[5] ^= n3, i3[6] ^= t3, i3[7] ^= s3;
-              for (o3 = 0; o3 < 4; o3++) z2.call(this);
-            }
-          }, _doProcessBlock: function (t3, e3) {
-            var r3 = this._X;
-            z2.call(this), h[0] = r3[0] ^ r3[5] >>> 16 ^ r3[3] << 16, h[1] = r3[2] ^ r3[7] >>> 16 ^ r3[5] << 16, h[2] = r3[4] ^ r3[1] >>> 16 ^ r3[7] << 16, h[3] = r3[6] ^ r3[3] >>> 16 ^ r3[1] << 16;
-            for (var i3 = 0; i3 < 4; i3++) h[i3] = 16711935 & (h[i3] << 8 | h[i3] >>> 24) | 4278255360 & (h[i3] << 24 | h[i3] >>> 8), t3[e3 + i3] ^= h[i3];
-          }, blockSize: 4, ivSize: 2
-        }), w.RabbitLegacy = p._createHelper(u);
-        {
-          let C22 = function (t3, e3) {
-            var r3 = t3.sbox[0][e3 >> 24 & 255] + t3.sbox[1][e3 >> 16 & 255];
-            return r3 = (r3 ^= t3.sbox[2][e3 >> 8 & 255]) + t3.sbox[3][255 & e3];
-          }, R22 = function (e3, t3, r3) {
-            let i3 = t3, o3 = r3, n3;
-            for (let t4 = 0; t4 < F; ++t4) i3 ^= e3.pbox[t4], o3 = C22(e3, i3) ^ o3, n3 = i3, i3 = o3, o3 = n3;
-            return n3 = i3, i3 = o3, o3 = n3, o3 ^= e3.pbox[F], { left: i3 ^= e3.pbox[F + 1], right: o3 };
-          };
-          var C2 = C22, R2 = R22;
-          w = (P = i).lib.BlockCipher, p = P.algo;
-          const F = 16, D2 = [608135816, 2242054355, 320440878, 57701188, 2752067618, 698298832, 137296536, 3964562569, 1160258022, 953160567, 3193202383, 887688300, 3232508343, 3380367581, 1065670069, 3041331479, 2450970073, 2306472731], E2 = [[3509652390, 2564797868, 805139163, 3491422135, 3101798381, 1780907670, 3128725573, 4046225305, 614570311, 3012652279, 134345442, 2240740374, 1667834072, 1901547113, 2757295779, 4103290238, 227898511, 1921955416, 1904987480, 2182433518, 2069144605, 3260701109, 2620446009, 720527379, 3318853667, 677414384, 3393288472, 3101374703, 2390351024, 1614419982, 1822297739, 2954791486, 3608508353, 3174124327, 2024746970, 1432378464, 3864339955, 2857741204, 1464375394, 1676153920, 1439316330, 715854006, 3033291828, 289532110, 2706671279, 2087905683, 3018724369, 1668267050, 732546397, 1947742710, 3462151702, 2609353502, 2950085171, 1814351708, 2050118529, 680887927, 999245976, 1800124847, 3300911131, 1713906067, 1641548236, 4213287313, 1216130144, 1575780402, 4018429277, 3917837745, 3693486850, 3949271944, 596196993, 3549867205, 258830323, 2213823033, 772490370, 2760122372, 1774776394, 2652871518, 566650946, 4142492826, 1728879713, 2882767088, 1783734482, 3629395816, 2517608232, 2874225571, 1861159788, 326777828, 3124490320, 2130389656, 2716951837, 967770486, 1724537150, 2185432712, 2364442137, 1164943284, 2105845187, 998989502, 3765401048, 2244026483, 1075463327, 1455516326, 1322494562, 910128902, 469688178, 1117454909, 936433444, 3490320968, 3675253459, 1240580251, 122909385, 2157517691, 634681816, 4142456567, 3825094682, 3061402683, 2540495037, 79693498, 3249098678, 1084186820, 1583128258, 426386531, 1761308591, 1047286709, 322548459, 995290223, 1845252383, 2603652396, 3431023940, 2942221577, 3202600964, 3727903485, 1712269319, 422464435, 3234572375, 1170764815, 3523960633, 3117677531, 1434042557, 442511882, 3600875718, 1076654713, 1738483198, 4213154764, 2393238008, 3677496056, 1014306527, 4251020053, 793779912, 2902807211, 842905082, 4246964064, 1395751752, 1040244610, 2656851899, 3396308128, 445077038, 3742853595, 3577915638, 679411651, 2892444358, 2354009459, 1767581616, 3150600392, 3791627101, 3102740896, 284835224, 4246832056, 1258075500, 768725851, 2589189241, 3069724005, 3532540348, 1274779536, 3789419226, 2764799539, 1660621633, 3471099624, 4011903706, 913787905, 3497959166, 737222580, 2514213453, 2928710040, 3937242737, 1804850592, 3499020752, 2949064160, 2386320175, 2390070455, 2415321851, 4061277028, 2290661394, 2416832540, 1336762016, 1754252060, 3520065937, 3014181293, 791618072, 3188594551, 3933548030, 2332172193, 3852520463, 3043980520, 413987798, 3465142937, 3030929376, 4245938359, 2093235073, 3534596313, 375366246, 2157278981, 2479649556, 555357303, 3870105701, 2008414854, 3344188149, 4221384143, 3956125452, 2067696032, 3594591187, 2921233993, 2428461, 544322398, 577241275, 1471733935, 610547355, 4027169054, 1432588573, 1507829418, 2025931657, 3646575487, 545086370, 48609733, 2200306550, 1653985193, 298326376, 1316178497, 3007786442, 2064951626, 458293330, 2589141269, 3591329599, 3164325604, 727753846, 2179363840, 146436021, 1461446943, 4069977195, 705550613, 3059967265, 3887724982, 4281599278, 3313849956, 1404054877, 2845806497, 146425753, 1854211946], [1266315497, 3048417604, 3681880366, 3289982499, 290971e4, 1235738493, 2632868024, 2414719590, 3970600049, 1771706367, 1449415276, 3266420449, 422970021, 1963543593, 2690192192, 3826793022, 1062508698, 1531092325, 1804592342, 2583117782, 2714934279, 4024971509, 1294809318, 4028980673, 1289560198, 2221992742, 1669523910, 35572830, 157838143, 1052438473, 1016535060, 1802137761, 1753167236, 1386275462, 3080475397, 2857371447, 1040679964, 2145300060, 2390574316, 1461121720, 2956646967, 4031777805, 4028374788, 33600511, 2920084762, 1018524850, 629373528, 3691585981, 3515945977, 2091462646, 2486323059, 586499841, 988145025, 935516892, 3367335476, 2599673255, 2839830854, 265290510, 3972581182, 2759138881, 3795373465, 1005194799, 847297441, 406762289, 1314163512, 1332590856, 1866599683, 4127851711, 750260880, 613907577, 1450815602, 3165620655, 3734664991, 3650291728, 3012275730, 3704569646, 1427272223, 778793252, 1343938022, 2676280711, 2052605720, 1946737175, 3164576444, 3914038668, 3967478842, 3682934266, 1661551462, 3294938066, 4011595847, 840292616, 3712170807, 616741398, 312560963, 711312465, 1351876610, 322626781, 1910503582, 271666773, 2175563734, 1594956187, 70604529, 3617834859, 1007753275, 1495573769, 4069517037, 2549218298, 2663038764, 504708206, 2263041392, 3941167025, 2249088522, 1514023603, 1998579484, 1312622330, 694541497, 2582060303, 2151582166, 1382467621, 776784248, 2618340202, 3323268794, 2497899128, 2784771155, 503983604, 4076293799, 907881277, 423175695, 432175456, 1378068232, 4145222326, 3954048622, 3938656102, 3820766613, 2793130115, 2977904593, 26017576, 3274890735, 3194772133, 1700274565, 1756076034, 4006520079, 3677328699, 720338349, 1533947780, 354530856, 688349552, 3973924725, 1637815568, 332179504, 3949051286, 53804574, 2852348879, 3044236432, 1282449977, 3583942155, 3416972820, 4006381244, 1617046695, 2628476075, 3002303598, 1686838959, 431878346, 2686675385, 1700445008, 1080580658, 1009431731, 832498133, 3223435511, 2605976345, 2271191193, 2516031870, 1648197032, 4164389018, 2548247927, 300782431, 375919233, 238389289, 3353747414, 2531188641, 2019080857, 1475708069, 455242339, 2609103871, 448939670, 3451063019, 1395535956, 2413381860, 1841049896, 1491858159, 885456874, 4264095073, 4001119347, 1565136089, 3898914787, 1108368660, 540939232, 1173283510, 2745871338, 3681308437, 4207628240, 3343053890, 4016749493, 1699691293, 1103962373, 3625875870, 2256883143, 3830138730, 1031889488, 3479347698, 1535977030, 4236805024, 3251091107, 2132092099, 1774941330, 1199868427, 1452454533, 157007616, 2904115357, 342012276, 595725824, 1480756522, 206960106, 497939518, 591360097, 863170706, 2375253569, 3596610801, 1814182875, 2094937945, 3421402208, 1082520231, 3463918190, 2785509508, 435703966, 3908032597, 1641649973, 2842273706, 3305899714, 1510255612, 2148256476, 2655287854, 3276092548, 4258621189, 236887753, 3681803219, 274041037, 1734335097, 3815195456, 3317970021, 1899903192, 1026095262, 4050517792, 356393447, 2410691914, 3873677099, 3682840055], [3913112168, 2491498743, 4132185628, 2489919796, 1091903735, 1979897079, 3170134830, 3567386728, 3557303409, 857797738, 1136121015, 1342202287, 507115054, 2535736646, 337727348, 3213592640, 1301675037, 2528481711, 1895095763, 1721773893, 3216771564, 62756741, 2142006736, 835421444, 2531993523, 1442658625, 3659876326, 2882144922, 676362277, 1392781812, 170690266, 3921047035, 1759253602, 3611846912, 1745797284, 664899054, 1329594018, 3901205900, 3045908486, 2062866102, 2865634940, 3543621612, 3464012697, 1080764994, 553557557, 3656615353, 3996768171, 991055499, 499776247, 1265440854, 648242737, 3940784050, 980351604, 3713745714, 1749149687, 3396870395, 4211799374, 3640570775, 1161844396, 3125318951, 1431517754, 545492359, 4268468663, 3499529547, 1437099964, 2702547544, 3433638243, 2581715763, 2787789398, 1060185593, 1593081372, 2418618748, 4260947970, 69676912, 2159744348, 86519011, 2512459080, 3838209314, 1220612927, 3339683548, 133810670, 1090789135, 1078426020, 1569222167, 845107691, 3583754449, 4072456591, 1091646820, 628848692, 1613405280, 3757631651, 526609435, 236106946, 48312990, 2942717905, 3402727701, 1797494240, 859738849, 992217954, 4005476642, 2243076622, 3870952857, 3732016268, 765654824, 3490871365, 2511836413, 1685915746, 3888969200, 1414112111, 2273134842, 3281911079, 4080962846, 172450625, 2569994100, 980381355, 4109958455, 2819808352, 2716589560, 2568741196, 3681446669, 3329971472, 1835478071, 660984891, 3704678404, 4045999559, 3422617507, 3040415634, 1762651403, 1719377915, 3470491036, 2693910283, 3642056355, 3138596744, 1364962596, 2073328063, 1983633131, 926494387, 3423689081, 2150032023, 4096667949, 1749200295, 3328846651, 309677260, 2016342300, 1779581495, 3079819751, 111262694, 1274766160, 443224088, 298511866, 1025883608, 3806446537, 1145181785, 168956806, 3641502830, 3584813610, 1689216846, 3666258015, 3200248200, 1692713982, 2646376535, 4042768518, 1618508792, 1610833997, 3523052358, 4130873264, 2001055236, 3610705100, 2202168115, 4028541809, 2961195399, 1006657119, 2006996926, 3186142756, 1430667929, 3210227297, 1314452623, 4074634658, 4101304120, 2273951170, 1399257539, 3367210612, 3027628629, 1190975929, 2062231137, 2333990788, 2221543033, 2438960610, 1181637006, 548689776, 2362791313, 3372408396, 3104550113, 3145860560, 296247880, 1970579870, 3078560182, 3769228297, 1714227617, 3291629107, 3898220290, 166772364, 1251581989, 493813264, 448347421, 195405023, 2709975567, 677966185, 3703036547, 1463355134, 2715995803, 1338867538, 1343315457, 2802222074, 2684532164, 233230375, 2599980071, 2000651841, 3277868038, 1638401717, 4028070440, 3237316320, 6314154, 819756386, 300326615, 590932579, 1405279636, 3267499572, 3150704214, 2428286686, 3959192993, 3461946742, 1862657033, 1266418056, 963775037, 2089974820, 2263052895, 1917689273, 448879540, 3550394620, 3981727096, 150775221, 3627908307, 1303187396, 508620638, 2975983352, 2726630617, 1817252668, 1876281319, 1457606340, 908771278, 3720792119, 3617206836, 2455994898, 1729034894, 1080033504], [976866871, 3556439503, 2881648439, 1522871579, 1555064734, 1336096578, 3548522304, 2579274686, 3574697629, 3205460757, 3593280638, 3338716283, 3079412587, 564236357, 2993598910, 1781952180, 1464380207, 3163844217, 3332601554, 1699332808, 1393555694, 1183702653, 3581086237, 1288719814, 691649499, 2847557200, 2895455976, 3193889540, 2717570544, 1781354906, 1676643554, 2592534050, 3230253752, 1126444790, 2770207658, 2633158820, 2210423226, 2615765581, 2414155088, 3127139286, 673620729, 2805611233, 1269405062, 4015350505, 3341807571, 4149409754, 1057255273, 2012875353, 2162469141, 2276492801, 2601117357, 993977747, 3918593370, 2654263191, 753973209, 36408145, 2530585658, 25011837, 3520020182, 2088578344, 530523599, 2918365339, 1524020338, 1518925132, 3760827505, 3759777254, 1202760957, 3985898139, 3906192525, 674977740, 4174734889, 2031300136, 2019492241, 3983892565, 4153806404, 3822280332, 352677332, 2297720250, 60907813, 90501309, 3286998549, 1016092578, 2535922412, 2839152426, 457141659, 509813237, 4120667899, 652014361, 1966332200, 2975202805, 55981186, 2327461051, 676427537, 3255491064, 2882294119, 3433927263, 1307055953, 942726286, 933058658, 2468411793, 3933900994, 4215176142, 1361170020, 2001714738, 2830558078, 3274259782, 1222529897, 1679025792, 2729314320, 3714953764, 1770335741, 151462246, 3013232138, 1682292957, 1483529935, 471910574, 1539241949, 458788160, 3436315007, 1807016891, 3718408830, 978976581, 1043663428, 3165965781, 1927990952, 4200891579, 2372276910, 3208408903, 3533431907, 1412390302, 2931980059, 4132332400, 1947078029, 3881505623, 4168226417, 2941484381, 1077988104, 1320477388, 886195818, 18198404, 3786409e3, 2509781533, 112762804, 3463356488, 1866414978, 891333506, 18488651, 661792760, 1628790961, 3885187036, 3141171499, 876946877, 2693282273, 1372485963, 791857591, 2686433993, 3759982718, 3167212022, 3472953795, 2716379847, 445679433, 3561995674, 3504004811, 3574258232, 54117162, 3331405415, 2381918588, 3769707343, 4154350007, 1140177722, 4074052095, 668550556, 3214352940, 367459370, 261225585, 2610173221, 4209349473, 3468074219, 3265815641, 314222801, 3066103646, 3808782860, 282218597, 3406013506, 3773591054, 379116347, 1285071038, 846784868, 2669647154, 3771962079, 3550491691, 2305946142, 453669953, 1268987020, 3317592352, 3279303384, 3744833421, 2610507566, 3859509063, 266596637, 3847019092, 517658769, 3462560207, 3443424879, 370717030, 4247526661, 2224018117, 4143653529, 4112773975, 2788324899, 2477274417, 1456262402, 2901442914, 1517677493, 1846949527, 2295493580, 3734397586, 2176403920, 1280348187, 1908823572, 3871786941, 846861322, 1172426758, 3287448474, 3383383037, 1655181056, 3139813346, 901632758, 1897031941, 2986607138, 3066810236, 3447102507, 1393639104, 373351379, 950779232, 625454576, 3124240540, 4148612726, 2007998917, 544563296, 2244738638, 2330496472, 2058025392, 1291430526, 424198748, 50039436, 29584100, 3605783033, 2429876329, 2791104160, 1057563949, 3255363231, 3075367218, 3463963227, 1469046755, 985887462]];
-          var H2 = { pbox: [], sbox: [] };
-          p = p.Blowfish = w.extend({
-            _doReset: function () {
-              if (this._keyPriorReset !== this._key) {
-                var t3 = this._keyPriorReset = this._key, n3 = t3.words, t3 = t3.sigBytes / 4;
-                {
-                  var s3 = H2, c3 = n3, a3 = t3;
-                  for (let e4 = 0; e4 < 4; e4++) {
-                    s3.sbox[e4] = [];
-                    for (let t4 = 0; t4 < 256; t4++) s3.sbox[e4][t4] = E2[e4][t4];
-                  }
-                  let e3 = 0;
-                  for (let t4 = 0; t4 < F + 2; t4++) s3.pbox[t4] = D2[t4] ^ c3[e3], ++e3 >= a3 && (e3 = 0);
-                  let r3 = 0, i3 = 0, o3 = 0;
-                  for (let t4 = 0; t4 < F + 2; t4 += 2) o3 = R22(s3, r3, i3), r3 = o3.left, i3 = o3.right, s3.pbox[t4] = r3, s3.pbox[t4 + 1] = i3;
-                  for (let e4 = 0; e4 < 4; e4++) for (let t4 = 0; t4 < 256; t4 += 2) o3 = R22(s3, r3, i3), r3 = o3.left, i3 = o3.right, s3.sbox[e4][t4] = r3, s3.sbox[e4][t4 + 1] = i3;
-                }
-              }
-            }, encryptBlock: function (t3, e3) {
-              var r3 = R22(H2, t3[e3], t3[e3 + 1]);
-              t3[e3] = r3.left, t3[e3 + 1] = r3.right;
-            }, decryptBlock: function (t3, e3) {
-              var r3 = function (e4, t4, r4) {
-                let i3 = t4, o3 = r4, n3;
-                for (let t5 = F + 1; 1 < t5; --t5) i3 ^= e4.pbox[t5], o3 = C22(e4, i3) ^ o3, n3 = i3, i3 = o3, o3 = n3;
-                return n3 = i3, i3 = o3, o3 = n3, o3 ^= e4.pbox[1], { left: i3 ^= e4.pbox[0], right: o3 };
-              }(H2, t3[e3], t3[e3 + 1]);
-              t3[e3] = r3.left, t3[e3 + 1] = r3.right;
-            }, blockSize: 2, keySize: 4, ivSize: 2
-          }), P.Blowfish = w._createHelper(p);
-        }
-        return i;
-      });
-    }
-  });
-
-  // src/HiperDex/HiperDex.ts
-  var HiperDex_exports = {};
-  __export(HiperDex_exports, {
-    HiperDex: () => HiperDex,
-    HiperDexInfo: () => HiperDexInfo
+  // src/MangaFox/MangaFox.ts
+  var MangaFox_exports = {};
+  __export(MangaFox_exports, {
+    MangaFox: () => MangaFox,
+    MangaFoxInfo: () => MangaFoxInfo
   });
   var import_types3 = __toESM(require_lib());
-
-  // src/Madara.ts
-  var import_types2 = __toESM(require_lib());
 
   // node_modules/cheerio/dist/browser/static.js
   var static_exports = {};
@@ -1670,7 +819,7 @@ var _Sources = (() => {
     isTag: () => isTag
   });
   var ElementType;
-  (function (ElementType2) {
+  (function(ElementType2) {
     ElementType2["Root"] = "root";
     ElementType2["Text"] = "text";
     ElementType2["Directive"] = "directive";
@@ -1950,9 +1099,9 @@ var _Sources = (() => {
   }
   function cloneChildren(childs) {
     const children2 = childs.map((child) => cloneNode(child, true));
-    for (let i = 1; i < children2.length; i++) {
-      children2[i].prev = children2[i - 1];
-      children2[i - 1].next = children2[i];
+    for (let i2 = 1; i2 < children2.length; i2++) {
+      children2[i2].prev = children2[i2 - 1];
+      children2[i2 - 1].next = children2[i2];
     }
     return children2;
   }
@@ -2138,7 +1287,7 @@ var _Sources = (() => {
   ]);
   var fromCodePoint = (
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, node/no-unsupported-features/es-builtins
-    (_a = String.fromCodePoint) !== null && _a !== void 0 ? _a : function (codePoint) {
+    (_a = String.fromCodePoint) !== null && _a !== void 0 ? _a : function(codePoint) {
       let output = "";
       if (codePoint > 65535) {
         codePoint -= 65536;
@@ -2159,7 +1308,7 @@ var _Sources = (() => {
 
   // node_modules/entities/lib/esm/decode.js
   var CharCodes;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["NUM"] = 35] = "NUM";
     CharCodes5[CharCodes5["SEMI"] = 59] = "SEMI";
     CharCodes5[CharCodes5["EQUALS"] = 61] = "EQUALS";
@@ -2175,7 +1324,7 @@ var _Sources = (() => {
   })(CharCodes || (CharCodes = {}));
   var TO_LOWER_BIT = 32;
   var BinTrieFlags;
-  (function (BinTrieFlags4) {
+  (function(BinTrieFlags4) {
     BinTrieFlags4[BinTrieFlags4["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
     BinTrieFlags4[BinTrieFlags4["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
     BinTrieFlags4[BinTrieFlags4["JUMP_TABLE"] = 127] = "JUMP_TABLE";
@@ -2193,7 +1342,7 @@ var _Sources = (() => {
     return code === CharCodes.EQUALS || isAsciiAlphaNumeric(code);
   }
   var EntityDecoderState;
-  (function (EntityDecoderState4) {
+  (function(EntityDecoderState4) {
     EntityDecoderState4[EntityDecoderState4["EntityStart"] = 0] = "EntityStart";
     EntityDecoderState4[EntityDecoderState4["NumericStart"] = 1] = "NumericStart";
     EntityDecoderState4[EntityDecoderState4["NumericDecimal"] = 2] = "NumericDecimal";
@@ -2201,7 +1350,7 @@ var _Sources = (() => {
     EntityDecoderState4[EntityDecoderState4["NamedEntity"] = 4] = "NamedEntity";
   })(EntityDecoderState || (EntityDecoderState = {}));
   var DecodingMode;
-  (function (DecodingMode4) {
+  (function(DecodingMode4) {
     DecodingMode4[DecodingMode4["Legacy"] = 0] = "Legacy";
     DecodingMode4[DecodingMode4["Strict"] = 1] = "Strict";
     DecodingMode4[DecodingMode4["Attribute"] = 2] = "Attribute";
@@ -2388,9 +1537,9 @@ var _Sources = (() => {
         this.treeIndex = determineBranch(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
         if (this.treeIndex < 0) {
           return this.result === 0 || // If we are parsing an attribute
-            this.decodeMode === DecodingMode.Attribute && // We shouldn't have consumed any characters after the entity,
-            (valueLength === 0 || // And there should be no invalid characters.
-              isEntityInAttributeInvalidEnd(char)) ? 0 : this.emitNotTerminatedNamedEntity();
+          this.decodeMode === DecodingMode.Attribute && // We shouldn't have consumed any characters after the entity,
+          (valueLength === 0 || // And there should be no invalid characters.
+          isEntityInAttributeInvalidEnd(char)) ? 0 : this.emitNotTerminatedNamedEntity();
         }
         current = decodeTree[this.treeIndex];
         valueLength = (current & BinTrieFlags.VALUE_LENGTH) >> 14;
@@ -2522,8 +1671,8 @@ var _Sources = (() => {
 
   // node_modules/entities/lib/esm/generated/encode-html.js
   function restoreDiff(arr) {
-    for (let i = 1; i < arr.length; i++) {
-      arr[i][0] += arr[i - 1][0] + 1;
+    for (let i2 = 1; i2 < arr.length; i2++) {
+      arr[i2][0] += arr[i2 - 1][0] + 1;
     }
     return arr;
   }
@@ -2550,21 +1699,21 @@ var _Sources = (() => {
     let lastIdx = 0;
     let match;
     while ((match = xmlReplacer.exec(str)) !== null) {
-      const i = match.index;
-      const char = str.charCodeAt(i);
+      const i2 = match.index;
+      const char = str.charCodeAt(i2);
       const next2 = xmlCodeMap.get(char);
       if (next2 !== void 0) {
-        ret += str.substring(lastIdx, i) + next2;
-        lastIdx = i + 1;
+        ret += str.substring(lastIdx, i2) + next2;
+        lastIdx = i2 + 1;
       } else {
-        ret += `${str.substring(lastIdx, i)}&#x${getCodePoint(str, i).toString(16)};`;
+        ret += `${str.substring(lastIdx, i2)}&#x${getCodePoint(str, i2).toString(16)};`;
         lastIdx = xmlReplacer.lastIndex += Number((char & 64512) === 55296);
       }
     }
     return ret + str.substr(lastIdx);
   }
   function getEscaper(regex, map2) {
-    return function escape3(data2) {
+    return function escape2(data2) {
       let match;
       let lastIdx = 0;
       let result = "";
@@ -2593,12 +1742,12 @@ var _Sources = (() => {
 
   // node_modules/entities/lib/esm/index.js
   var EntityLevel;
-  (function (EntityLevel2) {
+  (function(EntityLevel2) {
     EntityLevel2[EntityLevel2["XML"] = 0] = "XML";
     EntityLevel2[EntityLevel2["HTML"] = 1] = "HTML";
   })(EntityLevel || (EntityLevel = {}));
   var EncodingMode;
-  (function (EncodingMode2) {
+  (function(EncodingMode2) {
     EncodingMode2[EncodingMode2["UTF8"] = 0] = "UTF8";
     EncodingMode2[EncodingMode2["ASCII"] = 1] = "ASCII";
     EncodingMode2[EncodingMode2["Extensive"] = 2] = "Extensive";
@@ -2763,8 +1912,8 @@ var _Sources = (() => {
   function render(node, options = {}) {
     const nodes = "length" in node ? node : [node];
     let output = "";
-    for (let i = 0; i < nodes.length; i++) {
-      output += renderNode(nodes[i], options);
+    for (let i2 = 0; i2 < nodes.length; i2++) {
+      output += renderNode(nodes[i2], options);
     }
     return output;
   }
@@ -3039,7 +2188,7 @@ var _Sources = (() => {
     const result = [];
     const nodeStack = [Array.isArray(nodes) ? nodes : [nodes]];
     const indexStack = [0];
-    for (; ;) {
+    for (; ; ) {
       if (indexStack[0] >= nodeStack[0].length) {
         if (indexStack.length === 1) {
           return result;
@@ -3065,8 +2214,8 @@ var _Sources = (() => {
   }
   function findOne(test, nodes, recurse = true) {
     const searchedNodes = Array.isArray(nodes) ? nodes : [nodes];
-    for (let i = 0; i < searchedNodes.length; i++) {
-      const node = searchedNodes[i];
+    for (let i2 = 0; i2 < searchedNodes.length; i2++) {
+      const node = searchedNodes[i2];
       if (isTag2(node) && test(node)) {
         return node;
       }
@@ -3085,7 +2234,7 @@ var _Sources = (() => {
     const result = [];
     const nodeStack = [Array.isArray(nodes) ? nodes : [nodes]];
     const indexStack = [0];
-    for (; ;) {
+    for (; ; ) {
       if (indexStack[0] >= nodeStack[0].length) {
         if (nodeStack.length === 1) {
           return result;
@@ -3185,7 +2334,7 @@ var _Sources = (() => {
     return nodes;
   }
   var DocumentPosition;
-  (function (DocumentPosition2) {
+  (function(DocumentPosition2) {
     DocumentPosition2[DocumentPosition2["DISCONNECTED"] = 1] = "DISCONNECTED";
     DocumentPosition2[DocumentPosition2["PRECEDING"] = 2] = "PRECEDING";
     DocumentPosition2[DocumentPosition2["FOLLOWING"] = 4] = "FOLLOWING";
@@ -3232,7 +2381,7 @@ var _Sources = (() => {
     return DocumentPosition.PRECEDING;
   }
   function uniqueSort(nodes) {
-    nodes = nodes.filter((node, i, arr) => !arr.includes(node, i + 1));
+    nodes = nodes.filter((node, i2, arr) => !arr.includes(node, i2 + 1));
     nodes.sort((a, b) => {
       const relative = compareDocumentPosition(a, b);
       if (relative & DocumentPosition.PRECEDING) {
@@ -3417,8 +2566,8 @@ var _Sources = (() => {
   function text(elements) {
     const elems = elements !== null && elements !== void 0 ? elements : this ? this.root() : [];
     let ret = "";
-    for (let i = 0; i < elems.length; i++) {
-      ret += textContent(elems[i]);
+    for (let i2 = 0; i2 < elems.length; i2++) {
+      ret += textContent(elems[i2]);
     }
     return ret;
   }
@@ -3460,8 +2609,8 @@ var _Sources = (() => {
     }
     let newLength = arr1.length;
     const len = +arr2.length;
-    for (let i = 0; i < len; i++) {
-      arr1[newLength++] = arr2[i];
+    for (let i2 = 0; i2 < len; i2++) {
+      arr1[newLength++] = arr2[i2];
     }
     arr1.length = newLength;
     return arr1;
@@ -3473,8 +2622,8 @@ var _Sources = (() => {
     if (typeof item !== "object" || item === null || !("length" in item) || typeof item.length !== "number" || item.length < 0) {
       return false;
     }
-    for (let i = 0; i < item.length; i++) {
-      if (!(i in item)) {
+    for (let i2 = 0; i2 < item.length; i2++) {
+      if (!(i2 in item)) {
         return false;
       }
     }
@@ -3507,12 +2656,12 @@ var _Sources = (() => {
   }
   function domEach(array, fn) {
     const len = array.length;
-    for (let i = 0; i < len; i++)
-      fn(array[i], i);
+    for (let i2 = 0; i2 < len; i2++)
+      fn(array[i2], i2);
     return array;
   }
   var CharacterCode;
-  (function (CharacterCode2) {
+  (function(CharacterCode2) {
     CharacterCode2[CharacterCode2["LowerA"] = 97] = "LowerA";
     CharacterCode2[CharacterCode2["LowerZ"] = 122] = "LowerZ";
     CharacterCode2[CharacterCode2["UpperA"] = 65] = "UpperA";
@@ -3574,7 +2723,7 @@ var _Sources = (() => {
   ]);
   var fromCodePoint2 = (
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, n/no-unsupported-features/es-builtins
-    (_a2 = String.fromCodePoint) !== null && _a2 !== void 0 ? _a2 : function (codePoint) {
+    (_a2 = String.fromCodePoint) !== null && _a2 !== void 0 ? _a2 : function(codePoint) {
       let output = "";
       if (codePoint > 65535) {
         codePoint -= 65536;
@@ -3595,7 +2744,7 @@ var _Sources = (() => {
 
   // node_modules/htmlparser2/node_modules/entities/dist/esm/decode.js
   var CharCodes2;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["NUM"] = 35] = "NUM";
     CharCodes5[CharCodes5["SEMI"] = 59] = "SEMI";
     CharCodes5[CharCodes5["EQUALS"] = 61] = "EQUALS";
@@ -3611,7 +2760,7 @@ var _Sources = (() => {
   })(CharCodes2 || (CharCodes2 = {}));
   var TO_LOWER_BIT2 = 32;
   var BinTrieFlags2;
-  (function (BinTrieFlags4) {
+  (function(BinTrieFlags4) {
     BinTrieFlags4[BinTrieFlags4["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
     BinTrieFlags4[BinTrieFlags4["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
     BinTrieFlags4[BinTrieFlags4["JUMP_TABLE"] = 127] = "JUMP_TABLE";
@@ -3629,7 +2778,7 @@ var _Sources = (() => {
     return code === CharCodes2.EQUALS || isAsciiAlphaNumeric2(code);
   }
   var EntityDecoderState2;
-  (function (EntityDecoderState4) {
+  (function(EntityDecoderState4) {
     EntityDecoderState4[EntityDecoderState4["EntityStart"] = 0] = "EntityStart";
     EntityDecoderState4[EntityDecoderState4["NumericStart"] = 1] = "NumericStart";
     EntityDecoderState4[EntityDecoderState4["NumericDecimal"] = 2] = "NumericDecimal";
@@ -3637,7 +2786,7 @@ var _Sources = (() => {
     EntityDecoderState4[EntityDecoderState4["NamedEntity"] = 4] = "NamedEntity";
   })(EntityDecoderState2 || (EntityDecoderState2 = {}));
   var DecodingMode2;
-  (function (DecodingMode4) {
+  (function(DecodingMode4) {
     DecodingMode4[DecodingMode4["Legacy"] = 0] = "Legacy";
     DecodingMode4[DecodingMode4["Strict"] = 1] = "Strict";
     DecodingMode4[DecodingMode4["Attribute"] = 2] = "Attribute";
@@ -3824,9 +2973,9 @@ var _Sources = (() => {
         this.treeIndex = determineBranch2(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
         if (this.treeIndex < 0) {
           return this.result === 0 || // If we are parsing an attribute
-            this.decodeMode === DecodingMode2.Attribute && // We shouldn't have consumed any characters after the entity,
-            (valueLength === 0 || // And there should be no invalid characters.
-              isEntityInAttributeInvalidEnd2(char)) ? 0 : this.emitNotTerminatedNamedEntity();
+          this.decodeMode === DecodingMode2.Attribute && // We shouldn't have consumed any characters after the entity,
+          (valueLength === 0 || // And there should be no invalid characters.
+          isEntityInAttributeInvalidEnd2(char)) ? 0 : this.emitNotTerminatedNamedEntity();
         }
         current = decodeTree[this.treeIndex];
         valueLength = (current & BinTrieFlags2.VALUE_LENGTH) >> 14;
@@ -3930,7 +3079,7 @@ var _Sources = (() => {
 
   // node_modules/htmlparser2/dist/esm/Tokenizer.js
   var CharCodes3;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["Tab"] = 9] = "Tab";
     CharCodes5[CharCodes5["NewLine"] = 10] = "NewLine";
     CharCodes5[CharCodes5["FormFeed"] = 12] = "FormFeed";
@@ -3960,7 +3109,7 @@ var _Sources = (() => {
     CharCodes5[CharCodes5["OpeningSquareBracket"] = 91] = "OpeningSquareBracket";
   })(CharCodes3 || (CharCodes3 = {}));
   var State;
-  (function (State3) {
+  (function(State3) {
     State3[State3["Text"] = 1] = "Text";
     State3[State3["BeforeTagName"] = 2] = "BeforeTagName";
     State3[State3["InTagName"] = 3] = "InTagName";
@@ -3998,7 +3147,7 @@ var _Sources = (() => {
     return c >= CharCodes3.LowerA && c <= CharCodes3.LowerZ || c >= CharCodes3.UpperA && c <= CharCodes3.UpperZ;
   }
   var QuoteType;
-  (function (QuoteType2) {
+  (function(QuoteType2) {
     QuoteType2[QuoteType2["NoValue"] = 0] = "NoValue";
     QuoteType2[QuoteType2["Unquoted"] = 1] = "Unquoted";
     QuoteType2[QuoteType2["Single"] = 2] = "Single";
@@ -5126,9 +4275,9 @@ var _Sources = (() => {
             throw new Error("Bad combination of arguments.");
           }
         }
-        return domEach(this, (el, i) => {
+        return domEach(this, (el, i2) => {
           if (isTag2(el))
-            setAttr(el, name, value.call(el, i, el.attribs[name]));
+            setAttr(el, name, value.call(el, i2, el.attribs[name]));
         });
       }
       return domEach(this, (el) => {
@@ -5169,8 +4318,8 @@ var _Sources = (() => {
         case "style": {
           const property = this.css();
           const keys = Object.keys(property);
-          for (let i = 0; i < keys.length; i++) {
-            property[i] = keys[i];
+          for (let i2 = 0; i2 < keys.length; i2++) {
+            property[i2] = keys[i2];
           }
           property.length = keys.length;
           return property;
@@ -5217,9 +4366,9 @@ var _Sources = (() => {
         if (typeof name === "object") {
           throw new TypeError("Bad combination of arguments.");
         }
-        return domEach(this, (el, i) => {
+        return domEach(this, (el, i2) => {
           if (isTag2(el)) {
-            setProp(el, name, value.call(el, i, getProp(el, name, this.options.xmlMode)), this.options.xmlMode);
+            setProp(el, name, value.call(el, i2, getProp(el, name, this.options.xmlMode)), this.options.xmlMode);
           }
         });
       }
@@ -5377,10 +4526,10 @@ var _Sources = (() => {
   }
   function addClass(value) {
     if (typeof value === "function") {
-      return domEach(this, (el, i) => {
+      return domEach(this, (el, i2) => {
         if (isTag2(el)) {
           const className = el.attribs["class"] || "";
-          addClass.call([el], value.call(el, i, className));
+          addClass.call([el], value.call(el, i2, className));
         }
       });
     }
@@ -5388,8 +4537,8 @@ var _Sources = (() => {
       return this;
     const classNames = value.split(rspace);
     const numElements = this.length;
-    for (let i = 0; i < numElements; i++) {
-      const el = this[i];
+    for (let i2 = 0; i2 < numElements; i2++) {
+      const el = this[i2];
       if (!isTag2(el))
         continue;
       const className = getAttr(el, "class", false);
@@ -5409,9 +4558,9 @@ var _Sources = (() => {
   }
   function removeClass(name) {
     if (typeof name === "function") {
-      return domEach(this, (el, i) => {
+      return domEach(this, (el, i2) => {
         if (isTag2(el)) {
-          removeClass.call([el], name.call(el, i, el.attribs["class"] || ""));
+          removeClass.call([el], name.call(el, i2, el.attribs["class"] || ""));
         }
       });
     }
@@ -5442,9 +4591,9 @@ var _Sources = (() => {
   }
   function toggleClass(value, stateVal) {
     if (typeof value === "function") {
-      return domEach(this, (el, i) => {
+      return domEach(this, (el, i2) => {
         if (isTag2(el)) {
-          toggleClass.call([el], value.call(el, i, el.attribs["class"] || "", stateVal), stateVal);
+          toggleClass.call([el], value.call(el, i2, el.attribs["class"] || "", stateVal), stateVal);
         }
       });
     }
@@ -5454,8 +4603,8 @@ var _Sources = (() => {
     const numClasses = classNames.length;
     const state = typeof stateVal === "boolean" ? stateVal ? 1 : -1 : 0;
     const numElements = this.length;
-    for (let i = 0; i < numElements; i++) {
-      const el = this[i];
+    for (let i2 = 0; i2 < numElements; i2++) {
+      const el = this[i2];
       if (!isTag2(el))
         continue;
       const elementClasses = splitNames(el.attribs["class"]);
@@ -5511,7 +4660,7 @@ var _Sources = (() => {
 
   // node_modules/css-what/lib/es/types.js
   var SelectorType;
-  (function (SelectorType2) {
+  (function(SelectorType2) {
     SelectorType2["Attribute"] = "attribute";
     SelectorType2["Pseudo"] = "pseudo";
     SelectorType2["PseudoElement"] = "pseudo-element";
@@ -5525,7 +4674,7 @@ var _Sources = (() => {
     SelectorType2["ColumnCombinator"] = "column-combinator";
   })(SelectorType || (SelectorType = {}));
   var AttributeAction;
-  (function (AttributeAction2) {
+  (function(AttributeAction2) {
     AttributeAction2["Any"] = "any";
     AttributeAction2["Element"] = "element";
     AttributeAction2["End"] = "end";
@@ -5904,11 +5053,11 @@ var _Sources = (() => {
   ]);
   function sortByProcedure(arr) {
     const procs = arr.map(getProcedure);
-    for (let i = 1; i < arr.length; i++) {
-      const procNew = procs[i];
+    for (let i2 = 1; i2 < arr.length; i2++) {
+      const procNew = procs[i2];
       if (procNew < 0)
         continue;
-      for (let j = i - 1; j >= 0 && procNew < procs[j]; j--) {
+      for (let j = i2 - 1; j >= 0 && procNew < procs[j]; j--) {
         const token = arr[j + 1];
         arr[j + 1] = arr[j];
         arr[j] = token;
@@ -6233,10 +5382,10 @@ var _Sources = (() => {
       return function nthChild(elem) {
         const siblings2 = adapter2.getSiblings(elem);
         let pos = 0;
-        for (let i = 0; i < siblings2.length; i++) {
-          if (equals(elem, siblings2[i]))
+        for (let i2 = 0; i2 < siblings2.length; i2++) {
+          if (equals(elem, siblings2[i2]))
             break;
-          if (adapter2.isTag(siblings2[i])) {
+          if (adapter2.isTag(siblings2[i2])) {
             pos++;
           }
         }
@@ -6252,10 +5401,10 @@ var _Sources = (() => {
       return function nthLastChild(elem) {
         const siblings2 = adapter2.getSiblings(elem);
         let pos = 0;
-        for (let i = siblings2.length - 1; i >= 0; i--) {
-          if (equals(elem, siblings2[i]))
+        for (let i2 = siblings2.length - 1; i2 >= 0; i2--) {
+          if (equals(elem, siblings2[i2]))
             break;
-          if (adapter2.isTag(siblings2[i])) {
+          if (adapter2.isTag(siblings2[i2])) {
             pos++;
           }
         }
@@ -6271,8 +5420,8 @@ var _Sources = (() => {
       return function nthOfType(elem) {
         const siblings2 = adapter2.getSiblings(elem);
         let pos = 0;
-        for (let i = 0; i < siblings2.length; i++) {
-          const currentSibling = siblings2[i];
+        for (let i2 = 0; i2 < siblings2.length; i2++) {
+          const currentSibling = siblings2[i2];
           if (equals(elem, currentSibling))
             break;
           if (adapter2.isTag(currentSibling) && adapter2.getName(currentSibling) === adapter2.getName(elem)) {
@@ -6291,8 +5440,8 @@ var _Sources = (() => {
       return function nthLastOfType(elem) {
         const siblings2 = adapter2.getSiblings(elem);
         let pos = 0;
-        for (let i = siblings2.length - 1; i >= 0; i--) {
-          const currentSibling = siblings2[i];
+        for (let i2 = siblings2.length - 1; i2 >= 0; i2--) {
+          const currentSibling = siblings2[i2];
           if (equals(elem, currentSibling))
             break;
           if (adapter2.isTag(currentSibling) && adapter2.getName(currentSibling) === adapter2.getName(elem)) {
@@ -6352,10 +5501,10 @@ var _Sources = (() => {
     },
     "last-child"(elem, { adapter: adapter2, equals }) {
       const siblings2 = adapter2.getSiblings(elem);
-      for (let i = siblings2.length - 1; i >= 0; i--) {
-        if (equals(elem, siblings2[i]))
+      for (let i2 = siblings2.length - 1; i2 >= 0; i2--) {
+        if (equals(elem, siblings2[i2]))
           return true;
-        if (adapter2.isTag(siblings2[i]))
+        if (adapter2.isTag(siblings2[i2]))
           break;
       }
       return false;
@@ -6363,8 +5512,8 @@ var _Sources = (() => {
     "first-of-type"(elem, { adapter: adapter2, equals }) {
       const siblings2 = adapter2.getSiblings(elem);
       const elemName = adapter2.getName(elem);
-      for (let i = 0; i < siblings2.length; i++) {
-        const currentSibling = siblings2[i];
+      for (let i2 = 0; i2 < siblings2.length; i2++) {
+        const currentSibling = siblings2[i2];
         if (equals(elem, currentSibling))
           return true;
         if (adapter2.isTag(currentSibling) && adapter2.getName(currentSibling) === elemName) {
@@ -6376,8 +5525,8 @@ var _Sources = (() => {
     "last-of-type"(elem, { adapter: adapter2, equals }) {
       const siblings2 = adapter2.getSiblings(elem);
       const elemName = adapter2.getName(elem);
-      for (let i = siblings2.length - 1; i >= 0; i--) {
-        const currentSibling = siblings2[i];
+      for (let i2 = siblings2.length - 1; i2 >= 0; i2--) {
+        const currentSibling = siblings2[i2];
         if (equals(elem, currentSibling))
           return true;
         if (adapter2.isTag(currentSibling) && adapter2.getName(currentSibling) === elemName) {
@@ -6633,8 +5782,8 @@ var _Sources = (() => {
       case SelectorType.Sibling: {
         return function sibling(elem) {
           const siblings2 = adapter2.getSiblings(elem);
-          for (let i = 0; i < siblings2.length; i++) {
-            const currentSibling = siblings2[i];
+          for (let i2 = 0; i2 < siblings2.length; i2++) {
+            const currentSibling = siblings2[i2];
             if (equals(elem, currentSibling))
               break;
             if (adapter2.isTag(currentSibling) && next2(currentSibling)) {
@@ -6654,8 +5803,8 @@ var _Sources = (() => {
         return function adjacent(elem) {
           const siblings2 = adapter2.getSiblings(elem);
           let lastElement;
-          for (let i = 0; i < siblings2.length; i++) {
-            const currentSibling = siblings2[i];
+          for (let i2 = 0; i2 < siblings2.length; i2++) {
+            const currentSibling = siblings2[i2];
             if (equals(elem, currentSibling))
               break;
             if (adapter2.isTag(currentSibling)) {
@@ -6794,8 +5943,8 @@ var _Sources = (() => {
   function appendNextSiblings(elem, adapter2) {
     const elems = Array.isArray(elem) ? elem.slice(0) : [elem];
     const elemsLength = elems.length;
-    for (let i = 0; i < elemsLength; i++) {
-      const nextSiblings = getNextSiblings(elems[i], adapter2);
+    for (let i2 = 0; i2 < elemsLength; i2++) {
+      const nextSiblings = getNextSiblings(elems[i2], adapter2);
       elems.push(...nextSiblings);
     }
     return elems;
@@ -6901,9 +6050,9 @@ var _Sources = (() => {
       case "gt":
         return isFinite(num) ? elems.slice(num + 1) : [];
       case "even":
-        return elems.filter((_, i) => i % 2 === 0);
+        return elems.filter((_, i2) => i2 % 2 === 0);
       case "odd":
-        return elems.filter((_, i) => i % 2 === 1);
+        return elems.filter((_, i2) => i2 % 2 === 1);
       case "not": {
         const filtered = new Set(filterParsed(data2, elems, options));
         return elems.filter((e) => !filtered.has(e));
@@ -6927,15 +6076,15 @@ var _Sources = (() => {
         found = new Set(filtered);
       }
     }
-    for (let i = 0; i < filteredSelectors.length && (found === null || found === void 0 ? void 0 : found.size) !== elements.length; i++) {
-      const filteredSelector = filteredSelectors[i];
+    for (let i2 = 0; i2 < filteredSelectors.length && (found === null || found === void 0 ? void 0 : found.size) !== elements.length; i2++) {
+      const filteredSelector = filteredSelectors[i2];
       const missing = found ? elements.filter((e) => isTag2(e) && !found.has(e)) : elements;
       if (missing.length === 0)
         break;
       const filtered = filterBySelector(filteredSelector, elements, options);
       if (filtered.length) {
         if (!found) {
-          if (i === filteredSelectors.length - 1) {
+          if (i2 === filteredSelectors.length - 1) {
             return filtered;
           }
           found = new Set(filtered);
@@ -7067,8 +6216,8 @@ var _Sources = (() => {
     return this._make(select(selector, elems, options, limit));
   }
   function _getMatcher(matchMap) {
-    return function (fn, ...postFns) {
-      return function (selector) {
+    return function(fn, ...postFns) {
+      return function(selector) {
         var _a5;
         let matched = matchMap(fn, this);
         if (selector) {
@@ -7083,8 +6232,8 @@ var _Sources = (() => {
   }
   var _matcher = _getMatcher((fn, elems) => {
     let ret = [];
-    for (let i = 0; i < elems.length; i++) {
-      const value = fn(elems[i]);
+    for (let i2 = 0; i2 < elems.length; i2++) {
+      const value = fn(elems[i2]);
       if (value.length > 0)
         ret = ret.concat(value);
     }
@@ -7092,8 +6241,8 @@ var _Sources = (() => {
   });
   var _singleMatcher = _getMatcher((fn, elems) => {
     const ret = [];
-    for (let i = 0; i < elems.length; i++) {
-      const value = fn(elems[i]);
+    for (let i2 = 0; i2 < elems.length; i2++) {
+      const value = fn(elems[i2]);
       if (value !== null) {
         ret.push(value);
       }
@@ -7113,7 +6262,7 @@ var _Sources = (() => {
       });
       return matched;
     })(nextElem, ...postFns);
-    return function (selector, filterSelector) {
+    return function(selector, filterSelector) {
       matches = typeof selector === "string" ? (elem) => is2(elem, selector, this.options) : selector ? getFilterFn(selector) : null;
       const ret = innerMatcher.call(this, filterSelector);
       matches = null;
@@ -7189,17 +6338,17 @@ var _Sources = (() => {
     return this._make(elems);
   }
   function each(fn) {
-    let i = 0;
+    let i2 = 0;
     const len = this.length;
-    while (i < len && fn.call(this[i], i, this[i]) !== false)
-      ++i;
+    while (i2 < len && fn.call(this[i2], i2, this[i2]) !== false)
+      ++i2;
     return this;
   }
   function map(fn) {
     let elems = [];
-    for (let i = 0; i < this.length; i++) {
-      const el = this[i];
-      const val2 = fn.call(el, i, el);
+    for (let i2 = 0; i2 < this.length; i2++) {
+      const el = this[i2];
+      const val2 = fn.call(el, i2, el);
       if (val2 != null) {
         elems = elems.concat(val2);
       }
@@ -7208,12 +6357,12 @@ var _Sources = (() => {
   }
   function getFilterFn(match) {
     if (typeof match === "function") {
-      return (el, i) => match.call(el, i, el);
+      return (el, i2) => match.call(el, i2, el);
     }
     if (isCheerio(match)) {
       return (el) => Array.prototype.includes.call(match, el);
     }
-    return function (el) {
+    return function(el) {
       return match === el;
     };
   }
@@ -7235,7 +6384,7 @@ var _Sources = (() => {
       nodes = nodes.filter((el) => !matches.has(el));
     } else {
       const filterFn = getFilterFn(match);
-      nodes = nodes.filter((el, i) => !filterFn(el, i));
+      nodes = nodes.filter((el, i2) => !filterFn(el, i2));
     }
     return this._make(nodes);
   }
@@ -7251,20 +6400,20 @@ var _Sources = (() => {
   function last() {
     return this.length > 0 ? this._make(this[this.length - 1]) : this;
   }
-  function eq(i) {
+  function eq(i2) {
     var _a5;
-    i = +i;
-    if (i === 0 && this.length <= 1)
+    i2 = +i2;
+    if (i2 === 0 && this.length <= 1)
       return this;
-    if (i < 0)
-      i = this.length + i;
-    return this._make((_a5 = this[i]) !== null && _a5 !== void 0 ? _a5 : []);
+    if (i2 < 0)
+      i2 = this.length + i2;
+    return this._make((_a5 = this[i2]) !== null && _a5 !== void 0 ? _a5 : []);
   }
-  function get(i) {
-    if (i == null) {
+  function get(i2) {
+    if (i2 == null) {
       return this.toArray();
     }
-    return this[i < 0 ? this.length + i : i];
+    return this[i2 < 0 ? this.length + i2 : i2];
   }
   function toArray() {
     return Array.prototype.slice.call(this);
@@ -7350,14 +6499,14 @@ var _Sources = (() => {
     } else {
       parent2 = null;
     }
-    for (let i = 0; i < arr.length; i++) {
-      const node = arr[i];
+    for (let i2 = 0; i2 < arr.length; i2++) {
+      const node = arr[i2];
       if (node.parent && node.parent.children !== arr) {
         removeElement(node);
       }
       if (parent2) {
-        node.prev = arr[i - 1] || null;
-        node.next = arr[i + 1] || null;
+        node.prev = arr[i2 - 1] || null;
+        node.next = arr[i2 + 1] || null;
       } else {
         node.prev = node.next = null;
       }
@@ -7379,8 +6528,8 @@ var _Sources = (() => {
         return this._makeDomArray(elem[0], clone2);
       }
       const result = [];
-      for (let i = 0; i < elem.length; i++) {
-        const el = elem[i];
+      for (let i2 = 0; i2 < elem.length; i2++) {
+        const el = elem[i2];
         if (typeof el === "object") {
           if (el == null) {
             continue;
@@ -7397,13 +6546,13 @@ var _Sources = (() => {
     return [clone2 ? cloneNode(elem, true) : elem];
   }
   function _insert(concatenator) {
-    return function (...elems) {
+    return function(...elems) {
       const lastIdx = this.length - 1;
-      return domEach(this, (el, i) => {
+      return domEach(this, (el, i2) => {
         if (!hasChildren(el))
           return;
-        const domSrc = typeof elems[0] === "function" ? elems[0].call(el, i, this._render(el.children)) : elems;
-        const dom = this._makeDomArray(domSrc, i < lastIdx);
+        const domSrc = typeof elems[0] === "function" ? elems[0].call(el, i2, this._render(el.children)) : elems;
+        const dom = this._makeDomArray(domSrc, i2 < lastIdx);
         concatenator(dom, el.children, el);
       });
     };
@@ -7465,13 +6614,13 @@ var _Sources = (() => {
     uniqueSplice(children2, 0, 0, dom, parent2);
   });
   function _wrap(insert) {
-    return function (wrapper) {
+    return function(wrapper) {
       const lastIdx = this.length - 1;
       const lastParent = this.parents().last();
-      for (let i = 0; i < this.length; i++) {
-        const el = this[i];
-        const wrap2 = typeof wrapper === "function" ? wrapper.call(el, i, el) : typeof wrapper === "string" && !isHtml(wrapper) ? lastParent.find(wrapper).clone() : wrapper;
-        const [wrapperDom] = this._makeDomArray(wrap2, i < lastIdx);
+      for (let i2 = 0; i2 < this.length; i2++) {
+        const el = this[i2];
+        const wrap2 = typeof wrapper === "function" ? wrapper.call(el, i2, el) : typeof wrapper === "string" && !isHtml(wrapper) ? lastParent.find(wrapper).clone() : wrapper;
+        const [wrapperDom] = this._makeDomArray(wrap2, i2 < lastIdx);
         if (!wrapperDom || !hasChildren(wrapperDom))
           continue;
         let elInsertLocation = wrapperDom;
@@ -7516,9 +6665,9 @@ var _Sources = (() => {
     if (el) {
       const wrap2 = this._make(typeof wrapper === "function" ? wrapper.call(el, 0, el) : wrapper).insertBefore(el);
       let elInsertLocation;
-      for (let i = 0; i < wrap2.length; i++) {
-        if (wrap2[i].type === esm_exports.Tag) {
-          elInsertLocation = wrap2[i];
+      for (let i2 = 0; i2 < wrap2.length; i2++) {
+        if (wrap2[i2].type === esm_exports.Tag) {
+          elInsertLocation = wrap2[i2];
         }
       }
       let j = 0;
@@ -7538,7 +6687,7 @@ var _Sources = (() => {
   }
   function after(...elems) {
     const lastIdx = this.length - 1;
-    return domEach(this, (el, i) => {
+    return domEach(this, (el, i2) => {
       if (!hasChildren(el) || !el.parent) {
         return;
       }
@@ -7546,8 +6695,8 @@ var _Sources = (() => {
       const index2 = siblings2.indexOf(el);
       if (index2 === -1)
         return;
-      const domSrc = typeof elems[0] === "function" ? elems[0].call(el, i, this._render(el.children)) : elems;
-      const dom = this._makeDomArray(domSrc, i < lastIdx);
+      const domSrc = typeof elems[0] === "function" ? elems[0].call(el, i2, this._render(el.children)) : elems;
+      const dom = this._makeDomArray(domSrc, i2 < lastIdx);
       uniqueSplice(siblings2, index2 + 1, 0, dom, el.parent);
     });
   }
@@ -7574,7 +6723,7 @@ var _Sources = (() => {
   }
   function before(...elems) {
     const lastIdx = this.length - 1;
-    return domEach(this, (el, i) => {
+    return domEach(this, (el, i2) => {
       if (!hasChildren(el) || !el.parent) {
         return;
       }
@@ -7582,8 +6731,8 @@ var _Sources = (() => {
       const index2 = siblings2.indexOf(el);
       if (index2 === -1)
         return;
-      const domSrc = typeof elems[0] === "function" ? elems[0].call(el, i, this._render(el.children)) : elems;
-      const dom = this._makeDomArray(domSrc, i < lastIdx);
+      const domSrc = typeof elems[0] === "function" ? elems[0].call(el, i2, this._render(el.children)) : elems;
+      const dom = this._makeDomArray(domSrc, i2 < lastIdx);
       uniqueSplice(siblings2, index2, 0, dom, el.parent);
     });
   }
@@ -7615,13 +6764,13 @@ var _Sources = (() => {
     return this;
   }
   function replaceWith(content) {
-    return domEach(this, (el, i) => {
+    return domEach(this, (el, i2) => {
       const { parent: parent2 } = el;
       if (!parent2) {
         return;
       }
       const siblings2 = parent2.children;
-      const cont = typeof content === "function" ? content.call(el, i, el) : content;
+      const cont = typeof content === "function" ? content.call(el, i2, el) : content;
       const dom = this._makeDomArray(cont);
       update(dom, null);
       const index2 = siblings2.indexOf(el);
@@ -7666,7 +6815,7 @@ var _Sources = (() => {
       return text(this);
     }
     if (typeof str === "function") {
-      return domEach(this, (el, i) => this._make(el).text(str.call(el, i, text([el]))));
+      return domEach(this, (el, i2) => this._make(el).text(str.call(el, i2, text([el]))));
     }
     return domEach(this, (el) => {
       if (!hasChildren(el))
@@ -7694,10 +6843,10 @@ var _Sources = (() => {
   });
   function css(prop2, val2) {
     if (prop2 != null && val2 != null || // When `prop` is a "plain" object
-      typeof prop2 === "object" && !Array.isArray(prop2)) {
-      return domEach(this, (el, i) => {
+    typeof prop2 === "object" && !Array.isArray(prop2)) {
+      return domEach(this, (el, i2) => {
         if (isTag2(el)) {
-          setCss(el, prop2, val2, i);
+          setCss(el, prop2, val2, i2);
         }
       });
     }
@@ -7718,9 +6867,9 @@ var _Sources = (() => {
       el.attribs["style"] = stringify(styles);
     } else if (typeof prop2 === "object") {
       const keys = Object.keys(prop2);
-      for (let i = 0; i < keys.length; i++) {
-        const k = keys[i];
-        setCss(el, k, prop2[k], i);
+      for (let i2 = 0; i2 < keys.length; i2++) {
+        const k = keys[i2];
+        setCss(el, k, prop2[k], i2);
       }
     }
   }
@@ -7833,8 +6982,8 @@ var _Sources = (() => {
       if (isArray) {
         ret[key] = this._findBySelector(selector, Number.POSITIVE_INFINITY).map((_, el) => fn(el, key, ret)).get();
       } else {
-        const $2 = this._findBySelector(selector, 1);
-        ret[key] = $2.length > 0 ? fn($2[0], key, ret) : void 0;
+        const $3 = this._findBySelector(selector, 1);
+        ret[key] = $3.length > 0 ? fn($3[0], key, ret) : void 0;
       }
     }
     return ret;
@@ -7999,7 +7148,7 @@ var _Sources = (() => {
   ]);
   var REPLACEMENT_CHARACTER = "\uFFFD";
   var CODE_POINTS;
-  (function (CODE_POINTS2) {
+  (function(CODE_POINTS2) {
     CODE_POINTS2[CODE_POINTS2["EOF"] = -1] = "EOF";
     CODE_POINTS2[CODE_POINTS2["NULL"] = 0] = "NULL";
     CODE_POINTS2[CODE_POINTS2["TABULATION"] = 9] = "TABULATION";
@@ -8053,7 +7202,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/dist/common/error-codes.js
   var ERR;
-  (function (ERR2) {
+  (function(ERR2) {
     ERR2["controlCharacterInInputStream"] = "control-character-in-input-stream";
     ERR2["noncharacterInInputStream"] = "noncharacter-in-input-stream";
     ERR2["surrogateInInputStream"] = "surrogate-in-input-stream";
@@ -8215,9 +7364,9 @@ var _Sources = (() => {
       if (caseSensitive) {
         return this.html.startsWith(pattern, this.pos);
       }
-      for (let i = 0; i < pattern.length; i++) {
-        const cp = this.html.charCodeAt(this.pos + i) | 32;
-        if (cp !== pattern.charCodeAt(i)) {
+      for (let i2 = 0; i2 < pattern.length; i2++) {
+        const cp = this.html.charCodeAt(this.pos + i2) | 32;
+        if (cp !== pattern.charCodeAt(i2)) {
           return false;
         }
       }
@@ -8287,7 +7436,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/dist/common/token.js
   var TokenType;
-  (function (TokenType2) {
+  (function(TokenType2) {
     TokenType2[TokenType2["CHARACTER"] = 0] = "CHARACTER";
     TokenType2[TokenType2["NULL_CHARACTER"] = 1] = "NULL_CHARACTER";
     TokenType2[TokenType2["WHITESPACE_CHARACTER"] = 2] = "WHITESPACE_CHARACTER";
@@ -8299,9 +7448,9 @@ var _Sources = (() => {
     TokenType2[TokenType2["HIBERNATION"] = 8] = "HIBERNATION";
   })(TokenType || (TokenType = {}));
   function getTokenAttr(token, attrName) {
-    for (let i = token.attrs.length - 1; i >= 0; i--) {
-      if (token.attrs[i].name === attrName) {
-        return token.attrs[i].value;
+    for (let i2 = token.attrs.length - 1; i2 >= 0; i2--) {
+      if (token.attrs[i2].name === attrName) {
+        return token.attrs[i2].value;
       }
     }
     return null;
@@ -8348,7 +7497,7 @@ var _Sources = (() => {
   ]);
   var fromCodePoint3 = (
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, n/no-unsupported-features/es-builtins
-    (_a4 = String.fromCodePoint) !== null && _a4 !== void 0 ? _a4 : function (codePoint) {
+    (_a4 = String.fromCodePoint) !== null && _a4 !== void 0 ? _a4 : function(codePoint) {
       let output = "";
       if (codePoint > 65535) {
         codePoint -= 65536;
@@ -8369,7 +7518,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/node_modules/entities/dist/esm/decode.js
   var CharCodes4;
-  (function (CharCodes5) {
+  (function(CharCodes5) {
     CharCodes5[CharCodes5["NUM"] = 35] = "NUM";
     CharCodes5[CharCodes5["SEMI"] = 59] = "SEMI";
     CharCodes5[CharCodes5["EQUALS"] = 61] = "EQUALS";
@@ -8385,7 +7534,7 @@ var _Sources = (() => {
   })(CharCodes4 || (CharCodes4 = {}));
   var TO_LOWER_BIT3 = 32;
   var BinTrieFlags3;
-  (function (BinTrieFlags4) {
+  (function(BinTrieFlags4) {
     BinTrieFlags4[BinTrieFlags4["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
     BinTrieFlags4[BinTrieFlags4["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
     BinTrieFlags4[BinTrieFlags4["JUMP_TABLE"] = 127] = "JUMP_TABLE";
@@ -8403,7 +7552,7 @@ var _Sources = (() => {
     return code === CharCodes4.EQUALS || isAsciiAlphaNumeric3(code);
   }
   var EntityDecoderState3;
-  (function (EntityDecoderState4) {
+  (function(EntityDecoderState4) {
     EntityDecoderState4[EntityDecoderState4["EntityStart"] = 0] = "EntityStart";
     EntityDecoderState4[EntityDecoderState4["NumericStart"] = 1] = "NumericStart";
     EntityDecoderState4[EntityDecoderState4["NumericDecimal"] = 2] = "NumericDecimal";
@@ -8411,7 +7560,7 @@ var _Sources = (() => {
     EntityDecoderState4[EntityDecoderState4["NamedEntity"] = 4] = "NamedEntity";
   })(EntityDecoderState3 || (EntityDecoderState3 = {}));
   var DecodingMode3;
-  (function (DecodingMode4) {
+  (function(DecodingMode4) {
     DecodingMode4[DecodingMode4["Legacy"] = 0] = "Legacy";
     DecodingMode4[DecodingMode4["Strict"] = 1] = "Strict";
     DecodingMode4[DecodingMode4["Attribute"] = 2] = "Attribute";
@@ -8598,9 +7747,9 @@ var _Sources = (() => {
         this.treeIndex = determineBranch3(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
         if (this.treeIndex < 0) {
           return this.result === 0 || // If we are parsing an attribute
-            this.decodeMode === DecodingMode3.Attribute && // We shouldn't have consumed any characters after the entity,
-            (valueLength === 0 || // And there should be no invalid characters.
-              isEntityInAttributeInvalidEnd3(char)) ? 0 : this.emitNotTerminatedNamedEntity();
+          this.decodeMode === DecodingMode3.Attribute && // We shouldn't have consumed any characters after the entity,
+          (valueLength === 0 || // And there should be no invalid characters.
+          isEntityInAttributeInvalidEnd3(char)) ? 0 : this.emitNotTerminatedNamedEntity();
         }
         current = decodeTree[this.treeIndex];
         valueLength = (current & BinTrieFlags3.VALUE_LENGTH) >> 14;
@@ -8716,7 +7865,7 @@ var _Sources = (() => {
     hasUnescapedText: () => hasUnescapedText
   });
   var NS;
-  (function (NS2) {
+  (function(NS2) {
     NS2["HTML"] = "http://www.w3.org/1999/xhtml";
     NS2["MATHML"] = "http://www.w3.org/1998/Math/MathML";
     NS2["SVG"] = "http://www.w3.org/2000/svg";
@@ -8725,7 +7874,7 @@ var _Sources = (() => {
     NS2["XMLNS"] = "http://www.w3.org/2000/xmlns/";
   })(NS || (NS = {}));
   var ATTRS;
-  (function (ATTRS2) {
+  (function(ATTRS2) {
     ATTRS2["TYPE"] = "type";
     ATTRS2["ACTION"] = "action";
     ATTRS2["ENCODING"] = "encoding";
@@ -8736,13 +7885,13 @@ var _Sources = (() => {
     ATTRS2["SIZE"] = "size";
   })(ATTRS || (ATTRS = {}));
   var DOCUMENT_MODE;
-  (function (DOCUMENT_MODE2) {
+  (function(DOCUMENT_MODE2) {
     DOCUMENT_MODE2["NO_QUIRKS"] = "no-quirks";
     DOCUMENT_MODE2["QUIRKS"] = "quirks";
     DOCUMENT_MODE2["LIMITED_QUIRKS"] = "limited-quirks";
   })(DOCUMENT_MODE || (DOCUMENT_MODE = {}));
   var TAG_NAMES;
-  (function (TAG_NAMES2) {
+  (function(TAG_NAMES2) {
     TAG_NAMES2["A"] = "a";
     TAG_NAMES2["ADDRESS"] = "address";
     TAG_NAMES2["ANNOTATION_XML"] = "annotation-xml";
@@ -8868,7 +8017,7 @@ var _Sources = (() => {
     TAG_NAMES2["XMP"] = "xmp";
   })(TAG_NAMES || (TAG_NAMES = {}));
   var TAG_ID;
-  (function (TAG_ID2) {
+  (function(TAG_ID2) {
     TAG_ID2[TAG_ID2["UNKNOWN"] = 0] = "UNKNOWN";
     TAG_ID2[TAG_ID2["A"] = 1] = "A";
     TAG_ID2[TAG_ID2["ADDRESS"] = 2] = "ADDRESS";
@@ -9123,98 +8272,98 @@ var _Sources = (() => {
     var _a5;
     return (_a5 = TAG_NAME_TO_ID.get(tagName)) !== null && _a5 !== void 0 ? _a5 : TAG_ID.UNKNOWN;
   }
-  var $ = TAG_ID;
+  var $2 = TAG_ID;
   var SPECIAL_ELEMENTS = {
     [NS.HTML]: /* @__PURE__ */ new Set([
-      $.ADDRESS,
-      $.APPLET,
-      $.AREA,
-      $.ARTICLE,
-      $.ASIDE,
-      $.BASE,
-      $.BASEFONT,
-      $.BGSOUND,
-      $.BLOCKQUOTE,
-      $.BODY,
-      $.BR,
-      $.BUTTON,
-      $.CAPTION,
-      $.CENTER,
-      $.COL,
-      $.COLGROUP,
-      $.DD,
-      $.DETAILS,
-      $.DIR,
-      $.DIV,
-      $.DL,
-      $.DT,
-      $.EMBED,
-      $.FIELDSET,
-      $.FIGCAPTION,
-      $.FIGURE,
-      $.FOOTER,
-      $.FORM,
-      $.FRAME,
-      $.FRAMESET,
-      $.H1,
-      $.H2,
-      $.H3,
-      $.H4,
-      $.H5,
-      $.H6,
-      $.HEAD,
-      $.HEADER,
-      $.HGROUP,
-      $.HR,
-      $.HTML,
-      $.IFRAME,
-      $.IMG,
-      $.INPUT,
-      $.LI,
-      $.LINK,
-      $.LISTING,
-      $.MAIN,
-      $.MARQUEE,
-      $.MENU,
-      $.META,
-      $.NAV,
-      $.NOEMBED,
-      $.NOFRAMES,
-      $.NOSCRIPT,
-      $.OBJECT,
-      $.OL,
-      $.P,
-      $.PARAM,
-      $.PLAINTEXT,
-      $.PRE,
-      $.SCRIPT,
-      $.SECTION,
-      $.SELECT,
-      $.SOURCE,
-      $.STYLE,
-      $.SUMMARY,
-      $.TABLE,
-      $.TBODY,
-      $.TD,
-      $.TEMPLATE,
-      $.TEXTAREA,
-      $.TFOOT,
-      $.TH,
-      $.THEAD,
-      $.TITLE,
-      $.TR,
-      $.TRACK,
-      $.UL,
-      $.WBR,
-      $.XMP
+      $2.ADDRESS,
+      $2.APPLET,
+      $2.AREA,
+      $2.ARTICLE,
+      $2.ASIDE,
+      $2.BASE,
+      $2.BASEFONT,
+      $2.BGSOUND,
+      $2.BLOCKQUOTE,
+      $2.BODY,
+      $2.BR,
+      $2.BUTTON,
+      $2.CAPTION,
+      $2.CENTER,
+      $2.COL,
+      $2.COLGROUP,
+      $2.DD,
+      $2.DETAILS,
+      $2.DIR,
+      $2.DIV,
+      $2.DL,
+      $2.DT,
+      $2.EMBED,
+      $2.FIELDSET,
+      $2.FIGCAPTION,
+      $2.FIGURE,
+      $2.FOOTER,
+      $2.FORM,
+      $2.FRAME,
+      $2.FRAMESET,
+      $2.H1,
+      $2.H2,
+      $2.H3,
+      $2.H4,
+      $2.H5,
+      $2.H6,
+      $2.HEAD,
+      $2.HEADER,
+      $2.HGROUP,
+      $2.HR,
+      $2.HTML,
+      $2.IFRAME,
+      $2.IMG,
+      $2.INPUT,
+      $2.LI,
+      $2.LINK,
+      $2.LISTING,
+      $2.MAIN,
+      $2.MARQUEE,
+      $2.MENU,
+      $2.META,
+      $2.NAV,
+      $2.NOEMBED,
+      $2.NOFRAMES,
+      $2.NOSCRIPT,
+      $2.OBJECT,
+      $2.OL,
+      $2.P,
+      $2.PARAM,
+      $2.PLAINTEXT,
+      $2.PRE,
+      $2.SCRIPT,
+      $2.SECTION,
+      $2.SELECT,
+      $2.SOURCE,
+      $2.STYLE,
+      $2.SUMMARY,
+      $2.TABLE,
+      $2.TBODY,
+      $2.TD,
+      $2.TEMPLATE,
+      $2.TEXTAREA,
+      $2.TFOOT,
+      $2.TH,
+      $2.THEAD,
+      $2.TITLE,
+      $2.TR,
+      $2.TRACK,
+      $2.UL,
+      $2.WBR,
+      $2.XMP
     ]),
-    [NS.MATHML]: /* @__PURE__ */ new Set([$.MI, $.MO, $.MN, $.MS, $.MTEXT, $.ANNOTATION_XML]),
-    [NS.SVG]: /* @__PURE__ */ new Set([$.TITLE, $.FOREIGN_OBJECT, $.DESC]),
+    [NS.MATHML]: /* @__PURE__ */ new Set([$2.MI, $2.MO, $2.MN, $2.MS, $2.MTEXT, $2.ANNOTATION_XML]),
+    [NS.SVG]: /* @__PURE__ */ new Set([$2.TITLE, $2.FOREIGN_OBJECT, $2.DESC]),
     [NS.XLINK]: /* @__PURE__ */ new Set(),
     [NS.XML]: /* @__PURE__ */ new Set(),
     [NS.XMLNS]: /* @__PURE__ */ new Set()
   };
-  var NUMBERED_HEADERS = /* @__PURE__ */ new Set([$.H1, $.H2, $.H3, $.H4, $.H5, $.H6]);
+  var NUMBERED_HEADERS = /* @__PURE__ */ new Set([$2.H1, $2.H2, $2.H3, $2.H4, $2.H5, $2.H6]);
   var UNESCAPED_TEXT = /* @__PURE__ */ new Set([
     TAG_NAMES.STYLE,
     TAG_NAMES.SCRIPT,
@@ -9230,7 +8379,7 @@ var _Sources = (() => {
 
   // node_modules/parse5/dist/tokenizer/index.js
   var State2;
-  (function (State3) {
+  (function(State3) {
     State3[State3["DATA"] = 0] = "DATA";
     State3[State3["RCDATA"] = 1] = "RCDATA";
     State3[State3["RAWTEXT"] = 2] = "RAWTEXT";
@@ -9464,7 +8613,7 @@ var _Sources = (() => {
     }
     _advanceBy(count) {
       this.consumedAfterSnapshot += count;
-      for (let i = 0; i < count; i++) {
+      for (let i2 = 0; i2 < count; i2++) {
         this.preprocessor.advance();
       }
     }
@@ -10484,7 +9633,7 @@ var _Sources = (() => {
     _stateScriptDataDoubleEscapeStart(cp) {
       if (this.preprocessor.startsWith(SEQUENCES.SCRIPT, false) && isScriptDataDoubleEscapeSequenceEnd(this.preprocessor.peek(SEQUENCES.SCRIPT.length))) {
         this._emitCodePoint(cp);
-        for (let i = 0; i < SEQUENCES.SCRIPT.length; i++) {
+        for (let i2 = 0; i2 < SEQUENCES.SCRIPT.length; i2++) {
           this._emitCodePoint(this._consume());
         }
         this.state = State2.SCRIPT_DATA_DOUBLE_ESCAPED;
@@ -10604,7 +9753,7 @@ var _Sources = (() => {
     _stateScriptDataDoubleEscapeEnd(cp) {
       if (this.preprocessor.startsWith(SEQUENCES.SCRIPT, false) && isScriptDataDoubleEscapeSequenceEnd(this.preprocessor.peek(SEQUENCES.SCRIPT.length))) {
         this._emitCodePoint(cp);
-        for (let i = 0; i < SEQUENCES.SCRIPT.length; i++) {
+        for (let i2 = 0; i2 < SEQUENCES.SCRIPT.length; i2++) {
           this._emitCodePoint(this._consume());
         }
         this.state = State2.SCRIPT_DATA_ESCAPED;
@@ -11979,9 +11128,9 @@ var _Sources = (() => {
       this.shortenToLength(1);
     }
     _indexOfTagNames(tagNames, namespace) {
-      for (let i = this.stackTop; i >= 0; i--) {
-        if (tagNames.has(this.tagIDs[i]) && this.treeAdapter.getNamespaceURI(this.items[i]) === namespace) {
-          return i;
+      for (let i2 = this.stackTop; i2 >= 0; i2--) {
+        if (tagNames.has(this.tagIDs[i2]) && this.treeAdapter.getNamespaceURI(this.items[i2]) === namespace) {
+          return i2;
         }
       }
       return -1;
@@ -12029,9 +11178,9 @@ var _Sources = (() => {
     }
     //Element in scope
     hasInDynamicScope(tagName, htmlScope) {
-      for (let i = this.stackTop; i >= 0; i--) {
-        const tn = this.tagIDs[i];
-        switch (this.treeAdapter.getNamespaceURI(this.items[i])) {
+      for (let i2 = this.stackTop; i2 >= 0; i2--) {
+        const tn = this.tagIDs[i2];
+        switch (this.treeAdapter.getNamespaceURI(this.items[i2])) {
           case NS.HTML: {
             if (tn === tagName)
               return true;
@@ -12063,9 +11212,9 @@ var _Sources = (() => {
       return this.hasInDynamicScope(tagName, SCOPING_ELEMENTS_HTML_BUTTON);
     }
     hasNumberedHeaderInScope() {
-      for (let i = this.stackTop; i >= 0; i--) {
-        const tn = this.tagIDs[i];
-        switch (this.treeAdapter.getNamespaceURI(this.items[i])) {
+      for (let i2 = this.stackTop; i2 >= 0; i2--) {
+        const tn = this.tagIDs[i2];
+        switch (this.treeAdapter.getNamespaceURI(this.items[i2])) {
           case NS.HTML: {
             if (NUMBERED_HEADERS.has(tn))
               return true;
@@ -12088,11 +11237,11 @@ var _Sources = (() => {
       return true;
     }
     hasInTableScope(tagName) {
-      for (let i = this.stackTop; i >= 0; i--) {
-        if (this.treeAdapter.getNamespaceURI(this.items[i]) !== NS.HTML) {
+      for (let i2 = this.stackTop; i2 >= 0; i2--) {
+        if (this.treeAdapter.getNamespaceURI(this.items[i2]) !== NS.HTML) {
           continue;
         }
-        switch (this.tagIDs[i]) {
+        switch (this.tagIDs[i2]) {
           case tagName: {
             return true;
           }
@@ -12105,11 +11254,11 @@ var _Sources = (() => {
       return true;
     }
     hasTableBodyContextInTableScope() {
-      for (let i = this.stackTop; i >= 0; i--) {
-        if (this.treeAdapter.getNamespaceURI(this.items[i]) !== NS.HTML) {
+      for (let i2 = this.stackTop; i2 >= 0; i2--) {
+        if (this.treeAdapter.getNamespaceURI(this.items[i2]) !== NS.HTML) {
           continue;
         }
-        switch (this.tagIDs[i]) {
+        switch (this.tagIDs[i2]) {
           case TAG_ID.TBODY:
           case TAG_ID.THEAD:
           case TAG_ID.TFOOT: {
@@ -12124,11 +11273,11 @@ var _Sources = (() => {
       return true;
     }
     hasInSelectScope(tagName) {
-      for (let i = this.stackTop; i >= 0; i--) {
-        if (this.treeAdapter.getNamespaceURI(this.items[i]) !== NS.HTML) {
+      for (let i2 = this.stackTop; i2 >= 0; i2--) {
+        if (this.treeAdapter.getNamespaceURI(this.items[i2]) !== NS.HTML) {
           continue;
         }
-        switch (this.tagIDs[i]) {
+        switch (this.tagIDs[i2]) {
           case tagName: {
             return true;
           }
@@ -12164,7 +11313,7 @@ var _Sources = (() => {
   // node_modules/parse5/dist/parser/formatting-element-list.js
   var NOAH_ARK_CAPACITY = 3;
   var EntryType;
-  (function (EntryType2) {
+  (function(EntryType2) {
     EntryType2[EntryType2["Marker"] = 0] = "Marker";
     EntryType2[EntryType2["Element"] = 1] = "Element";
   })(EntryType || (EntryType = {}));
@@ -12183,8 +11332,8 @@ var _Sources = (() => {
       const neAttrsLength = neAttrs.length;
       const neTagName = this.treeAdapter.getTagName(newElement);
       const neNamespaceURI = this.treeAdapter.getNamespaceURI(newElement);
-      for (let i = 0; i < this.entries.length; i++) {
-        const entry = this.entries[i];
+      for (let i2 = 0; i2 < this.entries.length; i2++) {
+        const entry = this.entries[i2];
         if (entry.type === EntryType.Marker) {
           break;
         }
@@ -12192,7 +11341,7 @@ var _Sources = (() => {
         if (this.treeAdapter.getTagName(element) === neTagName && this.treeAdapter.getNamespaceURI(element) === neNamespaceURI) {
           const elementAttrs = this.treeAdapter.getAttrList(element);
           if (elementAttrs.length === neAttrsLength) {
-            candidates.push({ idx: i, attrs: elementAttrs });
+            candidates.push({ idx: i2, attrs: elementAttrs });
           }
         }
       }
@@ -12207,8 +11356,8 @@ var _Sources = (() => {
         return;
       const neAttrsMap = new Map(neAttrs.map((neAttr) => [neAttr.name, neAttr.value]));
       let validCandidates = 0;
-      for (let i = 0; i < candidates.length; i++) {
-        const candidate = candidates[i];
+      for (let i2 = 0; i2 < candidates.length; i2++) {
+        const candidate = candidates[i2];
         if (candidate.attrs.every((cAttr) => neAttrsMap.get(cAttr.name) === cAttr.value)) {
           validCandidates += 1;
           if (validCandidates >= NOAH_ARK_CAPACITY) {
@@ -12717,28 +11866,28 @@ var _Sources = (() => {
     return isFontWithAttrs || EXITS_FOREIGN_CONTENT.has(tn);
   }
   function adjustTokenMathMLAttrs(token) {
-    for (let i = 0; i < token.attrs.length; i++) {
-      if (token.attrs[i].name === DEFINITION_URL_ATTR) {
-        token.attrs[i].name = ADJUSTED_DEFINITION_URL_ATTR;
+    for (let i2 = 0; i2 < token.attrs.length; i2++) {
+      if (token.attrs[i2].name === DEFINITION_URL_ATTR) {
+        token.attrs[i2].name = ADJUSTED_DEFINITION_URL_ATTR;
         break;
       }
     }
   }
   function adjustTokenSVGAttrs(token) {
-    for (let i = 0; i < token.attrs.length; i++) {
-      const adjustedAttrName = SVG_ATTRS_ADJUSTMENT_MAP.get(token.attrs[i].name);
+    for (let i2 = 0; i2 < token.attrs.length; i2++) {
+      const adjustedAttrName = SVG_ATTRS_ADJUSTMENT_MAP.get(token.attrs[i2].name);
       if (adjustedAttrName != null) {
-        token.attrs[i].name = adjustedAttrName;
+        token.attrs[i2].name = adjustedAttrName;
       }
     }
   }
   function adjustTokenXMLAttrs(token) {
-    for (let i = 0; i < token.attrs.length; i++) {
-      const adjustedAttrEntry = XML_ATTRS_ADJUSTMENT_MAP.get(token.attrs[i].name);
+    for (let i2 = 0; i2 < token.attrs.length; i2++) {
+      const adjustedAttrEntry = XML_ATTRS_ADJUSTMENT_MAP.get(token.attrs[i2].name);
       if (adjustedAttrEntry) {
-        token.attrs[i].prefix = adjustedAttrEntry.prefix;
-        token.attrs[i].name = adjustedAttrEntry.name;
-        token.attrs[i].namespace = adjustedAttrEntry.namespace;
+        token.attrs[i2].prefix = adjustedAttrEntry.prefix;
+        token.attrs[i2].name = adjustedAttrEntry.name;
+        token.attrs[i2].namespace = adjustedAttrEntry.namespace;
       }
     }
   }
@@ -12754,9 +11903,9 @@ var _Sources = (() => {
   }
   function isHtmlIntegrationPoint(tn, ns, attrs) {
     if (ns === NS.MATHML && tn === TAG_ID.ANNOTATION_XML) {
-      for (let i = 0; i < attrs.length; i++) {
-        if (attrs[i].name === ATTRS.ENCODING) {
-          const value = attrs[i].value.toLowerCase();
+      for (let i2 = 0; i2 < attrs.length; i2++) {
+        if (attrs[i2].name === ATTRS.ENCODING) {
+          const value = attrs[i2].value.toLowerCase();
           return value === MIME_TYPES.TEXT_HTML || value === MIME_TYPES.APPLICATION_XML;
         }
       }
@@ -12772,7 +11921,7 @@ var _Sources = (() => {
   var AA_OUTER_LOOP_ITER = 8;
   var AA_INNER_LOOP_ITER = 3;
   var InsertionMode;
-  (function (InsertionMode2) {
+  (function(InsertionMode2) {
     InsertionMode2[InsertionMode2["INITIAL"] = 0] = "INITIAL";
     InsertionMode2[InsertionMode2["BEFORE_HTML"] = 1] = "BEFORE_HTML";
     InsertionMode2[InsertionMode2["BEFORE_HEAD"] = 2] = "BEFORE_HEAD";
@@ -13190,8 +12339,8 @@ var _Sources = (() => {
       if (listLength) {
         const endIndex = this.activeFormattingElements.entries.findIndex((entry) => entry.type === EntryType.Marker || this.openElements.contains(entry.element));
         const unopenIdx = endIndex === -1 ? listLength - 1 : endIndex - 1;
-        for (let i = unopenIdx; i >= 0; i--) {
-          const entry = this.activeFormattingElements.entries[i];
+        for (let i2 = unopenIdx; i2 >= 0; i2--) {
+          const entry = this.activeFormattingElements.entries[i2];
           this._insertElement(entry.token, this.treeAdapter.getNamespaceURI(entry.element));
           entry.element = this.openElements.current;
         }
@@ -13213,8 +12362,8 @@ var _Sources = (() => {
     //Insertion modes
     /** @protected */
     _resetInsertionMode() {
-      for (let i = this.openElements.stackTop; i >= 0; i--) {
-        switch (i === 0 && this.fragmentContext ? this.fragmentContextID : this.openElements.tagIDs[i]) {
+      for (let i2 = this.openElements.stackTop; i2 >= 0; i2--) {
+        switch (i2 === 0 && this.fragmentContext ? this.fragmentContextID : this.openElements.tagIDs[i2]) {
           case TAG_ID.TR: {
             this.insertionMode = InsertionMode.IN_ROW;
             return;
@@ -13246,7 +12395,7 @@ var _Sources = (() => {
             return;
           }
           case TAG_ID.SELECT: {
-            this._resetInsertionModeForSelect(i);
+            this._resetInsertionModeForSelect(i2);
             return;
           }
           case TAG_ID.TEMPLATE: {
@@ -13259,14 +12408,14 @@ var _Sources = (() => {
           }
           case TAG_ID.TD:
           case TAG_ID.TH: {
-            if (i > 0) {
+            if (i2 > 0) {
               this.insertionMode = InsertionMode.IN_CELL;
               return;
             }
             break;
           }
           case TAG_ID.HEAD: {
-            if (i > 0) {
+            if (i2 > 0) {
               this.insertionMode = InsertionMode.IN_HEAD;
               return;
             }
@@ -13279,8 +12428,8 @@ var _Sources = (() => {
     /** @protected */
     _resetInsertionModeForSelect(selectIdx) {
       if (selectIdx > 0) {
-        for (let i = selectIdx - 1; i > 0; i--) {
-          const tn = this.openElements.tagIDs[i];
+        for (let i2 = selectIdx - 1; i2 > 0; i2--) {
+          const tn = this.openElements.tagIDs[i2];
           if (tn === TAG_ID.TEMPLATE) {
             break;
           } else if (tn === TAG_ID.TABLE) {
@@ -13302,9 +12451,9 @@ var _Sources = (() => {
     }
     /** @protected */
     _findFosterParentingLocation() {
-      for (let i = this.openElements.stackTop; i >= 0; i--) {
-        const openElement = this.openElements.items[i];
-        switch (this.openElements.tagIDs[i]) {
+      for (let i2 = this.openElements.stackTop; i2 >= 0; i2--) {
+        const openElement = this.openElements.items[i2];
+        switch (this.openElements.tagIDs[i2]) {
           case TAG_ID.TEMPLATE: {
             if (this.treeAdapter.getNamespaceURI(openElement) === NS.HTML) {
               return { parent: this.treeAdapter.getTemplateContent(openElement), beforeElement: null };
@@ -13316,7 +12465,7 @@ var _Sources = (() => {
             if (parent2) {
               return { parent: parent2, beforeElement: openElement };
             }
-            return { parent: this.openElements.items[i - 1], beforeElement: null };
+            return { parent: this.openElements.items[i2 - 1], beforeElement: null };
           }
           default:
         }
@@ -13906,10 +13055,10 @@ var _Sources = (() => {
   function aaInnerLoop(p, furthestBlock, formattingElement) {
     let lastElement = furthestBlock;
     let nextElement = p.openElements.getCommonAncestor(furthestBlock);
-    for (let i = 0, element = nextElement; element !== formattingElement; i++, element = nextElement) {
+    for (let i2 = 0, element = nextElement; element !== formattingElement; i2++, element = nextElement) {
       nextElement = p.openElements.getCommonAncestor(element);
       const elementEntry = p.activeFormattingElements.getElementEntry(element);
-      const counterOverflow = elementEntry && i >= AA_INNER_LOOP_ITER;
+      const counterOverflow = elementEntry && i2 >= AA_INNER_LOOP_ITER;
       const shouldRemoveFromOpenElements = !elementEntry || counterOverflow;
       if (shouldRemoveFromOpenElements) {
         if (counterOverflow) {
@@ -13960,7 +13109,7 @@ var _Sources = (() => {
     p.openElements.insertAfter(furthestBlock, newElement, token.tagID);
   }
   function callAdoptionAgency(p, token) {
-    for (let i = 0; i < AA_OUTER_LOOP_ITER; i++) {
+    for (let i2 = 0; i2 < AA_OUTER_LOOP_ITER; i2++) {
       const formattingElementEntry = aaObtainFormattingElementEntry(p, token);
       if (!formattingElementEntry) {
         break;
@@ -13991,8 +13140,8 @@ var _Sources = (() => {
     p.stopped = true;
     if (token.location) {
       const target = p.fragmentContext ? 0 : 2;
-      for (let i = p.openElements.stackTop; i >= target; i--) {
-        p._setEndLocation(p.openElements.items[i], token);
+      for (let i2 = p.openElements.stackTop; i2 >= target; i2--) {
+        p._setEndLocation(p.openElements.items[i2], token);
       }
       if (!p.fragmentContext && p.openElements.stackTop >= 0) {
         const htmlElement = p.openElements.items[0];
@@ -14379,14 +13528,14 @@ var _Sources = (() => {
   function listItemStartTagInBody(p, token) {
     p.framesetOk = false;
     const tn = token.tagID;
-    for (let i = p.openElements.stackTop; i >= 0; i--) {
-      const elementId = p.openElements.tagIDs[i];
+    for (let i2 = p.openElements.stackTop; i2 >= 0; i2--) {
+      const elementId = p.openElements.tagIDs[i2];
       if (tn === TAG_ID.LI && elementId === TAG_ID.LI || (tn === TAG_ID.DD || tn === TAG_ID.DT) && (elementId === TAG_ID.DD || elementId === TAG_ID.DT)) {
         p.openElements.generateImpliedEndTagsWithExclusion(elementId);
         p.openElements.popUntilTagNamePopped(elementId);
         break;
       }
-      if (elementId !== TAG_ID.ADDRESS && elementId !== TAG_ID.DIV && elementId !== TAG_ID.P && p._isSpecialElement(p.openElements.items[i], elementId)) {
+      if (elementId !== TAG_ID.ADDRESS && elementId !== TAG_ID.DIV && elementId !== TAG_ID.P && p._isSpecialElement(p.openElements.items[i2], elementId)) {
         break;
       }
     }
@@ -14856,13 +14005,13 @@ var _Sources = (() => {
   function genericEndTagInBody(p, token) {
     const tn = token.tagName;
     const tid = token.tagID;
-    for (let i = p.openElements.stackTop; i > 0; i--) {
-      const element = p.openElements.items[i];
-      const elementId = p.openElements.tagIDs[i];
+    for (let i2 = p.openElements.stackTop; i2 > 0; i2--) {
+      const element = p.openElements.items[i2];
+      const elementId = p.openElements.tagIDs[i2];
       if (tid === elementId && (tid !== TAG_ID.UNKNOWN || p.treeAdapter.getTagName(element) === tn)) {
         p.openElements.generateImpliedEndTagsWithExclusion(tid);
-        if (p.openElements.stackTop >= i)
-          p.openElements.shortenToLength(i);
+        if (p.openElements.stackTop >= i2)
+          p.openElements.shortenToLength(i2);
         break;
       }
       if (p._isSpecialElement(element, elementId)) {
@@ -15157,14 +14306,14 @@ var _Sources = (() => {
     p.hasNonWhitespacePendingCharacterToken = true;
   }
   function tokenInTableText(p, token) {
-    let i = 0;
+    let i2 = 0;
     if (p.hasNonWhitespacePendingCharacterToken) {
-      for (; i < p.pendingCharacterTokens.length; i++) {
-        tokenInTable(p, p.pendingCharacterTokens[i]);
+      for (; i2 < p.pendingCharacterTokens.length; i2++) {
+        tokenInTable(p, p.pendingCharacterTokens[i2]);
       }
     } else {
-      for (; i < p.pendingCharacterTokens.length; i++) {
-        p._insertCharacters(p.pendingCharacterTokens[i]);
+      for (; i2 < p.pendingCharacterTokens.length; i2++) {
+        p._insertCharacters(p.pendingCharacterTokens[i2]);
       }
     }
     p.insertionMode = p.originalInsertionMode;
@@ -15775,8 +14924,8 @@ var _Sources = (() => {
       p._endTagOutsideForeignContent(token);
       return;
     }
-    for (let i = p.openElements.stackTop; i > 0; i--) {
-      const element = p.openElements.items[i];
+    for (let i2 = p.openElements.stackTop; i2 > 0; i2--) {
+      const element = p.openElements.items[i2];
       if (p.treeAdapter.getNamespaceURI(element) === NS.HTML) {
         p._endTagOutsideForeignContent(token);
         break;
@@ -15784,7 +14933,7 @@ var _Sources = (() => {
       const tagName = p.treeAdapter.getTagName(element);
       if (tagName.toLowerCase() === token.tagName) {
         token.tagName = tagName;
-        p.openElements.shortenToLength(i);
+        p.openElements.shortenToLength(i2);
         break;
       }
     }
@@ -15799,7 +14948,7 @@ var _Sources = (() => {
     )
   );
   function getEscaper2(regex, map2) {
-    return function escape3(data2) {
+    return function escape2(data2) {
       let match;
       let lastIndex = 0;
       let result = "";
@@ -15983,11 +15132,11 @@ var _Sources = (() => {
       const attribs = /* @__PURE__ */ Object.create(null);
       const attribsNamespace = /* @__PURE__ */ Object.create(null);
       const attribsPrefix = /* @__PURE__ */ Object.create(null);
-      for (let i = 0; i < attrs.length; i++) {
-        const attrName = attrs[i].name;
-        attribs[attrName] = attrs[i].value;
-        attribsNamespace[attrName] = attrs[i].namespace;
-        attribsPrefix[attrName] = attrs[i].prefix;
+      for (let i2 = 0; i2 < attrs.length; i2++) {
+        const attrName = attrs[i2].name;
+        attribs[attrName] = attrs[i2].value;
+        attribsNamespace[attrName] = attrs[i2].namespace;
+        attribsPrefix[attrName] = attrs[i2].prefix;
       }
       const node = new Element(tagName, attribs, []);
       node.namespace = namespaceURI;
@@ -16081,12 +15230,12 @@ var _Sources = (() => {
       }
     },
     adoptAttributes(recipient, attrs) {
-      for (let i = 0; i < attrs.length; i++) {
-        const attrName = attrs[i].name;
+      for (let i2 = 0; i2 < attrs.length; i2++) {
+        const attrName = attrs[i2].name;
         if (recipient.attribs[attrName] === void 0) {
-          recipient.attribs[attrName] = attrs[i].value;
-          recipient["x-attribsNamespace"][attrName] = attrs[i].namespace;
-          recipient["x-attribsPrefix"][attrName] = attrs[i].prefix;
+          recipient.attribs[attrName] = attrs[i2].value;
+          recipient["x-attribsNamespace"][attrName] = attrs[i2].namespace;
+          recipient["x-attribsPrefix"][attrName] = attrs[i2].prefix;
         }
       }
     },
@@ -16183,451 +15332,331 @@ var _Sources = (() => {
   var parse5 = getParse((content, options, isDocument2, context) => options._useHtmlParser2 ? parseDocument(content, options) : parseWithParse5(content, options, isDocument2, context));
   var load = getLoad(parse5, (dom, options) => options._useHtmlParser2 ? esm_default(dom, options) : renderWithParse5(dom));
 
-  // node_modules/html-entities/dist/esm/named-references.js
-  var __assign = function () {
-    __assign = Object.assign || function (t) {
-      for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-          t[p] = s[p];
-      }
-      return t;
-    };
-    return __assign.apply(this, arguments);
-  };
-  var pairDivider = "~";
-  var blockDivider = "~~";
-  function generateNamedReferences(input, prev2) {
-    var entities = {};
-    var characters = {};
-    var blocks = input.split(blockDivider);
-    var isOptionalBlock = false;
-    for (var i = 0; blocks.length > i; i++) {
-      var entries = blocks[i].split(pairDivider);
-      for (var j = 0; j < entries.length; j += 2) {
-        var entity = entries[j];
-        var character = entries[j + 1];
-        var fullEntity = "&" + entity + ";";
-        entities[fullEntity] = character;
-        if (isOptionalBlock) {
-          entities["&" + entity] = character;
-        }
-        characters[character] = fullEntity;
-      }
-      isOptionalBlock = true;
+  // src/MangaFox/MangaFoxParser.ts
+  var import_types2 = __toESM(require_lib());
+  var parseMangaDetails = ($3, mangaId2) => {
+    const section = $3(".detail-info");
+    const title = $3("span.detail-info-right-title-font", section).text().trim();
+    const rating = $3("span.item-score", section).text().trim().replace(",", ".");
+    const author = $3("p.detail-info-right-say a", section).text().trim();
+    const image = $3(".detail-info-cover-img", $3(".detail-info-cover")).attr("src") ?? "";
+    const description = $3("p.fullcontent").text().trim();
+    const arrayTags = [];
+    for (const tag of $3("a", ".detail-info-right-tag-list").toArray()) {
+      const id = $3(tag).attr("href")?.split("/directory/")[1]?.replace(/\//g, "");
+      const label = $3(tag).text().trim();
+      if (!id || !label) continue;
+      arrayTags.push({ id, label });
     }
-    return prev2 ? { entities: __assign(__assign({}, entities), prev2.entities), characters: __assign(__assign({}, characters), prev2.characters) } : { entities, characters };
-  }
-  var bodyRegExps = {
-    xml: /&(?:#\d+|#[xX][\da-fA-F]+|[0-9a-zA-Z]+);?/g,
-    html4: /&notin;|&(?:nbsp|iexcl|cent|pound|curren|yen|brvbar|sect|uml|copy|ordf|laquo|not|shy|reg|macr|deg|plusmn|sup2|sup3|acute|micro|para|middot|cedil|sup1|ordm|raquo|frac14|frac12|frac34|iquest|Agrave|Aacute|Acirc|Atilde|Auml|Aring|AElig|Ccedil|Egrave|Eacute|Ecirc|Euml|Igrave|Iacute|Icirc|Iuml|ETH|Ntilde|Ograve|Oacute|Ocirc|Otilde|Ouml|times|Oslash|Ugrave|Uacute|Ucirc|Uuml|Yacute|THORN|szlig|agrave|aacute|acirc|atilde|auml|aring|aelig|ccedil|egrave|eacute|ecirc|euml|igrave|iacute|icirc|iuml|eth|ntilde|ograve|oacute|ocirc|otilde|ouml|divide|oslash|ugrave|uacute|ucirc|uuml|yacute|thorn|yuml|quot|amp|lt|gt|#\d+|#[xX][\da-fA-F]+|[0-9a-zA-Z]+);?/g,
-    html5: /&centerdot;|&copysr;|&divideontimes;|&gtcc;|&gtcir;|&gtdot;|&gtlPar;|&gtquest;|&gtrapprox;|&gtrarr;|&gtrdot;|&gtreqless;|&gtreqqless;|&gtrless;|&gtrsim;|&ltcc;|&ltcir;|&ltdot;|&lthree;|&ltimes;|&ltlarr;|&ltquest;|&ltrPar;|&ltri;|&ltrie;|&ltrif;|&notin;|&notinE;|&notindot;|&notinva;|&notinvb;|&notinvc;|&notni;|&notniva;|&notnivb;|&notnivc;|&parallel;|&timesb;|&timesbar;|&timesd;|&(?:AElig|AMP|Aacute|Acirc|Agrave|Aring|Atilde|Auml|COPY|Ccedil|ETH|Eacute|Ecirc|Egrave|Euml|GT|Iacute|Icirc|Igrave|Iuml|LT|Ntilde|Oacute|Ocirc|Ograve|Oslash|Otilde|Ouml|QUOT|REG|THORN|Uacute|Ucirc|Ugrave|Uuml|Yacute|aacute|acirc|acute|aelig|agrave|amp|aring|atilde|auml|brvbar|ccedil|cedil|cent|copy|curren|deg|divide|eacute|ecirc|egrave|eth|euml|frac12|frac14|frac34|gt|iacute|icirc|iexcl|igrave|iquest|iuml|laquo|lt|macr|micro|middot|nbsp|not|ntilde|oacute|ocirc|ograve|ordf|ordm|oslash|otilde|ouml|para|plusmn|pound|quot|raquo|reg|sect|shy|sup1|sup2|sup3|szlig|thorn|times|uacute|ucirc|ugrave|uml|uuml|yacute|yen|yuml|#\d+|#[xX][\da-fA-F]+|[0-9a-zA-Z]+);?/g
-  };
-  var namedReferences = {};
-  namedReferences["xml"] = generateNamedReferences(`lt~<~gt~>~quot~"~apos~'~amp~&`);
-  namedReferences["html4"] = generateNamedReferences(`apos~'~OElig~\u0152~oelig~\u0153~Scaron~\u0160~scaron~\u0161~Yuml~\u0178~circ~\u02C6~tilde~\u02DC~ensp~\u2002~emsp~\u2003~thinsp~\u2009~zwnj~\u200C~zwj~\u200D~lrm~\u200E~rlm~\u200F~ndash~\u2013~mdash~\u2014~lsquo~\u2018~rsquo~\u2019~sbquo~\u201A~ldquo~\u201C~rdquo~\u201D~bdquo~\u201E~dagger~\u2020~Dagger~\u2021~permil~\u2030~lsaquo~\u2039~rsaquo~\u203A~euro~\u20AC~fnof~\u0192~Alpha~\u0391~Beta~\u0392~Gamma~\u0393~Delta~\u0394~Epsilon~\u0395~Zeta~\u0396~Eta~\u0397~Theta~\u0398~Iota~\u0399~Kappa~\u039A~Lambda~\u039B~Mu~\u039C~Nu~\u039D~Xi~\u039E~Omicron~\u039F~Pi~\u03A0~Rho~\u03A1~Sigma~\u03A3~Tau~\u03A4~Upsilon~\u03A5~Phi~\u03A6~Chi~\u03A7~Psi~\u03A8~Omega~\u03A9~alpha~\u03B1~beta~\u03B2~gamma~\u03B3~delta~\u03B4~epsilon~\u03B5~zeta~\u03B6~eta~\u03B7~theta~\u03B8~iota~\u03B9~kappa~\u03BA~lambda~\u03BB~mu~\u03BC~nu~\u03BD~xi~\u03BE~omicron~\u03BF~pi~\u03C0~rho~\u03C1~sigmaf~\u03C2~sigma~\u03C3~tau~\u03C4~upsilon~\u03C5~phi~\u03C6~chi~\u03C7~psi~\u03C8~omega~\u03C9~thetasym~\u03D1~upsih~\u03D2~piv~\u03D6~bull~\u2022~hellip~\u2026~prime~\u2032~Prime~\u2033~oline~\u203E~frasl~\u2044~weierp~\u2118~image~\u2111~real~\u211C~trade~\u2122~alefsym~\u2135~larr~\u2190~uarr~\u2191~rarr~\u2192~darr~\u2193~harr~\u2194~crarr~\u21B5~lArr~\u21D0~uArr~\u21D1~rArr~\u21D2~dArr~\u21D3~hArr~\u21D4~forall~\u2200~part~\u2202~exist~\u2203~empty~\u2205~nabla~\u2207~isin~\u2208~notin~\u2209~ni~\u220B~prod~\u220F~sum~\u2211~minus~\u2212~lowast~\u2217~radic~\u221A~prop~\u221D~infin~\u221E~ang~\u2220~and~\u2227~or~\u2228~cap~\u2229~cup~\u222A~int~\u222B~there4~\u2234~sim~\u223C~cong~\u2245~asymp~\u2248~ne~\u2260~equiv~\u2261~le~\u2264~ge~\u2265~sub~\u2282~sup~\u2283~nsub~\u2284~sube~\u2286~supe~\u2287~oplus~\u2295~otimes~\u2297~perp~\u22A5~sdot~\u22C5~lceil~\u2308~rceil~\u2309~lfloor~\u230A~rfloor~\u230B~lang~\u2329~rang~\u232A~loz~\u25CA~spades~\u2660~clubs~\u2663~hearts~\u2665~diams~\u2666~~nbsp~\xA0~iexcl~\xA1~cent~\xA2~pound~\xA3~curren~\xA4~yen~\xA5~brvbar~\xA6~sect~\xA7~uml~\xA8~copy~\xA9~ordf~\xAA~laquo~\xAB~not~\xAC~shy~\xAD~reg~\xAE~macr~\xAF~deg~\xB0~plusmn~\xB1~sup2~\xB2~sup3~\xB3~acute~\xB4~micro~\xB5~para~\xB6~middot~\xB7~cedil~\xB8~sup1~\xB9~ordm~\xBA~raquo~\xBB~frac14~\xBC~frac12~\xBD~frac34~\xBE~iquest~\xBF~Agrave~\xC0~Aacute~\xC1~Acirc~\xC2~Atilde~\xC3~Auml~\xC4~Aring~\xC5~AElig~\xC6~Ccedil~\xC7~Egrave~\xC8~Eacute~\xC9~Ecirc~\xCA~Euml~\xCB~Igrave~\xCC~Iacute~\xCD~Icirc~\xCE~Iuml~\xCF~ETH~\xD0~Ntilde~\xD1~Ograve~\xD2~Oacute~\xD3~Ocirc~\xD4~Otilde~\xD5~Ouml~\xD6~times~\xD7~Oslash~\xD8~Ugrave~\xD9~Uacute~\xDA~Ucirc~\xDB~Uuml~\xDC~Yacute~\xDD~THORN~\xDE~szlig~\xDF~agrave~\xE0~aacute~\xE1~acirc~\xE2~atilde~\xE3~auml~\xE4~aring~\xE5~aelig~\xE6~ccedil~\xE7~egrave~\xE8~eacute~\xE9~ecirc~\xEA~euml~\xEB~igrave~\xEC~iacute~\xED~icirc~\xEE~iuml~\xEF~eth~\xF0~ntilde~\xF1~ograve~\xF2~oacute~\xF3~ocirc~\xF4~otilde~\xF5~ouml~\xF6~divide~\xF7~oslash~\xF8~ugrave~\xF9~uacute~\xFA~ucirc~\xFB~uuml~\xFC~yacute~\xFD~thorn~\xFE~yuml~\xFF~quot~"~amp~&~lt~<~gt~>`);
-  namedReferences["html5"] = generateNamedReferences('Abreve~\u0102~Acy~\u0410~Afr~\u{1D504}~Amacr~\u0100~And~\u2A53~Aogon~\u0104~Aopf~\u{1D538}~ApplyFunction~\u2061~Ascr~\u{1D49C}~Assign~\u2254~Backslash~\u2216~Barv~\u2AE7~Barwed~\u2306~Bcy~\u0411~Because~\u2235~Bernoullis~\u212C~Bfr~\u{1D505}~Bopf~\u{1D539}~Breve~\u02D8~Bscr~\u212C~Bumpeq~\u224E~CHcy~\u0427~Cacute~\u0106~Cap~\u22D2~CapitalDifferentialD~\u2145~Cayleys~\u212D~Ccaron~\u010C~Ccirc~\u0108~Cconint~\u2230~Cdot~\u010A~Cedilla~\xB8~CenterDot~\xB7~Cfr~\u212D~CircleDot~\u2299~CircleMinus~\u2296~CirclePlus~\u2295~CircleTimes~\u2297~ClockwiseContourIntegral~\u2232~CloseCurlyDoubleQuote~\u201D~CloseCurlyQuote~\u2019~Colon~\u2237~Colone~\u2A74~Congruent~\u2261~Conint~\u222F~ContourIntegral~\u222E~Copf~\u2102~Coproduct~\u2210~CounterClockwiseContourIntegral~\u2233~Cross~\u2A2F~Cscr~\u{1D49E}~Cup~\u22D3~CupCap~\u224D~DD~\u2145~DDotrahd~\u2911~DJcy~\u0402~DScy~\u0405~DZcy~\u040F~Darr~\u21A1~Dashv~\u2AE4~Dcaron~\u010E~Dcy~\u0414~Del~\u2207~Dfr~\u{1D507}~DiacriticalAcute~\xB4~DiacriticalDot~\u02D9~DiacriticalDoubleAcute~\u02DD~DiacriticalGrave~`~DiacriticalTilde~\u02DC~Diamond~\u22C4~DifferentialD~\u2146~Dopf~\u{1D53B}~Dot~\xA8~DotDot~\u20DC~DotEqual~\u2250~DoubleContourIntegral~\u222F~DoubleDot~\xA8~DoubleDownArrow~\u21D3~DoubleLeftArrow~\u21D0~DoubleLeftRightArrow~\u21D4~DoubleLeftTee~\u2AE4~DoubleLongLeftArrow~\u27F8~DoubleLongLeftRightArrow~\u27FA~DoubleLongRightArrow~\u27F9~DoubleRightArrow~\u21D2~DoubleRightTee~\u22A8~DoubleUpArrow~\u21D1~DoubleUpDownArrow~\u21D5~DoubleVerticalBar~\u2225~DownArrow~\u2193~DownArrowBar~\u2913~DownArrowUpArrow~\u21F5~DownBreve~\u0311~DownLeftRightVector~\u2950~DownLeftTeeVector~\u295E~DownLeftVector~\u21BD~DownLeftVectorBar~\u2956~DownRightTeeVector~\u295F~DownRightVector~\u21C1~DownRightVectorBar~\u2957~DownTee~\u22A4~DownTeeArrow~\u21A7~Downarrow~\u21D3~Dscr~\u{1D49F}~Dstrok~\u0110~ENG~\u014A~Ecaron~\u011A~Ecy~\u042D~Edot~\u0116~Efr~\u{1D508}~Element~\u2208~Emacr~\u0112~EmptySmallSquare~\u25FB~EmptyVerySmallSquare~\u25AB~Eogon~\u0118~Eopf~\u{1D53C}~Equal~\u2A75~EqualTilde~\u2242~Equilibrium~\u21CC~Escr~\u2130~Esim~\u2A73~Exists~\u2203~ExponentialE~\u2147~Fcy~\u0424~Ffr~\u{1D509}~FilledSmallSquare~\u25FC~FilledVerySmallSquare~\u25AA~Fopf~\u{1D53D}~ForAll~\u2200~Fouriertrf~\u2131~Fscr~\u2131~GJcy~\u0403~Gammad~\u03DC~Gbreve~\u011E~Gcedil~\u0122~Gcirc~\u011C~Gcy~\u0413~Gdot~\u0120~Gfr~\u{1D50A}~Gg~\u22D9~Gopf~\u{1D53E}~GreaterEqual~\u2265~GreaterEqualLess~\u22DB~GreaterFullEqual~\u2267~GreaterGreater~\u2AA2~GreaterLess~\u2277~GreaterSlantEqual~\u2A7E~GreaterTilde~\u2273~Gscr~\u{1D4A2}~Gt~\u226B~HARDcy~\u042A~Hacek~\u02C7~Hat~^~Hcirc~\u0124~Hfr~\u210C~HilbertSpace~\u210B~Hopf~\u210D~HorizontalLine~\u2500~Hscr~\u210B~Hstrok~\u0126~HumpDownHump~\u224E~HumpEqual~\u224F~IEcy~\u0415~IJlig~\u0132~IOcy~\u0401~Icy~\u0418~Idot~\u0130~Ifr~\u2111~Im~\u2111~Imacr~\u012A~ImaginaryI~\u2148~Implies~\u21D2~Int~\u222C~Integral~\u222B~Intersection~\u22C2~InvisibleComma~\u2063~InvisibleTimes~\u2062~Iogon~\u012E~Iopf~\u{1D540}~Iscr~\u2110~Itilde~\u0128~Iukcy~\u0406~Jcirc~\u0134~Jcy~\u0419~Jfr~\u{1D50D}~Jopf~\u{1D541}~Jscr~\u{1D4A5}~Jsercy~\u0408~Jukcy~\u0404~KHcy~\u0425~KJcy~\u040C~Kcedil~\u0136~Kcy~\u041A~Kfr~\u{1D50E}~Kopf~\u{1D542}~Kscr~\u{1D4A6}~LJcy~\u0409~Lacute~\u0139~Lang~\u27EA~Laplacetrf~\u2112~Larr~\u219E~Lcaron~\u013D~Lcedil~\u013B~Lcy~\u041B~LeftAngleBracket~\u27E8~LeftArrow~\u2190~LeftArrowBar~\u21E4~LeftArrowRightArrow~\u21C6~LeftCeiling~\u2308~LeftDoubleBracket~\u27E6~LeftDownTeeVector~\u2961~LeftDownVector~\u21C3~LeftDownVectorBar~\u2959~LeftFloor~\u230A~LeftRightArrow~\u2194~LeftRightVector~\u294E~LeftTee~\u22A3~LeftTeeArrow~\u21A4~LeftTeeVector~\u295A~LeftTriangle~\u22B2~LeftTriangleBar~\u29CF~LeftTriangleEqual~\u22B4~LeftUpDownVector~\u2951~LeftUpTeeVector~\u2960~LeftUpVector~\u21BF~LeftUpVectorBar~\u2958~LeftVector~\u21BC~LeftVectorBar~\u2952~Leftarrow~\u21D0~Leftrightarrow~\u21D4~LessEqualGreater~\u22DA~LessFullEqual~\u2266~LessGreater~\u2276~LessLess~\u2AA1~LessSlantEqual~\u2A7D~LessTilde~\u2272~Lfr~\u{1D50F}~Ll~\u22D8~Lleftarrow~\u21DA~Lmidot~\u013F~LongLeftArrow~\u27F5~LongLeftRightArrow~\u27F7~LongRightArrow~\u27F6~Longleftarrow~\u27F8~Longleftrightarrow~\u27FA~Longrightarrow~\u27F9~Lopf~\u{1D543}~LowerLeftArrow~\u2199~LowerRightArrow~\u2198~Lscr~\u2112~Lsh~\u21B0~Lstrok~\u0141~Lt~\u226A~Map~\u2905~Mcy~\u041C~MediumSpace~\u205F~Mellintrf~\u2133~Mfr~\u{1D510}~MinusPlus~\u2213~Mopf~\u{1D544}~Mscr~\u2133~NJcy~\u040A~Nacute~\u0143~Ncaron~\u0147~Ncedil~\u0145~Ncy~\u041D~NegativeMediumSpace~\u200B~NegativeThickSpace~\u200B~NegativeThinSpace~\u200B~NegativeVeryThinSpace~\u200B~NestedGreaterGreater~\u226B~NestedLessLess~\u226A~NewLine~\n~Nfr~\u{1D511}~NoBreak~\u2060~NonBreakingSpace~\xA0~Nopf~\u2115~Not~\u2AEC~NotCongruent~\u2262~NotCupCap~\u226D~NotDoubleVerticalBar~\u2226~NotElement~\u2209~NotEqual~\u2260~NotEqualTilde~\u2242\u0338~NotExists~\u2204~NotGreater~\u226F~NotGreaterEqual~\u2271~NotGreaterFullEqual~\u2267\u0338~NotGreaterGreater~\u226B\u0338~NotGreaterLess~\u2279~NotGreaterSlantEqual~\u2A7E\u0338~NotGreaterTilde~\u2275~NotHumpDownHump~\u224E\u0338~NotHumpEqual~\u224F\u0338~NotLeftTriangle~\u22EA~NotLeftTriangleBar~\u29CF\u0338~NotLeftTriangleEqual~\u22EC~NotLess~\u226E~NotLessEqual~\u2270~NotLessGreater~\u2278~NotLessLess~\u226A\u0338~NotLessSlantEqual~\u2A7D\u0338~NotLessTilde~\u2274~NotNestedGreaterGreater~\u2AA2\u0338~NotNestedLessLess~\u2AA1\u0338~NotPrecedes~\u2280~NotPrecedesEqual~\u2AAF\u0338~NotPrecedesSlantEqual~\u22E0~NotReverseElement~\u220C~NotRightTriangle~\u22EB~NotRightTriangleBar~\u29D0\u0338~NotRightTriangleEqual~\u22ED~NotSquareSubset~\u228F\u0338~NotSquareSubsetEqual~\u22E2~NotSquareSuperset~\u2290\u0338~NotSquareSupersetEqual~\u22E3~NotSubset~\u2282\u20D2~NotSubsetEqual~\u2288~NotSucceeds~\u2281~NotSucceedsEqual~\u2AB0\u0338~NotSucceedsSlantEqual~\u22E1~NotSucceedsTilde~\u227F\u0338~NotSuperset~\u2283\u20D2~NotSupersetEqual~\u2289~NotTilde~\u2241~NotTildeEqual~\u2244~NotTildeFullEqual~\u2247~NotTildeTilde~\u2249~NotVerticalBar~\u2224~Nscr~\u{1D4A9}~Ocy~\u041E~Odblac~\u0150~Ofr~\u{1D512}~Omacr~\u014C~Oopf~\u{1D546}~OpenCurlyDoubleQuote~\u201C~OpenCurlyQuote~\u2018~Or~\u2A54~Oscr~\u{1D4AA}~Otimes~\u2A37~OverBar~\u203E~OverBrace~\u23DE~OverBracket~\u23B4~OverParenthesis~\u23DC~PartialD~\u2202~Pcy~\u041F~Pfr~\u{1D513}~PlusMinus~\xB1~Poincareplane~\u210C~Popf~\u2119~Pr~\u2ABB~Precedes~\u227A~PrecedesEqual~\u2AAF~PrecedesSlantEqual~\u227C~PrecedesTilde~\u227E~Product~\u220F~Proportion~\u2237~Proportional~\u221D~Pscr~\u{1D4AB}~Qfr~\u{1D514}~Qopf~\u211A~Qscr~\u{1D4AC}~RBarr~\u2910~Racute~\u0154~Rang~\u27EB~Rarr~\u21A0~Rarrtl~\u2916~Rcaron~\u0158~Rcedil~\u0156~Rcy~\u0420~Re~\u211C~ReverseElement~\u220B~ReverseEquilibrium~\u21CB~ReverseUpEquilibrium~\u296F~Rfr~\u211C~RightAngleBracket~\u27E9~RightArrow~\u2192~RightArrowBar~\u21E5~RightArrowLeftArrow~\u21C4~RightCeiling~\u2309~RightDoubleBracket~\u27E7~RightDownTeeVector~\u295D~RightDownVector~\u21C2~RightDownVectorBar~\u2955~RightFloor~\u230B~RightTee~\u22A2~RightTeeArrow~\u21A6~RightTeeVector~\u295B~RightTriangle~\u22B3~RightTriangleBar~\u29D0~RightTriangleEqual~\u22B5~RightUpDownVector~\u294F~RightUpTeeVector~\u295C~RightUpVector~\u21BE~RightUpVectorBar~\u2954~RightVector~\u21C0~RightVectorBar~\u2953~Rightarrow~\u21D2~Ropf~\u211D~RoundImplies~\u2970~Rrightarrow~\u21DB~Rscr~\u211B~Rsh~\u21B1~RuleDelayed~\u29F4~SHCHcy~\u0429~SHcy~\u0428~SOFTcy~\u042C~Sacute~\u015A~Sc~\u2ABC~Scedil~\u015E~Scirc~\u015C~Scy~\u0421~Sfr~\u{1D516}~ShortDownArrow~\u2193~ShortLeftArrow~\u2190~ShortRightArrow~\u2192~ShortUpArrow~\u2191~SmallCircle~\u2218~Sopf~\u{1D54A}~Sqrt~\u221A~Square~\u25A1~SquareIntersection~\u2293~SquareSubset~\u228F~SquareSubsetEqual~\u2291~SquareSuperset~\u2290~SquareSupersetEqual~\u2292~SquareUnion~\u2294~Sscr~\u{1D4AE}~Star~\u22C6~Sub~\u22D0~Subset~\u22D0~SubsetEqual~\u2286~Succeeds~\u227B~SucceedsEqual~\u2AB0~SucceedsSlantEqual~\u227D~SucceedsTilde~\u227F~SuchThat~\u220B~Sum~\u2211~Sup~\u22D1~Superset~\u2283~SupersetEqual~\u2287~Supset~\u22D1~TRADE~\u2122~TSHcy~\u040B~TScy~\u0426~Tab~	~Tcaron~\u0164~Tcedil~\u0162~Tcy~\u0422~Tfr~\u{1D517}~Therefore~\u2234~ThickSpace~\u205F\u200A~ThinSpace~\u2009~Tilde~\u223C~TildeEqual~\u2243~TildeFullEqual~\u2245~TildeTilde~\u2248~Topf~\u{1D54B}~TripleDot~\u20DB~Tscr~\u{1D4AF}~Tstrok~\u0166~Uarr~\u219F~Uarrocir~\u2949~Ubrcy~\u040E~Ubreve~\u016C~Ucy~\u0423~Udblac~\u0170~Ufr~\u{1D518}~Umacr~\u016A~UnderBar~_~UnderBrace~\u23DF~UnderBracket~\u23B5~UnderParenthesis~\u23DD~Union~\u22C3~UnionPlus~\u228E~Uogon~\u0172~Uopf~\u{1D54C}~UpArrow~\u2191~UpArrowBar~\u2912~UpArrowDownArrow~\u21C5~UpDownArrow~\u2195~UpEquilibrium~\u296E~UpTee~\u22A5~UpTeeArrow~\u21A5~Uparrow~\u21D1~Updownarrow~\u21D5~UpperLeftArrow~\u2196~UpperRightArrow~\u2197~Upsi~\u03D2~Uring~\u016E~Uscr~\u{1D4B0}~Utilde~\u0168~VDash~\u22AB~Vbar~\u2AEB~Vcy~\u0412~Vdash~\u22A9~Vdashl~\u2AE6~Vee~\u22C1~Verbar~\u2016~Vert~\u2016~VerticalBar~\u2223~VerticalLine~|~VerticalSeparator~\u2758~VerticalTilde~\u2240~VeryThinSpace~\u200A~Vfr~\u{1D519}~Vopf~\u{1D54D}~Vscr~\u{1D4B1}~Vvdash~\u22AA~Wcirc~\u0174~Wedge~\u22C0~Wfr~\u{1D51A}~Wopf~\u{1D54E}~Wscr~\u{1D4B2}~Xfr~\u{1D51B}~Xopf~\u{1D54F}~Xscr~\u{1D4B3}~YAcy~\u042F~YIcy~\u0407~YUcy~\u042E~Ycirc~\u0176~Ycy~\u042B~Yfr~\u{1D51C}~Yopf~\u{1D550}~Yscr~\u{1D4B4}~ZHcy~\u0416~Zacute~\u0179~Zcaron~\u017D~Zcy~\u0417~Zdot~\u017B~ZeroWidthSpace~\u200B~Zfr~\u2128~Zopf~\u2124~Zscr~\u{1D4B5}~abreve~\u0103~ac~\u223E~acE~\u223E\u0333~acd~\u223F~acy~\u0430~af~\u2061~afr~\u{1D51E}~aleph~\u2135~amacr~\u0101~amalg~\u2A3F~andand~\u2A55~andd~\u2A5C~andslope~\u2A58~andv~\u2A5A~ange~\u29A4~angle~\u2220~angmsd~\u2221~angmsdaa~\u29A8~angmsdab~\u29A9~angmsdac~\u29AA~angmsdad~\u29AB~angmsdae~\u29AC~angmsdaf~\u29AD~angmsdag~\u29AE~angmsdah~\u29AF~angrt~\u221F~angrtvb~\u22BE~angrtvbd~\u299D~angsph~\u2222~angst~\xC5~angzarr~\u237C~aogon~\u0105~aopf~\u{1D552}~ap~\u2248~apE~\u2A70~apacir~\u2A6F~ape~\u224A~apid~\u224B~approx~\u2248~approxeq~\u224A~ascr~\u{1D4B6}~ast~*~asympeq~\u224D~awconint~\u2233~awint~\u2A11~bNot~\u2AED~backcong~\u224C~backepsilon~\u03F6~backprime~\u2035~backsim~\u223D~backsimeq~\u22CD~barvee~\u22BD~barwed~\u2305~barwedge~\u2305~bbrk~\u23B5~bbrktbrk~\u23B6~bcong~\u224C~bcy~\u0431~becaus~\u2235~because~\u2235~bemptyv~\u29B0~bepsi~\u03F6~bernou~\u212C~beth~\u2136~between~\u226C~bfr~\u{1D51F}~bigcap~\u22C2~bigcirc~\u25EF~bigcup~\u22C3~bigodot~\u2A00~bigoplus~\u2A01~bigotimes~\u2A02~bigsqcup~\u2A06~bigstar~\u2605~bigtriangledown~\u25BD~bigtriangleup~\u25B3~biguplus~\u2A04~bigvee~\u22C1~bigwedge~\u22C0~bkarow~\u290D~blacklozenge~\u29EB~blacksquare~\u25AA~blacktriangle~\u25B4~blacktriangledown~\u25BE~blacktriangleleft~\u25C2~blacktriangleright~\u25B8~blank~\u2423~blk12~\u2592~blk14~\u2591~blk34~\u2593~block~\u2588~bne~=\u20E5~bnequiv~\u2261\u20E5~bnot~\u2310~bopf~\u{1D553}~bot~\u22A5~bottom~\u22A5~bowtie~\u22C8~boxDL~\u2557~boxDR~\u2554~boxDl~\u2556~boxDr~\u2553~boxH~\u2550~boxHD~\u2566~boxHU~\u2569~boxHd~\u2564~boxHu~\u2567~boxUL~\u255D~boxUR~\u255A~boxUl~\u255C~boxUr~\u2559~boxV~\u2551~boxVH~\u256C~boxVL~\u2563~boxVR~\u2560~boxVh~\u256B~boxVl~\u2562~boxVr~\u255F~boxbox~\u29C9~boxdL~\u2555~boxdR~\u2552~boxdl~\u2510~boxdr~\u250C~boxh~\u2500~boxhD~\u2565~boxhU~\u2568~boxhd~\u252C~boxhu~\u2534~boxminus~\u229F~boxplus~\u229E~boxtimes~\u22A0~boxuL~\u255B~boxuR~\u2558~boxul~\u2518~boxur~\u2514~boxv~\u2502~boxvH~\u256A~boxvL~\u2561~boxvR~\u255E~boxvh~\u253C~boxvl~\u2524~boxvr~\u251C~bprime~\u2035~breve~\u02D8~bscr~\u{1D4B7}~bsemi~\u204F~bsim~\u223D~bsime~\u22CD~bsol~\\~bsolb~\u29C5~bsolhsub~\u27C8~bullet~\u2022~bump~\u224E~bumpE~\u2AAE~bumpe~\u224F~bumpeq~\u224F~cacute~\u0107~capand~\u2A44~capbrcup~\u2A49~capcap~\u2A4B~capcup~\u2A47~capdot~\u2A40~caps~\u2229\uFE00~caret~\u2041~caron~\u02C7~ccaps~\u2A4D~ccaron~\u010D~ccirc~\u0109~ccups~\u2A4C~ccupssm~\u2A50~cdot~\u010B~cemptyv~\u29B2~centerdot~\xB7~cfr~\u{1D520}~chcy~\u0447~check~\u2713~checkmark~\u2713~cir~\u25CB~cirE~\u29C3~circeq~\u2257~circlearrowleft~\u21BA~circlearrowright~\u21BB~circledR~\xAE~circledS~\u24C8~circledast~\u229B~circledcirc~\u229A~circleddash~\u229D~cire~\u2257~cirfnint~\u2A10~cirmid~\u2AEF~cirscir~\u29C2~clubsuit~\u2663~colon~:~colone~\u2254~coloneq~\u2254~comma~,~commat~@~comp~\u2201~compfn~\u2218~complement~\u2201~complexes~\u2102~congdot~\u2A6D~conint~\u222E~copf~\u{1D554}~coprod~\u2210~copysr~\u2117~cross~\u2717~cscr~\u{1D4B8}~csub~\u2ACF~csube~\u2AD1~csup~\u2AD0~csupe~\u2AD2~ctdot~\u22EF~cudarrl~\u2938~cudarrr~\u2935~cuepr~\u22DE~cuesc~\u22DF~cularr~\u21B6~cularrp~\u293D~cupbrcap~\u2A48~cupcap~\u2A46~cupcup~\u2A4A~cupdot~\u228D~cupor~\u2A45~cups~\u222A\uFE00~curarr~\u21B7~curarrm~\u293C~curlyeqprec~\u22DE~curlyeqsucc~\u22DF~curlyvee~\u22CE~curlywedge~\u22CF~curvearrowleft~\u21B6~curvearrowright~\u21B7~cuvee~\u22CE~cuwed~\u22CF~cwconint~\u2232~cwint~\u2231~cylcty~\u232D~dHar~\u2965~daleth~\u2138~dash~\u2010~dashv~\u22A3~dbkarow~\u290F~dblac~\u02DD~dcaron~\u010F~dcy~\u0434~dd~\u2146~ddagger~\u2021~ddarr~\u21CA~ddotseq~\u2A77~demptyv~\u29B1~dfisht~\u297F~dfr~\u{1D521}~dharl~\u21C3~dharr~\u21C2~diam~\u22C4~diamond~\u22C4~diamondsuit~\u2666~die~\xA8~digamma~\u03DD~disin~\u22F2~div~\xF7~divideontimes~\u22C7~divonx~\u22C7~djcy~\u0452~dlcorn~\u231E~dlcrop~\u230D~dollar~$~dopf~\u{1D555}~dot~\u02D9~doteq~\u2250~doteqdot~\u2251~dotminus~\u2238~dotplus~\u2214~dotsquare~\u22A1~doublebarwedge~\u2306~downarrow~\u2193~downdownarrows~\u21CA~downharpoonleft~\u21C3~downharpoonright~\u21C2~drbkarow~\u2910~drcorn~\u231F~drcrop~\u230C~dscr~\u{1D4B9}~dscy~\u0455~dsol~\u29F6~dstrok~\u0111~dtdot~\u22F1~dtri~\u25BF~dtrif~\u25BE~duarr~\u21F5~duhar~\u296F~dwangle~\u29A6~dzcy~\u045F~dzigrarr~\u27FF~eDDot~\u2A77~eDot~\u2251~easter~\u2A6E~ecaron~\u011B~ecir~\u2256~ecolon~\u2255~ecy~\u044D~edot~\u0117~ee~\u2147~efDot~\u2252~efr~\u{1D522}~eg~\u2A9A~egs~\u2A96~egsdot~\u2A98~el~\u2A99~elinters~\u23E7~ell~\u2113~els~\u2A95~elsdot~\u2A97~emacr~\u0113~emptyset~\u2205~emptyv~\u2205~emsp13~\u2004~emsp14~\u2005~eng~\u014B~eogon~\u0119~eopf~\u{1D556}~epar~\u22D5~eparsl~\u29E3~eplus~\u2A71~epsi~\u03B5~epsiv~\u03F5~eqcirc~\u2256~eqcolon~\u2255~eqsim~\u2242~eqslantgtr~\u2A96~eqslantless~\u2A95~equals~=~equest~\u225F~equivDD~\u2A78~eqvparsl~\u29E5~erDot~\u2253~erarr~\u2971~escr~\u212F~esdot~\u2250~esim~\u2242~excl~!~expectation~\u2130~exponentiale~\u2147~fallingdotseq~\u2252~fcy~\u0444~female~\u2640~ffilig~\uFB03~fflig~\uFB00~ffllig~\uFB04~ffr~\u{1D523}~filig~\uFB01~fjlig~fj~flat~\u266D~fllig~\uFB02~fltns~\u25B1~fopf~\u{1D557}~fork~\u22D4~forkv~\u2AD9~fpartint~\u2A0D~frac13~\u2153~frac15~\u2155~frac16~\u2159~frac18~\u215B~frac23~\u2154~frac25~\u2156~frac35~\u2157~frac38~\u215C~frac45~\u2158~frac56~\u215A~frac58~\u215D~frac78~\u215E~frown~\u2322~fscr~\u{1D4BB}~gE~\u2267~gEl~\u2A8C~gacute~\u01F5~gammad~\u03DD~gap~\u2A86~gbreve~\u011F~gcirc~\u011D~gcy~\u0433~gdot~\u0121~gel~\u22DB~geq~\u2265~geqq~\u2267~geqslant~\u2A7E~ges~\u2A7E~gescc~\u2AA9~gesdot~\u2A80~gesdoto~\u2A82~gesdotol~\u2A84~gesl~\u22DB\uFE00~gesles~\u2A94~gfr~\u{1D524}~gg~\u226B~ggg~\u22D9~gimel~\u2137~gjcy~\u0453~gl~\u2277~glE~\u2A92~gla~\u2AA5~glj~\u2AA4~gnE~\u2269~gnap~\u2A8A~gnapprox~\u2A8A~gne~\u2A88~gneq~\u2A88~gneqq~\u2269~gnsim~\u22E7~gopf~\u{1D558}~grave~`~gscr~\u210A~gsim~\u2273~gsime~\u2A8E~gsiml~\u2A90~gtcc~\u2AA7~gtcir~\u2A7A~gtdot~\u22D7~gtlPar~\u2995~gtquest~\u2A7C~gtrapprox~\u2A86~gtrarr~\u2978~gtrdot~\u22D7~gtreqless~\u22DB~gtreqqless~\u2A8C~gtrless~\u2277~gtrsim~\u2273~gvertneqq~\u2269\uFE00~gvnE~\u2269\uFE00~hairsp~\u200A~half~\xBD~hamilt~\u210B~hardcy~\u044A~harrcir~\u2948~harrw~\u21AD~hbar~\u210F~hcirc~\u0125~heartsuit~\u2665~hercon~\u22B9~hfr~\u{1D525}~hksearow~\u2925~hkswarow~\u2926~hoarr~\u21FF~homtht~\u223B~hookleftarrow~\u21A9~hookrightarrow~\u21AA~hopf~\u{1D559}~horbar~\u2015~hscr~\u{1D4BD}~hslash~\u210F~hstrok~\u0127~hybull~\u2043~hyphen~\u2010~ic~\u2063~icy~\u0438~iecy~\u0435~iff~\u21D4~ifr~\u{1D526}~ii~\u2148~iiiint~\u2A0C~iiint~\u222D~iinfin~\u29DC~iiota~\u2129~ijlig~\u0133~imacr~\u012B~imagline~\u2110~imagpart~\u2111~imath~\u0131~imof~\u22B7~imped~\u01B5~in~\u2208~incare~\u2105~infintie~\u29DD~inodot~\u0131~intcal~\u22BA~integers~\u2124~intercal~\u22BA~intlarhk~\u2A17~intprod~\u2A3C~iocy~\u0451~iogon~\u012F~iopf~\u{1D55A}~iprod~\u2A3C~iscr~\u{1D4BE}~isinE~\u22F9~isindot~\u22F5~isins~\u22F4~isinsv~\u22F3~isinv~\u2208~it~\u2062~itilde~\u0129~iukcy~\u0456~jcirc~\u0135~jcy~\u0439~jfr~\u{1D527}~jmath~\u0237~jopf~\u{1D55B}~jscr~\u{1D4BF}~jsercy~\u0458~jukcy~\u0454~kappav~\u03F0~kcedil~\u0137~kcy~\u043A~kfr~\u{1D528}~kgreen~\u0138~khcy~\u0445~kjcy~\u045C~kopf~\u{1D55C}~kscr~\u{1D4C0}~lAarr~\u21DA~lAtail~\u291B~lBarr~\u290E~lE~\u2266~lEg~\u2A8B~lHar~\u2962~lacute~\u013A~laemptyv~\u29B4~lagran~\u2112~langd~\u2991~langle~\u27E8~lap~\u2A85~larrb~\u21E4~larrbfs~\u291F~larrfs~\u291D~larrhk~\u21A9~larrlp~\u21AB~larrpl~\u2939~larrsim~\u2973~larrtl~\u21A2~lat~\u2AAB~latail~\u2919~late~\u2AAD~lates~\u2AAD\uFE00~lbarr~\u290C~lbbrk~\u2772~lbrace~{~lbrack~[~lbrke~\u298B~lbrksld~\u298F~lbrkslu~\u298D~lcaron~\u013E~lcedil~\u013C~lcub~{~lcy~\u043B~ldca~\u2936~ldquor~\u201E~ldrdhar~\u2967~ldrushar~\u294B~ldsh~\u21B2~leftarrow~\u2190~leftarrowtail~\u21A2~leftharpoondown~\u21BD~leftharpoonup~\u21BC~leftleftarrows~\u21C7~leftrightarrow~\u2194~leftrightarrows~\u21C6~leftrightharpoons~\u21CB~leftrightsquigarrow~\u21AD~leftthreetimes~\u22CB~leg~\u22DA~leq~\u2264~leqq~\u2266~leqslant~\u2A7D~les~\u2A7D~lescc~\u2AA8~lesdot~\u2A7F~lesdoto~\u2A81~lesdotor~\u2A83~lesg~\u22DA\uFE00~lesges~\u2A93~lessapprox~\u2A85~lessdot~\u22D6~lesseqgtr~\u22DA~lesseqqgtr~\u2A8B~lessgtr~\u2276~lesssim~\u2272~lfisht~\u297C~lfr~\u{1D529}~lg~\u2276~lgE~\u2A91~lhard~\u21BD~lharu~\u21BC~lharul~\u296A~lhblk~\u2584~ljcy~\u0459~ll~\u226A~llarr~\u21C7~llcorner~\u231E~llhard~\u296B~lltri~\u25FA~lmidot~\u0140~lmoust~\u23B0~lmoustache~\u23B0~lnE~\u2268~lnap~\u2A89~lnapprox~\u2A89~lne~\u2A87~lneq~\u2A87~lneqq~\u2268~lnsim~\u22E6~loang~\u27EC~loarr~\u21FD~lobrk~\u27E6~longleftarrow~\u27F5~longleftrightarrow~\u27F7~longmapsto~\u27FC~longrightarrow~\u27F6~looparrowleft~\u21AB~looparrowright~\u21AC~lopar~\u2985~lopf~\u{1D55D}~loplus~\u2A2D~lotimes~\u2A34~lowbar~_~lozenge~\u25CA~lozf~\u29EB~lpar~(~lparlt~\u2993~lrarr~\u21C6~lrcorner~\u231F~lrhar~\u21CB~lrhard~\u296D~lrtri~\u22BF~lscr~\u{1D4C1}~lsh~\u21B0~lsim~\u2272~lsime~\u2A8D~lsimg~\u2A8F~lsqb~[~lsquor~\u201A~lstrok~\u0142~ltcc~\u2AA6~ltcir~\u2A79~ltdot~\u22D6~lthree~\u22CB~ltimes~\u22C9~ltlarr~\u2976~ltquest~\u2A7B~ltrPar~\u2996~ltri~\u25C3~ltrie~\u22B4~ltrif~\u25C2~lurdshar~\u294A~luruhar~\u2966~lvertneqq~\u2268\uFE00~lvnE~\u2268\uFE00~mDDot~\u223A~male~\u2642~malt~\u2720~maltese~\u2720~map~\u21A6~mapsto~\u21A6~mapstodown~\u21A7~mapstoleft~\u21A4~mapstoup~\u21A5~marker~\u25AE~mcomma~\u2A29~mcy~\u043C~measuredangle~\u2221~mfr~\u{1D52A}~mho~\u2127~mid~\u2223~midast~*~midcir~\u2AF0~minusb~\u229F~minusd~\u2238~minusdu~\u2A2A~mlcp~\u2ADB~mldr~\u2026~mnplus~\u2213~models~\u22A7~mopf~\u{1D55E}~mp~\u2213~mscr~\u{1D4C2}~mstpos~\u223E~multimap~\u22B8~mumap~\u22B8~nGg~\u22D9\u0338~nGt~\u226B\u20D2~nGtv~\u226B\u0338~nLeftarrow~\u21CD~nLeftrightarrow~\u21CE~nLl~\u22D8\u0338~nLt~\u226A\u20D2~nLtv~\u226A\u0338~nRightarrow~\u21CF~nVDash~\u22AF~nVdash~\u22AE~nacute~\u0144~nang~\u2220\u20D2~nap~\u2249~napE~\u2A70\u0338~napid~\u224B\u0338~napos~\u0149~napprox~\u2249~natur~\u266E~natural~\u266E~naturals~\u2115~nbump~\u224E\u0338~nbumpe~\u224F\u0338~ncap~\u2A43~ncaron~\u0148~ncedil~\u0146~ncong~\u2247~ncongdot~\u2A6D\u0338~ncup~\u2A42~ncy~\u043D~neArr~\u21D7~nearhk~\u2924~nearr~\u2197~nearrow~\u2197~nedot~\u2250\u0338~nequiv~\u2262~nesear~\u2928~nesim~\u2242\u0338~nexist~\u2204~nexists~\u2204~nfr~\u{1D52B}~ngE~\u2267\u0338~nge~\u2271~ngeq~\u2271~ngeqq~\u2267\u0338~ngeqslant~\u2A7E\u0338~nges~\u2A7E\u0338~ngsim~\u2275~ngt~\u226F~ngtr~\u226F~nhArr~\u21CE~nharr~\u21AE~nhpar~\u2AF2~nis~\u22FC~nisd~\u22FA~niv~\u220B~njcy~\u045A~nlArr~\u21CD~nlE~\u2266\u0338~nlarr~\u219A~nldr~\u2025~nle~\u2270~nleftarrow~\u219A~nleftrightarrow~\u21AE~nleq~\u2270~nleqq~\u2266\u0338~nleqslant~\u2A7D\u0338~nles~\u2A7D\u0338~nless~\u226E~nlsim~\u2274~nlt~\u226E~nltri~\u22EA~nltrie~\u22EC~nmid~\u2224~nopf~\u{1D55F}~notinE~\u22F9\u0338~notindot~\u22F5\u0338~notinva~\u2209~notinvb~\u22F7~notinvc~\u22F6~notni~\u220C~notniva~\u220C~notnivb~\u22FE~notnivc~\u22FD~npar~\u2226~nparallel~\u2226~nparsl~\u2AFD\u20E5~npart~\u2202\u0338~npolint~\u2A14~npr~\u2280~nprcue~\u22E0~npre~\u2AAF\u0338~nprec~\u2280~npreceq~\u2AAF\u0338~nrArr~\u21CF~nrarr~\u219B~nrarrc~\u2933\u0338~nrarrw~\u219D\u0338~nrightarrow~\u219B~nrtri~\u22EB~nrtrie~\u22ED~nsc~\u2281~nsccue~\u22E1~nsce~\u2AB0\u0338~nscr~\u{1D4C3}~nshortmid~\u2224~nshortparallel~\u2226~nsim~\u2241~nsime~\u2244~nsimeq~\u2244~nsmid~\u2224~nspar~\u2226~nsqsube~\u22E2~nsqsupe~\u22E3~nsubE~\u2AC5\u0338~nsube~\u2288~nsubset~\u2282\u20D2~nsubseteq~\u2288~nsubseteqq~\u2AC5\u0338~nsucc~\u2281~nsucceq~\u2AB0\u0338~nsup~\u2285~nsupE~\u2AC6\u0338~nsupe~\u2289~nsupset~\u2283\u20D2~nsupseteq~\u2289~nsupseteqq~\u2AC6\u0338~ntgl~\u2279~ntlg~\u2278~ntriangleleft~\u22EA~ntrianglelefteq~\u22EC~ntriangleright~\u22EB~ntrianglerighteq~\u22ED~num~#~numero~\u2116~numsp~\u2007~nvDash~\u22AD~nvHarr~\u2904~nvap~\u224D\u20D2~nvdash~\u22AC~nvge~\u2265\u20D2~nvgt~>\u20D2~nvinfin~\u29DE~nvlArr~\u2902~nvle~\u2264\u20D2~nvlt~<\u20D2~nvltrie~\u22B4\u20D2~nvrArr~\u2903~nvrtrie~\u22B5\u20D2~nvsim~\u223C\u20D2~nwArr~\u21D6~nwarhk~\u2923~nwarr~\u2196~nwarrow~\u2196~nwnear~\u2927~oS~\u24C8~oast~\u229B~ocir~\u229A~ocy~\u043E~odash~\u229D~odblac~\u0151~odiv~\u2A38~odot~\u2299~odsold~\u29BC~ofcir~\u29BF~ofr~\u{1D52C}~ogon~\u02DB~ogt~\u29C1~ohbar~\u29B5~ohm~\u03A9~oint~\u222E~olarr~\u21BA~olcir~\u29BE~olcross~\u29BB~olt~\u29C0~omacr~\u014D~omid~\u29B6~ominus~\u2296~oopf~\u{1D560}~opar~\u29B7~operp~\u29B9~orarr~\u21BB~ord~\u2A5D~order~\u2134~orderof~\u2134~origof~\u22B6~oror~\u2A56~orslope~\u2A57~orv~\u2A5B~oscr~\u2134~osol~\u2298~otimesas~\u2A36~ovbar~\u233D~par~\u2225~parallel~\u2225~parsim~\u2AF3~parsl~\u2AFD~pcy~\u043F~percnt~%~period~.~pertenk~\u2031~pfr~\u{1D52D}~phiv~\u03D5~phmmat~\u2133~phone~\u260E~pitchfork~\u22D4~planck~\u210F~planckh~\u210E~plankv~\u210F~plus~+~plusacir~\u2A23~plusb~\u229E~pluscir~\u2A22~plusdo~\u2214~plusdu~\u2A25~pluse~\u2A72~plussim~\u2A26~plustwo~\u2A27~pm~\xB1~pointint~\u2A15~popf~\u{1D561}~pr~\u227A~prE~\u2AB3~prap~\u2AB7~prcue~\u227C~pre~\u2AAF~prec~\u227A~precapprox~\u2AB7~preccurlyeq~\u227C~preceq~\u2AAF~precnapprox~\u2AB9~precneqq~\u2AB5~precnsim~\u22E8~precsim~\u227E~primes~\u2119~prnE~\u2AB5~prnap~\u2AB9~prnsim~\u22E8~profalar~\u232E~profline~\u2312~profsurf~\u2313~propto~\u221D~prsim~\u227E~prurel~\u22B0~pscr~\u{1D4C5}~puncsp~\u2008~qfr~\u{1D52E}~qint~\u2A0C~qopf~\u{1D562}~qprime~\u2057~qscr~\u{1D4C6}~quaternions~\u210D~quatint~\u2A16~quest~?~questeq~\u225F~rAarr~\u21DB~rAtail~\u291C~rBarr~\u290F~rHar~\u2964~race~\u223D\u0331~racute~\u0155~raemptyv~\u29B3~rangd~\u2992~range~\u29A5~rangle~\u27E9~rarrap~\u2975~rarrb~\u21E5~rarrbfs~\u2920~rarrc~\u2933~rarrfs~\u291E~rarrhk~\u21AA~rarrlp~\u21AC~rarrpl~\u2945~rarrsim~\u2974~rarrtl~\u21A3~rarrw~\u219D~ratail~\u291A~ratio~\u2236~rationals~\u211A~rbarr~\u290D~rbbrk~\u2773~rbrace~}~rbrack~]~rbrke~\u298C~rbrksld~\u298E~rbrkslu~\u2990~rcaron~\u0159~rcedil~\u0157~rcub~}~rcy~\u0440~rdca~\u2937~rdldhar~\u2969~rdquor~\u201D~rdsh~\u21B3~realine~\u211B~realpart~\u211C~reals~\u211D~rect~\u25AD~rfisht~\u297D~rfr~\u{1D52F}~rhard~\u21C1~rharu~\u21C0~rharul~\u296C~rhov~\u03F1~rightarrow~\u2192~rightarrowtail~\u21A3~rightharpoondown~\u21C1~rightharpoonup~\u21C0~rightleftarrows~\u21C4~rightleftharpoons~\u21CC~rightrightarrows~\u21C9~rightsquigarrow~\u219D~rightthreetimes~\u22CC~ring~\u02DA~risingdotseq~\u2253~rlarr~\u21C4~rlhar~\u21CC~rmoust~\u23B1~rmoustache~\u23B1~rnmid~\u2AEE~roang~\u27ED~roarr~\u21FE~robrk~\u27E7~ropar~\u2986~ropf~\u{1D563}~roplus~\u2A2E~rotimes~\u2A35~rpar~)~rpargt~\u2994~rppolint~\u2A12~rrarr~\u21C9~rscr~\u{1D4C7}~rsh~\u21B1~rsqb~]~rsquor~\u2019~rthree~\u22CC~rtimes~\u22CA~rtri~\u25B9~rtrie~\u22B5~rtrif~\u25B8~rtriltri~\u29CE~ruluhar~\u2968~rx~\u211E~sacute~\u015B~sc~\u227B~scE~\u2AB4~scap~\u2AB8~sccue~\u227D~sce~\u2AB0~scedil~\u015F~scirc~\u015D~scnE~\u2AB6~scnap~\u2ABA~scnsim~\u22E9~scpolint~\u2A13~scsim~\u227F~scy~\u0441~sdotb~\u22A1~sdote~\u2A66~seArr~\u21D8~searhk~\u2925~searr~\u2198~searrow~\u2198~semi~;~seswar~\u2929~setminus~\u2216~setmn~\u2216~sext~\u2736~sfr~\u{1D530}~sfrown~\u2322~sharp~\u266F~shchcy~\u0449~shcy~\u0448~shortmid~\u2223~shortparallel~\u2225~sigmav~\u03C2~simdot~\u2A6A~sime~\u2243~simeq~\u2243~simg~\u2A9E~simgE~\u2AA0~siml~\u2A9D~simlE~\u2A9F~simne~\u2246~simplus~\u2A24~simrarr~\u2972~slarr~\u2190~smallsetminus~\u2216~smashp~\u2A33~smeparsl~\u29E4~smid~\u2223~smile~\u2323~smt~\u2AAA~smte~\u2AAC~smtes~\u2AAC\uFE00~softcy~\u044C~sol~/~solb~\u29C4~solbar~\u233F~sopf~\u{1D564}~spadesuit~\u2660~spar~\u2225~sqcap~\u2293~sqcaps~\u2293\uFE00~sqcup~\u2294~sqcups~\u2294\uFE00~sqsub~\u228F~sqsube~\u2291~sqsubset~\u228F~sqsubseteq~\u2291~sqsup~\u2290~sqsupe~\u2292~sqsupset~\u2290~sqsupseteq~\u2292~squ~\u25A1~square~\u25A1~squarf~\u25AA~squf~\u25AA~srarr~\u2192~sscr~\u{1D4C8}~ssetmn~\u2216~ssmile~\u2323~sstarf~\u22C6~star~\u2606~starf~\u2605~straightepsilon~\u03F5~straightphi~\u03D5~strns~\xAF~subE~\u2AC5~subdot~\u2ABD~subedot~\u2AC3~submult~\u2AC1~subnE~\u2ACB~subne~\u228A~subplus~\u2ABF~subrarr~\u2979~subset~\u2282~subseteq~\u2286~subseteqq~\u2AC5~subsetneq~\u228A~subsetneqq~\u2ACB~subsim~\u2AC7~subsub~\u2AD5~subsup~\u2AD3~succ~\u227B~succapprox~\u2AB8~succcurlyeq~\u227D~succeq~\u2AB0~succnapprox~\u2ABA~succneqq~\u2AB6~succnsim~\u22E9~succsim~\u227F~sung~\u266A~supE~\u2AC6~supdot~\u2ABE~supdsub~\u2AD8~supedot~\u2AC4~suphsol~\u27C9~suphsub~\u2AD7~suplarr~\u297B~supmult~\u2AC2~supnE~\u2ACC~supne~\u228B~supplus~\u2AC0~supset~\u2283~supseteq~\u2287~supseteqq~\u2AC6~supsetneq~\u228B~supsetneqq~\u2ACC~supsim~\u2AC8~supsub~\u2AD4~supsup~\u2AD6~swArr~\u21D9~swarhk~\u2926~swarr~\u2199~swarrow~\u2199~swnwar~\u292A~target~\u2316~tbrk~\u23B4~tcaron~\u0165~tcedil~\u0163~tcy~\u0442~tdot~\u20DB~telrec~\u2315~tfr~\u{1D531}~therefore~\u2234~thetav~\u03D1~thickapprox~\u2248~thicksim~\u223C~thkap~\u2248~thksim~\u223C~timesb~\u22A0~timesbar~\u2A31~timesd~\u2A30~tint~\u222D~toea~\u2928~top~\u22A4~topbot~\u2336~topcir~\u2AF1~topf~\u{1D565}~topfork~\u2ADA~tosa~\u2929~tprime~\u2034~triangle~\u25B5~triangledown~\u25BF~triangleleft~\u25C3~trianglelefteq~\u22B4~triangleq~\u225C~triangleright~\u25B9~trianglerighteq~\u22B5~tridot~\u25EC~trie~\u225C~triminus~\u2A3A~triplus~\u2A39~trisb~\u29CD~tritime~\u2A3B~trpezium~\u23E2~tscr~\u{1D4C9}~tscy~\u0446~tshcy~\u045B~tstrok~\u0167~twixt~\u226C~twoheadleftarrow~\u219E~twoheadrightarrow~\u21A0~uHar~\u2963~ubrcy~\u045E~ubreve~\u016D~ucy~\u0443~udarr~\u21C5~udblac~\u0171~udhar~\u296E~ufisht~\u297E~ufr~\u{1D532}~uharl~\u21BF~uharr~\u21BE~uhblk~\u2580~ulcorn~\u231C~ulcorner~\u231C~ulcrop~\u230F~ultri~\u25F8~umacr~\u016B~uogon~\u0173~uopf~\u{1D566}~uparrow~\u2191~updownarrow~\u2195~upharpoonleft~\u21BF~upharpoonright~\u21BE~uplus~\u228E~upsi~\u03C5~upuparrows~\u21C8~urcorn~\u231D~urcorner~\u231D~urcrop~\u230E~uring~\u016F~urtri~\u25F9~uscr~\u{1D4CA}~utdot~\u22F0~utilde~\u0169~utri~\u25B5~utrif~\u25B4~uuarr~\u21C8~uwangle~\u29A7~vArr~\u21D5~vBar~\u2AE8~vBarv~\u2AE9~vDash~\u22A8~vangrt~\u299C~varepsilon~\u03F5~varkappa~\u03F0~varnothing~\u2205~varphi~\u03D5~varpi~\u03D6~varpropto~\u221D~varr~\u2195~varrho~\u03F1~varsigma~\u03C2~varsubsetneq~\u228A\uFE00~varsubsetneqq~\u2ACB\uFE00~varsupsetneq~\u228B\uFE00~varsupsetneqq~\u2ACC\uFE00~vartheta~\u03D1~vartriangleleft~\u22B2~vartriangleright~\u22B3~vcy~\u0432~vdash~\u22A2~vee~\u2228~veebar~\u22BB~veeeq~\u225A~vellip~\u22EE~verbar~|~vert~|~vfr~\u{1D533}~vltri~\u22B2~vnsub~\u2282\u20D2~vnsup~\u2283\u20D2~vopf~\u{1D567}~vprop~\u221D~vrtri~\u22B3~vscr~\u{1D4CB}~vsubnE~\u2ACB\uFE00~vsubne~\u228A\uFE00~vsupnE~\u2ACC\uFE00~vsupne~\u228B\uFE00~vzigzag~\u299A~wcirc~\u0175~wedbar~\u2A5F~wedge~\u2227~wedgeq~\u2259~wfr~\u{1D534}~wopf~\u{1D568}~wp~\u2118~wr~\u2240~wreath~\u2240~wscr~\u{1D4CC}~xcap~\u22C2~xcirc~\u25EF~xcup~\u22C3~xdtri~\u25BD~xfr~\u{1D535}~xhArr~\u27FA~xharr~\u27F7~xlArr~\u27F8~xlarr~\u27F5~xmap~\u27FC~xnis~\u22FB~xodot~\u2A00~xopf~\u{1D569}~xoplus~\u2A01~xotime~\u2A02~xrArr~\u27F9~xrarr~\u27F6~xscr~\u{1D4CD}~xsqcup~\u2A06~xuplus~\u2A04~xutri~\u25B3~xvee~\u22C1~xwedge~\u22C0~yacy~\u044F~ycirc~\u0177~ycy~\u044B~yfr~\u{1D536}~yicy~\u0457~yopf~\u{1D56A}~yscr~\u{1D4CE}~yucy~\u044E~zacute~\u017A~zcaron~\u017E~zcy~\u0437~zdot~\u017C~zeetrf~\u2128~zfr~\u{1D537}~zhcy~\u0436~zigrarr~\u21DD~zopf~\u{1D56B}~zscr~\u{1D4CF}~~AMP~&~COPY~\xA9~GT~>~LT~<~QUOT~"~REG~\xAE', namedReferences["html4"]);
-
-  // node_modules/html-entities/dist/esm/numeric-unicode-map.js
-  var numericUnicodeMap = {
-    0: 65533,
-    128: 8364,
-    130: 8218,
-    131: 402,
-    132: 8222,
-    133: 8230,
-    134: 8224,
-    135: 8225,
-    136: 710,
-    137: 8240,
-    138: 352,
-    139: 8249,
-    140: 338,
-    142: 381,
-    145: 8216,
-    146: 8217,
-    147: 8220,
-    148: 8221,
-    149: 8226,
-    150: 8211,
-    151: 8212,
-    152: 732,
-    153: 8482,
-    154: 353,
-    155: 8250,
-    156: 339,
-    158: 382,
-    159: 376
-  };
-
-  // node_modules/html-entities/dist/esm/surrogate-pairs.js
-  var fromCodePoint4 = String.fromCodePoint || function (astralCodePoint) {
-    return String.fromCharCode(Math.floor((astralCodePoint - 65536) / 1024) + 55296, (astralCodePoint - 65536) % 1024 + 56320);
-  };
-  var getCodePoint3 = String.prototype.codePointAt ? function (input, position) {
-    return input.codePointAt(position);
-  } : function (input, position) {
-    return (input.charCodeAt(position) - 55296) * 1024 + input.charCodeAt(position + 1) - 56320 + 65536;
-  };
-
-  // node_modules/html-entities/dist/esm/index.js
-  var __assign2 = function () {
-    __assign2 = Object.assign || function (t) {
-      for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-          t[p] = s[p];
-      }
-      return t;
-    };
-    return __assign2.apply(this, arguments);
-  };
-  var allNamedReferences = __assign2(__assign2({}, namedReferences), { all: namedReferences.html5 });
-  var defaultDecodeOptions = {
-    scope: "body",
-    level: "all"
-  };
-  var strict = /&(?:#\d+|#[xX][\da-fA-F]+|[0-9a-zA-Z]+);/g;
-  var attribute = /&(?:#\d+|#[xX][\da-fA-F]+|[0-9a-zA-Z]+)[;=]?/g;
-  var baseDecodeRegExps = {
-    xml: {
-      strict,
-      attribute,
-      body: bodyRegExps.xml
-    },
-    html4: {
-      strict,
-      attribute,
-      body: bodyRegExps.html4
-    },
-    html5: {
-      strict,
-      attribute,
-      body: bodyRegExps.html5
+    const tagSections = [App.createTagSection({ id: "0", label: "genres", tags: arrayTags.map((x) => App.createTag(x)) })];
+    const rawStatus = $3(".detail-info-right-title-tip", section).text().trim();
+    let status = "ONGOING";
+    switch (rawStatus.toUpperCase()) {
+      case "ONGOING":
+        status = "Ongoing";
+        break;
+      case "COMPLETED":
+        status = "Completed";
+        break;
+      default:
+        status = "Ongoing";
+        break;
     }
-  };
-  var decodeRegExps = __assign2(__assign2({}, baseDecodeRegExps), { all: baseDecodeRegExps.html5 });
-  var fromCharCode = String.fromCharCode;
-  var outOfBoundsChar = fromCharCode(65533);
-  function getDecodedEntity(entity, references, isAttribute, isStrict) {
-    var decodeResult = entity;
-    var decodeEntityLastChar = entity[entity.length - 1];
-    if (isAttribute && decodeEntityLastChar === "=") {
-      decodeResult = entity;
-    } else if (isStrict && decodeEntityLastChar !== ";") {
-      decodeResult = entity;
-    } else {
-      var decodeResultByReference = references[entity];
-      if (decodeResultByReference) {
-        decodeResult = decodeResultByReference;
-      } else if (entity[0] === "&" && entity[1] === "#") {
-        var decodeSecondChar = entity[2];
-        var decodeCode = decodeSecondChar == "x" || decodeSecondChar == "X" ? parseInt(entity.substr(3), 16) : parseInt(entity.substr(2));
-        decodeResult = decodeCode >= 1114111 ? outOfBoundsChar : decodeCode > 65535 ? fromCodePoint4(decodeCode) : fromCharCode(numericUnicodeMap[decodeCode] || decodeCode);
-      }
-    }
-    return decodeResult;
-  }
-  function decode(text3, _a5) {
-    var _b = _a5 === void 0 ? defaultDecodeOptions : _a5, _c = _b.level, level = _c === void 0 ? "all" : _c, _d = _b.scope, scope = _d === void 0 ? level === "xml" ? "strict" : "body" : _d;
-    if (!text3) {
-      return "";
-    }
-    var decodeRegExp = decodeRegExps[level][scope];
-    var references = allNamedReferences[level].entities;
-    var isAttribute = scope === "attribute";
-    var isStrict = scope === "strict";
-    return text3.replace(decodeRegExp, function (entity) {
-      return getDecodedEntity(entity, references, isAttribute, isStrict);
+    return App.createSourceManga({
+      id: mangaId2,
+      mangaInfo: App.createMangaInfo({
+        titles: [title],
+        image,
+        rating: Number(rating),
+        status,
+        author,
+        artist: author,
+        tags: tagSections,
+        desc: description
+      })
     });
-  }
-
-  // src/MadaraDecrypter.ts
-  var CryptoJS = __toESM(require_crypto_js_min());
-  var CryptoJSFormatter = {
-    stringify: function (cipherParams) {
-      const jsonObj = {
-        ct: cipherParams.ciphertext.toString(CryptoJS.enc.Base64),
-        iv: "",
-        s: ""
-      };
-      if (cipherParams.iv) {
-        jsonObj.iv = cipherParams.iv.toString();
-      }
-      if (cipherParams.salt) {
-        jsonObj.s = cipherParams.salt.toString();
-      }
-      return JSON.stringify(jsonObj);
-    },
-    parse: function (jsonStr) {
-      const jsonObj = JSON.parse(jsonStr);
-      const cipherParams = CryptoJS.lib.CipherParams.create({ ciphertext: CryptoJS.enc.Base64.parse(jsonObj.ct) });
-      if (jsonObj.iv) {
-        cipherParams.iv = CryptoJS.enc.Hex.parse(jsonObj.iv);
-      }
-      if (jsonObj.s) {
-        cipherParams.salt = CryptoJS.enc.Hex.parse(jsonObj.s);
-      }
-      return cipherParams;
-    }
   };
-  function decryptData(cipherText, key) {
-    return JSON.parse(JSON.parse(CryptoJS.AES.decrypt(cipherText, key, { format: CryptoJSFormatter }).toString(CryptoJS.enc.Utf8)));
-  }
-  function extractVariableValues(chapterData) {
-    const variableRegex = /var\s+(\w+)\s*=\s*'([^']*)';/g;
-    const variables = {};
-    let match;
-    while ((match = variableRegex.exec(chapterData)) !== null) {
-      const [, variableName, variableValue] = match;
-      variables[variableName] = variableValue;
+  var parseChapters = ($3, mangaId2) => {
+    const chapters = [];
+    for (const chapter of $3("div#chapterlist ul li").children("a").toArray()) {
+      const title = $3("p.title3", chapter).html() ?? "";
+      const date = parseDate($3("p.title2", chapter).html() ?? "");
+      const chapterIdRaw = $3(chapter).attr("href")?.trim();
+      const chapterIdRegex = chapterIdRaw?.match(/\/manga\/[a-zA-Z0-9_]*\/(.*)\//);
+      let chapterId2 = null;
+      if (chapterIdRegex && chapterIdRegex[1]) chapterId2 = chapterIdRegex[1];
+      if (!chapterId2) continue;
+      const chapRegex = chapterId2?.match(/c([0-9.]+)/);
+      let chapNum = 0;
+      if (chapRegex && chapRegex[1]) chapNum = Number(chapRegex[1]);
+      const volRegex = chapterId2?.match(/v([0-9.]+)/);
+      let volNum = 0;
+      if (volRegex && volRegex[1]) volNum = Number(volRegex[1]);
+      chapters.push(App.createChapter({
+        id: chapterId2,
+        name: title,
+        langCode: "\u{1F1EC}\u{1F1E7}",
+        chapNum: isNaN(chapNum) ? 0 : chapNum,
+        volume: isNaN(volNum) ? 0 : volNum,
+        time: date
+      }));
     }
-    return variables;
-  }
-
-  // src/MadaraParser.ts
-  var Parser3 = class {
-    constructor() {
-      this.parseDate = (date) => {
-        date = date.toUpperCase();
-        let time;
-        const number = Number((/\d*/.exec(date) ?? [])[0]);
-        if (date.includes("LESS THAN AN HOUR") || date.includes("JUST NOW")) {
-          time = new Date(Date.now());
-        } else if (date.includes("YEAR") || date.includes("YEARS")) {
-          time = new Date(Date.now() - number * 31556952e3);
-        } else if (date.includes("MONTH") || date.includes("MONTHS")) {
-          time = new Date(Date.now() - number * 2592e6);
-        } else if (date.includes("WEEK") || date.includes("WEEKS")) {
-          time = new Date(Date.now() - number * 6048e5);
-        } else if (date.includes("YESTERDAY")) {
-          time = new Date(Date.now() - 864e5);
-        } else if (date.includes("DAY") || date.includes("DAYS")) {
-          time = new Date(Date.now() - number * 864e5);
-        } else if (date.includes("HOUR") || date.includes("HOURS")) {
-          time = new Date(Date.now() - number * 36e5);
-        } else if (date.includes("MINUTE") || date.includes("MINUTES")) {
-          time = new Date(Date.now() - number * 6e4);
-        } else if (date.includes("SECOND") || date.includes("SECONDS")) {
-          time = new Date(Date.now() - number * 1e3);
-        } else {
-          time = new Date(date);
+    if (chapters.length == 0) {
+      throw new Error(`Couldn't find any chapters for mangaId: ${mangaId2}!`);
+    }
+    return chapters;
+  };
+  var parseChapterDetails = async ($, mangaId, chapterId, url, source) => {
+    const pages = [];
+    const bar = $("script[src*=chapter_bar]").length;
+    if (bar) {
+      const script = $("script:contains(function(p,a,c,k,e,d))").html()?.replace("eval", "");
+      const deobfuscatedScript = eval(script).toString();
+      const urls = deobfuscatedScript.substring(deobfuscatedScript.indexOf("newImgs=['") + 9, deobfuscatedScript.indexOf("'];")).split("','");
+      for (const url2 of urls) {
+        pages.push("https:" + url2.replace("'", ""));
+      }
+    } else {
+      const script = $("script:contains(function(p,a,c,k,e,d))").html()?.replace("eval", "");
+      const deobfuscatedScript = eval(script).toString();
+      const secretKeyStart = deobfuscatedScript.indexOf("'");
+      const secretKeyEnd = deobfuscatedScript.indexOf(";");
+      const secretKeyResultScript = deobfuscatedScript.substring(secretKeyStart, secretKeyEnd).trim();
+      let secretKey = eval(secretKeyResultScript).toString();
+      const chapterIdStartLoc = $.html().indexOf("chapterid");
+      const numericChapterId = $.html().substring(chapterIdStartLoc + 11, $.html().indexOf(";", chapterIdStartLoc)).trim();
+      const pagesLinksElements = $("a", $(".pager-list-left > span").first());
+      const pagesNumber = Number($(pagesLinksElements[pagesLinksElements.length - 2])?.attr("data-page"));
+      const pageBase = url.substring(0, url.lastIndexOf("/"));
+      for (let i = 1; i <= pagesNumber; i++) {
+        let responseString = "";
+        for (let tr = 1; tr <= 3; tr++) {
+          const request = App.createRequest({
+            url: `${pageBase}/chapterfun.ashx?cid=${numericChapterId}&page=${i}&key=${secretKey}`,
+            method: "GET",
+            headers: {
+              "Referer": url,
+              "Accept": "*/*",
+              "Accept-Language": "en-US,en;q=0.9",
+              "Connection": "keep-alive",
+              "X-Requested-With": "XMLHttpRequest"
+            }
+          });
+          const response = await source.requestManager.schedule(request, 1);
+          responseString = response.data;
+          if (!responseString) {
+            continue;
+          } else {
+            secretKey = "";
+          }
         }
-        return time;
-      };
+        const deobfuscatedScript = eval(responseString.replace("eval", "")).toString();
+        const baseLinkStartPos = deobfuscatedScript.indexOf("pix=") + 5;
+        const baseLink = deobfuscatedScript.substring(deobfuscatedScript.indexOf("pix=") + 5, deobfuscatedScript.indexOf(";", baseLinkStartPos) - 1);
+        const imageLinkStartPos = deobfuscatedScript.indexOf("pvalue=") + 9;
+        const imageLinkEndPos = deobfuscatedScript.indexOf('"', imageLinkStartPos);
+        const imageLink = deobfuscatedScript.substring(imageLinkStartPos, imageLinkEndPos);
+        pages.push(`https:${baseLink}${imageLink}`);
+      }
     }
-    async parseMangaDetails($2, mangaId, source) {
-      const title = decode($2("div.post-title h1, div#manga-title h1").children().remove().end().text().trim());
-      const author = decode($2("div.author-content").first().text().replace("\\n", "").trim()).replace("Updating", "");
-      const artist = decode($2("div.artist-content").first().text().replace("\\n", "").trim()).replace("Updating", "");
-      const description = decode($2("div.description-summary, div.summary-container, div.manga-excerpt").first().text()).replace("Show more", "").trim();
-      const image = encodeURI(await this.getImageSrc($2("div.summary_image img").first(), source));
-      const parsedStatus = $2("div.summary-content", $2("div.post-content_item").last()).text().trim();
-      let status;
-      switch (parsedStatus.toUpperCase()) {
-        case "COMPLETED":
-          status = "Completed";
-          break;
-        default:
-          status = "Ongoing";
-          break;
+    const chapterDetails = App.createChapterDetails({
+      id: chapterId,
+      mangaId,
+      pages
+    });
+    return chapterDetails;
+  };
+  var parseHomeSections = ($3, sectionCallback) => {
+    const sections = [
+      {
+        sectionID: App.createHomeSection({
+          id: "hot_release",
+          title: "Hot Manga Releases",
+          containsMoreItems: true,
+          type: import_types2.HomeSectionType.singleRowNormal
+        }),
+        selector: $3("div.manga-list-1").get(0)
+      },
+      {
+        sectionID: App.createHomeSection({
+          id: "being_read",
+          title: "Being Read Right Now",
+          containsMoreItems: false,
+          type: import_types2.HomeSectionType.singleRowNormal
+        }),
+        selector: $3("div.manga-list-1").get(1)
+      },
+      {
+        sectionID: App.createHomeSection({
+          id: "recommended",
+          title: "Recommended",
+          containsMoreItems: false,
+          type: import_types2.HomeSectionType.singleRowNormal
+        }),
+        selector: $3("div.manga-list-3")
+      },
+      {
+        sectionID: App.createHomeSection({
+          id: "new_manga",
+          title: "New Manga Releases",
+          containsMoreItems: true,
+          type: import_types2.HomeSectionType.singleRowNormal
+        }),
+        selector: $3("div.manga-list-1").get(2)
       }
-      const genres = [];
-      for (const obj of $2("div.genres-content a").toArray()) {
-        const label = $2(obj).text();
-        const id = $2(obj).attr("href")?.split("/")[4] ?? label;
-        if (!label || !id) continue;
-        genres.push(App.createTag({ label, id }));
-      }
-      const tagSections = [App.createTagSection({ id: "0", label: "genres", tags: genres })];
-      return App.createSourceManga({
-        id: mangaId,
-        mangaInfo: App.createMangaInfo({
-          titles: [title],
+    ];
+    const collectedIds = [];
+    for (const section of sections) {
+      const mangaArray = [];
+      for (const manga of $3("li", section.selector).toArray()) {
+        const id = $3("a", manga).attr("href")?.split("/manga/")[1]?.replace(/\//g, "");
+        const image = $3("img", manga).first().attr("src") ?? "";
+        const title = $3("a", manga).first().attr("title")?.trim() ?? "";
+        const subtitle = $3("p.manga-list-1-item-subtitle", manga).text().trim();
+        if (!id || !title || collectedIds.includes(id)) continue;
+        mangaArray.push(App.createPartialSourceManga({
           image,
-          author,
-          artist,
-          tags: tagSections,
-          desc: description,
-          status
-        })
-      });
-    }
-    parseChapterList($2, mangaId, source) {
-      const chapters = [];
-      let sortingIndex = 0;
-      for (const obj of $2("li.wp-manga-chapter  ").toArray()) {
-        const id = this.idCleaner($2("a", obj).first().attr("href") ?? "");
-        const chapName = $2("a", obj).first().text().trim() ?? "";
-        const chapNumRegex = id.match(/(?:chapter|ch.*?)(\d+\.?\d?(?:[-_]\d+)?)|(\d+\.?\d?(?:[-_]\d+)?)$/);
-        let chapNum = chapNumRegex && chapNumRegex[1] ? chapNumRegex[1].replace(/[-_]/gm, ".") : chapNumRegex?.[2] ?? "0";
-        chapNum = parseFloat(chapNum) ?? 0;
-        let mangaTime;
-        const timeSelector = $2("span.chapter-release-date > a, span.chapter-release-date > span.c-new-tag > a", obj).attr("title");
-        if (typeof timeSelector !== "undefined") {
-          mangaTime = this.parseDate(timeSelector ?? "");
-        } else {
-          mangaTime = this.parseDate($2("span.chapter-release-date > i", obj).text().trim());
-        }
-        if (!mangaTime.getTime()) mangaTime = /* @__PURE__ */ new Date();
-        if (!id || typeof id === "undefined" || id === "#") {
-          console.log(`Could not parse out ID when getting chapters for postId:${mangaId} parsedId: ${id}`);
-          continue;
-        }
-        chapters.push({
-          id,
-          langCode: source.language,
-          chapNum,
-          name: chapName ? decode(chapName) : "",
-          time: mangaTime,
-          sortingIndex,
-          volume: 0,
-          group: ""
-        });
-        sortingIndex--;
-      }
-      if (chapters.length == 0) {
-        throw new Error(`Couldn't find any chapters for mangaId: ${mangaId}!`);
-      }
-      return chapters.map((chapter) => {
-        chapter.sortingIndex += chapters.length;
-        return App.createChapter(chapter);
-      });
-    }
-    async parseChapterDetails($2, mangaId, chapterId, selector, source) {
-      const pages = [];
-      for (const obj of $2(selector).get()) {
-        const page = await this.getImageSrc($2(obj), source);
-        if (!page) {
-          console.log(`Could not parse pages for postId:${mangaId} chapterId:${chapterId}`);
-          continue;
-        }
-        pages.push(encodeURI(page));
-      }
-      return App.createChapterDetails({
-        id: chapterId,
-        mangaId,
-        pages
-      });
-    }
-    async parseProtectedChapterDetails($2, mangaId, chapterId, selector, source) {
-      if (!$2(selector).length) {
-        return this.parseChapterDetails($2, mangaId, chapterId, selector, source);
-      }
-      const variables = extractVariableValues($2(selector).get()[0].children[0].data);
-      if (!("chapter_data" in variables) || !("wpmangaprotectornonce" in variables)) {
-        throw new Error(`Could not parse page for postId:${mangaId} chapterId:${chapterId}. Reason: Lacks sufficient data`);
-      }
-      const chapterList = decryptData(variables["chapter_data"], variables["wpmangaprotectornonce"]);
-      const pages = [];
-      chapterList.forEach((page) => {
-        pages.push(encodeURI(page));
-      });
-      return App.createChapterDetails({
-        id: chapterId,
-        mangaId,
-        pages
-      });
-    }
-    parseTags($2, advancedSearch) {
-      const genres = [];
-      if (advancedSearch) {
-        for (const obj of $2(".checkbox-group div label").toArray()) {
-          const label = $2(obj).text().trim();
-          const id = $2(obj).attr("for") ?? label;
-          genres.push(App.createTag({ label, id }));
-        }
-      } else {
-        for (const obj of $2(".menu-item-object-wp-manga-genre a", $2(".second-menu")).toArray()) {
-          const label = $2(obj).text().trim();
-          const id = $2(obj).attr("href")?.split("/")[4] ?? label;
-          genres.push(App.createTag({ label, id }));
-        }
-      }
-      return [App.createTagSection({ id: "0", label: "genres", tags: genres })];
-    }
-    async parseSearchResults($2, source) {
-      const results = [];
-      for (const obj of $2(source.searchMangaSelector).toArray()) {
-        const slug = ($2("a", obj).attr("href") ?? "").replace(/\/$/, "").split("/").pop() ?? "";
-        const path = ($2("a", obj).attr("href") ?? "").replace(/\/$/, "").split("/").slice(-2).shift() ?? "";
-        if (!slug || !path) {
-          throw new Error(`Unable to parse slug (${slug}) or path (${path})!`);
-        }
-        const title = $2("a", obj).attr("title") ?? "";
-        const image = encodeURI(await this.getImageSrc($2("img", obj), source));
-        const subtitle = $2("span.font-meta.chapter", obj).text().trim();
-        results.push({
-          slug,
-          path,
-          image,
-          title: decode(title),
-          subtitle: decode(subtitle)
-        });
-      }
-      return results;
-    }
-    async parseHomeSection($2, source) {
-      const items = [];
-      for (const obj of $2("div.page-item-detail").toArray()) {
-        const image = encodeURI(await this.getImageSrc($2("img", obj), source) ?? "");
-        const title = $2("a", $2("h3.h5", obj)).last().text();
-        const slug = this.idCleaner($2("a", $2("h3.h5", obj)).attr("href") ?? "");
-        const postId = $2("div", obj).attr("data-post-id");
-        const subtitle = $2("span.font-meta.chapter", obj).first().text().trim();
-        if (isNaN(Number(postId)) || !title) {
-          console.log(`Failed to parse homepage sections for ${source.baseUrl}`);
-          continue;
-        }
-        items.push(App.createPartialSourceManga({
-          mangaId: String(source.usePostIds ? postId : slug),
-          image,
-          title: decode(title),
-          subtitle: decode(subtitle)
+          title,
+          mangaId: id,
+          subtitle
         }));
+        collectedIds.push(id);
       }
-      return items;
+      section.sectionID.items = mangaArray;
+      sectionCallback(section.sectionID);
     }
-    async getImageSrc(imageObj, source) {
-      let image;
-      if (typeof imageObj?.attr("data-src") != "undefined" && imageObj?.attr("data-src") != "") {
-        image = imageObj?.attr("data-src");
-      } else if (typeof imageObj?.attr("data-lazy-src") != "undefined" && imageObj?.attr("data-lazy-src") != "") {
-        image = imageObj?.attr("data-lazy-src");
-      } else if (typeof imageObj?.attr("srcset") != "undefined" && imageObj?.attr("srcset") != "") {
-        image = imageObj?.attr("srcset")?.split(" ")[0] ?? "";
-      } else if (typeof imageObj?.attr("src") != "undefined" && imageObj?.attr("src") != "") {
-        image = imageObj?.attr("src");
-      } else if (typeof imageObj?.attr("data-cfsrc") != "undefined" && imageObj?.attr("data-cfsrc") != "") {
-        image = imageObj?.attr("data-cfsrc");
-      } else {
-        image = "";
-      }
-      if (source?.stateManager) {
-        const HQthumb = await source.stateManager.retrieve("HQthumb") ?? false;
-        if (HQthumb) {
-          image = image?.replace("-110x150", "").replace("-175x238", "").replace("-193x278", "").replace("-350x476", "");
-        }
-      }
-      if (image?.startsWith("/")) {
-        image = source.baseUrl + image;
-      }
-      image = image?.trim().replace(/(\s{2,})/gi, "");
-      image = image?.replace(/http:\/\/\//g, "http://");
-      image = image?.replace(/http:\/\//g, "https://");
-      image = image?.replace(/https:\/\/\//g, "https://");
-      return decodeURI(decode(image ?? ""));
+    const latestSection = App.createHomeSection({
+      id: "latest_updates",
+      title: "Latest Updates",
+      containsMoreItems: true,
+      type: import_types2.HomeSectionType.singleRowNormal
+    });
+    const latestManga = [];
+    for (const manga of $3("li", "div.manga-list-4 ").toArray()) {
+      const id = $3("a", manga).attr("href")?.split("/manga/")[1]?.replace(/\//g, "");
+      const image = $3("img", manga).first().attr("src") ?? "";
+      const title = $3("a", manga).attr("title")?.trim() ?? "";
+      const subtitle = $3("ul.manga-list-4-item-part > li", manga).first().text().trim();
+      if (!id || !title || collectedIds.includes(id)) continue;
+      latestManga.push(App.createPartialSourceManga({
+        image,
+        title,
+        mangaId: id,
+        subtitle
+      }));
+      collectedIds.push(id);
     }
-    idCleaner(str) {
-      let cleanId = str;
-      cleanId = cleanId.replace(/\/$/, "");
-      cleanId = cleanId.split("/").pop() ?? null;
-      if (!cleanId) throw new Error(`Unable to parse id for ${str}`);
-      return cleanId;
+    latestSection.items = latestManga;
+    sectionCallback(latestSection);
+  };
+  var parseSearch = ($3) => {
+    const mangaItems = [];
+    const collectedIds = [];
+    for (const manga of $3("ul.manga-list-4-list > li").toArray()) {
+      const id = $3("a", manga).attr("href")?.split("/manga/")[1]?.replace(/\//g, "");
+      const image = $3("img", manga).first().attr("src") ?? "";
+      const title = $3("a", manga).attr("title")?.trim() ?? "";
+      const subtitle = $3("a", $3("p.manga-list-4-item-tip", manga).get(1)).text();
+      if (!id || !title || collectedIds.includes(id)) continue;
+      mangaItems.push(App.createPartialSourceManga({
+        image,
+        title,
+        mangaId: id,
+        subtitle
+      }));
+      collectedIds.push(id);
     }
+    return mangaItems;
+  };
+  var parseViewMore = ($3, homepageSectionId) => {
+    const mangaItems = [];
+    const collectedIds = [];
+    if (homepageSectionId === "latest_updates") {
+      for (const manga of $3("ul.manga-list-4-list > li").toArray()) {
+        const id = $3("a", manga).attr("href")?.split("/manga/")[1]?.replace(/\//g, "");
+        const image = $3("img", manga).first().attr("src") ?? "";
+        const title = $3("a", manga).attr("title")?.trim() ?? "";
+        const subtitle = $3("ul.manga-list-4-item-part > li", manga).first().text().trim();
+        if (!id || !title || collectedIds.includes(id)) continue;
+        mangaItems.push(App.createPartialSourceManga({
+          image,
+          title,
+          mangaId: id,
+          subtitle
+        }));
+        collectedIds.push(id);
+      }
+      return mangaItems;
+    }
+    for (const manga of $3("li", $3.html()).toArray()) {
+      const id = $3("a", manga).attr("href")?.split("/manga/")[1]?.replace(/\//g, "");
+      const image = $3("img", manga).first().attr("src") ?? "";
+      const title = $3("img", manga).first().attr("alt")?.trim() ?? "";
+      const subtitle = $3("p.manga-list-1-item-subtitle", manga).text().trim();
+      if (!id || !title || collectedIds.includes(id)) continue;
+      mangaItems.push(App.createPartialSourceManga({
+        image,
+        title,
+        mangaId: id,
+        subtitle
+      }));
+      collectedIds.push(id);
+    }
+    return mangaItems;
+  };
+  var parseTags = ($3) => {
+    const arrayTags = [];
+    for (const tag of $3("div.tag-box > a").toArray()) {
+      const label = $3(tag).text().trim();
+      const id = $3(tag).attr("data-val") ?? "";
+      if (!id || !label) continue;
+      arrayTags.push({ id, label });
+    }
+    const tagSections = [App.createTagSection({ id: "0", label: "genres", tags: arrayTags.map((x) => App.createTag(x)) })];
+    return tagSections;
+  };
+  var parseDate = (date) => {
+    date = date.toUpperCase();
+    let time;
+    const number = Number((/\d*/.exec(date) ?? [])[0]);
+    if (date.includes("LESS THAN AN HOUR") || date.includes("JUST NOW")) {
+      time = new Date(Date.now());
+    } else if (date.includes("YEAR") || date.includes("YEARS")) {
+      time = new Date(Date.now() - number * 31556952e3);
+    } else if (date.includes("MONTH") || date.includes("MONTHS")) {
+      time = new Date(Date.now() - number * 2592e6);
+    } else if (date.includes("WEEK") || date.includes("WEEKS")) {
+      time = new Date(Date.now() - number * 6048e5);
+    } else if (date.includes("YESTERDAY")) {
+      time = new Date(Date.now() - 864e5);
+    } else if (date.includes("DAY") || date.includes("DAYS")) {
+      time = new Date(Date.now() - number * 864e5);
+    } else if (date.includes("HOUR") || date.includes("HOURS")) {
+      time = new Date(Date.now() - number * 36e5);
+    } else if (date.includes("MINUTE") || date.includes("MINUTES")) {
+      time = new Date(Date.now() - number * 6e4);
+    } else if (date.includes("SECOND") || date.includes("SECONDS")) {
+      time = new Date(Date.now() - number * 1e3);
+    } else {
+      time = new Date(date);
+    }
+    return time;
+  };
+  var isLastPage = ($3) => {
+    let isLast = true;
+    const pages2 = [];
+    for (const page of $3("a", ".pager-list-left").toArray()) {
+      const p = Number($3(page).text().trim());
+      if (isNaN(p)) continue;
+      pages2.push(p);
+    }
+    const lastPage = Math.max(...pages2);
+    const currentPage = Number($3("a.active", ".pager-list-left").text().trim());
+    if (currentPage <= lastPage) isLast = false;
+    return isLast;
   };
 
-  // src/MadaraHelper.ts
+  // src/MangaFox/MangaFoxHelper.ts
   var URLBuilder = class {
     constructor(baseUrl) {
       this.parameters = {};
@@ -16648,14 +15677,11 @@ var _Sources = (() => {
       finalUrl += addTrailingSlash ? "/" : "";
       finalUrl += Object.values(this.parameters).length > 0 ? "?" : "";
       finalUrl += Object.entries(this.parameters).map((entry) => {
-        if (entry[1] == null && !includeUndefinedParameters) {
-          return void 0;
-        }
         if (Array.isArray(entry[1])) {
           return entry[1].map((value) => value || includeUndefinedParameters ? `${entry[0]}[]=${value}` : void 0).filter((x) => x !== void 0).join("&");
         }
         if (typeof entry[1] === "object") {
-          return Object.keys(entry[1]).map((key) => `${entry[0]}[${key}]=${entry[1][key]}`).join("&");
+          return Object.keys(entry[1]).map((key) => entry[1][key] || includeUndefinedParameters ? `${entry[0]}[${key}]=${entry[1][key]}` : void 0).filter((x) => x !== void 0).join("&");
         }
         return `${entry[0]}=${entry[1]}`;
       }).filter((x) => x !== void 0).join("&");
@@ -16663,36 +15689,35 @@ var _Sources = (() => {
     }
   };
 
-  // src/Madara.ts
-  var BASE_VERSION = "3.2.1";
-  var getExportVersion = (EXTENSION_VERSION) => {
-    return BASE_VERSION.split(".").map((x, index2) => Number(x) + Number(EXTENSION_VERSION.split(".")[index2])).join(".");
+  // src/MangaFox/MangaFox.ts
+  var FF_DOMAIN = "https://fanfox.net";
+  var MangaFoxInfo = {
+    version: "3.0.6",
+    name: "MangaFox",
+    icon: "icon.png",
+    author: "Netsky",
+    authorWebsite: "https://github.com/TheNetsky",
+    description: "Extension that pulls manga from fanfox.net",
+    contentRating: import_types3.ContentRating.MATURE,
+    websiteBaseURL: FF_DOMAIN,
+    sourceTags: [],
+    intents: import_types3.SourceIntents.MANGA_CHAPTERS | import_types3.SourceIntents.HOMEPAGE_SECTIONS | import_types3.SourceIntents.CLOUDFLARE_BYPASS_REQUIRED
   };
-  var Madara = class {
+  var MangaFox = class {
     constructor() {
-      /**
-       *  Request manager override
-       */
-      this.requestsPerSecond = 5;
-      this.requestTimeout = 2e4;
       this.requestManager = App.createRequestManager({
-        requestsPerSecond: this.requestsPerSecond,
-        requestTimeout: this.requestTimeout,
+        requestsPerSecond: 5,
+        requestTimeout: 2e4,
         interceptor: {
           interceptRequest: async (request) => {
             request.headers = {
               ...request.headers ?? {},
               ...{
-                "user-agent": await this.requestManager.getDefaultUserAgent(),
-                "referer": `${this.baseUrl}/`,
-                "origin": `${this.baseUrl}/`,
-                ...request.url.includes("wordpress.com") && { "Accept": "image/avif,image/webp,*/*" }
-                // Used for images hosted on Wordpress blogs
+                "referer": `${FF_DOMAIN}/`,
+                "user-agent": await this.requestManager.getDefaultUserAgent()
               }
-            };
-            request.cookies = [
-              App.createCookie({ name: "wpmanga-adault", value: "1", domain: this.baseUrl }),
-              App.createCookie({ name: "toonily-mature", value: "1", domain: this.baseUrl })
+            }, request.cookies = [
+              App.createCookie({ name: "isAdult", value: "1", domain: "fanfox.net" })
             ];
             return request;
           },
@@ -16701,529 +15726,101 @@ var _Sources = (() => {
           }
         }
       });
-      this.stateManager = App.createSourceStateManager();
-      this.sourceSettings = (stateManager) => {
-        return App.createDUINavigationButton({
-          id: "madara_settings",
-          label: "Source Settings",
-          form: App.createDUIForm({
-            sections: async () => [
-              App.createDUISection({
-                id: "hq_thumb",
-                isHidden: false,
-                footer: "Enabling HQ thumbnails will use more bandwidth and will load thumbnails slightly slower.",
-                rows: async () => [
-                  App.createDUISwitch({
-                    id: "HQthumb",
-                    label: "HQ Thumbnails",
-                    value: App.createDUIBinding({
-                      get: async () => await stateManager.retrieve("HQthumb") ?? false,
-                      set: async (newValue) => await stateManager.store("HQthumb", newValue)
-                    })
-                  })
-                ]
-              })
-            ]
-          })
-        });
-      };
-      /**
-       * The language code the source's content is served in in string form.
-       */
-      this.language = "\u{1F1EC}\u{1F1E7}";
-      /**
-       * Different Madara sources might have a slightly different selector which is required to parse out
-       * each manga object while on a search result page. This is the selector
-       * which is looped over. This may be overridden if required.
-       */
-      this.searchMangaSelector = "div.c-tabs-item__content";
-      /**
-       * Set to true if your source has advanced search functionality built in.
-       * If this is not true, no genre tags will be shown on the homepage!
-       * See https://www.webtoon.xyz/?s=&post_type=wp-manga if they have a "advanced" option, if NOT, set this to false.
-       */
-      this.hasAdvancedSearchPage = true;
-      /**
-       * The path used for search pagination. Used in search function.
-       * Eg. for https://mangabob.com/page/2/?s&post_type=wp-manga it would be 'page'
-       */
-      this.searchPagePathName = "page";
-      /**
-       * Set to true if the source makes use of the manga chapter protector plugin.
-       * (https://mangabooth.com/product/wp-manga-chapter-protector/)
-       */
-      this.hasProtectedChapters = false;
-      /**
-       * Some sources may in the future change how to get the chapter protector data,
-       * making it configurable, will make it way more flexible and open to customized installations of the protector plugin.
-       */
-      this.protectedChapterDataSelector = "#chapter-protector-data";
-      /**
-       * Some sites use the alternate URL for getting chapters through ajax
-       * 0: (POST) Form data https://domain.com/wp-admin/admin-ajax.php
-       * 1: (POST) Alternative Ajax page (https://domain.com/manga/manga-slug/ajax/chapters)
-       * 2: (POST) Manga page (https://domain.com/manga/manga-slug)
-       * 3: (GET) Manga page (https://domain.com/manga/manga-slug)
-       */
-      this.chapterEndpoint = 0;
-      /**
-       * Different Madara sources might have a slightly different selector which is required to parse out
-       * each page while on a chapter page. This is the selector
-       * which is looped over. This may be overridden if required.
-       */
-      this.chapterDetailsSelector = "div.reading-content img.wp-manga-chapter-img";
-      /**
-       * Some websites have the Cloudflare defense check enabled on specific parts of the website, these need to be loaded when using the Cloudflare bypass within the app
-       */
-      this.bypassPage = "";
-      /**
-       * If it's not possible to use postIds for certain reasons, you can disable this here.
-       */
-      this.usePostIds = true;
-      /**
-       * When not using postIds, you need to set the directory path
-       */
-      this.directoryPath = "manga";
-      /**
-       * Some sources may redirect to the manga page instead of the chapter page if adding the parameter '?style=list'
-       */
-      this.useListParameter = true;
-      this.parser = new Parser3();
     }
-    async getSourceMenu() {
-      return App.createDUISection({
-        id: "sourceMenu",
-        header: "Source Menu",
-        isHidden: false,
-        rows: async () => [
-          this.sourceSettings(this.stateManager)
-        ]
-      });
+    getMangaShareUrl(mangaId2) {
+      return `${FF_DOMAIN}/manga/${mangaId2}`;
     }
-    getMangaShareUrl(mangaId) {
-      return this.usePostIds ? `${this.baseUrl}/?p=${mangaId}/` : `${this.baseUrl}/${this.directoryPath}/${mangaId}/`;
-    }
-    async getMangaDetails(mangaId) {
+    async getMangaDetails(mangaId2) {
       const request = App.createRequest({
-        url: this.usePostIds ? `${this.baseUrl}/?p=${mangaId}/` : `${this.baseUrl}/${this.directoryPath}/${mangaId}/`,
+        url: `${FF_DOMAIN}/manga/${mangaId2}`,
         method: "GET"
       });
       const response = await this.requestManager.schedule(request, 1);
-      this.checkResponseError(response);
-      const $2 = load(response.data);
-      return this.parser.parseMangaDetails($2, mangaId, this);
+      const $3 = load(response.data);
+      return parseMangaDetails($3, mangaId2);
     }
-    async getChapters(mangaId) {
-      let requestConfig;
-      let path = this.directoryPath;
-      let slug = mangaId;
-      if (this.usePostIds) {
-        const postData = await this.convertPostIdToSlug(Number(mangaId));
-        path = postData.path;
-        slug = postData.slug;
-      }
-      switch (this.chapterEndpoint) {
-        case 0:
-          requestConfig = {
-            url: `${this.baseUrl}/wp-admin/admin-ajax.php`,
-            method: "POST",
-            headers: {
-              "content-type": "application/x-www-form-urlencoded"
-            },
-            data: {
-              "action": "manga_get_chapters",
-              "manga": this.usePostIds ? mangaId : await this.convertSlugToPostId(mangaId, this.directoryPath)
-            }
-          };
+    async getChapters(mangaId2) {
+      const request = App.createRequest({
+        url: `${FF_DOMAIN}/manga/${mangaId2}`,
+        method: "GET"
+      });
+      const response = await this.requestManager.schedule(request, 1);
+      const $3 = load(response.data);
+      return parseChapters($3, mangaId2);
+    }
+    async getChapterDetails(mangaId2, chapterId2) {
+      const request = App.createRequest({
+        url: `${FF_DOMAIN}/manga/${mangaId2}/${chapterId2}/1.html`,
+        method: "GET"
+      });
+      const response = await this.requestManager.schedule(request, 1);
+      const $3 = load(response.data);
+      return parseChapterDetails($3, mangaId2, chapterId2, request.url, this);
+    }
+    async getHomePageSections(sectionCallback) {
+      const request = App.createRequest({
+        url: FF_DOMAIN,
+        method: "GET"
+      });
+      const response = await this.requestManager.schedule(request, 1);
+      const $3 = load(response.data);
+      parseHomeSections($3, sectionCallback);
+    }
+    async getViewMoreItems(homepageSectionId, metadata) {
+      const page = metadata?.page ?? 1;
+      let param = "";
+      switch (homepageSectionId) {
+        case "hot_release":
+          param = "hot";
           break;
-        case 1:
-          requestConfig = {
-            url: `${this.baseUrl}/${path}/${slug}/ajax/chapters`,
-            method: "POST",
-            headers: {
-              "content-type": "application/x-www-form-urlencoded"
-            }
-          };
+        case "new_manga":
+          param = `directory/${page}.html?news`;
           break;
-        case 2:
-          requestConfig = {
-            url: `${this.baseUrl}/${path}/${slug}`,
-            method: "POST",
-            headers: {
-              "content-type": "application/x-www-form-urlencoded"
-            }
-          };
-          break;
-        case 3:
-          requestConfig = {
-            url: `${this.baseUrl}/${path}/${slug}`,
-            method: "GET",
-            headers: {
-              "content-type": "application/x-www-form-urlencoded"
-            }
-          };
+        case "latest_updates":
+          param = `releases/${page}.html`;
           break;
         default:
-          throw new Error("Invalid chapter endpoint!");
-      }
-      const request = App.createRequest(requestConfig);
-      const response = await this.requestManager.schedule(request, 1);
-      this.checkResponseError(response);
-      const $2 = load(response.data);
-      return this.parser.parseChapterList($2, mangaId, this);
-    }
-    async getChapterDetails(mangaId, chapterId) {
-      let url;
-      if (this.usePostIds) {
-        const slugData = await this.convertPostIdToSlug(Number(mangaId));
-        url = `${this.baseUrl}/${slugData.path}/${slugData.slug}/${chapterId}/${this.useListParameter ? "?style=list" : ""}`;
-      } else {
-        url = `${this.baseUrl}/${this.directoryPath}/${mangaId}/${chapterId}/${this.useListParameter ? "?style=list" : ""}`;
+          throw new Error(`Invalid homeSectionId | ${homepageSectionId}`);
       }
       const request = App.createRequest({
-        url,
+        url: `${FF_DOMAIN}/${param}`,
         method: "GET"
       });
       const response = await this.requestManager.schedule(request, 1);
-      this.checkResponseError(response);
-      const $2 = load(response.data);
-      if (this.hasProtectedChapters) {
-        return this.parser.parseProtectedChapterDetails($2, mangaId, chapterId, this.protectedChapterDataSelector, this);
-      }
-      return this.parser.parseChapterDetails($2, mangaId, chapterId, this.chapterDetailsSelector, this);
-    }
-    async getSearchTags() {
-      let request;
-      if (this.hasAdvancedSearchPage) {
-        request = App.createRequest({
-          url: `${this.baseUrl}/?s=the&post_type=wp-manga`,
-          method: "GET"
-        });
-      } else {
-        request = App.createRequest({
-          url: `${this.baseUrl}/`,
-          method: "GET"
-        });
-      }
-      const response = await this.requestManager.schedule(request, 1);
-      this.checkResponseError(response);
-      const $2 = load(response.data);
-      return this.parser.parseTags($2, this.hasAdvancedSearchPage);
+      const $3 = load(response.data);
+      const manga = parseViewMore($3, homepageSectionId);
+      metadata = !isLastPage($3) ? { page: page + 1 } : void 0;
+      return App.createPagedResults({
+        results: manga,
+        metadata
+      });
     }
     async getSearchResults(query, metadata) {
       const page = metadata?.page ?? 1;
-      const request = this.constructSearchRequest(page, query);
+      const url2 = new URLBuilder(FF_DOMAIN).addPathComponent("search").addQueryParameter("page", page).addQueryParameter("title", encodeURI(query?.title || "")).addQueryParameter("genres", query.includedTags?.map((x) => x.id).join("%2C")).buildUrl();
+      const request = App.createRequest({
+        url: url2,
+        method: "GET"
+      });
       const response = await this.requestManager.schedule(request, 1);
-      this.checkResponseError(response);
-      const $2 = load(response.data);
-      const results = await this.parser.parseSearchResults($2, this);
-      const manga = [];
-      for (const result of results) {
-        if (this.usePostIds) {
-          const postId = await this.slugToPostId(result.slug, result.path);
-          manga.push(App.createPartialSourceManga({
-            mangaId: String(postId),
-            image: result.image,
-            title: result.title,
-            subtitle: result.subtitle
-          }));
-        } else {
-          manga.push(App.createPartialSourceManga({
-            mangaId: result.slug,
-            image: result.image,
-            title: result.title,
-            subtitle: result.subtitle
-          }));
-        }
-      }
+      const $3 = load(response.data);
+      const manga = parseSearch($3);
+      metadata = !isLastPage($3) ? { page: page + 1 } : void 0;
       return App.createPagedResults({
         results: manga,
-        metadata: { page: page + 1 }
+        metadata
       });
     }
-    async getHomePageSections(sectionCallback) {
-      const sections = [
-        {
-          request: this.constructAjaxHomepageRequest(0, 10, "_latest_update"),
-          section: App.createHomeSection({
-            id: "0",
-            title: "Recently Updated",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
-        },
-        {
-          request: this.constructAjaxHomepageRequest(0, 10, "_wp_manga_week_views_value"),
-          section: App.createHomeSection({
-            id: "1",
-            title: "Currently Trending",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
-        },
-        {
-          request: this.constructAjaxHomepageRequest(0, 10, "_wp_manga_views"),
-          section: App.createHomeSection({
-            id: "2",
-            title: "Most Popular",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
-        },
-        {
-          request: this.constructAjaxHomepageRequest(0, 10, "_wp_manga_status", "end"),
-          section: App.createHomeSection({
-            id: "3",
-            title: "Completed",
-            type: import_types2.HomeSectionType.singleRowNormal,
-            containsMoreItems: true
-          })
-        }
-      ];
-      const promises = [];
-      for (const section of sections) {
-        sectionCallback(section.section);
-        promises.push(
-          this.requestManager.schedule(section.request, 1).then(async (response) => {
-            this.checkResponseError(response);
-            const $2 = load(response.data);
-            section.section.items = await this.parser.parseHomeSection($2, this);
-            sectionCallback(section.section);
-          })
-        );
-      }
-      await Promise.all(promises);
-    }
-    async getViewMoreItems(homepageSectionId, metadata) {
-      const page = metadata?.page ?? 0;
-      let sortBy = [];
-      switch (homepageSectionId) {
-        case "0": {
-          sortBy = ["_latest_update"];
-          break;
-        }
-        case "1": {
-          sortBy = ["_wp_manga_week_views_value"];
-          break;
-        }
-        case "2": {
-          sortBy = ["_wp_manga_views"];
-          break;
-        }
-        case "3": {
-          sortBy = ["_wp_manga_status", "end"];
-          break;
-        }
-      }
-      const request = this.constructAjaxHomepageRequest(page, 50, sortBy[0], sortBy[1]);
-      const response = await this.requestManager.schedule(request, 1);
-      this.checkResponseError(response);
-      const $2 = load(response.data);
-      const items = await this.parser.parseHomeSection($2, this);
-      let mData = { page: page + 1 };
-      if (items.length < 50) {
-        mData = void 0;
-      }
-      return App.createPagedResults({
-        results: items,
-        metadata: mData
-      });
-    }
-    // Utility
-    constructSearchRequest(page, query) {
-      return App.createRequest({
-        url: new URLBuilder(this.baseUrl).addPathComponent(this.searchPagePathName).addPathComponent(page.toString()).addQueryParameter("s", encodeURIComponent(query?.title ?? "")).addQueryParameter("post_type", "wp-manga").addQueryParameter("genre", query?.includedTags?.map((x) => x.id)).buildUrl({ addTrailingSlash: true, includeUndefinedParameters: false }),
-        method: "GET"
-      });
-    }
-    constructAjaxHomepageRequest(page, postsPerPage, meta_key, meta_value) {
-      return App.createRequest({
-        url: `${this.baseUrl}/wp-admin/admin-ajax.php`,
-        method: "POST",
-        headers: {
-          "content-type": "application/x-www-form-urlencoded"
-        },
-        data: {
-          "action": "madara_load_more",
-          "template": "madara-core/content/content-archive",
-          "page": page,
-          "vars[paged]": "1",
-          "vars[posts_per_page]": postsPerPage,
-          "vars[orderby]": "meta_value_num",
-          "vars[sidebar]": "right",
-          "vars[post_type]": "wp-manga",
-          "vars[order]": "desc",
-          "vars[meta_key]": meta_key,
-          "vars[meta_value]": meta_value
-        }
-      });
-    }
-    async slugToPostId(slug, path) {
-      if (await this.stateManager.retrieve(slug) == null) {
-        const postId2 = await this.convertSlugToPostId(slug, path);
-        const existingMappedSlug = await this.stateManager.retrieve(postId2);
-        if (existingMappedSlug != null) {
-          await this.stateManager.store(slug, void 0);
-        }
-        await this.stateManager.store(postId2, slug);
-        await this.stateManager.store(slug, postId2);
-      }
-      const postId = await this.stateManager.retrieve(slug);
-      if (!postId) throw new Error(`Unable to fetch postId for slug:${slug}`);
-      return postId;
-    }
-    async convertPostIdToSlug(postId) {
+    async getSearchTags() {
       const request = App.createRequest({
-        url: `${this.baseUrl}/?p=${postId}`,
+        url: `${FF_DOMAIN}/search?`,
         method: "GET"
       });
       const response = await this.requestManager.schedule(request, 1);
-      const $2 = load(response.data);
-      let parseSlug;
-      parseSlug = String($2('meta[property="og:url"]').attr("content"));
-      if (!parseSlug.includes(this.baseUrl)) {
-        parseSlug = String($2('link[rel="canonical"]').attr("href"));
-      }
-      if (!parseSlug || !parseSlug.includes(this.baseUrl)) {
-        throw new Error("Unable to parse slug!");
-      }
-      parseSlug = parseSlug.replace(/\/$/, "").split("/");
-      const slug = parseSlug.slice(-1).pop();
-      const path = parseSlug.slice(-2).shift();
-      return { path, slug };
-    }
-    async convertSlugToPostId(slug, path) {
-      const headRequest = App.createRequest({
-        url: `${this.baseUrl}/${path}/${slug}`,
-        method: "HEAD"
-      });
-      const headResponse = await this.requestManager.schedule(headRequest, 1);
-      let postId;
-      const postIdRegex = headResponse?.headers["Link"]?.match(/\?p=(\d+)/);
-      if (postIdRegex && postIdRegex[1]) postId = postIdRegex[1];
-      if (postId || !isNaN(Number(postId))) {
-        return postId?.toString();
-      } else {
-        postId = "";
-      }
-      const request = App.createRequest({
-        url: `${this.baseUrl}/${path}/${slug}`,
-        method: "GET"
-      });
-      const response = await this.requestManager.schedule(request, 1);
-      const $2 = load(response.data);
-      postId = Number($2('link[rel="shortlink"]')?.attr("href")?.split("/?p=")[1]);
-      if (isNaN(postId)) {
-        postId = Number($2("a.wp-manga-action-button").attr("data-post"));
-      }
-      if (isNaN(postId)) {
-        const page = $2.root().html();
-        const match = page?.match(/manga_id.*\D(\d+)/);
-        if (match && match[1]) {
-          postId = Number(match[1]?.trim());
-        }
-      }
-      if (!postId || isNaN(postId)) {
-        throw new Error(`Unable to fetch numeric postId for this item! (path:${path} slug:${slug})`);
-      }
-      return postId.toString();
-    }
-    async getCloudflareBypassRequestAsync() {
-      return App.createRequest({
-        url: this.bypassPage || this.baseUrl,
-        method: "GET",
-        headers: {
-          "referer": `${this.baseUrl}/`,
-          "origin": `${this.baseUrl}/`,
-          "user-agent": await this.requestManager.getDefaultUserAgent()
-        }
-      });
-    }
-    checkResponseError(response) {
-      const status = response.status;
-      switch (status) {
-        case 403:
-        case 503:
-          throw new Error(`CLOUDFLARE BYPASS ERROR:
-Please go to the homepage of <${this.baseUrl}> and press the cloud icon.`);
-        case 404:
-          throw new Error(`The requested page ${response.request.url} was not found!`);
-      }
+      const $3 = load(response.data);
+      return parseTags($3);
     }
   };
-
-  // src/HiperDex/HiperDex.ts
-  var DOMAIN = "https://hiperdex.com";
-  var HiperDexInfo = {
-    version: getExportVersion("0.0.12"),
-    name: "HiperDex",
-    description: `Extension that pulls manga from ${DOMAIN}`,
-    author: "Rakha",
-    authorWebsite: "http://github.com/rakha28",
-    icon: "icon.png",
-    contentRating: import_types3.ContentRating.ADULT,
-    websiteBaseURL: DOMAIN,
-    sourceTags: [
-      {
-        text: "18+",
-        type: import_types3.BadgeColor.YELLOW
-      }
-    ],
-    intents: import_types3.SourceIntents.MANGA_CHAPTERS | import_types3.SourceIntents.HOMEPAGE_SECTIONS | import_types3.SourceIntents.CLOUDFLARE_BYPASS_REQUIRED | import_types3.SourceIntents.SETTINGS_UI
-  };
-  var HiperDex = class extends Madara {
-    constructor() {
-      super(...arguments);
-      this.baseUrl = DOMAIN;
-      this.chapterEndpoint = 1;
-
-      // Fix 1: Use the correct selector for chapter images
-      this.chapterDetailsSelector = "div.reading-content img.wp-manga-chapter-img";
-
-      // Fix 2: Override the RequestManager to fix Cloudflare 403 errors
-      this.requestManager = App.createRequestManager({
-        requestsPerSecond: this.requestsPerSecond,
-        requestTimeout: this.requestTimeout,
-        // Add the interceptor
-        interceptor: {
-          interceptRequest: async (request) => {
-            let referer = `${this.baseUrl}/`; // Default referer
-            const reqUrl = request.url;
-
-            // Check if it's an AJAX chapters request or a chapter details page
-            // This regex matches URLs like /manga/slug/chapter/ or /manga/slug/ajax/
-            const mangaPageRegex = new RegExp(`^${this.baseUrl}/([^/]+)/([^/]+)/`);
-            const match = reqUrl.match(mangaPageRegex);
-
-            if (match) {
-              // Set the referer to be the manga's main page: https://domain.com/manga/slug/
-              referer = `${this.baseUrl}/${match[1]}/${match[2]}/`;
-            }
-
-            request.headers = {
-              ...request.headers ?? {},
-              ...{
-                "user-agent": await this.requestManager.getDefaultUserAgent(),
-                "referer": referer, // Use the new dynamic referer
-                "origin": `${this.baseUrl}/`,
-                ...request.url.includes("wordpress.com") && { "Accept": "image/avif,image/webp,*/*" }
-              }
-            };
-
-            request.cookies = [
-              App.createCookie({ name: "wpmanga-adault", value: "1", domain: this.baseUrl }),
-              App.createCookie({ name: "toonily-mature", value: "1", domain: this.baseUrl })
-            ];
-
-            return request;
-          },
-          interceptResponse: async (response) => {
-            return response;
-          }
-        }
-      });
-    }
-  };
-  return __toCommonJS(HiperDex_exports);
+  return __toCommonJS(MangaFox_exports);
 })();
-this.Sources = _Sources; if (typeof exports === 'object' && typeof module !== 'undefined') { module.exports.Sources = this.Sources; }
+this.Sources = _Sources; if (typeof exports === 'object' && typeof module !== 'undefined') {module.exports.Sources = this.Sources;}
